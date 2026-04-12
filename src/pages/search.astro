@@ -1,0 +1,25 @@
+---
+import HelpCenterLayout from '@/layouts/HelpCenterLayout.astro';
+import HelpNavbar from '@/components/help/HelpNavbar.astro';
+import HelpFooter from '@/components/help/HelpFooter.astro';
+import SearchResults from '@/components/help/SearchResults';
+import { getAllArticleSummaries, getModules } from '@/lib/help-center';
+
+const articles = getAllArticleSummaries();
+const modules = getModules().map(m => ({ id: m.id, title: m.title, color: m.color }));
+---
+
+<HelpCenterLayout
+  title="Cari Artikel — Gilabs Help Center"
+  description="Cari artikel bantuan, tutorial, dan panduan penggunaan produk ERP Gilabs."
+  noindex={true}
+>
+  <HelpNavbar />
+
+  <main class="min-h-screen max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <h1 class="text-2xl font-bold text-foreground mb-6">Hasil Pencarian</h1>
+    <SearchResults client:load articles={articles} modules={modules} />
+  </main>
+
+  <HelpFooter />
+</HelpCenterLayout>

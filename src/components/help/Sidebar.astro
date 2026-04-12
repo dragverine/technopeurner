@@ -1,0 +1,71 @@
+---
+import { getModules, getSubcategoryArticleCount, getModuleIcon } from '@/lib/help-center';
+
+interface Props {
+  currentModule?: string;
+  currentSubcategory?: string;
+}
+
+const { currentModule, currentSubcategory } = Astro.props;
+const modules = getModules();
+---
+
+<aside class="w-full lg:w-64 shrink-0">
+  <!-- Mobile sidebar toggle -->
+  <button
+    id="sidebar-toggle"
+    class="lg:hidden w-full flex items-center justify-between p-3 mb-4 border border-border rounded-lg text-sm font-medium text-foreground bg-background"
+  >
+    <span>Navigasi Modul</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sidebar-chevron transition-transform">
+      <path d="m6 9 6 6 6-6"/>
+    </svg>
+  </button>
+
+  <nav id="sidebar-nav" class="hidden lg:block space-y-1">
+    {modules.map((mod) => {
+      const isActiveModule = currentModule === mod.id;
+      return (
+        <details open={isActiveModule} class="group">
+          <summary class={`flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer text-sm font-medium transition-colors list-none
+            ${isActiveModule ? 'bg-brand/10 text-brand' : 'text-foreground hover:bg-secondary'}`}>
+            <span class="w-5 h-5 shrink-0" style={`color: ${mod.color}`} set:html={getModuleIcon(mod.id)} />
+            <span class="flex-1">{mod.title}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-open:rotate-180 text-muted-foreground">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </summary>
+          <div class="ml-8 mt-1 space-y-0.5 border-l border-border/50 pl-3">
+            {mod.subcategories.map((sub) => {
+              const isActiveSub = isActiveModule && currentSubcategory === sub.id;
+              const count = getSubcategoryArticleCount(mod.id, sub.id);
+              return (
+                <a
+                  href={`/${mod.id}/${sub.id}`}
+                  class={`block px-3 py-1.5 rounded-md text-sm transition-colors
+                    ${isActiveSub ? 'text-brand font-medium bg-brand/5' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/50'}`}
+                >
+                  {sub.title}
+                  {count > 0 && (
+                    <span class="ml-1.5 text-xs text-muted-foreground">({count})</span>
+                  )}
+                </a>
+              );
+            })}
+          </div>
+        </details>
+      );
+    })}
+  </nav>
+</aside>
+
+<script>
+  const toggle = document.getElementById('sidebar-toggle');
+  const nav = document.getElementById('sidebar-nav');
+  const chevron = toggle?.querySelector('.sidebar-chevron');
+
+  toggle?.addEventListener('click', () => {
+    nav?.classList.toggle('hidden');
+    chevron?.classList.toggle('rotate-180');
+  });
+</script>

@@ -1,0 +1,144 @@
+---
+import HelpCenterLayout from '@/layouts/HelpCenterLayout.astro';
+import HelpNavbar from '@/components/help/HelpNavbar.astro';
+import HelpFooter from '@/components/help/HelpFooter.astro';
+import Sidebar from '@/components/help/Sidebar.astro';
+import Breadcrumb from '@/components/help/Breadcrumb.astro';
+import ArticleRenderer from '@/components/help/ArticleRenderer.astro';
+import ArticleCard from '@/components/help/ArticleCard.astro';
+import { getModules, getAllArticles, getArticlesBySubcategory } from '@/lib/help-center';
+import type { Module, SubCategory, Article } from '@/lib/help-center';
+
+export function getStaticPaths() {
+  const modules = getModules();
+  const articles = getAllArticles();
+
+  return articles.map((article) => {
+    const mod = modules.find((m) => m.id === article.module)!;
+    const sub = mod.subcategories.find((s) => s.id === article.subcategory)!;
+    return {
+      params: {
+        module: article.module,
+        subcategory: article.subcategory,
+        slug: article.slug,
+      },
+      props: { article, module: mod, subcategory: sub },
+    };
+  });
+}
+
+interface Props {
+  article: Article;
+  module: Module;
+  subcategory: SubCategory;
+}
+
+const { article, module, subcategory } = Astro.props;
+
+// Related articles
+const relatedSlugs = article.relatedArticles || [];
+const siblingArticles = getArticlesBySubcategory(module.id, subcategory.id)
+  .filter((a) => a.slug !== article.slug);
+const relatedArticles = relatedSlugs.length > 0
+  ? siblingArticles.filter((a) => relatedSlugs.includes(a.slug))
+  : siblingArticles.slice(0, 3);
+
+// Table of contents from steps
+const steps = article.content.filter((block) => block.type === 'step');
+---
+
+<HelpCenterLayout
+  title={`${article.title} — ${module.title} — Gilabs Help Center`}
+  description={article.description}
+>
+  <HelpNavbar />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <Sidebar currentModule={module.id} currentSubcategory={subcategory.id} />
+
+      <main class="flex-1 min-w-0">
+        <Breadcrumb items={[
+          { label: module.title, href: `/${module.id}` },
+          { label: subcategory.title, href: `/${module.id}/${subcategory.id}` },
+          { label: article.title },
+        ]} />
+
+        <article class="max-w-3xl">
+          <!-- Article Header -->
+          <header class="mb-8">
+            <div class="flex items-center gap-2 mb-3">
+              <span
+                class="text-xs font-medium px-2 py-0.5 rounded-full text-white"
+                style={`background-color: ${module.color}`}
+              >
+                {module.title}
+              </span>
+              <span class="text-xs text-muted-foreground">{subcategory.title}</span>
+            </div>
+            <h1 class="text-2xl md:text-3xl font-bold text-foreground">
+              {article.title}
+            </h1>
+            <p class="text-muted-foreground mt-2">{article.description}</p>
+
+            {article.updatedAt && (
+              <p class="text-xs text-muted-foreground mt-3">
+                Terakhir diperbarui: {new Date(article.updatedAt).toLocaleDateString('id-ID', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+                })}
+                {article.author && ` oleh ${article.author}`}
+              </p>
+            )}
+          </header>
+
+          <!-- Table of Contents (if has steps) -->
+          {steps.length > 1 && (
+            <nav class="mb-8 p-4 bg-secondary/50 border border-border rounded-xl">
+              <h2 class="text-sm font-semibold text-foreground mb-3">Daftar Langkah</h2>
+              <ol class="space-y-1.5">
+                {steps.map((step) => (
+                  <li class="text-sm text-muted-foreground hover:text-brand transition-colors">
+                    <span class="font-medium text-foreground mr-2">{step.stepNumber}.</span>
+                    {step.title}
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )}
+
+          <!-- Article Content -->
+          <ArticleRenderer content={article.content} />
+
+          <!-- Tags -->
+          {article.tags && article.tags.length > 0 && (
+            <div class="mt-8 pt-6 border-t border-border">
+              <div class="flex flex-wrap gap-2">
+                {article.tags.map((tag) => (
+                  <span class="text-xs px-2.5 py-1 bg-secondary rounded-full text-muted-foreground">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </article>
+
+        <!-- Related Articles -->
+        {relatedArticles.length > 0 && (
+          <section class="mt-12 pt-8 border-t border-border max-w-3xl">
+            <h2 class="text-lg font-semibold text-foreground mb-4">Artikel Terkait</h2>
+            <div class="space-y-3">
+              {relatedArticles.map((related) => (
+                <ArticleCard article={related} />
+              ))}
+            </div>
+          </section>
+        )}
+      </main>
+    </div>
+  </div>
+
+  <HelpFooter />
+</HelpCenterLayout>

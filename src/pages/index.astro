@@ -1,0 +1,46 @@
+---
+import HelpCenterLayout from '@/layouts/HelpCenterLayout.astro';
+import HelpNavbar from '@/components/help/HelpNavbar.astro';
+import HelpFooter from '@/components/help/HelpFooter.astro';
+import ModuleCard from '@/components/help/ModuleCard.astro';
+import SearchBar from '@/components/help/SearchBar';
+import { getModules } from '@/lib/help-center';
+
+const modules = getModules();
+---
+
+<HelpCenterLayout
+  title="Gilabs Help Center — Pusat Bantuan"
+  description="Temukan panduan, tutorial, dan tips penggunaan seluruh modul produk ERP Gilabs."
+>
+  <HelpNavbar />
+
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-brand/5 to-background py-16 md:py-24">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
+          Bagaimana kami bisa membantu?
+        </h1>
+        <p class="text-lg text-muted-foreground mb-8">
+          Cari tutorial, panduan, dan tips untuk semua modul produk Gilabs
+        </p>
+        <div class="flex justify-center">
+          <SearchBar client:load size="large" placeholder="Cari artikel, tutorial, panduan..." />
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules Grid -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h2 class="text-xl font-semibold text-foreground mb-6">Jelajahi berdasarkan modul</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {modules.map((mod) => (
+          <ModuleCard module={mod} />
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <HelpFooter />
+</HelpCenterLayout>

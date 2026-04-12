@@ -1,0 +1,45 @@
+---
+import type { Article } from '@/lib/help-center';
+
+interface Props {
+  article: Article;
+  showModule?: boolean;
+  moduleColor?: string;
+  moduleTitle?: string;
+}
+
+const { article, showModule = false, moduleColor, moduleTitle } = Astro.props;
+---
+
+<a
+  href={`/${article.module}/${article.subcategory}/${article.slug}`}
+  class="group block p-4 border border-border rounded-xl hover:border-brand/30 hover:bg-secondary/30 transition-all"
+>
+  {showModule && moduleTitle && (
+    <div class="mb-2">
+      <span
+        class="text-xs font-medium px-2 py-0.5 rounded-full text-white"
+        style={`background-color: ${moduleColor || '#666'}`}
+      >
+        {moduleTitle}
+      </span>
+    </div>
+  )}
+
+  <h3 class="font-medium text-foreground group-hover:text-brand transition-colors">
+    {article.title}
+  </h3>
+  <p class="text-sm text-muted-foreground mt-1 line-clamp-2">
+    {article.description}
+  </p>
+
+  {article.updatedAt && (
+    <p class="text-xs text-muted-foreground mt-2">
+      Diperbarui: {new Date(article.updatedAt).toLocaleDateString('id-ID', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      })}
+    </p>
+  )}
+</a>

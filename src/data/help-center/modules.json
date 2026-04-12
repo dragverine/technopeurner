@@ -1,0 +1,69 @@
+{
+  "modules": [
+    {
+      "id": "erp",
+      "title": "ERP",
+      "description": "Enterprise Resource Planning — Kelola operasional bisnis secara terpadu",
+      "color": "#2563EB",
+      "subcategories": [
+        { "id": "inventory", "title": "Inventory", "description": "Kelola stok dan data barang" },
+        { "id": "purchasing", "title": "Purchasing", "description": "Manajemen pembelian dan supplier" },
+        { "id": "warehouse", "title": "Warehouse", "description": "Manajemen gudang dan penyimpanan" }
+      ]
+    },
+    {
+      "id": "crm",
+      "title": "CRM",
+      "description": "Customer Relationship Management — Kelola hubungan pelanggan",
+      "color": "#10B981",
+      "subcategories": [
+        { "id": "leads", "title": "Leads", "description": "Kelola prospek dan calon pelanggan" },
+        { "id": "pipeline", "title": "Pipeline", "description": "Pantau tahapan penjualan" },
+        { "id": "customer", "title": "Customer", "description": "Manajemen data pelanggan" }
+      ]
+    },
+    {
+      "id": "pos",
+      "title": "POS",
+      "description": "Point of Sale — Sistem kasir dan penjualan",
+      "color": "#F59E0B",
+      "subcategories": [
+        { "id": "transaction", "title": "Transaction", "description": "Proses transaksi penjualan" },
+        { "id": "product", "title": "Product", "description": "Kelola produk dan katalog" },
+        { "id": "discount", "title": "Discount", "description": "Atur diskon dan promo" }
+      ]
+    },
+    {
+      "id": "hr",
+      "title": "HR",
+      "description": "Human Resources — Manajemen sumber daya manusia",
+      "color": "#8B5CF6",
+      "subcategories": [
+        { "id": "employee", "title": "Employee", "description": "Kelola data karyawan" },
+        { "id": "payroll", "title": "Payroll", "description": "Penggajian dan kompensasi" },
+        { "id": "attendance", "title": "Attendance", "description": "Absensi dan kehadiran" }
+      ]
+    },
+    {
+      "id": "finance",
+      "title": "Finance",
+      "description": "Manajemen keuangan perusahaan",
+      "color": "#14B8A6",
+      "subcategories": [
+        { "id": "invoice", "title": "Invoice", "description": "Kelola faktur dan tagihan" },
+        { "id": "journal", "title": "Journal", "description": "Jurnal dan catatan keuangan" },
+        { "id": "report", "title": "Report", "description": "Laporan keuangan" }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI",
+      "description": "Artificial Intelligence — Fitur kecerdasan buatan",
+      "color": "#6366F1",
+      "subcategories": [
+        { "id": "auto-insight", "title": "Auto-insight", "description": "Analisis otomatis berbasis AI" },
+        { "id": "forecasting", "title": "Forecasting", "description": "Prediksi dan peramalan bisnis" }
+      ]
+    }
+  ]
+}

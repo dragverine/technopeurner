@@ -1,0 +1,52 @@
+{
+  "title": "Cara Mengelola Stok Barang",
+  "description": "Pelajari cara memantau dan mengelola stok barang di modul Inventory",
+  "slug": "cara-mengelola-stok",
+  "module": "erp",
+  "subcategory": "inventory",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-04-02",
+  "updatedAt": "2026-04-10",
+  "tags": ["inventory", "stok", "kelola", "stock opname"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Mengelola stok barang dengan baik sangat penting untuk memastikan ketersediaan produk dan menghindari kekurangan atau kelebihan stok. Artikel ini membahas fitur-fitur pengelolaan stok di modul Inventory."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Halaman Stok",
+      "body": "Navigasi ke menu Inventory > Stok Barang untuk melihat daftar seluruh barang beserta jumlah stok terkini.",
+      "image": {
+        "src": "/images/help/erp/inventory/kelola-stok-step-1.webp",
+        "alt": "Halaman daftar stok barang"
+      }
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Lakukan Penyesuaian Stok",
+      "body": "Untuk menyesuaikan jumlah stok, klik tombol Adjustment pada barang yang ingin diubah. Masukkan jumlah stok baru dan alasan penyesuaian.",
+      "image": {
+        "src": "/images/help/erp/inventory/kelola-stok-step-2.webp",
+        "alt": "Form penyesuaian stok"
+      }
+    },
+    {
+      "type": "warning",
+      "body": "Setiap penyesuaian stok akan tercatat di log audit. Pastikan alasan penyesuaian diisi dengan jelas untuk keperluan pelaporan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pantau Stok Minimum",
+      "body": "Sistem akan memberikan notifikasi otomatis ketika stok barang mencapai batas minimum yang telah ditentukan. Atur batas minimum di halaman detail masing-masing barang.",
+      "image": {
+        "src": "/images/help/erp/inventory/kelola-stok-step-3.webp",
+        "alt": "Pengaturan stok minimum"
+      }
+    }
+  ],
+  "relatedArticles": ["cara-menambah-barang-baru"]
+}

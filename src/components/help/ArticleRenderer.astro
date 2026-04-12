@@ -1,0 +1,104 @@
+---
+import type { ArticleContentBlock } from '@/lib/help-center';
+
+interface Props {
+  content: ArticleContentBlock[];
+}
+
+const { content } = Astro.props;
+---
+
+<div class="article-content space-y-6">
+  {content.map((block) => {
+    if (block.type === 'text') {
+      return (
+        <div class="prose-block">
+          {block.body?.split('\n').map((line) => (
+            <p class="text-foreground leading-relaxed">{line}</p>
+          ))}
+        </div>
+      );
+    }
+
+    if (block.type === 'step') {
+      return (
+        <div class="step-block border border-border rounded-xl p-5">
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-brand text-white flex items-center justify-center shrink-0 text-sm font-bold">
+              {block.stepNumber}
+            </div>
+            <div class="flex-1 min-w-0">
+              {block.title && (
+                <h4 class="font-semibold text-foreground mb-2">{block.title}</h4>
+              )}
+              {block.body && (
+                <div class="text-muted-foreground leading-relaxed">
+                  {block.body.split('\n').map((line) => {
+                    if (line.startsWith('- ')) {
+                      return <li class="ml-4 list-disc">{line.slice(2)}</li>;
+                    }
+                    return <p>{line}</p>;
+                  })}
+                </div>
+              )}
+              {block.image && (
+                <div class="mt-4 rounded-lg overflow-hidden border border-border bg-secondary/30">
+                  <img
+                    src={block.image.src}
+                    alt={block.image.alt}
+                    class="w-full h-auto"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    if (block.type === 'info') {
+      return (
+        <div class="flex gap-3 p-4 bg-blue-50 border border-blue-200 rounded-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600 shrink-0 mt-0.5">
+            <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+          </svg>
+          <p class="text-sm text-blue-800 leading-relaxed">{block.body}</p>
+        </div>
+      );
+    }
+
+    if (block.type === 'warning') {
+      return (
+        <div class="flex gap-3 p-4 bg-amber-50 border border-amber-200 rounded-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-600 shrink-0 mt-0.5">
+            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/>
+          </svg>
+          <p class="text-sm text-amber-800 leading-relaxed">{block.body}</p>
+        </div>
+      );
+    }
+
+    if (block.type === 'image') {
+      return (
+        <figure class="rounded-lg overflow-hidden border border-border">
+          <img
+            src={block.src}
+            alt={block.alt || ''}
+            class="w-full h-auto"
+            loading="lazy"
+            decoding="async"
+          />
+          {block.caption && (
+            <figcaption class="text-center text-sm text-muted-foreground p-3 bg-secondary/30">
+              {block.caption}
+            </figcaption>
+          )}
+        </figure>
+      );
+    }
+
+    return null;
+  })}
+</div>

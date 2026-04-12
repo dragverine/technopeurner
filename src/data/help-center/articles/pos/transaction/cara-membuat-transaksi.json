@@ -1,0 +1,62 @@
+{
+  "title": "Cara Membuat Transaksi Baru",
+  "description": "Panduan langkah demi langkah membuat transaksi penjualan di modul POS",
+  "slug": "cara-membuat-transaksi",
+  "module": "pos",
+  "subcategory": "transaction",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-04-04",
+  "updatedAt": "2026-04-10",
+  "tags": ["pos", "transaksi", "penjualan", "kasir"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Modul POS memudahkan Anda dalam memproses transaksi penjualan secara cepat dan akurat. Berikut panduan membuat transaksi baru."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Halaman Kasir",
+      "body": "Klik menu POS pada sidebar, lalu pilih Kasir / New Transaction untuk membuka halaman transaksi baru.",
+      "image": {
+        "src": "/images/help/pos/transaction/buat-transaksi-step-1.webp",
+        "alt": "Halaman kasir POS"
+      }
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambahkan Produk",
+      "body": "Cari produk melalui kolom pencarian atau scan barcode. Klik produk untuk menambahkannya ke keranjang. Anda bisa mengubah jumlah (qty) langsung di keranjang.",
+      "image": {
+        "src": "/images/help/pos/transaction/buat-transaksi-step-2.webp",
+        "alt": "Menambahkan produk ke keranjang"
+      }
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Metode Pembayaran",
+      "body": "Setelah semua produk ditambahkan, klik tombol Bayar. Pilih metode pembayaran yang digunakan pelanggan: Tunai, Kartu Debit/Kredit, atau E-Wallet.",
+      "image": {
+        "src": "/images/help/pos/transaction/buat-transaksi-step-3.webp",
+        "alt": "Pilihan metode pembayaran"
+      }
+    },
+    {
+      "type": "info",
+      "body": "Untuk pembayaran tunai, sistem akan otomatis menghitung kembalian berdasarkan nominal yang dimasukkan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Selesaikan Transaksi",
+      "body": "Klik Selesaikan Pembayaran untuk menyelesaikan transaksi. Struk pembayaran dapat dicetak atau dikirim via email/WhatsApp ke pelanggan.",
+      "image": {
+        "src": "/images/help/pos/transaction/buat-transaksi-step-4.webp",
+        "alt": "Konfirmasi transaksi selesai"
+      }
+    }
+  ],
+  "relatedArticles": []
+}

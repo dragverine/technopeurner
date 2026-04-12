@@ -1,0 +1,95 @@
+---
+import "../styles/globals.css";
+
+const {
+  title = 'Gilabs Help Center',
+  description = 'Pusat bantuan dan panduan penggunaan produk ERP Gilabs. Temukan tutorial, tips, dan solusi untuk semua modul.',
+  canonical = Astro.url.href,
+  noindex = false,
+} = Astro.props;
+
+const siteUrl = 'https://help.gilabs.id';
+const fullCanonical = canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`;
+const robotsContent = noindex ? 'noindex, nofollow' : 'index, follow';
+---
+
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="144x144" href="/favicon-144x144.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="robots" content={robotsContent} />
+    <meta name="author" content="Gilabs.id" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={fullCanonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={fullCanonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Gilabs Help Center" />
+    <meta property="og:locale" content="id_ID" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Gilabs Help Center",
+      "url": siteUrl,
+      "description": description,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Gilabs.id",
+        "url": "https://gilabs.id"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": `${siteUrl}/search?q={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
+    })} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+  </head>
+  <body class="bg-background text-foreground font-sans antialiased help-center">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  .help-center {
+    font-weight: 400;
+  }
+  .help-center p {
+    font-weight: 400;
+  }
+  .help-center h1, .help-center h2, .help-center h3, .help-center h4 {
+    font-weight: 600;
+  }
+</style>

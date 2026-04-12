@@ -1,0 +1,80 @@
+---
+import HelpCenterLayout from '@/layouts/HelpCenterLayout.astro';
+import HelpNavbar from '@/components/help/HelpNavbar.astro';
+import HelpFooter from '@/components/help/HelpFooter.astro';
+import Sidebar from '@/components/help/Sidebar.astro';
+import Breadcrumb from '@/components/help/Breadcrumb.astro';
+import { getModules, getModuleIcon, getSubcategoryArticleCount } from '@/lib/help-center';
+import type { Module } from '@/lib/help-center';
+
+export function getStaticPaths() {
+  const modules = getModules();
+  return modules.map((mod) => ({
+    params: { module: mod.id },
+    props: { module: mod },
+  }));
+}
+
+interface Props {
+  module: Module;
+}
+
+const { module } = Astro.props;
+---
+
+<HelpCenterLayout
+  title={`${module.title} — Gilabs Help Center`}
+  description={module.description}
+>
+  <HelpNavbar />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <Sidebar currentModule={module.id} />
+
+      <main class="flex-1 min-w-0">
+        <Breadcrumb items={[{ label: module.title }]} />
+
+        <!-- Module Header -->
+        <div class="flex items-center gap-4 mb-8">
+          <div
+            class="w-14 h-14 rounded-2xl flex items-center justify-center text-white shrink-0"
+            style={`background-color: ${module.color}`}
+          >
+            <span class="w-7 h-7" set:html={getModuleIcon(module.id)} />
+          </div>
+          <div>
+            <h1 class="text-2xl md:text-3xl font-bold text-foreground">{module.title}</h1>
+            <p class="text-muted-foreground mt-1">{module.description}</p>
+          </div>
+        </div>
+
+        <!-- Subcategories Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {module.subcategories.map((sub) => {
+            const count = getSubcategoryArticleCount(module.id, sub.id);
+            return (
+              <a
+                href={`/${module.id}/${sub.id}`}
+                class="group block p-5 border border-border rounded-xl hover:border-brand/30 hover:shadow-md transition-all"
+              >
+                <h3 class="font-semibold text-foreground group-hover:text-brand transition-colors">
+                  {sub.title}
+                </h3>
+                <p class="text-sm text-muted-foreground mt-1">{sub.description}</p>
+                <div class="flex items-center gap-2 mt-3 text-xs text-muted-foreground">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  </svg>
+                  <span>{count} artikel</span>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <HelpFooter />
+</HelpCenterLayout>
