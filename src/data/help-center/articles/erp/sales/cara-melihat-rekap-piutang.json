@@ -1,18 +1,18 @@
 {
   "title": "Cara Melihat Rekap Piutang",
-  "description": "Panduan memantau saldo piutang pelanggan yang belum dibayar melalui menu rekap piutang",
+  "description": "Panduan memantau saldo piutang pelanggan yang belum dibayar, filter berdasarkan status jatuh tempo, dan ekspor laporan",
   "slug": "cara-melihat-rekap-piutang",
   "module": "erp",
   "subcategory": "sales",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["piutang", "rekap", "tagihan", "pelanggan", "laporan"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["rekap piutang", "piutang", "tagihan", "jatuh tempo", "laporan penjualan"],
   "relatedArticles": ["cara-membuat-faktur-pelanggan", "cara-mencatat-pembayaran-pelanggan"],
   "content": [
     {
       "type": "text",
-      "body": "Rekap Piutang menampilkan ringkasan tagihan yang belum dibayar oleh pelanggan. Gunakan fitur ini untuk memantau siapa saja pelanggan yang masih memiliki hutang dan berapa nilainya."
+      "body": "Rekap Piutang menampilkan ringkasan seluruh faktur pelanggan yang belum dibayar. Gunakan menu ini untuk memantau siapa yang masih berhutang, berapa nilainya, dan apakah sudah melewati jatuh tempo."
     },
     {
       "type": "step",
@@ -24,23 +24,29 @@
       "type": "step",
       "stepNumber": 2,
       "title": "Filter Data",
-      "body": "Gunakan filter yang tersedia untuk menyaring data:\n- Filter berdasarkan pelanggan tertentu\n- Filter berdasarkan rentang tanggal jatuh tempo\n- Filter berdasarkan status: belum jatuh tempo, sudah jatuh tempo"
+      "body": "Gunakan filter berikut untuk menyaring data:\n- Pelanggan: tampilkan piutang pelanggan tertentu saja\n- Rentang Tanggal Jatuh Tempo: filter berdasarkan kapan tagihan jatuh tempo\n- Status: pilih Belum Jatuh Tempo, Sudah Jatuh Tempo, atau Semua"
     },
     {
       "type": "step",
       "stepNumber": 3,
-      "title": "Lihat Detail per Pelanggan",
-      "body": "Klik nama pelanggan untuk melihat daftar faktur yang belum lunas beserta tanggal jatuh tempo masing-masing."
+      "title": "Baca Data Piutang",
+      "body": "Setiap baris menampilkan:\n- Nama Pelanggan\n- Nomor Faktur\n- Tanggal Faktur dan Tanggal Jatuh Tempo\n- Total Faktur\n- Sisa yang belum dibayar\n- Hari keterlambatan (Aging)"
     },
     {
       "type": "step",
       "stepNumber": 4,
+      "title": "Klik Pelanggan untuk Detail",
+      "body": "Klik nama pelanggan untuk melihat semua faktur yang belum lunas dari pelanggan tersebut, beserta riwayat pembayaran yang sudah masuk."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
       "title": "Ekspor Rekap",
-      "body": "Klik tombol Ekspor untuk mengunduh data rekap piutang dalam format Excel untuk keperluan pelaporan atau follow-up."
+      "body": "Klik tombol Ekspor untuk mengunduh data rekap piutang dalam format Excel sesuai filter yang aktif — berguna untuk keperluan follow-up atau laporan ke manajemen."
     },
     {
       "type": "info",
-      "body": "Kolom Aging menunjukkan berapa hari faktur sudah melewati jatuh tempo. Semakin besar angkanya, semakin perlu diprioritaskan untuk ditagih."
+      "body": "Kolom Aging (hari keterlambatan) menunjukkan sudah berapa hari faktur melewati jatuh tempo. Prioritaskan follow-up pelanggan dengan nilai aging tertinggi."
     }
   ]
 }

@@ -1,18 +1,18 @@
 {
   "title": "Cara Mencatat Faktur Pemasok (Supplier Invoice)",
-  "description": "Panduan mencatat faktur tagihan dari supplier setelah menerima barang",
+  "description": "Panduan mencatat tagihan dari supplier berdasarkan Goods Receipt yang sudah dikonfirmasi, lengkap dengan nomor faktur supplier dan tanggal jatuh tempo",
   "slug": "cara-mencatat-faktur-pemasok",
   "module": "erp",
   "subcategory": "purchasing",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["faktur pemasok", "supplier invoice", "hutang", "pembelian"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["faktur pemasok", "supplier invoice", "hutang", "tagihan supplier"],
   "relatedArticles": ["cara-menerima-barang", "cara-melakukan-pembayaran-ke-supplier", "cara-melihat-rekap-hutang"],
   "content": [
     {
       "type": "text",
-      "body": "Faktur Pemasok (Supplier Invoice) adalah tagihan yang diterima dari supplier setelah barang dikirimkan. Mencatat faktur ini penting untuk memastikan hutang kepada supplier tercatat dengan benar di sistem."
+      "body": "Faktur Pemasok adalah tagihan yang diterima dari supplier setelah barang dikirimkan. Mencatat faktur ini memastikan hutang kepada supplier tercatat dengan benar dan bisa dilacak hingga jatuh tempo pembayaran."
     },
     {
       "type": "step",
@@ -24,37 +24,35 @@
       "type": "step",
       "stepNumber": 2,
       "title": "Buat Faktur Baru",
-      "body": "Klik tombol Buat Faktur di sudut kanan atas."
+      "body": "Klik tombol Buat Faktur. Form akan terbuka."
     },
     {
       "type": "step",
       "stepNumber": 3,
-      "title": "Pilih Supplier dan Penerimaan Barang",
-      "body": "Pilih supplier, lalu pilih Penerimaan Barang (Goods Receipt) yang menjadi dasar faktur ini. Daftar barang akan terisi otomatis."
+      "title": "Pilih Supplier dan Goods Receipt",
+      "body": "Pilih Supplier dari dropdown. Kemudian pilih Goods Receipt yang menjadi dasar faktur ini. Daftar item dan nilai akan otomatis terisi berdasarkan GR yang dipilih."
     },
     {
       "type": "step",
       "stepNumber": 4,
-      "title": "Isi Nomor Faktur Supplier",
-      "body": "Masukkan nomor faktur yang tertera pada dokumen fisik dari supplier. Ini penting untuk pencocokan data saat audit."
+      "title": "Isi Detail Faktur",
+      "body": "Lengkapi informasi:\n- Nomor Faktur Supplier: nomor yang tertera di dokumen fisik dari supplier (wajib untuk rekonsiliasi)\n- Tanggal Faktur: tanggal tertera di faktur supplier\n- Tanggal Jatuh Tempo: batas waktu pembayaran\n- Pajak (%): sesuaikan jika ada perbedaan\n- Biaya Pengiriman dan Biaya Lainnya: jika supplier membebankan\n- Catatan: informasi tambahan"
     },
     {
       "type": "step",
       "stepNumber": 5,
-      "title": "Periksa dan Sesuaikan Harga",
-      "body": "Verifikasi harga per unit sesuai dengan faktur fisik dari supplier. Sesuaikan jika ada perbedaan dari harga yang tercatat di PO."
+      "title": "Verifikasi Harga",
+      "body": "Periksa harga per unit di setiap item. Sesuaikan jika ada perbedaan antara harga di PO dan harga aktual di faktur supplier."
     },
     {
       "type": "step",
       "stepNumber": 6,
-      "title": "Isi Tanggal Jatuh Tempo",
-      "body": "Isi tanggal jatuh tempo pembayaran berdasarkan ketentuan pembayaran yang disepakati."
+      "title": "Konfirmasi Faktur",
+      "body": "Klik Konfirmasi. Faktur tercatat sebagai hutang kepada supplier dan masuk ke rekap hutang. Status faktur bisa dipantau di menu Rekap Hutang."
     },
     {
-      "type": "step",
-      "stepNumber": 7,
-      "title": "Konfirmasi Faktur",
-      "body": "Klik Konfirmasi. Faktur akan tercatat sebagai hutang kepada supplier dan masuk ke rekap hutang."
+      "type": "info",
+      "body": "Setelah faktur dikonfirmasi, Anda bisa melanjutkan ke proses pembayaran hutang di menu Pembelian → Pembayaran."
     }
   ]
 }

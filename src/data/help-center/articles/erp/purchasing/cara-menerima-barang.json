@@ -1,72 +1,62 @@
 {
   "title": "Cara Menerima Barang dari Supplier (Goods Receipt)",
-  "description": "Panduan melakukan penerimaan barang dari supplier berdasarkan Purchase Order yang sudah disetujui",
+  "description": "Panduan mencatat penerimaan barang dari supplier berdasarkan PO yang disetujui, mengisi jumlah aktual diterima, dan memilih gudang tujuan",
   "slug": "cara-menerima-barang",
   "module": "erp",
   "subcategory": "purchasing",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["goods receipt", "penerimaan barang", "supplier", "purchase order"],
-  "relatedArticles": ["cara-membuat-purchase-order", "cara-membuat-permintaan-pembelian"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["goods receipt", "penerimaan barang", "GR", "stok masuk", "supplier"],
+  "relatedArticles": ["cara-membuat-purchase-order", "cara-mencatat-faktur-pemasok"],
   "content": [
     {
       "type": "text",
-      "body": "Penerimaan Barang (Goods Receipt) adalah proses pencatatan barang yang diterima dari supplier ke dalam sistem. Proses ini harus dilakukan setiap kali barang datang agar stok di sistem selalu akurat dan tercatat dengan benar."
+      "body": "Penerimaan Barang (Goods Receipt / GR) adalah pencatatan barang yang diterima secara fisik dari supplier. Proses ini wajib dilakukan setiap kali barang datang agar stok di sistem akurat dan tercatat dengan benar."
     },
     {
       "type": "info",
-      "body": "Goods Receipt hanya bisa dibuat untuk Purchase Order yang sudah berstatus Disetujui. Pastikan PO sudah melalui proses persetujuan sebelum barang datang."
+      "body": "Goods Receipt hanya bisa dibuat untuk Purchase Order yang sudah berstatus Approved. Pastikan PO sudah melalui persetujuan sebelum barang datang."
     },
     {
       "type": "step",
       "stepNumber": 1,
       "title": "Buka Menu Penerimaan Barang",
-      "body": "Dari menu utama, klik Pembelian → Penerimaan Barang. Halaman ini menampilkan daftar seluruh penerimaan barang yang pernah dicatat."
+      "body": "Dari menu utama, klik Pembelian → Penerimaan Barang."
     },
     {
       "type": "step",
       "stepNumber": 2,
-      "title": "Buat Penerimaan Baru",
-      "body": "Klik tombol Buat Penerimaan di sudut kanan atas. Form penerimaan barang akan terbuka."
+      "title": "Buat GR Baru",
+      "body": "Klik tombol Buat Penerimaan. Form dialog akan terbuka."
     },
     {
       "type": "step",
       "stepNumber": 3,
       "title": "Pilih Purchase Order",
-      "body": "Pilih nomor PO yang sesuai dengan barang yang datang dari dropdown. Daftar barang yang dipesan akan otomatis terisi berdasarkan PO tersebut."
+      "body": "Di field Pilih PO, cari dan pilih nomor PO yang sesuai dengan barang yang datang. Daftar item dari PO tersebut akan otomatis terisi."
     },
     {
       "type": "step",
       "stepNumber": 4,
-      "title": "Isi Jumlah Barang yang Diterima",
-      "body": "Untuk setiap barang dalam daftar, isi kolom Jumlah Diterima sesuai dengan barang yang benar-benar datang. Jumlah yang diterima bisa lebih sedikit dari PO jika pengiriman dilakukan bertahap."
-    },
-    {
-      "type": "warning",
-      "body": "Jika ada barang yang kondisinya rusak atau tidak sesuai pesanan, jangan masukkan ke jumlah diterima. Catat sebagai retur kepada supplier melalui menu Retur Pembelian."
+      "title": "Isi Detail Penerimaan",
+      "body": "Lengkapi form:\n- Tanggal Penerimaan: tanggal barang datang secara fisik\n- Gudang Tujuan: pilih gudang tempat barang akan disimpan (wajib)\n- Nomor Surat Jalan Supplier: nomor surat jalan dari supplier untuk dokumentasi\n- Catatan: informasi tambahan"
     },
     {
       "type": "step",
       "stepNumber": 5,
-      "title": "Pilih Gudang Tujuan",
-      "body": "Pilih gudang tempat barang akan disimpan. Stok akan otomatis bertambah di gudang yang dipilih setelah penerimaan dikonfirmasi."
+      "title": "Isi Jumlah Barang Diterima",
+      "body": "Untuk setiap item dalam daftar, isi kolom Jumlah Diterima sesuai barang yang benar-benar datang secara fisik. Jumlah yang diterima bisa lebih sedikit dari PO jika pengiriman dilakukan bertahap."
+    },
+    {
+      "type": "warning",
+      "body": "Jangan masukkan barang yang kondisinya rusak atau tidak sesuai spesifikasi ke dalam jumlah diterima. Catat barang bermasalah tersebut sebagai Retur Pembelian setelah GR dikonfirmasi."
     },
     {
       "type": "step",
       "stepNumber": 6,
-      "title": "Tambahkan Nomor Surat Jalan",
-      "body": "Isi nomor surat jalan dari supplier di kolom yang tersedia. Ini berguna untuk keperluan dokumentasi dan verifikasi di kemudian hari."
-    },
-    {
-      "type": "step",
-      "stepNumber": 7,
       "title": "Konfirmasi Penerimaan",
-      "body": "Klik tombol Konfirmasi untuk menyelesaikan proses penerimaan. Stok barang akan otomatis bertambah dan sistem akan mencatat pergerakan stok masuk secara otomatis."
-    },
-    {
-      "type": "info",
-      "body": "Setelah penerimaan dikonfirmasi, Anda bisa melanjutkan ke proses pencatatan Faktur Pemasok (Supplier Invoice) untuk keperluan pembayaran."
+      "body": "Klik Konfirmasi. Stok barang akan langsung bertambah di gudang yang dipilih. Sistem mencatat pergerakan stok masuk secara otomatis dan GR bisa digunakan sebagai dasar pembuatan Faktur Pemasok."
     }
   ]
 }

@@ -1,22 +1,22 @@
 {
   "title": "Cara Membuat Surat Jalan (Delivery Order)",
-  "description": "Panduan membuat surat jalan untuk mencatat pengiriman barang kepada pelanggan",
+  "description": "Panduan membuat surat jalan untuk mencatat pengiriman barang kepada pelanggan berdasarkan Sales Order yang sudah disetujui",
   "slug": "cara-membuat-surat-jalan",
   "module": "erp",
   "subcategory": "sales",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["surat jalan", "delivery order", "pengiriman", "DO"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["surat jalan", "delivery order", "pengiriman", "DO", "stok keluar"],
   "relatedArticles": ["cara-membuat-pesanan-penjualan", "cara-membuat-faktur-pelanggan"],
   "content": [
     {
       "type": "text",
-      "body": "Surat Jalan (Delivery Order) adalah dokumen yang menyertai pengiriman barang kepada pelanggan. Surat jalan dibuat berdasarkan Sales Order yang sudah dikonfirmasi, dan akan mengurangi stok secara otomatis saat dikonfirmasi."
+      "body": "Surat Jalan (Delivery Order) mencatat pengiriman barang kepada pelanggan. Dibuat berdasarkan Sales Order yang sudah disetujui, dan saat dikonfirmasi akan otomatis mengurangi stok dari gudang asal."
     },
     {
       "type": "info",
-      "body": "Surat jalan hanya bisa dibuat dari Sales Order yang berstatus Dikonfirmasi. Pastikan SO sudah melewati proses persetujuan."
+      "body": "Surat jalan hanya bisa dibuat dari Sales Order yang sudah berstatus Approved. Pastikan SO sudah melalui proses persetujuan terlebih dahulu."
     },
     {
       "type": "step",
@@ -28,31 +28,35 @@
       "type": "step",
       "stepNumber": 2,
       "title": "Buat Surat Jalan Baru",
-      "body": "Klik tombol Buat Surat Jalan. Form surat jalan akan terbuka."
+      "body": "Klik tombol Buat Surat Jalan. Form dialog akan terbuka."
     },
     {
       "type": "step",
       "stepNumber": 3,
       "title": "Pilih Sales Order",
-      "body": "Pilih nomor SO dari dropdown. Daftar produk yang dipesan akan otomatis terisi."
+      "body": "Di field Pilih Sales Order, cari dan pilih nomor SO yang akan dikirimkan. Daftar produk dari SO tersebut akan otomatis terisi."
     },
     {
       "type": "step",
       "stepNumber": 4,
       "title": "Isi Detail Pengiriman",
-      "body": "Isi informasi berikut:\n- Tanggal Pengiriman\n- Agen Kurir: pilih jasa pengiriman yang digunakan\n- Nomor Resi (jika ada)\n- Gudang Asal: stok akan berkurang dari gudang ini"
+      "body": "Lengkapi form:\n- Tanggal Pengiriman: tanggal barang dikirimkan\n- Agen Kurir: pilih jasa pengiriman yang digunakan\n- Nomor Resi: nomor resi pengiriman (opsional, bisa diisi setelah barang dikirim)\n- Gudang: pilih gudang asal pengiriman — stok akan berkurang dari gudang ini\n- Catatan: instruksi pengiriman khusus"
     },
     {
       "type": "step",
       "stepNumber": 5,
       "title": "Isi Jumlah Terkirim",
-      "body": "Untuk setiap produk, isi jumlah yang benar-benar dikirimkan. Pengiriman bisa dilakukan bertahap jika barang belum tersedia semua."
+      "body": "Untuk setiap produk dalam daftar, isi jumlah yang benar-benar dikirimkan. Pengiriman bisa dilakukan bertahap — tidak harus mengirim semua kuantitas SO sekaligus."
     },
     {
       "type": "step",
       "stepNumber": 6,
-      "title": "Konfirmasi Pengiriman",
-      "body": "Klik Konfirmasi Pengiriman. Stok di gudang asal akan berkurang otomatis sesuai jumlah yang dikirimkan."
+      "title": "Kirim dan Konfirmasi",
+      "body": "Klik Kirim untuk mengubah status menjadi Dikirim. Klik Konfirmasi Pengiriman setelah barang benar-benar diserahkan ke kurir atau pelanggan. Stok di gudang asal akan berkurang otomatis sesuai jumlah yang dikonfirmasi."
+    },
+    {
+      "type": "info",
+      "body": "Setiap SO bisa memiliki lebih dari satu Surat Jalan jika pengiriman dilakukan bertahap. Sistem melacak sisa kuantitas yang belum terkirim dari SO tersebut."
     }
   ]
 }

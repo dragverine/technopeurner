@@ -1,18 +1,18 @@
 {
-  "title": "Cara Menambah Produk",
-  "description": "Panduan mendaftarkan produk baru ke dalam katalog produk sistem ERP Gilabs",
+  "title": "Cara Menambah Produk Baru",
+  "description": "Panduan lengkap mendaftarkan produk ke katalog sistem ERP beserta harga, satuan, pajak, stok minimum, dan ketersediaan POS",
   "slug": "cara-menambah-produk",
   "module": "erp",
   "subcategory": "master-data",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["produk", "katalog", "barang", "master data"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["produk", "katalog", "harga pokok", "stok minimum", "pajak", "master data"],
   "relatedArticles": ["cara-mengelola-kategori-produk", "cara-mengatur-satuan-ukur", "cara-menambah-barang-baru"],
   "content": [
     {
       "type": "text",
-      "body": "Produk adalah data barang atau jasa yang dijual maupun dibeli oleh perusahaan. Data produk harus didaftarkan ke sistem sebelum bisa digunakan dalam transaksi penjualan, pembelian, atau pencatatan stok."
+      "body": "Produk adalah data barang atau jasa yang dijual maupun dibeli perusahaan. Setiap produk harus didaftarkan terlebih dahulu sebelum bisa digunakan dalam transaksi penjualan, pembelian, atau pencatatan stok."
     },
     {
       "type": "step",
@@ -24,35 +24,57 @@
       "type": "step",
       "stepNumber": 2,
       "title": "Tambah Produk Baru",
-      "body": "Klik tombol Tambah Produk di sudut kanan atas. Form data produk akan terbuka."
+      "body": "Klik tombol Tambah Produk. Form dialog dengan beberapa bagian akan terbuka."
     },
     {
       "type": "step",
       "stepNumber": 3,
-      "title": "Isi Informasi Dasar Produk",
-      "body": "Isi informasi berikut:\n- Nama Produk\n- Kode/SKU Produk (harus unik)\n- Kategori Produk\n- Merek\n- Satuan Ukur\n- Jenis Kemasan"
+      "title": "Isi Informasi Dasar",
+      "body": "Di bagian Informasi Dasar:\n- Nama Produk: nama lengkap produk (wajib)\n- MPN (Nomor Suku Cadang Pabrikan): kode pabrikan jika ada\n- Deskripsi: keterangan detail produk\n- Gambar Produk: upload via drag-drop, paste URL, atau cari gambar dari internet"
     },
     {
       "type": "step",
       "stepNumber": 4,
-      "title": "Isi Informasi Harga",
-      "body": "Isi harga pokok pembelian (Cost Price) dan harga jual (Selling Price). Harga ini akan menjadi harga default saat produk dipilih dalam transaksi."
-    },
-    {
-      "type": "info",
-      "body": "Harga di form produk adalah harga default. Anda tetap bisa mengubah harga secara manual saat membuat Sales Order atau Purchase Order."
+      "title": "Isi Klasifikasi",
+      "body": "Di bagian Klasifikasi:\n- Kategori: pilih atau ketik untuk membuat kategori baru langsung\n- Merek: pilih atau buat merek baru\n- Segmen: pilih atau buat segmen pasar\n- Tipe: pilih atau buat tipe produk"
     },
     {
       "type": "step",
       "stepNumber": 5,
-      "title": "Upload Gambar Produk (Opsional)",
-      "body": "Klik area upload gambar untuk menambahkan foto produk. Gambar akan muncul di katalog dan detail produk."
+      "title": "Isi Satuan & Kemasan",
+      "body": "Di bagian Satuan & Kemasan:\n- Satuan Ukuran (UoM): satuan utama, contoh Pcs, Kg, Liter (wajib)\n- Purchase UoM: satuan saat pembelian jika berbeda dari satuan jual\n- Konversi: faktor konversi antara satuan beli dan jual (wajib, default 1)\n- Kemasan: tipe kemasan, contoh Botol, Karton (opsional)"
     },
     {
       "type": "step",
       "stepNumber": 6,
-      "title": "Simpan Produk",
-      "body": "Klik tombol Simpan. Produk baru langsung tersedia untuk digunakan dalam transaksi penjualan, pembelian, dan pencatatan stok."
+      "title": "Isi Supply Chain",
+      "body": "Di bagian Supply Chain:\n- Tipe Pengadaan: cara produk diperoleh\n- Waktu Tunggu (Hari): estimasi lead time pengiriman (wajib)\n- Tipe Pajak: pilih PPN (11%), PPH, atau Tidak Ada Pajak\n- Termasuk Pajak: aktifkan jika harga sudah termasuk pajak"
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Isi Harga & Stok",
+      "body": "Di bagian Harga & Stok:\n- Harga Pokok (Rp): biaya pembelian atau produksi (wajib)\n- Harga Jual (Rp): harga jual default (wajib)\n- Stok Minimum: batas bawah stok sebelum ada peringatan (wajib)\n- Stok Maksimum: batas atas stok ideal (wajib)"
+    },
+    {
+      "type": "info",
+      "body": "Harga Pokok dan Harga Jual di sini adalah nilai default. Saat membuat transaksi, harga masih bisa diubah secara manual."
+    },
+    {
+      "type": "step",
+      "stepNumber": 8,
+      "title": "Atur Ketersediaan POS (Jika Perlu)",
+      "body": "Di bagian Ketersediaan POS:\n- Tersembunyi: produk tidak muncul di kasir POS\n- Semua Outlet: produk tersedia di semua outlet\n- Outlet Tertentu: centang outlet spesifik dari daftar"
+    },
+    {
+      "type": "step",
+      "stepNumber": 9,
+      "title": "Simpan dan Aktifkan",
+      "body": "Klik Submit. Produk tersimpan dengan status Draft. Klik Ajukan Persetujuan lalu tunggu disetujui. Setelah berstatus Disetujui, produk siap digunakan di semua transaksi."
+    },
+    {
+      "type": "warning",
+      "body": "Produk berstatus Draft tidak bisa dipilih saat membuat Sales Order atau Purchase Order. Pastikan proses persetujuan sudah selesai sebelum menggunakannya."
     }
   ]
 }

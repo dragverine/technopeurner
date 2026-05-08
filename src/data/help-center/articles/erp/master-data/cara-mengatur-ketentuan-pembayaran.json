@@ -1,18 +1,18 @@
 {
   "title": "Cara Mengatur Ketentuan Pembayaran",
-  "description": "Panduan menambah dan mengelola payment terms seperti Net 30, COD, atau DP 50% untuk transaksi",
+  "description": "Panduan menambah payment terms seperti COD, Net 30, atau DP 50% yang digunakan dalam transaksi penjualan dan pembelian",
   "slug": "cara-mengatur-ketentuan-pembayaran",
   "module": "erp",
   "subcategory": "master-data",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["ketentuan pembayaran", "payment terms", "tempo", "master data"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["ketentuan pembayaran", "payment terms", "termin", "tempo pembayaran", "master data"],
   "relatedArticles": ["cara-mengatur-mata-uang", "cara-membuat-purchase-order", "cara-membuat-pesanan-penjualan"],
   "content": [
     {
       "type": "text",
-      "body": "Ketentuan Pembayaran (Payment Terms) mendefinisikan aturan pembayaran yang berlaku dalam transaksi, seperti berapa hari tempo pembayaran atau apakah pembayaran dilakukan di muka. Data ini dipilih saat membuat Purchase Order maupun Sales Order."
+      "body": "Ketentuan Pembayaran mendefinisikan aturan kapan pembayaran harus dilakukan dalam transaksi. Data ini dipilih saat membuat Purchase Order maupun Sales Order dan menentukan tanggal jatuh tempo faktur secara otomatis."
     },
     {
       "type": "step",
@@ -23,18 +23,18 @@
     {
       "type": "step",
       "stepNumber": 2,
-      "title": "Tambah Ketentuan Pembayaran Baru",
-      "body": "Klik tombol Tambah. Isi nama ketentuan (contoh: Net 30, COD, DP 50%) dan jumlah hari temponya, lalu klik Simpan."
-    },
-    {
-      "type": "info",
-      "body": "Contoh ketentuan umum: COD (0 hari), Net 7 (7 hari), Net 14 (14 hari), Net 30 (30 hari). Sesuaikan dengan perjanjian bisnis Anda."
+      "title": "Tambah Ketentuan Baru",
+      "body": "Klik tombol Buat. Isi:\n- Nama: nama ketentuan yang deskriptif (wajib), contoh COD, Net 7, Net 30, DP 50%\n- Hari Tempo: jumlah hari pembayaran setelah tanggal transaksi (wajib)\n  → COD: 0 hari\n  → Net 7: 7 hari\n  → Net 30: 30 hari\n- Deskripsi: keterangan tambahan (opsional)\nKlik Simpan."
     },
     {
       "type": "step",
       "stepNumber": 3,
       "title": "Edit atau Hapus",
-      "body": "Gunakan ikon Edit untuk memperbarui, atau ikon Hapus untuk menghapus ketentuan yang tidak dipakai."
+      "body": "Klik ikon Edit untuk memperbarui. Hapus hanya bisa dilakukan jika ketentuan belum digunakan di transaksi manapun."
+    },
+    {
+      "type": "info",
+      "body": "Ketentuan Pembayaran juga bisa dibuat langsung dari form Purchase Order atau Sales Order — ketik nama baru di field Termin Pembayaran tanpa perlu membuka menu ini terlebih dahulu."
     }
   ]
 }

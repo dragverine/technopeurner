@@ -1,18 +1,18 @@
 {
   "title": "Cara Membuat Penawaran (Quotation)",
-  "description": "Panduan membuat dokumen penawaran harga kepada pelanggan sebelum pesanan dikonfirmasi",
+  "description": "Panduan membuat dokumen penawaran harga kepada pelanggan sebelum pesanan dikonfirmasi, lengkap dengan item, pajak, dan konversi ke Sales Order",
   "slug": "cara-membuat-penawaran",
   "module": "erp",
   "subcategory": "sales",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["penawaran", "quotation", "harga", "penjualan"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["penawaran", "quotation", "harga", "sales", "konversi SO"],
   "relatedArticles": ["cara-membuat-pesanan-penjualan"],
   "content": [
     {
       "type": "text",
-      "body": "Penawaran (Quotation) adalah dokumen yang dikirimkan kepada calon pelanggan berisi rincian harga produk atau jasa sebelum pesanan resmi dibuat. Setelah pelanggan setuju, penawaran bisa dikonversi menjadi Sales Order."
+      "body": "Penawaran (Quotation) adalah dokumen yang dikirimkan kepada calon pelanggan berisi rincian harga sebelum pesanan resmi dibuat. Setelah pelanggan setuju, penawaran bisa dikonversi menjadi Sales Order secara otomatis."
     },
     {
       "type": "step",
@@ -24,37 +24,41 @@
       "type": "step",
       "stepNumber": 2,
       "title": "Buat Penawaran Baru",
-      "body": "Klik tombol Buat Penawaran di sudut kanan atas. Form penawaran akan terbuka."
+      "body": "Klik tombol Buat Penawaran. Form penawaran akan terbuka dengan dua tab: Informasi Dasar dan Item."
     },
     {
       "type": "step",
       "stepNumber": 3,
-      "title": "Pilih Pelanggan",
-      "body": "Pilih nama pelanggan dari dropdown. Jika pelanggan belum terdaftar, daftarkan terlebih dahulu melalui Data Master → Pelanggan."
+      "title": "Tab Informasi Dasar",
+      "body": "Isi kolom berikut:\n- Pelanggan: pilih atau cari pelanggan (wajib)\n- Tanggal Penawaran: tanggal dokumen dibuat\n- Syarat Pembayaran: pilih termin pembayaran\n- Pajak (%): persentase pajak yang dikenakan\n- Biaya Pengiriman (Rp): ongkos kirim jika ada\n- Biaya Lainnya (Rp): biaya tambahan lain\n- Catatan: pesan khusus untuk pelanggan (opsional)"
     },
     {
       "type": "step",
       "stepNumber": 4,
-      "title": "Isi Detail Penawaran",
-      "body": "Isi informasi berikut:\n- Tanggal Penawaran\n- Tanggal Berlaku: batas masa berlaku penawaran\n- Ketentuan Pembayaran"
+      "title": "Tab Item — Tambah Produk",
+      "body": "Di tab Item, klik Tambah Item untuk setiap produk. Isi:\n- Produk: pilih dari katalog (wajib)\n- Jumlah: kuantitas yang ditawarkan\n- Harga Satuan (Rp): harga per unit (terisi otomatis dari data produk, bisa diubah)\n- Diskon (%): persentase diskon per item\n- Catatan: keterangan untuk item ini\nUlangi untuk setiap produk dalam penawaran."
     },
     {
       "type": "step",
       "stepNumber": 5,
-      "title": "Tambahkan Produk",
-      "body": "Klik Tambah Produk pada bagian daftar item. Pilih produk, isi jumlah, dan harga satuan. Ulangi untuk setiap produk yang ditawarkan."
+      "title": "Periksa Ringkasan Harga",
+      "body": "Di bagian bawah form, periksa ringkasan:\n- Subtotal: total sebelum pajak dan biaya tambahan\n- Nilai Pajak: nilai pajak yang dihitung otomatis\n- Biaya Pengiriman dan Biaya Lainnya\n- Total (Grand Total): jumlah yang harus dibayar pelanggan"
     },
     {
       "type": "step",
       "stepNumber": 6,
       "title": "Simpan dan Kirim",
-      "body": "Klik Simpan untuk menyimpan sebagai draft, atau Kirim untuk mengirimkan penawaran ke pelanggan. Penawaran yang dikirim bisa dicetak sebagai PDF."
+      "body": "Klik Simpan untuk menyimpan sebagai Draft. Klik Kirim untuk mengirimkan penawaran ke pelanggan. Penawaran yang dikirim bisa dicetak sebagai PDF."
     },
     {
       "type": "step",
       "stepNumber": 7,
       "title": "Konversi ke Sales Order",
-      "body": "Jika pelanggan menyetujui penawaran, buka detail penawaran lalu klik Konversi ke Sales Order. Data akan otomatis terisi dari penawaran."
+      "body": "Setelah pelanggan menyetujui penawaran, buka detail penawaran lalu klik Konversi ke Sales Order. Data produk, harga, dan pelanggan akan otomatis terbawa ke Sales Order baru."
+    },
+    {
+      "type": "info",
+      "body": "Status penawaran: Draft → Submitted (Dikirim) → Approved (Disetujui) → Rejected (Ditolak). Penawaran yang sudah dikonversi ke SO tidak bisa diubah lagi."
     }
   ]
 }

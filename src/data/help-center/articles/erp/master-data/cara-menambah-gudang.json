@@ -1,46 +1,52 @@
 {
   "title": "Cara Menambah Gudang Baru",
-  "description": "Panduan mendaftarkan gudang baru ke dalam sistem untuk keperluan manajemen stok dan penerimaan barang",
+  "description": "Panduan mendaftarkan gudang baru beserta alamat lengkap dan koordinat lokasi ke dalam sistem ERP",
   "slug": "cara-menambah-gudang",
   "module": "erp",
   "subcategory": "master-data",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["gudang", "warehouse", "master data", "lokasi stok"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["gudang", "warehouse", "lokasi stok", "peta gudang", "master data"],
   "relatedArticles": ["cara-melihat-pergerakan-stok", "cara-melakukan-stock-opname"],
   "content": [
     {
       "type": "text",
-      "body": "Gudang adalah lokasi fisik tempat barang disimpan. Sebelum bisa melakukan penerimaan barang atau mencatat stok, gudang harus didaftarkan terlebih dahulu ke dalam sistem. Satu perusahaan bisa memiliki lebih dari satu gudang."
+      "body": "Gudang adalah lokasi fisik tempat stok barang disimpan. Setiap penerimaan barang, pengiriman, dan stock opname harus dikaitkan dengan gudang yang terdaftar. Satu perusahaan bisa memiliki lebih dari satu gudang."
     },
     {
       "type": "step",
       "stepNumber": 1,
       "title": "Buka Menu Gudang",
-      "body": "Dari menu utama, klik Data Master → Gudang. Halaman ini menampilkan daftar gudang yang sudah terdaftar."
+      "body": "Dari menu utama, klik Data Master → Gudang."
     },
     {
       "type": "step",
       "stepNumber": 2,
       "title": "Tambah Gudang Baru",
-      "body": "Klik tombol Tambah Gudang di sudut kanan atas. Form pengisian data gudang akan terbuka."
+      "body": "Klik tombol Tambah Gudang. Form panel akan terbuka."
     },
     {
       "type": "step",
       "stepNumber": 3,
-      "title": "Isi Informasi Gudang",
-      "body": "Isi informasi berikut:\n- Nama Gudang: nama yang mudah dikenali (contoh: Gudang Utama, Gudang Cabang Jakarta)\n- Kode Gudang: kode singkat unik untuk gudang ini\n- Alamat: alamat fisik lokasi gudang\n- Penanggung Jawab: nama atau divisi yang bertanggung jawab atas gudang ini"
-    },
-    {
-      "type": "info",
-      "body": "Kode Gudang harus unik dan tidak boleh sama dengan gudang lain. Kode ini akan muncul di berbagai dokumen seperti surat jalan dan laporan stok."
+      "title": "Isi Informasi Dasar",
+      "body": "Isi kolom berikut:\n- Nama Gudang: nama yang mudah dikenali (wajib, 2–100 karakter), contoh \"Gudang Utama Jakarta\" atau \"Gudang Bekasi\"\n- Deskripsi: keterangan tambahan (opsional, maks 500 karakter)"
     },
     {
       "type": "step",
       "stepNumber": 4,
-      "title": "Simpan Data Gudang",
-      "body": "Klik tombol Simpan. Gudang baru akan langsung tersedia dan bisa digunakan saat membuat penerimaan barang, transfer stok, atau stock opname."
+      "title": "Isi Lokasi Gudang",
+      "body": "Isi informasi lokasi fisik:\n- Alamat: alamat lengkap gudang\n- Provinsi: pilih via Location Picker\n- Kota/Kabupaten, Kecamatan, Desa/Kelurahan: pilih dari dropdown yang muncul\n- Latitude: koordinat lintang (-90 hingga 90)\n- Longitude: koordinat bujur (-180 hingga 180)\n- Klik Pilih di Peta untuk menentukan koordinat secara visual dengan klik langsung di peta interaktif"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan Gudang",
+      "body": "Klik Submit. Gudang baru langsung aktif dan siap digunakan di penerimaan barang, transfer stok, dan stock opname. Kode gudang dibuat otomatis oleh sistem."
+    },
+    {
+      "type": "warning",
+      "body": "Gudang yang sudah memiliki transaksi stok tidak bisa dihapus. Jika gudang tidak lagi digunakan, nonaktifkan melalui form Edit dan toggle status Aktif."
     }
   ]
 }

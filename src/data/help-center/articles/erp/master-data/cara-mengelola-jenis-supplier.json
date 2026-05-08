@@ -1,18 +1,18 @@
 {
   "title": "Cara Mengelola Jenis Supplier",
-  "description": "Panduan menambah dan mengatur kategori atau jenis supplier untuk pengelompokan data pemasok",
+  "description": "Panduan menambah dan mengatur kategori supplier untuk pengelompokan dan pelaporan data pemasok",
   "slug": "cara-mengelola-jenis-supplier",
   "module": "erp",
   "subcategory": "master-data",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["jenis supplier", "kategori supplier", "master data"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["jenis supplier", "tipe pemasok", "kategori supplier", "master data"],
   "relatedArticles": ["cara-menambah-supplier"],
   "content": [
     {
       "type": "text",
-      "body": "Jenis Supplier digunakan untuk mengelompokkan supplier berdasarkan kategori, misalnya: Supplier Bahan Baku, Supplier Jasa, atau Supplier Peralatan. Pengelompokan ini memudahkan pencarian dan pelaporan."
+      "body": "Jenis Supplier mengelompokkan pemasok berdasarkan kategori seperti Supplier Bahan Baku, Supplier Jasa, atau Supplier Peralatan. Pengelompokan ini memudahkan pencarian dan analisis data pemasok."
     },
     {
       "type": "step",
@@ -23,14 +23,18 @@
     {
       "type": "step",
       "stepNumber": 2,
-      "title": "Tambah Jenis Supplier Baru",
-      "body": "Klik tombol Tambah. Isi nama jenis supplier dan deskripsi singkat, lalu klik Simpan."
+      "title": "Tambah Jenis Baru",
+      "body": "Klik tombol Buat. Isi nama jenis supplier (contoh: Supplier Bahan Baku, Supplier Jasa, Supplier Impor) dan deskripsi singkat, lalu klik Simpan."
     },
     {
       "type": "step",
       "stepNumber": 3,
       "title": "Edit atau Hapus",
-      "body": "Gunakan ikon Edit untuk memperbarui nama jenis supplier, atau ikon Hapus untuk menghapus jenis yang tidak digunakan."
+      "body": "Klik ikon Edit untuk memperbarui nama. Klik ikon Hapus untuk menghapus jenis yang tidak digunakan. Jenis yang sudah digunakan oleh supplier aktif tidak bisa dihapus."
+    },
+    {
+      "type": "info",
+      "body": "Jenis Supplier juga bisa dibuat langsung dari form pendaftaran supplier dengan mengetik nama baru di field Tipe Pemasok — tidak perlu membuka menu ini terlebih dahulu."
     }
   ]
 }

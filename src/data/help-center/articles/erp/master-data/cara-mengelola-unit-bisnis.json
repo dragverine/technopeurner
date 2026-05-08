@@ -1,18 +1,18 @@
 {
   "title": "Cara Mengelola Unit Bisnis",
-  "description": "Panduan menambah dan mengatur unit bisnis sebagai entitas operasional dalam sistem ERP",
+  "description": "Panduan menambah dan mengatur unit bisnis sebagai entitas operasional yang digunakan dalam transaksi Purchase Order dan Sales Order",
   "slug": "cara-mengelola-unit-bisnis",
   "module": "erp",
   "subcategory": "master-data",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["unit bisnis", "organisasi", "master data"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["unit bisnis", "business unit", "organisasi", "master data"],
   "relatedArticles": ["cara-mengatur-data-perusahaan", "cara-mengelola-divisi"],
   "content": [
     {
       "type": "text",
-      "body": "Unit Bisnis adalah entitas operasional dalam perusahaan yang digunakan sebagai dasar pembuatan transaksi seperti Purchase Order dan Sales Order. Setiap transaksi harus dikaitkan dengan unit bisnis yang relevan."
+      "body": "Unit Bisnis adalah entitas operasional perusahaan yang digunakan sebagai dasar setiap transaksi — Purchase Order, Sales Order, dan dokumen keuangan lainnya. Setiap transaksi harus dikaitkan dengan unit bisnis yang relevan."
     },
     {
       "type": "step",
@@ -24,17 +24,23 @@
       "type": "step",
       "stepNumber": 2,
       "title": "Tambah Unit Bisnis Baru",
-      "body": "Klik tombol Tambah Unit Bisnis. Isi nama unit bisnis dan kodenya, lalu klik Simpan."
+      "body": "Klik tombol Buat. Isi form:\n- Nama Unit Bisnis: nama yang jelas, contoh \"Divisi Ritel\", \"Cabang Surabaya\" (wajib)\n- Deskripsi: keterangan fungsi unit bisnis (opsional)\n- Aktif: toggle status (default aktif)"
     },
     {
       "type": "step",
       "stepNumber": 3,
-      "title": "Edit atau Hapus",
-      "body": "Gunakan ikon Edit untuk memperbarui data, atau ikon Hapus untuk menghapus unit bisnis yang tidak digunakan."
+      "title": "Simpan",
+      "body": "Klik Simpan. Unit bisnis langsung tersedia di dropdown saat membuat Purchase Order, Sales Order, dan dokumen transaksi lainnya."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Edit atau Nonaktifkan",
+      "body": "Gunakan ikon Edit untuk memperbarui data. Toggle status Aktif ke nonaktif untuk menyembunyikan unit bisnis dari pilihan di transaksi baru."
     },
     {
       "type": "info",
-      "body": "Unit bisnis yang sudah digunakan dalam transaksi tidak dapat dihapus. Anda bisa menonaktifkannya agar tidak muncul di pilihan transaksi baru."
+      "body": "Unit bisnis yang sudah digunakan dalam transaksi tidak bisa dihapus — hanya bisa dinonaktifkan. Data transaksi lama tetap tersimpan dengan referensi unit bisnis tersebut."
     }
   ]
 }

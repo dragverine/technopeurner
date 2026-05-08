@@ -1,18 +1,18 @@
 {
   "title": "Cara Memproses Retur Pembelian",
-  "description": "Panduan mengembalikan barang yang tidak sesuai atau rusak kepada supplier",
+  "description": "Panduan mengembalikan barang rusak atau tidak sesuai ke supplier dengan pencatatan stok keluar dan penyesuaian hutang otomatis",
   "slug": "cara-memproses-retur-pembelian",
   "module": "erp",
   "subcategory": "purchasing",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["retur pembelian", "return", "supplier", "barang rusak"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["retur pembelian", "purchase return", "barang rusak", "supplier", "stok koreksi"],
   "relatedArticles": ["cara-menerima-barang", "cara-mencatat-faktur-pemasok"],
   "content": [
     {
       "type": "text",
-      "body": "Retur Pembelian dilakukan ketika barang yang diterima dari supplier tidak sesuai pesanan, rusak, atau perlu dikembalikan. Proses ini akan mengurangi stok dan menyesuaikan nilai hutang kepada supplier."
+      "body": "Retur Pembelian dilakukan ketika barang yang diterima dari supplier tidak sesuai pesanan, rusak, atau perlu dikembalikan karena alasan lain. Proses ini mengurangi stok dan menyesuaikan nilai hutang kepada supplier."
     },
     {
       "type": "step",
@@ -24,29 +24,29 @@
       "type": "step",
       "stepNumber": 2,
       "title": "Buat Retur Baru",
-      "body": "Klik tombol Buat Retur atau Buat dari Penerimaan Barang. Pilih Penerimaan Barang yang menjadi dasar retur."
+      "body": "Klik tombol Buat Retur atau Buat dari Penerimaan Barang untuk membuat retur langsung dari GR tertentu."
     },
     {
       "type": "step",
       "stepNumber": 3,
-      "title": "Pilih Barang yang Diretur",
-      "body": "Pilih produk yang akan dikembalikan. Isi jumlah dan alasan retur (contoh: Barang Rusak, Tidak Sesuai Spesifikasi)."
+      "title": "Pilih Penerimaan Barang Sumber",
+      "body": "Pilih Goods Receipt yang menjadi dasar retur ini. Daftar item yang diterima akan otomatis terisi."
     },
     {
       "type": "step",
       "stepNumber": 4,
-      "title": "Pilih Gudang Asal",
-      "body": "Pilih gudang tempat barang saat ini disimpan. Stok akan berkurang dari gudang ini saat retur dikonfirmasi."
+      "title": "Isi Detail Retur",
+      "body": "Isi form:\n- Tanggal Retur: tanggal barang dikembalikan ke supplier\n- Gudang Asal: gudang tempat barang saat ini disimpan — stok akan berkurang dari gudang ini\n- Produk yang Diretur: pilih dari daftar item GR\n- Jumlah Retur: berapa unit yang dikembalikan\n- Alasan Retur: Barang Rusak, Tidak Sesuai Spesifikasi, Kelebihan Pengiriman, dll\n- Catatan: informasi tambahan untuk supplier"
     },
     {
       "type": "step",
       "stepNumber": 5,
       "title": "Konfirmasi Retur",
-      "body": "Klik Konfirmasi. Stok akan berkurang dan nilai hutang kepada supplier akan disesuaikan sesuai nilai barang yang dikembalikan."
+      "body": "Klik Konfirmasi. Efek yang terjadi:\n- Stok berkurang di gudang asal\n- Nilai hutang kepada supplier berkurang sesuai nilai barang yang diretur\n- Jurnal akuntansi retur dibuat otomatis"
     },
     {
       "type": "warning",
-      "body": "Koordinasikan dengan supplier sebelum mengirimkan barang retur untuk memastikan proses penggantian atau kredit nota berjalan lancar."
+      "body": "Koordinasikan dengan supplier sebelum mengirimkan barang retur untuk memastikan proses penggantian atau kredit nota berjalan lancar. Konfirmasi retur di sistem sebaiknya dilakukan bersamaan atau setelah barang benar-benar dikirim."
     }
   ]
 }

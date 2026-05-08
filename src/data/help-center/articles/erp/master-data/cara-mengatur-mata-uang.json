@@ -1,18 +1,18 @@
 {
   "title": "Cara Mengatur Mata Uang",
-  "description": "Panduan menambah dan mengatur mata uang yang digunakan dalam transaksi pembelian dan penjualan",
+  "description": "Panduan menambah mata uang asing dan mengatur kurs untuk transaksi multi-mata uang dalam sistem ERP",
   "slug": "cara-mengatur-mata-uang",
   "module": "erp",
   "subcategory": "master-data",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["mata uang", "currency", "kurs", "master data"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["mata uang", "currency", "kurs", "multi currency", "master data"],
   "relatedArticles": ["cara-mengatur-ketentuan-pembayaran", "cara-membuat-purchase-order"],
   "content": [
     {
       "type": "text",
-      "body": "Mata uang digunakan dalam transaksi jual beli, terutama jika perusahaan melakukan transaksi dengan supplier atau pelanggan dari luar negeri. Sistem mendukung penggunaan multi-mata uang."
+      "body": "Mata uang digunakan dalam transaksi jual-beli, terutama jika perusahaan bertransaksi dengan supplier atau pelanggan dari luar negeri. Sistem mendukung multi-mata uang dengan kurs yang bisa diatur."
     },
     {
       "type": "step",
@@ -24,17 +24,17 @@
       "type": "step",
       "stepNumber": 2,
       "title": "Tambah Mata Uang Baru",
-      "body": "Klik tombol Tambah Mata Uang. Isi kode mata uang (contoh: USD, SGD), nama lengkap, dan simbol (contoh: $), lalu klik Simpan."
+      "body": "Klik tombol Buat. Isi:\n- Kode: kode ISO mata uang, contoh USD, SGD, EUR (wajib)\n- Nama: nama lengkap, contoh US Dollar (wajib)\n- Simbol: simbol yang ditampilkan, contoh $ atau €\n- Kurs terhadap IDR: nilai tukar saat ini\nKlik Simpan."
     },
     {
       "type": "step",
       "stepNumber": 3,
-      "title": "Atur Kurs (Exchange Rate)",
-      "body": "Setelah mata uang ditambahkan, isi nilai kurs terhadap mata uang dasar perusahaan. Kurs ini akan digunakan untuk konversi otomatis dalam laporan keuangan."
+      "title": "Perbarui Kurs",
+      "body": "Kurs mata uang berubah setiap hari. Buka Edit pada mata uang yang bersangkutan, perbarui nilai kurs, lalu Simpan. Kurs terbaru akan digunakan di transaksi berikutnya."
     },
     {
       "type": "info",
-      "body": "Mata uang dasar perusahaan (biasanya IDR) diatur di pengaturan perusahaan dan tidak bisa dihapus."
+      "body": "Mata uang dasar perusahaan (IDR) sudah tersedia secara default dan tidak bisa dihapus. Tambahkan mata uang asing hanya jika benar-benar digunakan dalam transaksi."
     }
   ]
 }

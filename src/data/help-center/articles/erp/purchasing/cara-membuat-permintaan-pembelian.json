@@ -1,62 +1,58 @@
 {
-  "title": "Cara Membuat Permintaan Pembelian",
-  "description": "Panduan membuat permintaan pembelian (purchase requisition) sebagai langkah awal proses pengadaan barang",
+  "title": "Cara Membuat Permintaan Pembelian (Purchase Requisition)",
+  "description": "Panduan membuat permintaan pengadaan barang internal sebelum Purchase Order dikirimkan ke supplier, lengkap dengan alur persetujuan",
   "slug": "cara-membuat-permintaan-pembelian",
   "module": "erp",
   "subcategory": "purchasing",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["permintaan pembelian", "purchase requisition", "pengadaan", "pembelian"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["permintaan pembelian", "purchase requisition", "PR", "pengadaan", "persetujuan"],
   "relatedArticles": ["cara-membuat-purchase-order", "cara-menerima-barang"],
   "content": [
     {
       "type": "text",
-      "body": "Permintaan Pembelian (Purchase Requisition) adalah dokumen internal yang dibuat oleh departemen atau unit bisnis untuk mengajukan kebutuhan barang sebelum dibuatkan Purchase Order ke supplier. Dokumen ini perlu disetujui terlebih dahulu sebelum proses pembelian bisa dilanjutkan."
+      "body": "Purchase Requisition (PR) adalah dokumen internal yang diajukan oleh departemen atau unit bisnis untuk meminta pengadaan barang. PR harus disetujui terlebih dahulu sebelum bisa dibuatkan Purchase Order ke supplier."
     },
     {
       "type": "step",
       "stepNumber": 1,
-      "title": "Buka Menu Permintaan",
-      "body": "Dari menu utama, klik Pembelian → Permintaan. Halaman ini menampilkan daftar seluruh permintaan pembelian yang ada."
+      "title": "Buka Menu Permintaan Pembelian",
+      "body": "Dari menu utama, klik Pembelian → Permintaan."
     },
     {
       "type": "step",
       "stepNumber": 2,
-      "title": "Buat Permintaan Baru",
-      "body": "Klik tombol Buat Permintaan di sudut kanan atas. Form permintaan pembelian akan terbuka."
+      "title": "Buat PR Baru",
+      "body": "Klik tombol Buat Permintaan. Form dialog akan terbuka dengan dua tab."
     },
     {
       "type": "step",
       "stepNumber": 3,
-      "title": "Isi Informasi Dasar",
-      "body": "Isi informasi berikut pada form:\n- Unit Bisnis: pilih unit bisnis yang mengajukan permintaan\n- Tanggal Kebutuhan: tanggal barang dibutuhkan\n- Catatan: keterangan tambahan jika diperlukan"
+      "title": "Tab Informasi Dasar",
+      "body": "Isi kolom berikut:\n- Tanggal Permintaan: tanggal PR dibuat\n- Tanggal Kebutuhan: kapan barang dibutuhkan\n- Unit Bisnis: unit yang mengajukan permintaan (wajib)\n- Catatan: alasan atau keterangan permintaan"
     },
     {
       "type": "step",
       "stepNumber": 4,
-      "title": "Tambahkan Barang",
-      "body": "Pada bagian Daftar Barang, klik Tambah Barang lalu pilih produk yang dibutuhkan. Isi kolom Jumlah dan Satuan untuk setiap barang. Ulangi langkah ini untuk setiap barang yang dibutuhkan."
-    },
-    {
-      "type": "info",
-      "body": "Anda bisa menambahkan lebih dari satu barang dalam satu permintaan pembelian. Pastikan jumlah yang diisi sudah sesuai dengan kebutuhan aktual."
+      "title": "Tab Item — Tambah Barang",
+      "body": "Di tab Item, klik Tambah Item untuk setiap barang yang dibutuhkan:\n- Produk: pilih barang dari katalog (wajib)\n- Jumlah (Qty): kuantitas yang dibutuhkan (wajib)\n- Satuan: satuan ukur produk\n- Catatan: keterangan spesifik untuk item ini\nUlangi untuk setiap barang yang diminta."
     },
     {
       "type": "step",
       "stepNumber": 5,
-      "title": "Simpan Permintaan",
-      "body": "Klik tombol Simpan untuk menyimpan permintaan. Status permintaan akan menjadi Draft dan siap dikirim untuk persetujuan."
+      "title": "Simpan dan Ajukan",
+      "body": "Klik Simpan untuk menyimpan sebagai Draft. Klik Ajukan Persetujuan untuk mengirimkan PR ke atasan atau bagian purchasing untuk di-review."
     },
     {
       "type": "step",
       "stepNumber": 6,
-      "title": "Kirim untuk Persetujuan",
-      "body": "Klik tombol Kirim untuk mengirimkan permintaan ke atasan atau bagian purchasing untuk disetujui. Setelah disetujui, permintaan ini bisa digunakan sebagai dasar pembuatan Purchase Order."
+      "title": "Pantau Status Persetujuan",
+      "body": "Status PR: Draft → Submitted (Menunggu Persetujuan) → Approved (Disetujui) → Rejected (Ditolak). PR yang sudah Approved bisa digunakan sebagai dasar pembuatan Purchase Order."
     },
     {
       "type": "warning",
-      "body": "Permintaan yang sudah dikirim tidak dapat diedit. Pastikan semua data sudah benar sebelum mengklik Kirim."
+      "body": "PR yang sudah diajukan (Submitted) tidak bisa diedit lagi. Jika ada perubahan sebelum disetujui, hubungi atasan untuk menolak PR tersebut agar bisa dibuat ulang."
     }
   ]
 }

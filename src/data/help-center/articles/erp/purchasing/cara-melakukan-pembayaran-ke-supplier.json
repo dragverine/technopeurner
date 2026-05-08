@@ -1,18 +1,18 @@
 {
   "title": "Cara Melakukan Pembayaran ke Supplier",
-  "description": "Panduan mencatat pembayaran hutang kepada supplier atas faktur yang sudah jatuh tempo",
+  "description": "Panduan mencatat pembayaran hutang kepada supplier atas faktur yang sudah dikonfirmasi, termasuk pembayaran multi-faktur",
   "slug": "cara-melakukan-pembayaran-ke-supplier",
   "module": "erp",
   "subcategory": "purchasing",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["pembayaran", "supplier", "hutang", "pelunasan"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["pembayaran supplier", "pelunasan hutang", "transfer ke supplier", "multi faktur"],
   "relatedArticles": ["cara-mencatat-faktur-pemasok", "cara-melihat-rekap-hutang"],
   "content": [
     {
       "type": "text",
-      "body": "Setelah faktur pemasok dikonfirmasi, pembayaran kepada supplier harus dicatat ke sistem agar saldo hutang diperbarui. Pembayaran bisa dilakukan secara penuh atau sebagian."
+      "body": "Setelah Faktur Pemasok dikonfirmasi, pembayaran kepada supplier harus dicatat ke sistem agar saldo hutang diperbarui. Satu pembayaran bisa mengalokasikan pelunasan untuk beberapa faktur sekaligus."
     },
     {
       "type": "step",
@@ -30,29 +30,29 @@
       "type": "step",
       "stepNumber": 3,
       "title": "Pilih Supplier",
-      "body": "Pilih nama supplier yang akan dibayar. Daftar faktur yang belum lunas akan muncul secara otomatis."
+      "body": "Pilih nama supplier yang akan dibayar. Daftar faktur yang belum lunas otomatis muncul di bagian bawah form."
     },
     {
       "type": "step",
       "stepNumber": 4,
-      "title": "Pilih Faktur yang Dibayar",
-      "body": "Centang faktur-faktur yang akan dilunasi. Anda bisa membayar lebih dari satu faktur sekaligus."
+      "title": "Isi Detail Pembayaran",
+      "body": "Isi kolom berikut:\n- Tanggal Pembayaran: tanggal transfer dilakukan\n- Metode Pembayaran: Transfer Bank, Tunai, Cek, dll\n- Rekening Bank yang Digunakan: pilih rekening perusahaan yang dipakai membayar\n- Jumlah Dibayar (Rp): total yang ditransfer ke supplier\n- Referensi: nomor bukti transfer atau kwitansi"
     },
     {
       "type": "step",
       "stepNumber": 5,
-      "title": "Isi Detail Pembayaran",
-      "body": "Isi informasi berikut:\n- Tanggal Pembayaran\n- Metode Pembayaran: transfer bank atau tunai\n- Akun Bank yang digunakan untuk membayar\n- Jumlah yang Dibayar"
+      "title": "Alokasikan ke Faktur",
+      "body": "Centang faktur-faktur yang akan dilunasi. Isi jumlah alokasi per faktur jika ada pembayaran parsial. Total alokasi tidak boleh melebihi jumlah yang dibayar."
     },
     {
       "type": "step",
       "stepNumber": 6,
       "title": "Konfirmasi Pembayaran",
-      "body": "Klik Konfirmasi. Status faktur yang dipilih akan berubah menjadi Lunas dan saldo hutang supplier akan berkurang."
+      "body": "Klik Konfirmasi. Status faktur yang dilunasi penuh berubah menjadi Lunas. Saldo hutang supplier berkurang. Rekening bank perusahaan berkurang di jurnal keuangan."
     },
     {
       "type": "info",
-      "body": "Pembayaran yang dikonfirmasi akan otomatis mencatat pengeluaran kas di jurnal keuangan."
+      "body": "Pembayaran yang sudah dikonfirmasi bisa di-reverse jika ada kesalahan. Buka detail pembayaran dan klik Reverse — sistem akan membuat jurnal balik otomatis."
     }
   ]
 }

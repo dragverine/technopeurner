@@ -1,34 +1,34 @@
 {
   "title": "Cara Mengelola Kemasan dan Jenis Pengadaan",
-  "description": "Panduan menambah tipe kemasan produk dan jenis pengadaan untuk kebutuhan transaksi pembelian",
+  "description": "Panduan menambah tipe kemasan produk dan jenis pengadaan untuk melengkapi data katalog produk",
   "slug": "cara-mengelola-kemasan",
   "module": "erp",
   "subcategory": "master-data",
   "author": "Tim Gilabs",
-  "createdAt": "2026-05-07",
-  "updatedAt": "2026-05-07",
-  "tags": ["kemasan", "packaging", "jenis pengadaan", "master data"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["kemasan", "packaging", "jenis pengadaan", "procurement type", "master data"],
   "relatedArticles": ["cara-menambah-produk", "cara-mengatur-satuan-ukur"],
   "content": [
     {
       "type": "text",
-      "body": "Kemasan mendefinisikan jenis pengemasan produk seperti Botol, Kardus, atau Sachet. Jenis Pengadaan mendefinisikan cara pengadaan produk, misalnya Beli atau Buat Sendiri."
+      "body": "Kemasan mendefinisikan jenis pengemasan produk seperti Botol, Kardus, atau Sachet. Jenis Pengadaan mendefinisikan cara produk diperoleh — apakah dibeli (Purchase), diproduksi sendiri (Manufacture), atau cara lainnya."
     },
     {
       "type": "step",
       "stepNumber": 1,
       "title": "Kelola Kemasan",
-      "body": "Dari menu utama, klik Data Master → Produk → Kemasan. Klik Tambah, isi nama kemasan (contoh: Botol 500ml), lalu klik Simpan."
+      "body": "Dari menu utama, klik Data Master → Produk → Kemasan. Klik Buat, isi nama kemasan (contoh: Botol 500ml, Kardus 12pcs, Sachet 10gr), lalu klik Simpan."
     },
     {
       "type": "step",
       "stepNumber": 2,
       "title": "Kelola Jenis Pengadaan",
-      "body": "Dari menu utama, klik Data Master → Produk → Jenis Pengadaan. Klik Tambah, isi nama jenis pengadaan (contoh: Pembelian, Produksi), lalu klik Simpan."
+      "body": "Dari menu utama, klik Data Master → Produk → Jenis Pengadaan. Klik Buat, isi nama jenis (contoh: Pembelian, Produksi Sendiri, Konsinyasi), lalu klik Simpan."
     },
     {
       "type": "info",
-      "body": "Data kemasan dan jenis pengadaan yang ditambahkan akan tersedia sebagai pilihan saat mendaftarkan produk baru."
+      "body": "Kemasan dan Jenis Pengadaan juga bisa dibuat langsung dari form produk — ketik nama baru di field yang sesuai dan sistem akan menyimpannya secara otomatis."
     }
   ]
 }
