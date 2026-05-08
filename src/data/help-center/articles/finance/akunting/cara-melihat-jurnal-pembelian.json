@@ -1,0 +1,46 @@
+{
+  "title": "Cara Melihat Jurnal Pembelian",
+  "description": "Panduan memantau entri jurnal yang dihasilkan otomatis dari transaksi faktur pemasok, pembayaran hutang, dan retur pembelian",
+  "slug": "cara-melihat-jurnal-pembelian",
+  "module": "finance",
+  "subcategory": "akunting",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["jurnal pembelian", "purchase journal", "faktur pemasok", "hutang", "akunting"],
+  "relatedArticles": ["cara-melihat-jurnal-penjualan", "cara-melihat-jurnal-transaksi"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Jurnal Pembelian menampilkan semua entri akuntansi yang dihasilkan otomatis dari transaksi di modul Pembelian — termasuk konfirmasi faktur pemasok, pembayaran ke supplier, retur pembelian, dan uang muka pemasok."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Jurnal Pembelian",
+      "body": "Dari menu utama, klik Keuangan → Akunting → Jurnal → Jurnal Pembelian."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Filter dan Cari Jurnal",
+      "body": "Gunakan filter tanggal untuk menentukan rentang waktu yang ingin dilihat. Gunakan kolom pencarian untuk mencari berdasarkan nomor referensi faktur atau nama supplier."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Baca Data Jurnal",
+      "body": "Setiap baris menampilkan nomor jurnal, tanggal, referensi (nomor faktur pemasok), total debit dan kredit, serta status jurnal. Klik baris untuk melihat detail baris debit-kredit, misalnya:\n- Debit: Persediaan atau Akun Beban\n- Debit: PPN Masukan (jika ada)\n- Kredit: Hutang Usaha (sesuai pemetaan akun)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Ekspor Data",
+      "body": "Klik tombol Ekspor untuk mengunduh data dalam format Excel."
+    },
+    {
+      "type": "info",
+      "body": "Sama seperti Jurnal Penjualan, Jurnal Pembelian bersifat read-only. Koreksi dilakukan melalui Jurnal Penyesuaian atau retur di modul Pembelian."
+    }
+  ]
+}

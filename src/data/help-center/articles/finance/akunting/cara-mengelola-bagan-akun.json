@@ -1,0 +1,56 @@
+{
+  "title": "Cara Mengelola Bagan Akun (Chart of Accounts)",
+  "description": "Panduan membuat dan mengatur bagan akun sebagai fondasi pencatatan seluruh transaksi keuangan perusahaan",
+  "slug": "cara-mengelola-bagan-akun",
+  "module": "finance",
+  "subcategory": "akunting",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["bagan akun", "COA", "chart of accounts", "akun keuangan", "akunting"],
+  "relatedArticles": ["cara-mengatur-pemetaan-akun", "cara-membuat-jurnal-penyesuaian"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Bagan Akun (Chart of Accounts / COA) adalah daftar lengkap semua akun keuangan yang digunakan perusahaan. Setiap transaksi keuangan akan dicatat ke salah satu akun dalam daftar ini. COA harus dibuat sebelum mengisi Pemetaan Akun atau membuat jurnal apapun."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Bagan Akun",
+      "body": "Dari menu utama, klik Keuangan → Akunting → Bagan Akun. Halaman ini menampilkan COA dalam dua tampilan yang bisa dipilih: Tree View (hierarki) atau List (tabel)."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Akun Baru",
+      "body": "Klik tombol Tambah Akun. Form dialog akan terbuka dengan kolom berikut:\n- Kode Akun: kode numerik unik untuk akun ini. Jika memilih akun induk, kode akan diisi otomatis berdasarkan urutan\n- Nama Akun: nama deskriptif, contoh \"Kas Kecil\" atau \"Hutang Usaha\"\n- Tipe Akun: pilih tipe yang sesuai dari dropdown (lihat daftar tipe di bawah)\n- Induk (Parent): pilih akun induk jika akun ini adalah sub-akun. Pilih Tanpa Induk jika akun ini berdiri sendiri\n- Aktif: toggle untuk mengaktifkan atau menonaktifkan akun\n- Bisa Diposting (Is Postable): toggle yang menentukan apakah akun ini bisa digunakan langsung dalam jurnal (hanya tersedia saat membuat akun baru)"
+    },
+    {
+      "type": "info",
+      "body": "Tipe akun yang tersedia:\n- Aset (Asset)\n- Aset Lancar (Current Asset)\n- Aset Tetap (Fixed Asset)\n- Kewajiban (Liability)\n- Hutang Dagang (Trade Payable)\n- Ekuitas (Equity)\n- Pendapatan (Revenue)\n- Beban (Expense)\n- Harga Pokok Penjualan (Cost of Goods Sold)\n- Kas & Bank (Cash & Bank)\n- Gaji & Upah (Salary & Wages)\n- Operasional (Operational)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Simpan Akun",
+      "body": "Klik tombol Submit. Akun baru akan muncul di daftar. Akun berstatus Postable bisa dipilih langsung dalam form jurnal. Akun Non-Postable hanya berfungsi sebagai kelompok di laporan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tambah Sub-Akun",
+      "body": "Untuk menambah akun di bawah akun induk, buka tampilan Tree View dan klik tombol tambah (+) di sebelah kanan akun induk, lalu pilih Tambah Akun Anak. Form yang muncul sudah otomatis memilih akun induk tersebut."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Edit Akun",
+      "body": "Klik ikon Edit (pensil) pada baris akun yang ingin diubah. Anda bisa mengubah nama, tipe, status aktif, atau induk akun. Perubahan langsung berlaku setelah diklik Submit."
+    },
+    {
+      "type": "warning",
+      "body": "Akun yang ditandai Protected tidak bisa diedit atau dihapus karena digunakan sistem secara internal. Akun yang sudah memiliki transaksi tidak bisa dihapus — nonaktifkan saja jika tidak ingin digunakan lagi."
+    }
+  ]
+}

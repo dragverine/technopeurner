@@ -1,0 +1,46 @@
+{
+  "title": "Cara Memindahkan Lokasi Aset (Transfer Aset)",
+  "description": "Panduan mencatat perpindahan aset dari satu lokasi fisik ke lokasi lain dengan tanggal dan keterangan yang tepat",
+  "slug": "cara-memindahkan-lokasi-aset",
+  "module": "finance",
+  "subcategory": "aset",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["pindah aset", "transfer aset", "lokasi aset", "manajemen aset"],
+  "relatedArticles": ["cara-mendaftarkan-aset", "cara-menugaskan-aset"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Transfer Aset digunakan untuk mencatat perpindahan aset dari satu lokasi fisik ke lokasi lain, misalnya memindahkan laptop dari Kantor Pusat ke Cabang Surabaya. Setiap transfer tersimpan dalam riwayat transaksi aset."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Detail Aset",
+      "body": "Dari menu Keuangan → Manajemen Aset → Aset, cari dan klik aset yang akan dipindahkan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Pilih Aksi Transfer",
+      "body": "Di halaman detail aset, klik menu Aksi lalu pilih Transfer. Dialog transfer akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Detail Transfer",
+      "body": "Isi kolom berikut:\n- Lokasi Baru: pilih lokasi tujuan dari dropdown (lokasi yang tersedia di menu Lokasi Aset)\n- Tanggal Transfer: tanggal perpindahan aset\n- Keterangan: alasan atau catatan perpindahan (opsional)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Submit Transfer",
+      "body": "Klik Submit. Lokasi aset akan diperbarui ke lokasi baru dan transaksi transfer tercatat di riwayat aset dengan tanggal dan detail yang diisi."
+    },
+    {
+      "type": "info",
+      "body": "Riwayat semua perpindahan lokasi bisa dilihat di tab Riwayat Transaksi di halaman detail aset, lengkap dengan tanggal dan lokasi sebelum dan sesudah transfer."
+    }
+  ]
+}

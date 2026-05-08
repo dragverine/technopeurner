@@ -1,0 +1,56 @@
+{
+  "title": "Cara Mengatur Konfigurasi Pajak (PPN)",
+  "description": "Panduan menambah dan mengaktifkan konfigurasi pajak PPN atau jenis pajak lainnya untuk digunakan dalam transaksi",
+  "slug": "cara-mengatur-pajak-ppn",
+  "module": "finance",
+  "subcategory": "pengaturan",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["pajak", "PPN", "VAT", "tax", "konfigurasi pajak", "pengaturan"],
+  "relatedArticles": ["cara-mengatur-pemetaan-akun", "cara-mengelola-faktur-pajak"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Konfigurasi Pajak mendefinisikan jenis-jenis pajak yang berlaku dalam transaksi perusahaan, seperti PPN 11%, PPh, atau Withholding Tax. Setelah pajak dikonfigurasi dan diaktifkan, pajak tersebut bisa dipilih saat membuat transaksi penjualan atau pembelian."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Konfigurasi Pajak",
+      "body": "Dari menu utama, klik Keuangan → Pengaturan → Konfigurasi Pajak."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Konfigurasi Pajak Baru",
+      "body": "Klik tombol Tambah Pajak. Form pengisian akan muncul dengan kolom berikut:\n- Perusahaan: pilih perusahaan dari dropdown\n- Kode Pajak: kode singkat unik, contoh \"PPN-11\"\n- Nama Pajak: nama lengkap, contoh \"Pajak Pertambahan Nilai 11%\"\n- Tipe Pajak: pilih salah satu dari dropdown — VAT, Income Tax, atau Withholding Tax\n- Tarif (%): isi persentase pajak, contoh \"11\" untuk PPN 11%\n- Akun COA: pilih akun kewajiban pajak dari Bagan Akun"
+    },
+    {
+      "type": "info",
+      "body": "Untuk PPN standar Indonesia, gunakan: Kode PPN-11, Nama Pajak Pertambahan Nilai 11%, Tipe VAT, Tarif 11%, dan pilih akun Hutang PPN di Bagan Akun."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Simpan Konfigurasi Pajak",
+      "body": "Klik Simpan Pajak. Konfigurasi baru akan muncul di daftar dengan status Inactive."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Aktifkan Pajak",
+      "body": "Konfigurasi pajak yang baru disimpan masih berstatus Inactive. Klik tombol Aktifkan pada baris pajak tersebut untuk mengaktifkannya. Pajak yang sudah aktif akan tersedia sebagai pilihan di form transaksi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Nonaktifkan Pajak (Jika Diperlukan)",
+      "body": "Jika suatu jenis pajak tidak lagi berlaku, klik tombol Nonaktifkan pada baris pajak tersebut. Pajak yang dinonaktifkan tidak akan muncul lagi sebagai pilihan di transaksi baru."
+    },
+    {
+      "type": "warning",
+      "body": "Mengubah konfigurasi pajak yang sudah digunakan di transaksi sebelumnya bisa mempengaruhi laporan perpajakan. Konsultasikan dengan bagian Finance sebelum mengubah tarif atau tipe pajak yang sudah aktif."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Cara Memproses Pelepasan Aset (Disposal)",
+  "description": "Panduan memproses penjualan atau penghapusan aset tetap yang sudah tidak digunakan beserta pencatatan jurnal pelepasan",
+  "slug": "cara-memproses-disposal-aset",
+  "module": "finance",
+  "subcategory": "aset",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["disposal aset", "pelepasan aset", "penjualan aset", "write-off", "aset tetap"],
+  "relatedArticles": ["cara-mendaftarkan-aset", "cara-melakukan-revaluasi-aset"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Disposal Aset adalah proses melepaskan aset yang sudah tidak digunakan — baik dijual, dihancurkan, atau dibuang. Sistem akan menghitung keuntungan atau kerugian pelepasan berdasarkan nilai buku saat ini dibandingkan harga jual, lalu mencatatnya di jurnal secara otomatis."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Tab Disposal Aset",
+      "body": "Dari menu utama, klik Keuangan → Manajemen Aset → Aset Tetap, lalu pilih tab Disposal Aset."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Disposal Baru",
+      "body": "Klik tombol Buat Disposal Baru."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Form Disposal",
+      "body": "Isi form berikut:\n- Aset: cari dan pilih aset yang akan dilepas\n- Jumlah Hasil (Proceeds Amount): nilai yang diterima dari penjualan aset. Isi 0 jika aset dihancurkan atau dibuang tanpa hasil\n- Rekening Bank: pilih rekening bank untuk menerima hasil penjualan (wajib jika ada hasil penjualan)\n- Tanggal Disposal: tanggal aset resmi dilepas\n- Keterangan: alasan atau catatan pelepasan (opsional)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Proses Disposal",
+      "body": "Klik tombol Lepas Aset (Dispose Asset). Sistem akan:\n1. Menghitung nilai buku aset saat ini (Biaya Perolehan - Akumulasi Depresiasi)\n2. Membandingkan dengan Jumlah Hasil penjualan\n3. Mencatat selisih sebagai Keuntungan atau Kerugian Pelepasan Aset di jurnal\n4. Memindahkan aset ke status Dilepas (Disposed)"
+    },
+    {
+      "type": "info",
+      "body": "Jika Jumlah Hasil > Nilai Buku: selisihnya dicatat sebagai Keuntungan Pelepasan Aset (pendapatan lain-lain). Jika Jumlah Hasil < Nilai Buku: selisihnya dicatat sebagai Kerugian Pelepasan Aset (beban lain-lain)."
+    },
+    {
+      "type": "warning",
+      "body": "Setelah disposal dikonfirmasi, aset tidak akan muncul lagi di daftar aset aktif dan tidak bisa didepresiasi. Pastikan aset sudah benar-benar tidak digunakan sebelum memproses disposal."
+    }
+  ]
+}

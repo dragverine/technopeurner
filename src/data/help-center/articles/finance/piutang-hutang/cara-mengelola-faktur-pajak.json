@@ -1,0 +1,58 @@
+{
+  "title": "Cara Mengelola Faktur Pajak",
+  "description": "Panduan membuat faktur pajak PPN yang terhubung ke faktur supplier untuk keperluan pelaporan SPT PPN",
+  "slug": "cara-mengelola-faktur-pajak",
+  "module": "finance",
+  "subcategory": "piutang-hutang",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["faktur pajak", "PPN", "e-faktur", "DJP", "pelaporan pajak"],
+  "relatedArticles": ["cara-mengatur-pajak-ppn", "cara-mencatat-hutang-non-trade"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Faktur Pajak adalah dokumen resmi bukti pemungutan PPN. Sistem mengelola faktur pajak yang terhubung ke faktur supplier, sehingga nilai DPP (Dasar Pengenaan Pajak) dan PPN bisa diverifikasi dan digunakan untuk pelaporan SPT PPN."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Faktur Pajak",
+      "body": "Dari menu utama, klik Keuangan → Piutang & Hutang → Faktur Pajak."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Faktur Pajak Baru",
+      "body": "Klik tombol Buat Faktur Pajak. Form dialog akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Hubungkan ke Faktur Supplier",
+      "body": "Di form, pilih Faktur Supplier yang menjadi dasar faktur pajak ini. Setelah dipilih, sistem akan otomatis mengisi:\n- Nilai DPP (Dasar Pengenaan Pajak) dari nilai faktur\n- Nilai PPN berdasarkan tarif yang dikonfigurasi\n- Data supplier"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Nomor Seri Faktur Pajak",
+      "body": "Masukkan nomor seri faktur pajak resmi sesuai yang tertera di dokumen fisik dari supplier (sesuai penomoran e-Faktur DJP). Nomor ini harus diisi dengan benar untuk keperluan pelaporan pajak."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Verifikasi Nilai DPP dan PPN",
+      "body": "Periksa nilai DPP dan PPN yang terisi otomatis. Jika ada diskrepansi antara nilai di sistem dan dokumen fisik dari supplier, sistem akan menampilkan indikator peringatan. Selesaikan perbedaan tersebut sebelum menyimpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Simpan Faktur Pajak",
+      "body": "Klik Simpan. Faktur pajak tersimpan dan bisa dicetak atau diekspor untuk keperluan rekonsiliasi dengan laporan SPT PPN di aplikasi e-Faktur DJP."
+    },
+    {
+      "type": "info",
+      "body": "Pastikan Konfigurasi Pajak sudah diatur di menu Pengaturan sebelum membuat faktur pajak. Tanpa konfigurasi pajak yang aktif, form ini tidak akan tersedia."
+    }
+  ]
+}

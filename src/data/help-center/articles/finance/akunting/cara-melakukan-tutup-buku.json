@@ -1,0 +1,62 @@
+{
+  "title": "Cara Melakukan Tutup Buku (Financial Closing)",
+  "description": "Panduan menutup periode akuntansi resmi melalui wizard 4 langkah agar laporan keuangan terkunci dan tidak bisa diubah",
+  "slug": "cara-melakukan-tutup-buku",
+  "module": "finance",
+  "subcategory": "akunting",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["tutup buku", "financial closing", "penutupan periode", "laporan final"],
+  "relatedArticles": ["cara-membuat-jurnal-penyesuaian", "cara-melihat-neraca-keuangan", "cara-melihat-laporan-laba-rugi"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Tutup Buku adalah proses resmi menutup periode akuntansi. Setelah dikunci, tidak ada transaksi baru yang bisa diposting ke periode tersebut. Proses ini dilakukan melalui wizard 4 langkah: Pre-Check → Review → Eksekusi → Selesai."
+    },
+    {
+      "type": "warning",
+      "body": "Pastikan SEMUA jurnal dalam periode sudah diposting dan tidak ada transaksi yang masih berstatus Draft sebelum memulai proses tutup buku. Tutup buku yang sudah dikonfirmasi tidak bisa dibatalkan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Tutup Buku",
+      "body": "Dari menu utama, klik Keuangan → Akunting → Tutup Buku. Daftar penutupan periode yang pernah dilakukan akan ditampilkan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Mulai Penutupan Baru",
+      "body": "Klik tombol Buat Penutupan. Wizard akan terbuka dan langsung masuk ke Langkah 1."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Langkah 1 — Pre-Check",
+      "body": "Sistem menampilkan ringkasan validasi:\n- Tanggal Akhir Periode\n- Jumlah Akun yang Tercakup\n- Total Saldo Penutupan\n- Total Selisih\nJika Total Selisih tidak nol, sistem akan menampilkan banner peringatan. Selesaikan semua jurnal yang belum diposting sebelum melanjutkan. Klik Lanjut jika tidak ada masalah."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Langkah 2 — Review Neraca Saldo",
+      "body": "Halaman ini menampilkan tabel Neraca Saldo (Trial Balance) dengan kolom:\n- Akun (kode + nama)\n- Saldo Penutupan periode ini\n- Saldo Pembukaan periode sebelumnya\n- Selisih\nGunakan toggle Tampilkan Selisih Saja untuk fokus pada akun yang memiliki selisih. Klik Buka Trial Balance untuk melihat detail lengkap di halaman terpisah. Klik Lanjut jika sudah diperiksa."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Langkah 3 — Eksekusi",
+      "body": "Halaman konfirmasi terakhir sebelum proses dijalankan. Baca peringatan yang ditampilkan bahwa proses ini akan mengunci periode dan tidak bisa dibatalkan. Klik tombol Setujui untuk menjalankan penutupan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Langkah 4 — Selesai",
+      "body": "Sistem menampilkan konfirmasi bahwa penutupan berhasil dengan ikon centang dan tanggal akhir periode yang ditutup. Pada langkah ini, Anda bisa memilih opsi Tutup Buku Akhir Tahun (Year-End Close) dengan mencentang checkbox dan mengisi nomor tahun fiskal. Proses ini akan mereset akun Pendapatan dan Beban ke nol dan memindahkan saldo bersih ke akun Laba Ditahan."
+    },
+    {
+      "type": "info",
+      "body": "Setelah tutup buku selesai, laporan keuangan periode tersebut bisa dicetak sebagai laporan final yang datanya sudah terkunci dan tidak akan berubah."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Cara Mengelola Data Gaji Pokok Karyawan",
+  "description": "Panduan mencatat gaji pokok karyawan dengan alur persetujuan dan memantau tren biaya SDM perusahaan",
+  "slug": "cara-mengelola-gaji-pokok",
+  "module": "finance",
+  "subcategory": "anggaran",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["gaji pokok", "salary", "biaya SDM", "karyawan", "tren gaji"],
+  "relatedArticles": ["cara-membuat-anggaran"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Menu Gaji Pokok di modul Finance mencatat besaran gaji dasar setiap karyawan untuk keperluan perencanaan dan analisis biaya SDM perusahaan. Data ini dilengkapi alur persetujuan dan visualisasi tren gaji dari waktu ke waktu."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Gaji Pokok",
+      "body": "Dari menu utama, klik Keuangan → Anggaran & Gaji → Gaji Pokok. Halaman menampilkan statistik di bagian atas: Total Gaji Aktif, Jumlah Karyawan Aktif, Draft, dan Tidak Aktif."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Data Gaji Baru",
+      "body": "Klik tombol Tambah Gaji. Form dialog tiga bagian akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Karyawan",
+      "body": "Di bagian Informasi Karyawan:\n- Karyawan: klik field dan ketik nama untuk mencari karyawan. Sistem menampilkan daftar dengan foto, nama, dan kode karyawan. Pilih karyawan yang tepat.\n- Field ini tidak bisa diubah setelah disimpan (disabled saat edit)."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Informasi Gaji",
+      "body": "Di bagian Informasi Gaji:\n- Gaji Pokok: isi nominal gaji pokok dalam Rupiah (prefix \"Rp\", placeholder \"0\") (wajib)\n- Tanggal Efektif: pilih tanggal mulai berlakunya gaji ini menggunakan date picker kalender. Format tampilan: \"Mmm DD, YYYY\" (wajib)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Tambah Catatan",
+      "body": "Di bagian Informasi Tambahan:\n- Catatan: isi keterangan opsional, contoh \"Kenaikan gaji sesuai review tahunan 2026\" (maksimal 3 baris)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Submit Data Gaji",
+      "body": "Klik Submit. Data tersimpan dengan status Draft. Tombol akan menampilkan Menyimpan... dengan ikon loading selama proses berlangsung."
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Ajukan Persetujuan",
+      "body": "Klik Setujui (Approve) pada baris data gaji yang baru dibuat. Setelah disetujui, status berubah menjadi Aktif."
+    },
+    {
+      "type": "step",
+      "stepNumber": 8,
+      "title": "Pantau Tren Gaji",
+      "body": "Halaman utama menampilkan:\n- Grafik Tren Total Gaji perusahaan dari waktu ke waktu\n- Statistik: Total, Rata-rata, Gaji Tertinggi, dan Terendah\nKlik nama karyawan untuk melihat Grafik Riwayat Gaji individu tersebut."
+    },
+    {
+      "type": "info",
+      "body": "Data gaji di menu ini hanya untuk keperluan perencanaan keuangan dan analisis biaya SDM. Untuk proses penggajian lengkap termasuk tunjangan, potongan, dan slip gaji, gunakan modul HR."
+    }
+  ]
+}

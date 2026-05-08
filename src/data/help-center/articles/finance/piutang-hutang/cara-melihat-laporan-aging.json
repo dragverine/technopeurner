@@ -1,0 +1,58 @@
+{
+  "title": "Cara Melihat Laporan Aging Piutang dan Hutang",
+  "description": "Panduan menggunakan laporan aging untuk memantau umur piutang pelanggan dan hutang supplier berdasarkan bucket jatuh tempo",
+  "slug": "cara-melihat-laporan-aging",
+  "module": "finance",
+  "subcategory": "piutang-hutang",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["aging report", "laporan aging", "piutang", "hutang", "jatuh tempo", "AR", "AP"],
+  "relatedArticles": ["cara-mencatat-hutang-non-trade", "cara-melihat-neraca-keuangan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Laporan Aging mengelompokkan piutang (AR) dan hutang (AP) berdasarkan berapa lama sudah melewati tanggal jatuh tempo. Laporan ini adalah alat utama manajemen untuk memantau kesehatan arus kas dan menentukan prioritas penagihan atau pembayaran."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Laporan Aging",
+      "body": "Dari menu utama, klik Keuangan → Piutang & Hutang → Laporan Aging."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Pilih Tipe Laporan",
+      "body": "Halaman menampilkan dua tab:\n- AR Aging (Piutang): tagihan dari pelanggan yang belum dibayar ke perusahaan\n- AP Aging (Hutang): tagihan dari supplier/vendor yang belum dibayar oleh perusahaan\nKlik tab yang sesuai dengan kebutuhan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Atur Tanggal Laporan",
+      "body": "Pilih tanggal As-Of (per tanggal berapa laporan ini dibuat). Sistem menghitung umur setiap tagihan berdasarkan selisih tanggal jatuh tempo dengan tanggal As-Of yang dipilih."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Baca Data per Bucket Waktu",
+      "body": "Laporan mengelompokkan tagihan ke dalam bucket:\n- Current: belum jatuh tempo\n- 1–30 hari: jatuh tempo 1–30 hari yang lalu\n- 31–60 hari: jatuh tempo 31–60 hari yang lalu\n- 61–90 hari: jatuh tempo 61–90 hari yang lalu\n- Lebih dari 90 hari: jatuh tempo lebih dari 90 hari yang lalu\nSetiap baris menampilkan total per pelanggan/supplier di masing-masing bucket."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Konfigurasi Bucket",
+      "body": "Jika bucket default tidak sesuai kebijakan perusahaan, klik tombol Konfigurasi Bucket di halaman laporan. Anda bisa mengubah batas hari untuk setiap bucket sesuai kebutuhan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Ekspor Laporan",
+      "body": "Klik tombol Ekspor untuk mengunduh laporan aging dalam format Excel. Data yang diekspor sesuai dengan filter dan tipe laporan yang aktif saat itu."
+    },
+    {
+      "type": "info",
+      "body": "Tagihan di bucket 61-90 hari dan >90 hari perlu mendapat perhatian segera. Untuk AR, segera lakukan follow-up ke pelanggan. Untuk AP, koordinasikan dengan Finance untuk jadwal pembayaran agar tidak merusak hubungan dengan supplier."
+    }
+  ]
+}

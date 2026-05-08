@@ -1,0 +1,64 @@
+{
+  "title": "Cara Membuat dan Memantau Anggaran",
+  "description": "Panduan membuat anggaran perusahaan per departemen dan memantau realisasi pengeluaran terhadap anggaran yang ditetapkan secara real-time",
+  "slug": "cara-membuat-anggaran",
+  "module": "finance",
+  "subcategory": "anggaran",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["anggaran", "budget", "perencanaan keuangan", "realisasi", "departemen"],
+  "relatedArticles": ["cara-mengelola-gaji-pokok", "cara-melihat-laporan-laba-rugi"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Fitur Anggaran memungkinkan perusahaan menetapkan target pengeluaran per akun untuk departemen dan periode tertentu. Sistem memantau realisasi secara real-time sehingga manajemen bisa mengendalikan pengeluaran sebelum melampaui batas."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Anggaran",
+      "body": "Dari menu utama, klik Keuangan → Anggaran & Gaji → Anggaran. Halaman overview menampilkan ringkasan semua anggaran aktif beserta tingkat utilisasinya."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Anggaran Baru",
+      "body": "Klik tombol Buat Anggaran. Form dialog dua bagian akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Header Anggaran",
+      "body": "Bagian Header Anggaran berisi:\n- Nama: nama anggaran yang deskriptif, contoh \"Anggaran Operasional Q1 2026\" (wajib)\n- Keterangan: deskripsi tambahan (opsional)\n- Departemen: nama departemen atau unit yang menggunakan anggaran ini, contoh \"Marketing\" (wajib)\n- Tahun Fiskal: isi 4 digit tahun, contoh \"2026\" (wajib)\n- Tanggal Mulai: awal periode anggaran (wajib)\n- Tanggal Selesai: akhir periode anggaran (wajib)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tambah Baris Anggaran",
+      "body": "Bagian Baris Anggaran berisi item-item pengeluaran. Klik Tambah Item untuk setiap pos anggaran:\n- Akun: pilih akun COA (biasanya akun Beban/Expense) (wajib)\n- Jumlah: nilai anggaran yang ditetapkan, dalam Rupiah (wajib, format desimal)\n- Memo: catatan untuk baris ini (opsional)\nUlangi untuk setiap pos anggaran. Minimal 1 baris diperlukan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan Anggaran",
+      "body": "Klik Submit. Anggaran tersimpan dengan status Draft."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Ajukan Persetujuan",
+      "body": "Buka detail anggaran dan klik Ajukan. Anggaran dikirim ke manajemen untuk disetujui. Setelah disetujui, statusnya berubah menjadi Approved dan anggaran aktif dipantau."
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Pantau Realisasi",
+      "body": "Buka detail anggaran untuk melihat:\n- Kartu Progres per pos: menampilkan Total Anggaran, Realisasi, Sisa Anggaran, dan % Utilisasi\n- Overview halaman utama: ringkasan semua anggaran aktif dengan statistik Total Anggaran, Terpakai, Sisa, dan Tingkat Utilisasi keseluruhan"
+    },
+    {
+      "type": "info",
+      "body": "Tampilan kartu dan list tersedia di halaman utama Anggaran. Klik ikon toggle di sudut kanan untuk berpindah antara tampilan Kartu dan tampilan Tabel."
+    }
+  ]
+}

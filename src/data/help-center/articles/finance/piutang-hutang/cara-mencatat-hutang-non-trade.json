@@ -1,0 +1,54 @@
+{
+  "title": "Cara Mencatat Hutang Non-Trade",
+  "description": "Panduan mencatat dan mengelola hutang yang tidak berasal dari pembelian barang dagang, seperti sewa, utilitas, dan jasa, lengkap dengan alur persetujuan dan pembayaran",
+  "slug": "cara-mencatat-hutang-non-trade",
+  "module": "finance",
+  "subcategory": "piutang-hutang",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["hutang non-trade", "non-trade payable", "biaya operasional", "kewajiban", "persetujuan"],
+  "relatedArticles": ["cara-mencatat-pembayaran-finance", "cara-melihat-laporan-aging"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Hutang Non-Trade mencatat kewajiban pembayaran yang tidak berasal dari pembelian barang dagang — seperti tagihan sewa kantor, listrik, internet, atau jasa konsultan. Setiap tagihan melewati alur persetujuan sebelum bisa dibayar."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Hutang Non-Trade",
+      "body": "Dari menu utama, klik Keuangan → Piutang & Hutang → Hutang Non-Trade."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Hutang Baru",
+      "body": "Klik tombol Buat Hutang Baru. Form dialog akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Detail Hutang",
+      "body": "Isi kolom berikut:\n- Tanggal Transaksi: tanggal tagihan diterima (wajib)\n- Tanggal Jatuh Tempo: batas waktu pembayaran (opsional)\n- Akun COA: pilih akun beban yang sesuai dari Bagan Akun, contoh \"Beban Sewa\", \"Beban Listrik\" (wajib)\n- Jumlah: nominal tagihan dalam Rupiah (wajib)\n- Nama Vendor: nama pihak yang menagih, contoh \"PT. Sinar Properti\" (wajib)\n- No. Referensi: nomor invoice dari vendor (opsional)\n- Keterangan: deskripsi tagihan, contoh \"Sewa kantor bulan Mei 2026\" (opsional, 4 baris textarea)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Submit untuk Persetujuan",
+      "body": "Klik Submit. Tagihan tersimpan dan dikirim ke antrian persetujuan. Status akan berubah menjadi Submitted."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Pantau Status Persetujuan",
+      "body": "Status hutang non-trade:\n- Draft: baru dibuat, belum disubmit\n- Submitted: menunggu persetujuan\n- Approved: disetujui, siap dibayar\n- Confirmed: terkonfirmasi\n- Unpaid / Overdue: belum/sudah lewat jatuh tempo\n- Partial: dibayar sebagian\n- Paid: sudah lunas\n- Rejected / Cancelled: ditolak atau dibatalkan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Bayar Hutang",
+      "body": "Setelah disetujui, klik tombol Bayar di halaman detail hutang. Dialog pembayaran akan muncul — pilih rekening bank, isi tanggal dan jumlah pembayaran, lalu konfirmasi."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Cara Melihat Jurnal Penjualan",
+  "description": "Panduan memantau entri jurnal yang dihasilkan otomatis dari transaksi faktur pelanggan, pembayaran, dan retur penjualan",
+  "slug": "cara-melihat-jurnal-penjualan",
+  "module": "finance",
+  "subcategory": "akunting",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["jurnal penjualan", "sales journal", "faktur pelanggan", "piutang", "akunting"],
+  "relatedArticles": ["cara-melihat-jurnal-pembelian", "cara-melihat-jurnal-transaksi", "cara-membuat-jurnal-penyesuaian"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Jurnal Penjualan menampilkan semua entri akuntansi yang dihasilkan secara otomatis dari transaksi di modul Penjualan — termasuk konfirmasi faktur pelanggan, pembayaran yang diterima, retur penjualan, dan uang muka pelanggan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Jurnal Penjualan",
+      "body": "Dari menu utama, klik Keuangan → Akunting → Jurnal → Jurnal Penjualan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Gunakan Filter Tanggal",
+      "body": "Filter tanggal secara default menampilkan jurnal dari 1 Januari tahun berjalan hingga hari ini. Ubah filter Tanggal Mulai dan Tanggal Selesai untuk melihat jurnal dalam rentang waktu lain."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Cari Jurnal Tertentu",
+      "body": "Gunakan kolom pencarian di bagian atas tabel untuk mencari jurnal berdasarkan nomor referensi, nama pelanggan, atau keterangan. Pencarian berjalan otomatis setelah 300ms berhenti mengetik."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Baca Kolom Tabel",
+      "body": "Setiap baris jurnal penjualan menampilkan:\n- Nomor Jurnal\n- Tanggal Entri\n- Referensi: nomor faktur pelanggan yang menghasilkan jurnal ini\n- Keterangan\n- Total Debit\n- Total Kredit\n- Status: Posted, Draft, Cancelled, atau Reversed"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Lihat Detail Jurnal",
+      "body": "Klik baris jurnal untuk membuka detail. Di sini Anda bisa melihat setiap baris debit-kredit beserta akun yang digunakan, misalnya:\n- Debit: Piutang Usaha (sesuai pemetaan akun)\n- Kredit: Pendapatan Penjualan\n- Kredit: PPN Keluaran (jika dikenakan pajak)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Ekspor Data",
+      "body": "Klik tombol Ekspor untuk mengunduh data jurnal penjualan dalam format Excel sesuai filter yang aktif saat ini."
+    },
+    {
+      "type": "info",
+      "body": "Jurnal Penjualan bersifat read-only karena dihasilkan otomatis dari sistem. Jika ada koreksi yang diperlukan, gunakan Jurnal Penyesuaian atau batalkan transaksi sumber di modul Penjualan."
+    }
+  ]
+}

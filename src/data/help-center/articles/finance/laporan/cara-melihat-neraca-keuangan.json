@@ -1,0 +1,58 @@
+{
+  "title": "Cara Melihat Neraca Keuangan (Balance Sheet)",
+  "description": "Panduan membaca laporan neraca keuangan yang menampilkan posisi aset, kewajiban, dan ekuitas perusahaan pada tanggal tertentu",
+  "slug": "cara-melihat-neraca-keuangan",
+  "module": "finance",
+  "subcategory": "laporan",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["neraca keuangan", "balance sheet", "aset", "kewajiban", "ekuitas", "laporan keuangan"],
+  "relatedArticles": ["cara-melihat-buku-besar", "cara-melihat-laporan-laba-rugi", "cara-melakukan-tutup-buku"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Neraca Keuangan (Balance Sheet) adalah laporan posisi keuangan perusahaan pada tanggal tertentu. Laporan ini menampilkan total aset yang dimiliki, total kewajiban yang harus dibayar, dan ekuitas pemilik — ketiganya harus selalu seimbang: Total Aset = Kewajiban + Ekuitas."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Neraca Keuangan",
+      "body": "Dari menu utama, klik Keuangan → Laporan Keuangan → Neraca Keuangan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Pilih Tanggal Laporan",
+      "body": "Pilih tanggal As-Of — tanggal posisi keuangan yang ingin dilihat. Contoh: pilih 31 Maret 2026 untuk melihat neraca per akhir Q1 2026. Sistem akan menghitung posisi seluruh akun pada tanggal tersebut."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Aktifkan Perbandingan Periode",
+      "body": "Aktifkan toggle Perbandingan untuk menampilkan dua kolom berdampingan — periode saat ini vs periode sebelumnya. Ini memudahkan analisis perubahan posisi keuangan antar periode."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Baca Tiga Bagian Neraca",
+      "body": "Neraca terdiri dari:\n1. ASET\n  - Aset Lancar: kas, piutang, persediaan, aset lancar lain\n  - Aset Tetap: peralatan, kendaraan, gedung (dikurangi akumulasi depresiasi)\n  - Total Aset\n2. KEWAJIBAN\n  - Kewajiban Lancar: hutang usaha, hutang jangka pendek\n  - Kewajiban Jangka Panjang: hutang bank, obligasi\n  - Total Kewajiban\n3. EKUITAS\n  - Modal Disetor\n  - Laba Ditahan\n  - Laba Periode Berjalan\n  - Total Ekuitas\nTotal Aset harus sama dengan Total Kewajiban + Total Ekuitas."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Periksa Keseimbangan Neraca",
+      "body": "Sistem menampilkan indikator validasi keseimbangan. Jika Total Aset ≠ Total Kewajiban + Ekuitas, ada masalah dalam pencatatan jurnal. Periksa Buku Besar untuk menemukan penyebabnya."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Ekspor Laporan",
+      "body": "Klik tombol Ekspor untuk mengunduh neraca dalam format Excel, siap untuk dipresentasikan ke manajemen atau disampaikan ke auditor."
+    },
+    {
+      "type": "info",
+      "body": "Neraca yang akurat bergantung pada semua jurnal sudah diposting dan saldo awal sudah diisi dengan benar. Untuk laporan neraca final di akhir periode, pastikan proses Tutup Buku sudah dilakukan terlebih dahulu."
+    }
+  ]
+}

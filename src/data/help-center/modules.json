@@ -48,12 +48,16 @@
     {
       "id": "finance",
       "title": "Finance",
-      "description": "Manajemen keuangan perusahaan",
+      "description": "Manajemen keuangan perusahaan secara menyeluruh",
       "color": "#14B8A6",
       "subcategories": [
-        { "id": "invoice", "title": "Invoice", "description": "Kelola faktur dan tagihan" },
-        { "id": "journal", "title": "Journal", "description": "Jurnal dan catatan keuangan" },
-        { "id": "report", "title": "Report", "description": "Laporan keuangan" }
+        { "id": "pengaturan", "title": "Pengaturan Keuangan", "description": "Konfigurasi awal sistem keuangan, tahun fiskal, pemetaan akun, dan pajak" },
+        { "id": "akunting", "title": "Akunting", "description": "Bagan akun, jurnal transaksi, dan penutupan periode" },
+        { "id": "perbankan", "title": "Perbankan & Pembayaran", "description": "Kelola rekening bank, transaksi kas, transfer, dan rekonsiliasi" },
+        { "id": "piutang-hutang", "title": "Piutang & Hutang", "description": "Hutang non-trade, faktur pajak, pembayaran, dan laporan aging" },
+        { "id": "anggaran", "title": "Anggaran & Gaji", "description": "Kelola anggaran perusahaan dan data gaji pokok karyawan" },
+        { "id": "aset", "title": "Manajemen Aset", "description": "Daftarkan aset, kelola depresiasi, disposal, dan revaluasi" },
+        { "id": "laporan", "title": "Laporan Keuangan", "description": "Buku besar, neraca keuangan, dan laporan laba rugi" }
       ]
     },
     {

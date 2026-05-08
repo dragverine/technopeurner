@@ -1,0 +1,46 @@
+{
+  "title": "Cara Melihat Jurnal Kas & Bank",
+  "description": "Panduan memantau entri jurnal dari seluruh transaksi kas masuk, kas keluar, dan transfer antar rekening bank",
+  "slug": "cara-melihat-jurnal-kas-bank",
+  "module": "finance",
+  "subcategory": "akunting",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["jurnal kas", "jurnal bank", "cash bank journal", "transaksi kas", "akunting"],
+  "relatedArticles": ["cara-mencatat-transaksi-kas-bank", "cara-melakukan-transfer-bank", "cara-melihat-jurnal-transaksi"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Jurnal Kas & Bank menampilkan semua entri akuntansi yang berasal dari transaksi kas — termasuk penerimaan kas (uang masuk), pengeluaran kas (uang keluar), dan transfer antar rekening bank perusahaan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Jurnal Kas & Bank",
+      "body": "Dari menu utama, klik Keuangan → Akunting → Jurnal → Jurnal Kas & Bank."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Filter berdasarkan Rekening dan Periode",
+      "body": "Gunakan filter tanggal untuk melihat jurnal dalam rentang waktu tertentu. Anda juga bisa memfilter berdasarkan rekening bank tertentu jika perusahaan memiliki lebih dari satu rekening."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Baca Data Jurnal",
+      "body": "Setiap baris menampilkan tanggal transaksi, tipe (Uang Masuk / Uang Keluar / Transfer), referensi, jumlah, dan status. Klik baris untuk melihat detail baris jurnal:\n- Uang Masuk: Debit Rekening Bank, Kredit Akun Pendapatan atau Akun Lawan\n- Uang Keluar: Debit Akun Beban atau Akun Lawan, Kredit Rekening Bank\n- Transfer: Debit Rekening Tujuan, Kredit Rekening Asal"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Ekspor Data",
+      "body": "Klik tombol Ekspor untuk mengunduh data jurnal dalam format Excel."
+    },
+    {
+      "type": "info",
+      "body": "Jurnal ini adalah tampilan monitoring — tidak bisa diedit di sini. Untuk menambah transaksi baru, gunakan menu Keuangan → Perbankan & Pembayaran → Transaksi Kas-Bank."
+    }
+  ]
+}

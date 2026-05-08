@@ -1,0 +1,60 @@
+{
+  "title": "Cara Melihat Semua Jurnal Transaksi",
+  "description": "Panduan menggunakan halaman Jurnal untuk memantau dan mencari seluruh jurnal dari semua sumber transaksi sekaligus",
+  "slug": "cara-melihat-jurnal-transaksi",
+  "module": "finance",
+  "subcategory": "akunting",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["jurnal", "semua jurnal", "all journals", "monitoring", "akunting"],
+  "relatedArticles": ["cara-membuat-jurnal-penyesuaian", "cara-melihat-jurnal-penjualan", "cara-melihat-buku-besar"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Halaman Jurnal menampilkan seluruh entri jurnal dari semua sumber sekaligus — penjualan, pembelian, kas-bank, inventaris, penyesuaian, dan valuasi. Ini adalah titik monitoring utama bagi tim Finance."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Jurnal",
+      "body": "Dari menu utama, klik Keuangan → Akunting → Jurnal → Semua Jurnal (atau Entri Jurnal)."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Filter berdasarkan Tipe Jurnal",
+      "body": "Gunakan tab di bagian atas untuk memfilter berdasarkan tipe:\n- Semua: tampilkan semua jurnal\n- Jurnal Penjualan: dari transaksi faktur pelanggan\n- Jurnal Pembelian: dari faktur pemasok\n- Jurnal Kas & Bank: dari transaksi kas dan transfer\n- Jurnal Inventaris: dari pergerakan stok\n- Jurnal Penyesuaian: jurnal manual tim Finance\n- Jurnal Valuasi: dari valuasi stok dan revaluasi kurs"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Filter berdasarkan Periode dan Status",
+      "body": "Gunakan filter Tanggal Mulai dan Tanggal Selesai untuk mempersempit rentang waktu. Filter juga tersedia untuk status jurnal: Draft, Posted, Cancelled, atau Reversed."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Cari Jurnal Tertentu",
+      "body": "Gunakan kolom pencarian untuk mencari berdasarkan nomor jurnal, referensi dokumen, atau keterangan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Lihat Detail dan Dokumen Sumber",
+      "body": "Klik baris jurnal untuk membuka detail baris debit-kredit. Klik link referensi untuk melihat dokumen sumber yang menghasilkan jurnal tersebut."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Approve Massal",
+      "body": "Untuk jurnal penyesuaian yang menunggu persetujuan, centang beberapa jurnal lalu klik Approve Massal untuk menyetujui sekaligus."
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Ekspor Data",
+      "body": "Klik tombol Ekspor untuk mengunduh data jurnal yang ditampilkan saat ini ke format Excel."
+    }
+  ]
+}
