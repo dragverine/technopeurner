@@ -1,0 +1,46 @@
+{
+  "title": "Cara Melihat Rekap Hutang",
+  "description": "Panduan memantau saldo hutang kepada supplier yang belum dibayar melalui menu rekap hutang",
+  "slug": "cara-melihat-rekap-hutang",
+  "module": "erp",
+  "subcategory": "purchasing",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["rekap hutang", "payable", "supplier", "laporan"],
+  "relatedArticles": ["cara-mencatat-faktur-pemasok", "cara-melakukan-pembayaran-ke-supplier"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Rekap Hutang menampilkan ringkasan tagihan kepada supplier yang belum dibayar. Gunakan menu ini untuk memantau kewajiban pembayaran yang masih outstanding dan mana yang sudah jatuh tempo."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Rekap Hutang",
+      "body": "Dari menu utama, klik Pembelian → Rekap Hutang."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Filter Data",
+      "body": "Gunakan filter untuk menyaring data:\n- Filter berdasarkan supplier tertentu\n- Filter berdasarkan rentang tanggal jatuh tempo\n- Filter berdasarkan status: belum jatuh tempo atau sudah jatuh tempo"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Lihat Detail per Supplier",
+      "body": "Klik nama supplier untuk melihat daftar faktur yang belum lunas beserta nilai dan tanggal jatuh tempo."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Ekspor Data",
+      "body": "Klik tombol Ekspor untuk mengunduh rekap hutang dalam format Excel untuk keperluan laporan keuangan."
+    },
+    {
+      "type": "info",
+      "body": "Kolom Aging menunjukkan berapa hari faktur sudah melewati jatuh tempo. Prioritaskan pembayaran untuk faktur dengan nilai aging tertinggi."
+    }
+  ]
+}

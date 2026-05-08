@@ -1,0 +1,58 @@
+{
+  "title": "Cara Membuat Surat Jalan (Delivery Order)",
+  "description": "Panduan membuat surat jalan untuk mencatat pengiriman barang kepada pelanggan",
+  "slug": "cara-membuat-surat-jalan",
+  "module": "erp",
+  "subcategory": "sales",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["surat jalan", "delivery order", "pengiriman", "DO"],
+  "relatedArticles": ["cara-membuat-pesanan-penjualan", "cara-membuat-faktur-pelanggan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Surat Jalan (Delivery Order) adalah dokumen yang menyertai pengiriman barang kepada pelanggan. Surat jalan dibuat berdasarkan Sales Order yang sudah dikonfirmasi, dan akan mengurangi stok secara otomatis saat dikonfirmasi."
+    },
+    {
+      "type": "info",
+      "body": "Surat jalan hanya bisa dibuat dari Sales Order yang berstatus Dikonfirmasi. Pastikan SO sudah melewati proses persetujuan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Surat Jalan",
+      "body": "Dari menu utama, klik Penjualan → Surat Jalan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Surat Jalan Baru",
+      "body": "Klik tombol Buat Surat Jalan. Form surat jalan akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Sales Order",
+      "body": "Pilih nomor SO dari dropdown. Daftar produk yang dipesan akan otomatis terisi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Detail Pengiriman",
+      "body": "Isi informasi berikut:\n- Tanggal Pengiriman\n- Agen Kurir: pilih jasa pengiriman yang digunakan\n- Nomor Resi (jika ada)\n- Gudang Asal: stok akan berkurang dari gudang ini"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Isi Jumlah Terkirim",
+      "body": "Untuk setiap produk, isi jumlah yang benar-benar dikirimkan. Pengiriman bisa dilakukan bertahap jika barang belum tersedia semua."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Konfirmasi Pengiriman",
+      "body": "Klik Konfirmasi Pengiriman. Stok di gudang asal akan berkurang otomatis sesuai jumlah yang dikirimkan."
+    }
+  ]
+}

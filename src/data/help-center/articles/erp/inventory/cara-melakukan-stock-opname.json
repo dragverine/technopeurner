@@ -1,0 +1,62 @@
+{
+  "title": "Cara Melakukan Stock Opname",
+  "description": "Panduan melakukan stock opname untuk mencocokkan jumlah stok fisik dengan data di sistem",
+  "slug": "cara-melakukan-stock-opname",
+  "module": "erp",
+  "subcategory": "inventory",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["stock opname", "inventaris", "stok fisik", "rekonsiliasi"],
+  "relatedArticles": ["cara-menambah-barang-baru", "cara-mengelola-stok"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Stock opname adalah proses penghitungan stok fisik barang di gudang untuk dicocokkan dengan data stok yang tercatat di sistem. Proses ini penting dilakukan secara berkala untuk memastikan tidak ada selisih antara stok sistem dan kondisi nyata di lapangan."
+    },
+    {
+      "type": "info",
+      "body": "Disarankan melakukan stock opname minimal satu kali per bulan, atau sebelum tutup buku periode akuntansi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Stock Opname",
+      "body": "Dari menu utama, klik Stok → Opname Stok. Halaman ini menampilkan daftar sesi opname yang pernah dibuat."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Sesi Opname Baru",
+      "body": "Klik tombol Buat Opname Baru di sudut kanan atas halaman."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Gudang",
+      "body": "Pilih gudang yang akan dilakukan opname dari dropdown. Satu sesi opname hanya berlaku untuk satu gudang."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Stok Fisik",
+      "body": "Sistem menampilkan daftar seluruh barang beserta jumlah stok menurut sistem. Hitung stok fisik secara langsung di gudang, lalu masukkan angkanya ke kolom Stok Fisik untuk setiap barang."
+    },
+    {
+      "type": "warning",
+      "body": "Jangan klik Konfirmasi sebelum semua barang selesai dihitung. Data yang sudah dikonfirmasi tidak dapat diubah kembali."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Periksa Selisih",
+      "body": "Kolom Selisih akan otomatis terisi. Selisih positif berarti stok fisik lebih banyak dari sistem, selisih negatif berarti stok fisik kurang dari sistem."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Konfirmasi Opname",
+      "body": "Setelah semua barang selesai dihitung, klik tombol Konfirmasi Opname. Sistem akan menyesuaikan stok secara otomatis mengikuti hasil penghitungan fisik dan membuat jurnal penyesuaian secara otomatis."
+    }
+  ]
+}

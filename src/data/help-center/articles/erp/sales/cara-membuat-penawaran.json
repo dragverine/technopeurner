@@ -1,0 +1,60 @@
+{
+  "title": "Cara Membuat Penawaran (Quotation)",
+  "description": "Panduan membuat dokumen penawaran harga kepada pelanggan sebelum pesanan dikonfirmasi",
+  "slug": "cara-membuat-penawaran",
+  "module": "erp",
+  "subcategory": "sales",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["penawaran", "quotation", "harga", "penjualan"],
+  "relatedArticles": ["cara-membuat-pesanan-penjualan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Penawaran (Quotation) adalah dokumen yang dikirimkan kepada calon pelanggan berisi rincian harga produk atau jasa sebelum pesanan resmi dibuat. Setelah pelanggan setuju, penawaran bisa dikonversi menjadi Sales Order."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Penawaran",
+      "body": "Dari menu utama, klik Penjualan → Penawaran."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Penawaran Baru",
+      "body": "Klik tombol Buat Penawaran di sudut kanan atas. Form penawaran akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Pelanggan",
+      "body": "Pilih nama pelanggan dari dropdown. Jika pelanggan belum terdaftar, daftarkan terlebih dahulu melalui Data Master → Pelanggan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Detail Penawaran",
+      "body": "Isi informasi berikut:\n- Tanggal Penawaran\n- Tanggal Berlaku: batas masa berlaku penawaran\n- Ketentuan Pembayaran"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Tambahkan Produk",
+      "body": "Klik Tambah Produk pada bagian daftar item. Pilih produk, isi jumlah, dan harga satuan. Ulangi untuk setiap produk yang ditawarkan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Simpan dan Kirim",
+      "body": "Klik Simpan untuk menyimpan sebagai draft, atau Kirim untuk mengirimkan penawaran ke pelanggan. Penawaran yang dikirim bisa dicetak sebagai PDF."
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Konversi ke Sales Order",
+      "body": "Jika pelanggan menyetujui penawaran, buka detail penawaran lalu klik Konversi ke Sales Order. Data akan otomatis terisi dari penawaran."
+    }
+  ]
+}

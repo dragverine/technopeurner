@@ -1,0 +1,58 @@
+{
+  "title": "Cara Melihat Pergerakan Stok",
+  "description": "Panduan melihat riwayat pergerakan stok masuk dan keluar untuk memantau arus barang di gudang",
+  "slug": "cara-melihat-pergerakan-stok",
+  "module": "erp",
+  "subcategory": "inventory",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["pergerakan stok", "stock movement", "riwayat stok", "laporan gudang"],
+  "relatedArticles": ["cara-melakukan-stock-opname", "cara-transfer-stok-antar-gudang"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Pergerakan Stok mencatat setiap transaksi yang mempengaruhi jumlah stok, baik stok masuk (dari penerimaan barang) maupun stok keluar (dari pengiriman atau penjualan). Fitur ini berguna untuk memantau arus barang dan melacak asal-usul perubahan stok."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pergerakan Stok",
+      "body": "Dari menu utama, klik Stok → Pergerakan Stok. Halaman ini menampilkan seluruh riwayat pergerakan stok dari semua gudang."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Filter berdasarkan Gudang",
+      "body": "Gunakan filter Gudang di bagian atas tabel untuk menampilkan pergerakan stok dari gudang tertentu saja."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Filter berdasarkan Periode",
+      "body": "Atur filter Tanggal Mulai dan Tanggal Akhir untuk melihat pergerakan stok dalam rentang waktu tertentu."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Filter berdasarkan Produk",
+      "body": "Gunakan kolom pencarian Produk untuk melihat pergerakan stok dari barang tertentu saja."
+    },
+    {
+      "type": "info",
+      "body": "Setiap baris pergerakan stok menampilkan: tanggal transaksi, jenis pergerakan (masuk/keluar), jumlah, referensi dokumen (nomor PO, surat jalan, dll), dan saldo stok setelah transaksi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Lihat Detail Transaksi",
+      "body": "Klik pada baris pergerakan stok untuk melihat detail lengkap, termasuk dokumen sumber yang menyebabkan pergerakan tersebut."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Ekspor Data",
+      "body": "Klik tombol Ekspor untuk mengunduh data pergerakan stok dalam format Excel sesuai filter yang aktif."
+    }
+  ]
+}

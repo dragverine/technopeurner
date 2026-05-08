@@ -1,0 +1,58 @@
+{
+  "title": "Cara Membuat Faktur Pelanggan (Customer Invoice)",
+  "description": "Panduan membuat faktur tagihan kepada pelanggan berdasarkan Sales Order yang sudah dikirim",
+  "slug": "cara-membuat-faktur-pelanggan",
+  "module": "erp",
+  "subcategory": "sales",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["faktur pelanggan", "invoice", "tagihan", "piutang"],
+  "relatedArticles": ["cara-membuat-surat-jalan", "cara-mencatat-pembayaran-pelanggan", "cara-melihat-rekap-piutang"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Faktur Pelanggan (Customer Invoice) adalah dokumen tagihan yang dikirimkan kepada pelanggan untuk meminta pembayaran atas barang atau jasa yang sudah dikirimkan. Faktur dibuat berdasarkan Surat Jalan yang sudah dikonfirmasi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Faktur Pelanggan",
+      "body": "Dari menu utama, klik Penjualan → Faktur Pelanggan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Faktur Baru",
+      "body": "Klik tombol Buat Faktur di sudut kanan atas."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Pelanggan dan Surat Jalan",
+      "body": "Pilih pelanggan, lalu pilih Surat Jalan yang menjadi dasar penagihan. Sistem akan otomatis mengisi daftar produk dan jumlahnya."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Detail Faktur",
+      "body": "Isi tanggal faktur dan tanggal jatuh tempo berdasarkan ketentuan pembayaran yang berlaku."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Tambahkan Pajak (Jika Ada)",
+      "body": "Jika transaksi dikenakan PPN atau pajak lain, centang opsi pajak yang sesuai. Total tagihan akan diperbarui otomatis."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Simpan dan Konfirmasi",
+      "body": "Klik Simpan untuk menyimpan draft, atau Konfirmasi untuk menerbitkan faktur secara resmi. Faktur yang sudah dikonfirmasi akan masuk ke rekap piutang."
+    },
+    {
+      "type": "info",
+      "body": "Faktur yang sudah dikonfirmasi bisa dicetak atau dikirimkan ke pelanggan dalam format PDF."
+    }
+  ]
+}

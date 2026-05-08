@@ -1,0 +1,48 @@
+{
+  "title": "Cara Mengelola Outlet",
+  "description": "Panduan menambah dan mengatur data outlet atau cabang toko dalam sistem",
+  "slug": "cara-mengelola-outlet",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["outlet", "cabang", "toko", "master data"],
+  "relatedArticles": ["cara-mengatur-data-perusahaan", "cara-mengelola-area"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Outlet adalah lokasi fisik cabang atau toko yang dimiliki perusahaan. Data outlet digunakan untuk pengelompokan transaksi dan pelacakan kinerja per lokasi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Outlet",
+      "body": "Dari menu utama, klik Data Master → Outlet."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Outlet Baru",
+      "body": "Klik tombol Tambah Outlet. Form data outlet akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Data Outlet",
+      "body": "Isi informasi berikut:\n- Nama Outlet\n- Kode Outlet\n- Alamat lengkap\n- Nomor telepon\n- Area: pilih area yang mencakup lokasi outlet ini"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tandai Lokasi di Peta",
+      "body": "Gunakan fitur peta untuk menandai lokasi outlet secara tepat. Klik di peta untuk menempatkan pin lokasi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan Data Outlet",
+      "body": "Klik tombol Simpan. Outlet baru akan tersedia dalam sistem dan bisa digunakan untuk filter laporan dan manajemen kunjungan sales."
+    }
+  ]
+}

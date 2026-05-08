@@ -1,0 +1,46 @@
+{
+  "title": "Cara Mengatur Data Perusahaan",
+  "description": "Panduan mengisi dan memperbarui informasi perusahaan seperti nama, alamat, logo, dan kontak",
+  "slug": "cara-mengatur-data-perusahaan",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["perusahaan", "profil bisnis", "master data", "pengaturan"],
+  "relatedArticles": ["cara-mengelola-divisi", "cara-mengelola-unit-bisnis"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Data perusahaan adalah informasi dasar yang digunakan di seluruh dokumen sistem, seperti faktur, surat jalan, dan laporan. Pastikan data ini diisi lengkap dan akurat sebelum mulai menggunakan sistem."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Perusahaan",
+      "body": "Dari menu utama, klik Data Master → Organisasi → Perusahaan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Klik Edit Data Perusahaan",
+      "body": "Klik tombol Edit atau ikon pensil pada kartu perusahaan untuk membuka form pengisian data."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Informasi Perusahaan",
+      "body": "Isi informasi berikut:\n- Nama Perusahaan\n- Alamat lengkap\n- Nomor telepon dan email\n- NPWP (untuk keperluan pajak)\n- Logo perusahaan (upload file gambar)"
+    },
+    {
+      "type": "info",
+      "body": "Logo perusahaan yang diupload akan muncul secara otomatis di semua dokumen yang dicetak, seperti faktur dan surat jalan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Simpan Perubahan",
+      "body": "Klik tombol Simpan. Data perusahaan akan diperbarui dan langsung berlaku di seluruh sistem."
+    }
+  ]
+}

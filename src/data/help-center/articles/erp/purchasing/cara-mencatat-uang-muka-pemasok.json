@@ -1,0 +1,52 @@
+{
+  "title": "Cara Mencatat Uang Muka ke Supplier (Down Payment)",
+  "description": "Panduan mencatat pembayaran uang muka atau down payment kepada supplier sebelum barang diterima",
+  "slug": "cara-mencatat-uang-muka-pemasok",
+  "module": "erp",
+  "subcategory": "purchasing",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["uang muka", "down payment", "DP", "supplier", "hutang"],
+  "relatedArticles": ["cara-membuat-purchase-order", "cara-mencatat-faktur-pemasok"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Uang Muka ke Supplier (Down Payment) adalah pembayaran sebagian yang dibayarkan kepada supplier di awal, sebelum barang dikirimkan. Biasanya diminta supplier sebagai jaminan pesanan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Uang Muka Pemasok",
+      "body": "Dari menu utama, klik Pembelian → Uang Muka Pemasok."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Faktur DP Baru",
+      "body": "Klik tombol Buat Faktur DP."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Supplier dan PO",
+      "body": "Pilih supplier dan Purchase Order yang menjadi dasar pembayaran DP ini."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Jumlah Down Payment",
+      "body": "Masukkan jumlah uang muka yang akan dibayarkan kepada supplier."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Konfirmasi",
+      "body": "Klik Konfirmasi. Faktur DP akan tercatat sebagai hutang yang sudah dibayar sebagian, dan akan diperhitungkan saat faktur akhir dari supplier masuk."
+    },
+    {
+      "type": "info",
+      "body": "Saat mencatat Faktur Pemasok akhir, jumlah DP yang sudah dibayar akan otomatis dikurangkan dari total hutang."
+    }
+  ]
+}

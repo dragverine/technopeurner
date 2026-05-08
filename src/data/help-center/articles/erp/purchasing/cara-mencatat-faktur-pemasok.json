@@ -1,0 +1,60 @@
+{
+  "title": "Cara Mencatat Faktur Pemasok (Supplier Invoice)",
+  "description": "Panduan mencatat faktur tagihan dari supplier setelah menerima barang",
+  "slug": "cara-mencatat-faktur-pemasok",
+  "module": "erp",
+  "subcategory": "purchasing",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["faktur pemasok", "supplier invoice", "hutang", "pembelian"],
+  "relatedArticles": ["cara-menerima-barang", "cara-melakukan-pembayaran-ke-supplier", "cara-melihat-rekap-hutang"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Faktur Pemasok (Supplier Invoice) adalah tagihan yang diterima dari supplier setelah barang dikirimkan. Mencatat faktur ini penting untuk memastikan hutang kepada supplier tercatat dengan benar di sistem."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Faktur Pemasok",
+      "body": "Dari menu utama, klik Pembelian → Faktur Pemasok."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Faktur Baru",
+      "body": "Klik tombol Buat Faktur di sudut kanan atas."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Supplier dan Penerimaan Barang",
+      "body": "Pilih supplier, lalu pilih Penerimaan Barang (Goods Receipt) yang menjadi dasar faktur ini. Daftar barang akan terisi otomatis."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Nomor Faktur Supplier",
+      "body": "Masukkan nomor faktur yang tertera pada dokumen fisik dari supplier. Ini penting untuk pencocokan data saat audit."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Periksa dan Sesuaikan Harga",
+      "body": "Verifikasi harga per unit sesuai dengan faktur fisik dari supplier. Sesuaikan jika ada perbedaan dari harga yang tercatat di PO."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Isi Tanggal Jatuh Tempo",
+      "body": "Isi tanggal jatuh tempo pembayaran berdasarkan ketentuan pembayaran yang disepakati."
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Konfirmasi Faktur",
+      "body": "Klik Konfirmasi. Faktur akan tercatat sebagai hutang kepada supplier dan masuk ke rekap hutang."
+    }
+  ]
+}

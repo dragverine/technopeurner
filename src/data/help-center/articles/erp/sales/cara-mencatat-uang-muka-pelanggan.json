@@ -1,0 +1,52 @@
+{
+  "title": "Cara Mencatat Uang Muka Pelanggan (Down Payment)",
+  "description": "Panduan mencatat pembayaran uang muka atau down payment dari pelanggan sebelum barang dikirim",
+  "slug": "cara-mencatat-uang-muka-pelanggan",
+  "module": "erp",
+  "subcategory": "sales",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["uang muka", "down payment", "DP", "pelanggan", "piutang"],
+  "relatedArticles": ["cara-membuat-pesanan-penjualan", "cara-membuat-faktur-pelanggan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Uang Muka Pelanggan (Down Payment) adalah pembayaran sebagian yang diterima dari pelanggan di awal, sebelum barang dikirimkan. Ini berbeda dari faktur biasa karena barang belum sepenuhnya diserahkan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Uang Muka Pelanggan",
+      "body": "Dari menu utama, klik Penjualan → Uang Muka Pelanggan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Faktur DP Baru",
+      "body": "Klik tombol Buat Faktur DP. Form faktur down payment akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Pelanggan dan SO",
+      "body": "Pilih pelanggan dan Sales Order yang terkait dengan down payment ini."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Jumlah Down Payment",
+      "body": "Isi jumlah uang muka yang diterima. Bisa berupa nominal tetap atau persentase dari total nilai SO."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Konfirmasi Faktur DP",
+      "body": "Klik Konfirmasi. Faktur DP akan tercatat sebagai piutang yang sudah terbayar sebagian, dan akan diperhitungkan secara otomatis saat faktur akhir dibuat."
+    },
+    {
+      "type": "info",
+      "body": "Saat membuat faktur pelanggan final, jumlah DP yang sudah diterima akan otomatis dikurangkan dari total tagihan."
+    }
+  ]
+}

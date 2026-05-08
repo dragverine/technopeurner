@@ -1,0 +1,52 @@
+{
+  "title": "Cara Mengelola Pengguna dan Hak Akses",
+  "description": "Panduan menambah pengguna baru, mengatur peran (role), dan menentukan hak akses di sistem ERP",
+  "slug": "cara-mengelola-pengguna",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["pengguna", "user", "hak akses", "role", "master data"],
+  "relatedArticles": ["cara-mengatur-data-perusahaan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Manajemen Pengguna memungkinkan Anda mengontrol siapa saja yang bisa mengakses sistem dan fitur apa saja yang bisa mereka gunakan. Setiap pengguna diberikan satu peran (role) yang menentukan hak aksesnya."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pengguna",
+      "body": "Dari menu utama, klik Data Master → Pengguna."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Pengguna Baru",
+      "body": "Klik tombol Tambah Pengguna. Isi nama lengkap, email, dan nomor telepon. Email ini akan digunakan sebagai username login."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tetapkan Peran (Role)",
+      "body": "Pilih peran yang sesuai untuk pengguna dari dropdown Role. Peran menentukan menu dan fitur apa yang bisa diakses pengguna."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Simpan dan Kirim Undangan",
+      "body": "Klik Simpan. Sistem akan mengirimkan email undangan ke pengguna baru untuk mengatur password dan mulai login."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Kelola Peran (Role)",
+      "body": "Untuk menambah atau mengubah peran, klik tab Peran di halaman Pengguna. Klik Tambah Peran, beri nama, lalu pilih izin akses yang diizinkan untuk peran tersebut."
+    },
+    {
+      "type": "warning",
+      "body": "Hanya administrator yang memiliki akses untuk mengelola pengguna dan peran. Berhati-hatilah saat memberikan akses penuh kepada pengguna baru."
+    }
+  ]
+}

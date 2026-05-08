@@ -1,0 +1,40 @@
+{
+  "title": "Cara Mengatur Satuan Ukur",
+  "description": "Panduan menambah dan mengelola satuan ukur produk seperti pcs, kg, liter, dan karton",
+  "slug": "cara-mengatur-satuan-ukur",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["satuan ukur", "UOM", "unit", "kemasan", "master data"],
+  "relatedArticles": ["cara-menambah-produk", "cara-mengelola-kemasan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Satuan Ukur (Unit of Measure) mendefinisikan satuan yang digunakan untuk mengukur produk, seperti pcs, kg, liter, atau dus. Satuan yang tepat penting untuk akurasi pencatatan stok dan transaksi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Satuan Ukur",
+      "body": "Dari menu utama, klik Data Master → Produk → Satuan Ukur."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Satuan Baru",
+      "body": "Klik tombol Tambah Satuan. Isi nama satuan (contoh: Kilogram) dan singkatannya (contoh: kg), lalu klik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Edit atau Hapus Satuan",
+      "body": "Gunakan ikon Edit untuk memperbarui nama satuan, atau ikon Hapus untuk menghapus satuan yang tidak dipakai."
+    },
+    {
+      "type": "warning",
+      "body": "Satuan ukur yang sudah digunakan oleh produk aktif tidak dapat dihapus. Pastikan produk sudah diperbarui ke satuan lain sebelum menghapus."
+    }
+  ]
+}

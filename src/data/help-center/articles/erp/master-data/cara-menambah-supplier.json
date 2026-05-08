@@ -1,0 +1,52 @@
+{
+  "title": "Cara Menambah dan Mengelola Supplier",
+  "description": "Panduan mendaftarkan supplier baru dan mengelola data supplier dalam sistem ERP",
+  "slug": "cara-menambah-supplier",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["supplier", "pemasok", "vendor", "master data"],
+  "relatedArticles": ["cara-membuat-purchase-order", "cara-mengelola-jenis-supplier"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Supplier adalah pemasok barang yang digunakan dalam proses pembelian. Data supplier harus didaftarkan terlebih dahulu sebelum bisa membuat Purchase Order."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Supplier",
+      "body": "Dari menu utama, klik Data Master → Supplier → Supplier."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Supplier Baru",
+      "body": "Klik tombol Tambah Supplier di sudut kanan atas. Form data supplier akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Data Supplier",
+      "body": "Isi informasi berikut:\n- Nama Supplier\n- Jenis Supplier\n- Alamat lengkap\n- Nomor telepon dan email\n- NPWP (jika ada)\n- Kontak Person: tambahkan nama dan nomor kontak PIC supplier"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tambah Rekening Bank Supplier",
+      "body": "Pada tab Rekening Bank, klik Tambah Rekening. Isi nama bank, nomor rekening, dan nama pemilik rekening. Data ini digunakan saat melakukan pembayaran ke supplier."
+    },
+    {
+      "type": "info",
+      "body": "Anda bisa menambahkan lebih dari satu rekening bank untuk satu supplier."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan Data Supplier",
+      "body": "Klik tombol Simpan. Supplier baru akan langsung tersedia untuk dipilih saat membuat Purchase Order atau Faktur Pemasok."
+    }
+  ]
+}

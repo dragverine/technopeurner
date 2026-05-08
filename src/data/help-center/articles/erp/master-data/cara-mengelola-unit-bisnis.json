@@ -1,0 +1,40 @@
+{
+  "title": "Cara Mengelola Unit Bisnis",
+  "description": "Panduan menambah dan mengatur unit bisnis sebagai entitas operasional dalam sistem ERP",
+  "slug": "cara-mengelola-unit-bisnis",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["unit bisnis", "organisasi", "master data"],
+  "relatedArticles": ["cara-mengatur-data-perusahaan", "cara-mengelola-divisi"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Unit Bisnis adalah entitas operasional dalam perusahaan yang digunakan sebagai dasar pembuatan transaksi seperti Purchase Order dan Sales Order. Setiap transaksi harus dikaitkan dengan unit bisnis yang relevan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Unit Bisnis",
+      "body": "Dari menu utama, klik Data Master → Organisasi → Unit Bisnis."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Unit Bisnis Baru",
+      "body": "Klik tombol Tambah Unit Bisnis. Isi nama unit bisnis dan kodenya, lalu klik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Edit atau Hapus",
+      "body": "Gunakan ikon Edit untuk memperbarui data, atau ikon Hapus untuk menghapus unit bisnis yang tidak digunakan."
+    },
+    {
+      "type": "info",
+      "body": "Unit bisnis yang sudah digunakan dalam transaksi tidak dapat dihapus. Anda bisa menonaktifkannya agar tidak muncul di pilihan transaksi baru."
+    }
+  ]
+}

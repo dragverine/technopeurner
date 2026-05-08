@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #2563EB;
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(224 71% 4%);
+  --color-muted-foreground: hsl(220 9% 46%);
+  --color-border: hsl(220 13% 91%);
+  --color-secondary: hsl(220 14% 96%);
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 224 71% 4%;
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 9% 46%;
+  --border: 220 13% 91%;
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 222 47% 11%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.help-center h1,
+.help-center h2,
+.help-center h3,
+.help-center h4 {
+  font-weight: 600;
+}

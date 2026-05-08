@@ -1,0 +1,68 @@
+{
+  "title": "Cara Membuat Pesanan Penjualan (Sales Order)",
+  "description": "Panduan membuat Sales Order untuk mencatat pesanan resmi dari pelanggan",
+  "slug": "cara-membuat-pesanan-penjualan",
+  "module": "erp",
+  "subcategory": "sales",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["sales order", "pesanan penjualan", "SO", "penjualan"],
+  "relatedArticles": ["cara-membuat-penawaran", "cara-membuat-surat-jalan", "cara-membuat-faktur-pelanggan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Sales Order (SO) adalah dokumen resmi yang mencatat pesanan dari pelanggan. SO menjadi dasar untuk pembuatan Surat Jalan dan Faktur Pelanggan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pesanan Penjualan",
+      "body": "Dari menu utama, klik Penjualan → Pesanan Penjualan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat SO Baru",
+      "body": "Klik tombol Buat SO di sudut kanan atas."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Pelanggan",
+      "body": "Pilih pelanggan dari dropdown. Informasi seperti alamat pengiriman dan limit kredit akan terisi otomatis."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Detail SO",
+      "body": "Isi informasi berikut:\n- Tanggal SO\n- Sumber SO (marketplace, walk-in, dll)\n- Ketentuan Pembayaran\n- Alamat Pengiriman\n- Estimasi Tanggal Pengiriman"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Tambahkan Produk",
+      "body": "Klik Tambah Produk. Pilih produk, isi jumlah dan harga jual. Ulangi untuk setiap produk dalam pesanan."
+    },
+    {
+      "type": "info",
+      "body": "Sistem akan menampilkan peringatan jika stok produk tidak mencukupi untuk memenuhi pesanan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Muat dari Quotation (Opsional)",
+      "body": "Jika ada penawaran yang sudah disetujui pelanggan, klik Muat dari Quotation dan pilih nomor penawaran. Data produk akan terisi otomatis."
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Simpan dan Konfirmasi",
+      "body": "Klik Simpan untuk menyimpan draft, atau Konfirmasi untuk mengunci SO dan melanjutkan ke proses pengiriman dan penagihan."
+    },
+    {
+      "type": "warning",
+      "body": "SO yang sudah dikonfirmasi tidak dapat diedit. Jika ada perubahan, buat SO baru atau hubungi tim terkait."
+    }
+  ]
+}

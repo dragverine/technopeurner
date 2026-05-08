@@ -1,0 +1,40 @@
+{
+  "title": "Cara Mengatur Ketentuan Pembayaran",
+  "description": "Panduan menambah dan mengelola payment terms seperti Net 30, COD, atau DP 50% untuk transaksi",
+  "slug": "cara-mengatur-ketentuan-pembayaran",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["ketentuan pembayaran", "payment terms", "tempo", "master data"],
+  "relatedArticles": ["cara-mengatur-mata-uang", "cara-membuat-purchase-order", "cara-membuat-pesanan-penjualan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Ketentuan Pembayaran (Payment Terms) mendefinisikan aturan pembayaran yang berlaku dalam transaksi, seperti berapa hari tempo pembayaran atau apakah pembayaran dilakukan di muka. Data ini dipilih saat membuat Purchase Order maupun Sales Order."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Ketentuan Pembayaran",
+      "body": "Dari menu utama, klik Data Master → Pembayaran & Kurir → Ketentuan Pembayaran."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Ketentuan Pembayaran Baru",
+      "body": "Klik tombol Tambah. Isi nama ketentuan (contoh: Net 30, COD, DP 50%) dan jumlah hari temponya, lalu klik Simpan."
+    },
+    {
+      "type": "info",
+      "body": "Contoh ketentuan umum: COD (0 hari), Net 7 (7 hari), Net 14 (14 hari), Net 30 (30 hari). Sesuaikan dengan perjanjian bisnis Anda."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Edit atau Hapus",
+      "body": "Gunakan ikon Edit untuk memperbarui, atau ikon Hapus untuk menghapus ketentuan yang tidak dipakai."
+    }
+  ]
+}

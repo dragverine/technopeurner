@@ -1,0 +1,40 @@
+{
+  "title": "Cara Mengelola Merek dan Segmen Produk",
+  "description": "Panduan menambah merek, segmen, dan jenis produk untuk klasifikasi katalog yang lebih detail",
+  "slug": "cara-mengelola-merek",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["merek", "brand", "segmen", "jenis produk", "master data"],
+  "relatedArticles": ["cara-menambah-produk", "cara-mengelola-kategori-produk"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Merek, Segmen, dan Jenis Produk adalah data klasifikasi tambahan yang memungkinkan pengelompokan produk yang lebih detail. Ini berguna untuk pelaporan dan analisis produk berdasarkan brand atau segmen pasar."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Kelola Merek Produk",
+      "body": "Dari menu utama, klik Data Master → Produk → Merek. Klik Tambah Merek, isi nama merek, lalu klik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Kelola Segmen Produk",
+      "body": "Dari menu utama, klik Data Master → Produk → Segmen. Klik Tambah Segmen, isi nama segmen (contoh: Premium, Economy, Mid-range), lalu klik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Kelola Jenis Produk",
+      "body": "Dari menu utama, klik Data Master → Produk → Jenis. Klik Tambah Jenis, isi nama jenis produk, lalu klik Simpan."
+    },
+    {
+      "type": "info",
+      "body": "Data merek, segmen, dan jenis produk yang sudah ditambahkan akan muncul sebagai pilihan saat membuat atau mengedit produk baru."
+    }
+  ]
+}

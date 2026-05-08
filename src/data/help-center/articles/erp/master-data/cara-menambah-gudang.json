@@ -1,0 +1,46 @@
+{
+  "title": "Cara Menambah Gudang Baru",
+  "description": "Panduan mendaftarkan gudang baru ke dalam sistem untuk keperluan manajemen stok dan penerimaan barang",
+  "slug": "cara-menambah-gudang",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["gudang", "warehouse", "master data", "lokasi stok"],
+  "relatedArticles": ["cara-melihat-pergerakan-stok", "cara-melakukan-stock-opname"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Gudang adalah lokasi fisik tempat barang disimpan. Sebelum bisa melakukan penerimaan barang atau mencatat stok, gudang harus didaftarkan terlebih dahulu ke dalam sistem. Satu perusahaan bisa memiliki lebih dari satu gudang."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Gudang",
+      "body": "Dari menu utama, klik Data Master → Gudang. Halaman ini menampilkan daftar gudang yang sudah terdaftar."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Gudang Baru",
+      "body": "Klik tombol Tambah Gudang di sudut kanan atas. Form pengisian data gudang akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Informasi Gudang",
+      "body": "Isi informasi berikut:\n- Nama Gudang: nama yang mudah dikenali (contoh: Gudang Utama, Gudang Cabang Jakarta)\n- Kode Gudang: kode singkat unik untuk gudang ini\n- Alamat: alamat fisik lokasi gudang\n- Penanggung Jawab: nama atau divisi yang bertanggung jawab atas gudang ini"
+    },
+    {
+      "type": "info",
+      "body": "Kode Gudang harus unik dan tidak boleh sama dengan gudang lain. Kode ini akan muncul di berbagai dokumen seperti surat jalan dan laporan stok."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Simpan Data Gudang",
+      "body": "Klik tombol Simpan. Gudang baru akan langsung tersedia dan bisa digunakan saat membuat penerimaan barang, transfer stok, atau stock opname."
+    }
+  ]
+}

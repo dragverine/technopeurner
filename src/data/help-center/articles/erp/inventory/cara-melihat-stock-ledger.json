@@ -1,0 +1,52 @@
+{
+  "title": "Cara Melihat Stock Ledger",
+  "description": "Panduan melihat riwayat nilai stok dan harga pokok barang melalui menu Stock Ledger",
+  "slug": "cara-melihat-stock-ledger",
+  "module": "erp",
+  "subcategory": "inventory",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["stock ledger", "nilai stok", "harga pokok", "inventaris"],
+  "relatedArticles": ["cara-melihat-pergerakan-stok", "cara-melakukan-stock-opname"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Stock Ledger menampilkan riwayat nilai stok barang secara kronologis, termasuk harga pokok rata-rata (average cost) setiap kali terjadi pergerakan stok. Fitur ini berguna untuk keperluan audit dan analisis biaya persediaan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Stock Ledger",
+      "body": "Dari menu utama, klik Stok → Stock Ledger."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Pilih Produk",
+      "body": "Pilih produk yang ingin dilihat riwayat nilai stoknya dari dropdown atau kolom pencarian."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Atur Periode",
+      "body": "Tentukan rentang tanggal untuk melihat riwayat dalam periode tertentu."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Baca Data Stock Ledger",
+      "body": "Setiap baris menampilkan:\n- Tanggal transaksi\n- Jenis transaksi (masuk/keluar)\n- Jumlah stok berubah\n- Harga pokok per unit saat transaksi\n- Nilai total stok setelah transaksi"
+    },
+    {
+      "type": "info",
+      "body": "Sistem menggunakan metode Average Cost (biaya rata-rata bergerak) untuk menghitung harga pokok stok."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Ekspor Data",
+      "body": "Klik tombol Ekspor untuk mengunduh data stock ledger dalam format Excel."
+    }
+  ]
+}

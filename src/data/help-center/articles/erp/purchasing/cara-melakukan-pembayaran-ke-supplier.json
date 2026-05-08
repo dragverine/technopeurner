@@ -1,0 +1,58 @@
+{
+  "title": "Cara Melakukan Pembayaran ke Supplier",
+  "description": "Panduan mencatat pembayaran hutang kepada supplier atas faktur yang sudah jatuh tempo",
+  "slug": "cara-melakukan-pembayaran-ke-supplier",
+  "module": "erp",
+  "subcategory": "purchasing",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["pembayaran", "supplier", "hutang", "pelunasan"],
+  "relatedArticles": ["cara-mencatat-faktur-pemasok", "cara-melihat-rekap-hutang"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Setelah faktur pemasok dikonfirmasi, pembayaran kepada supplier harus dicatat ke sistem agar saldo hutang diperbarui. Pembayaran bisa dilakukan secara penuh atau sebagian."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pembayaran Pembelian",
+      "body": "Dari menu utama, klik Pembelian → Pembayaran."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Pembayaran Baru",
+      "body": "Klik tombol Buat Pembayaran."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Supplier",
+      "body": "Pilih nama supplier yang akan dibayar. Daftar faktur yang belum lunas akan muncul secara otomatis."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Pilih Faktur yang Dibayar",
+      "body": "Centang faktur-faktur yang akan dilunasi. Anda bisa membayar lebih dari satu faktur sekaligus."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Isi Detail Pembayaran",
+      "body": "Isi informasi berikut:\n- Tanggal Pembayaran\n- Metode Pembayaran: transfer bank atau tunai\n- Akun Bank yang digunakan untuk membayar\n- Jumlah yang Dibayar"
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Konfirmasi Pembayaran",
+      "body": "Klik Konfirmasi. Status faktur yang dipilih akan berubah menjadi Lunas dan saldo hutang supplier akan berkurang."
+    },
+    {
+      "type": "info",
+      "body": "Pembayaran yang dikonfirmasi akan otomatis mencatat pengeluaran kas di jurnal keuangan."
+    }
+  ]
+}

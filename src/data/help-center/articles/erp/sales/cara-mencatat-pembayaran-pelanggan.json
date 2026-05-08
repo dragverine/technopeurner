@@ -1,0 +1,58 @@
+{
+  "title": "Cara Mencatat Pembayaran dari Pelanggan",
+  "description": "Panduan mencatat penerimaan pembayaran dari pelanggan atas faktur yang sudah diterbitkan",
+  "slug": "cara-mencatat-pembayaran-pelanggan",
+  "module": "erp",
+  "subcategory": "sales",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["pembayaran", "pelanggan", "piutang", "penerimaan kas"],
+  "relatedArticles": ["cara-membuat-faktur-pelanggan", "cara-melihat-rekap-piutang"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Setelah faktur diterbitkan, pembayaran dari pelanggan harus dicatat ke sistem agar status piutang diperbarui. Pembayaran bisa dilakukan secara penuh atau sebagian (cicilan)."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pembayaran Penjualan",
+      "body": "Dari menu utama, klik Penjualan → Pembayaran."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Pembayaran Baru",
+      "body": "Klik tombol Buat Pembayaran."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Pelanggan",
+      "body": "Pilih nama pelanggan yang melakukan pembayaran. Daftar faktur yang belum lunas akan muncul."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Pilih Faktur yang Dibayar",
+      "body": "Centang faktur-faktur yang dilunasi dalam pembayaran ini. Anda bisa memilih lebih dari satu faktur sekaligus."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Isi Detail Pembayaran",
+      "body": "Isi informasi berikut:\n- Tanggal Pembayaran\n- Metode Pembayaran: tunai, transfer, atau kartu\n- Akun Bank Tujuan\n- Jumlah yang Dibayar"
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Konfirmasi Pembayaran",
+      "body": "Klik Konfirmasi. Status faktur yang dipilih akan berubah menjadi Lunas (jika dibayar penuh) atau Dibayar Sebagian."
+    },
+    {
+      "type": "info",
+      "body": "Pembayaran yang sudah dikonfirmasi akan otomatis mengurangi saldo piutang pelanggan dan mencatat penerimaan kas di jurnal keuangan."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Cara Mengelola Posisi Jabatan",
+  "description": "Panduan menambah dan mengatur posisi jabatan karyawan dalam struktur organisasi",
+  "slug": "cara-mengelola-posisi-jabatan",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["jabatan", "posisi", "organisasi", "karyawan"],
+  "relatedArticles": ["cara-mengelola-divisi", "cara-mengelola-unit-bisnis"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Posisi Jabatan mendefinisikan peran atau jabatan yang tersedia dalam perusahaan. Data ini digunakan saat mendaftarkan karyawan baru ke sistem."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Posisi Jabatan",
+      "body": "Dari menu utama, klik Data Master → Organisasi → Posisi Jabatan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Jabatan Baru",
+      "body": "Klik tombol Tambah Jabatan. Isi nama jabatan, kode, dan pilih divisi yang sesuai, lalu klik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Edit atau Hapus Jabatan",
+      "body": "Gunakan ikon Edit untuk memperbarui data jabatan, atau ikon Hapus untuk menghapus jabatan yang sudah tidak digunakan."
+    },
+    {
+      "type": "warning",
+      "body": "Jabatan yang masih digunakan oleh karyawan aktif tidak dapat dihapus."
+    }
+  ]
+}

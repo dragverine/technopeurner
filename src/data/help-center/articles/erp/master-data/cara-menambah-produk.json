@@ -1,0 +1,58 @@
+{
+  "title": "Cara Menambah Produk",
+  "description": "Panduan mendaftarkan produk baru ke dalam katalog produk sistem ERP Gilabs",
+  "slug": "cara-menambah-produk",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["produk", "katalog", "barang", "master data"],
+  "relatedArticles": ["cara-mengelola-kategori-produk", "cara-mengatur-satuan-ukur", "cara-menambah-barang-baru"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Produk adalah data barang atau jasa yang dijual maupun dibeli oleh perusahaan. Data produk harus didaftarkan ke sistem sebelum bisa digunakan dalam transaksi penjualan, pembelian, atau pencatatan stok."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Produk",
+      "body": "Dari menu utama, klik Data Master → Produk → Produk."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Produk Baru",
+      "body": "Klik tombol Tambah Produk di sudut kanan atas. Form data produk akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Informasi Dasar Produk",
+      "body": "Isi informasi berikut:\n- Nama Produk\n- Kode/SKU Produk (harus unik)\n- Kategori Produk\n- Merek\n- Satuan Ukur\n- Jenis Kemasan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Informasi Harga",
+      "body": "Isi harga pokok pembelian (Cost Price) dan harga jual (Selling Price). Harga ini akan menjadi harga default saat produk dipilih dalam transaksi."
+    },
+    {
+      "type": "info",
+      "body": "Harga di form produk adalah harga default. Anda tetap bisa mengubah harga secara manual saat membuat Sales Order atau Purchase Order."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Upload Gambar Produk (Opsional)",
+      "body": "Klik area upload gambar untuk menambahkan foto produk. Gambar akan muncul di katalog dan detail produk."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Simpan Produk",
+      "body": "Klik tombol Simpan. Produk baru langsung tersedia untuk digunakan dalam transaksi penjualan, pembelian, dan pencatatan stok."
+    }
+  ]
+}

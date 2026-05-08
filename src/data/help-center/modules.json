@@ -6,9 +6,10 @@
       "description": "Enterprise Resource Planning — Kelola operasional bisnis secara terpadu",
       "color": "#2563EB",
       "subcategories": [
-        { "id": "inventory", "title": "Inventory", "description": "Kelola stok dan data barang" },
-        { "id": "purchasing", "title": "Purchasing", "description": "Manajemen pembelian dan supplier" },
-        { "id": "warehouse", "title": "Warehouse", "description": "Manajemen gudang dan penyimpanan" }
+        { "id": "master-data", "title": "Data Master", "description": "Konfigurasi data dasar perusahaan, produk, supplier, dan pelanggan" },
+        { "id": "sales", "title": "Penjualan", "description": "Kelola proses penjualan dari penawaran hingga pembayaran" },
+        { "id": "purchasing", "title": "Pembelian", "description": "Manajemen pembelian dan pengadaan barang dari supplier" },
+        { "id": "inventory", "title": "Inventaris & Stok", "description": "Kelola stok barang, pergerakan stok, dan stock opname" }
       ]
     },
     {

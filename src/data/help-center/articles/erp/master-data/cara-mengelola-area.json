@@ -1,0 +1,48 @@
+{
+  "title": "Cara Mengelola Area dan Wilayah",
+  "description": "Panduan menambah dan mengatur area penjualan atau operasional yang digunakan dalam sistem CRM dan Sales",
+  "slug": "cara-mengelola-area",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["area", "wilayah", "peta", "sales", "CRM"],
+  "relatedArticles": ["cara-mengelola-unit-bisnis", "cara-mengelola-outlet"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Area adalah wilayah operasional atau penjualan yang digunakan untuk mengelompokkan pelanggan, outlet, dan kinerja sales. Setiap area dapat memiliki karyawan yang ditugaskan untuk mengelolanya."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Area",
+      "body": "Dari menu utama, klik Data Master → Organisasi → Area."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Area Baru",
+      "body": "Klik tombol Tambah Area. Isi nama area dan tentukan batas wilayahnya di peta yang tersedia."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tentukan Batas Wilayah di Peta",
+      "body": "Gunakan alat gambar pada peta untuk menandai batas wilayah area. Klik titik-titik di peta untuk membentuk poligon yang merepresentasikan area tersebut."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tugaskan Karyawan ke Area",
+      "body": "Setelah area dibuat, klik Tugaskan Karyawan untuk menentukan sales atau tim yang bertanggung jawab atas area ini."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan",
+      "body": "Klik Simpan untuk menyimpan data area. Area ini akan tersedia di modul CRM dan laporan kinerja penjualan."
+    }
+  ]
+}

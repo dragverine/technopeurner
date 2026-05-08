@@ -1,0 +1,46 @@
+{
+  "title": "Cara Mengelola Divisi",
+  "description": "Panduan menambah, mengedit, dan menghapus divisi dalam struktur organisasi perusahaan",
+  "slug": "cara-mengelola-divisi",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["divisi", "organisasi", "departemen", "master data"],
+  "relatedArticles": ["cara-mengatur-data-perusahaan", "cara-mengelola-unit-bisnis", "cara-mengelola-posisi-jabatan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Divisi adalah pengelompokan departemen dalam struktur organisasi perusahaan. Data divisi digunakan untuk pengelompokan karyawan dan pelaporan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Divisi",
+      "body": "Dari menu utama, klik Data Master → Organisasi → Divisi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Divisi Baru",
+      "body": "Klik tombol Tambah Divisi. Isi nama divisi dan deskripsi singkat, lalu klik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Edit Divisi",
+      "body": "Klik ikon Edit pada baris divisi yang ingin diubah. Perbarui informasi yang diperlukan lalu klik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Hapus Divisi",
+      "body": "Klik ikon Hapus pada baris divisi. Konfirmasi penghapusan pada dialog yang muncul."
+    },
+    {
+      "type": "warning",
+      "body": "Divisi yang sudah memiliki karyawan terdaftar tidak dapat dihapus. Pindahkan atau nonaktifkan karyawan terlebih dahulu sebelum menghapus divisi."
+    }
+  ]
+}

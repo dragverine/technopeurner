@@ -1,0 +1,52 @@
+{
+  "title": "Cara Memproses Retur Penjualan",
+  "description": "Panduan mencatat pengembalian barang dari pelanggan dan menyesuaikan stok serta tagihan",
+  "slug": "cara-memproses-retur-penjualan",
+  "module": "erp",
+  "subcategory": "sales",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["retur", "pengembalian barang", "return", "penjualan"],
+  "relatedArticles": ["cara-membuat-surat-jalan", "cara-membuat-faktur-pelanggan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Retur Penjualan terjadi ketika pelanggan mengembalikan barang yang sudah dikirim, misalnya karena produk rusak atau tidak sesuai pesanan. Proses ini akan menambah kembali stok dan mengurangi piutang dari pelanggan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Retur Penjualan",
+      "body": "Dari menu utama, klik Penjualan → Retur."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Retur Baru",
+      "body": "Klik tombol Buat Retur atau Buat dari Surat Jalan. Pilih Surat Jalan yang menjadi dasar retur."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Barang yang Diretur",
+      "body": "Pilih produk yang dikembalikan dari daftar barang pada surat jalan. Isi jumlah barang yang dikembalikan dan alasan retur."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Pilih Gudang Tujuan",
+      "body": "Pilih gudang tempat barang retur akan disimpan kembali."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Konfirmasi Retur",
+      "body": "Klik Konfirmasi. Stok akan bertambah di gudang tujuan, dan nilai piutang pelanggan akan berkurang sesuai nilai barang yang diretur."
+    },
+    {
+      "type": "warning",
+      "body": "Pastikan barang fisik sudah diterima kembali di gudang sebelum mengkonfirmasi retur di sistem."
+    }
+  ]
+}

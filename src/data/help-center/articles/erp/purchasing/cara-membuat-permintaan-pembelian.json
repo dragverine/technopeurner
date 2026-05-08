@@ -1,0 +1,62 @@
+{
+  "title": "Cara Membuat Permintaan Pembelian",
+  "description": "Panduan membuat permintaan pembelian (purchase requisition) sebagai langkah awal proses pengadaan barang",
+  "slug": "cara-membuat-permintaan-pembelian",
+  "module": "erp",
+  "subcategory": "purchasing",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-07",
+  "updatedAt": "2026-05-07",
+  "tags": ["permintaan pembelian", "purchase requisition", "pengadaan", "pembelian"],
+  "relatedArticles": ["cara-membuat-purchase-order", "cara-menerima-barang"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Permintaan Pembelian (Purchase Requisition) adalah dokumen internal yang dibuat oleh departemen atau unit bisnis untuk mengajukan kebutuhan barang sebelum dibuatkan Purchase Order ke supplier. Dokumen ini perlu disetujui terlebih dahulu sebelum proses pembelian bisa dilanjutkan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Permintaan",
+      "body": "Dari menu utama, klik Pembelian → Permintaan. Halaman ini menampilkan daftar seluruh permintaan pembelian yang ada."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Permintaan Baru",
+      "body": "Klik tombol Buat Permintaan di sudut kanan atas. Form permintaan pembelian akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Informasi Dasar",
+      "body": "Isi informasi berikut pada form:\n- Unit Bisnis: pilih unit bisnis yang mengajukan permintaan\n- Tanggal Kebutuhan: tanggal barang dibutuhkan\n- Catatan: keterangan tambahan jika diperlukan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tambahkan Barang",
+      "body": "Pada bagian Daftar Barang, klik Tambah Barang lalu pilih produk yang dibutuhkan. Isi kolom Jumlah dan Satuan untuk setiap barang. Ulangi langkah ini untuk setiap barang yang dibutuhkan."
+    },
+    {
+      "type": "info",
+      "body": "Anda bisa menambahkan lebih dari satu barang dalam satu permintaan pembelian. Pastikan jumlah yang diisi sudah sesuai dengan kebutuhan aktual."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan Permintaan",
+      "body": "Klik tombol Simpan untuk menyimpan permintaan. Status permintaan akan menjadi Draft dan siap dikirim untuk persetujuan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Kirim untuk Persetujuan",
+      "body": "Klik tombol Kirim untuk mengirimkan permintaan ke atasan atau bagian purchasing untuk disetujui. Setelah disetujui, permintaan ini bisa digunakan sebagai dasar pembuatan Purchase Order."
+    },
+    {
+      "type": "warning",
+      "body": "Permintaan yang sudah dikirim tidak dapat diedit. Pastikan semua data sudah benar sebelum mengklik Kirim."
+    }
+  ]
+}
