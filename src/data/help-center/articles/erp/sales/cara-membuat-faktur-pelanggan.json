@@ -1,0 +1,58 @@
+{
+  "title": "Cara Membuat Faktur Pelanggan (Customer Invoice)",
+  "description": "Panduan membuat faktur tagihan kepada pelanggan berdasarkan Sales Order, lengkap dengan pajak, biaya pengiriman, dan deteksi uang muka",
+  "slug": "cara-membuat-faktur-pelanggan",
+  "module": "erp",
+  "subcategory": "sales",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["faktur pelanggan", "customer invoice", "tagihan", "piutang", "uang muka"],
+  "relatedArticles": ["cara-membuat-surat-jalan", "cara-mencatat-pembayaran-pelanggan", "cara-melihat-rekap-piutang"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Faktur Pelanggan adalah dokumen tagihan resmi yang dikirimkan ke pelanggan atas barang atau jasa yang sudah dikirimkan. Faktur dibuat berdasarkan Sales Order dan otomatis mendeteksi jika ada uang muka yang perlu diperhitungkan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Faktur Pelanggan",
+      "body": "Dari menu utama, klik Penjualan → Faktur Pelanggan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Faktur Baru",
+      "body": "Klik tombol Buat Faktur. Form dialog akan terbuka dengan dua tab."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tab Informasi Dasar",
+      "body": "Isi kolom berikut:\n- Sales Order: pilih nomor SO yang menjadi dasar faktur ini (wajib). Data pelanggan dan Delivery Order terisi otomatis\n- Tanggal Invoice: tanggal faktur diterbitkan\n- Tanggal Jatuh Tempo: batas pembayaran, dihitung otomatis dari Syarat Pembayaran\n- Syarat Pembayaran: termin pembayaran yang berlaku\n- Pajak (%): persentase pajak\n- Biaya Pengiriman (Rp): ongkos kirim yang ditagihkan\n- Biaya Lainnya (Rp): biaya tambahan lain\n- Catatan: pesan untuk pelanggan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tab Item — Periksa Produk",
+      "body": "Di tab Item, produk sudah terisi otomatis dari SO. Verifikasi jumlah, harga satuan, dan diskon setiap item. Anda bisa menyesuaikan jika ada perubahan dari SO asal."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Periksa Deteksi Uang Muka",
+      "body": "Jika pelanggan sudah membayar uang muka (Down Payment) sebelumnya, sistem otomatis menampilkan bagian Deteksi Uang Muka di ringkasan. Uang muka yang terdeteksi akan dikurangkan dari total tagihan secara otomatis."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Konfirmasi Faktur",
+      "body": "Klik Konfirmasi untuk menerbitkan faktur secara resmi. Faktur yang sudah dikonfirmasi akan masuk ke rekap piutang dan bisa dicetak atau dikirim ke pelanggan sebagai PDF."
+    },
+    {
+      "type": "warning",
+      "body": "Faktur yang sudah dikonfirmasi tidak bisa diedit. Status faktur: Draft → Submitted → Approved → Posted. Jika ada kesalahan setelah diposting, hubungi tim Finance untuk membuat jurnal koreksi."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Cara Melihat Stock Ledger",
+  "description": "Panduan membaca laporan stock ledger untuk melihat riwayat nilai stok dan harga pokok rata-rata setiap produk dari waktu ke waktu",
+  "slug": "cara-melihat-stock-ledger",
+  "module": "erp",
+  "subcategory": "inventory",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["stock ledger", "nilai stok", "harga pokok rata-rata", "average cost", "laporan stok"],
+  "relatedArticles": ["cara-melihat-pergerakan-stok", "cara-melakukan-stock-opname"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Stock Ledger menampilkan riwayat lengkap nilai stok beserta harga pokok rata-rata (average cost) setiap kali terjadi pergerakan. Laporan ini digunakan oleh tim Finance untuk keperluan valuasi persediaan dan audit."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Stock Ledger",
+      "body": "Dari menu utama, klik Stok → Stock Ledger."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Pilih Produk",
+      "body": "Pilih produk yang ingin dilihat riwayat nilai stoknya dari field pencarian atau dropdown produk."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Atur Periode",
+      "body": "Tentukan Tanggal Mulai dan Tanggal Selesai untuk melihat riwayat dalam rentang waktu tertentu."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Baca Data Stock Ledger",
+      "body": "Setiap baris menampilkan:\n- Tanggal Transaksi\n- Tipe: Masuk atau Keluar\n- Qty Berubah: jumlah stok yang masuk atau keluar\n- Harga Pokok Satuan: harga per unit pada saat transaksi\n- Nilai Transaksi: total nilai (Qty × Harga)\n- Saldo Qty: jumlah stok setelah transaksi\n- Saldo Nilai: total nilai stok setelah transaksi\n- Harga Pokok Rata-rata Baru: average cost yang diperbarui setelah transaksi masuk"
+    },
+    {
+      "type": "info",
+      "body": "Sistem menggunakan metode Average Cost (biaya rata-rata bergerak) untuk menghitung harga pokok. Setiap kali ada stok masuk, harga pokok rata-rata diperbarui otomatis berdasarkan nilai total stok dibagi total kuantitas."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Ekspor Data",
+      "body": "Klik tombol Ekspor untuk mengunduh data stock ledger dalam format Excel — berguna untuk rekonsiliasi dengan laporan keuangan atau keperluan audit."
+    }
+  ]
+}

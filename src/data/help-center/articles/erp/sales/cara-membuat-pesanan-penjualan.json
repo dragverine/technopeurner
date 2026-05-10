@@ -1,0 +1,62 @@
+{
+  "title": "Cara Membuat Pesanan Penjualan (Sales Order)",
+  "description": "Panduan membuat Sales Order untuk mencatat pesanan resmi pelanggan beserta detail produk, harga, pajak, dan sumber pesanan",
+  "slug": "cara-membuat-pesanan-penjualan",
+  "module": "erp",
+  "subcategory": "sales",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["sales order", "pesanan penjualan", "SO", "penjualan", "credit limit"],
+  "relatedArticles": ["cara-membuat-penawaran", "cara-membuat-surat-jalan", "cara-membuat-faktur-pelanggan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Sales Order (SO) adalah dokumen resmi yang mencatat pesanan dari pelanggan. SO menjadi dasar pembuatan Surat Jalan (Delivery Order) dan Faktur Pelanggan. Setiap SO harus dikonfirmasi sebelum proses pengiriman bisa dimulai."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pesanan Penjualan",
+      "body": "Dari menu utama, klik Penjualan → Pesanan Penjualan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat SO Baru",
+      "body": "Klik tombol Buat SO. Form akan terbuka dengan dua tab: Informasi Dasar dan Item."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tab Informasi Dasar",
+      "body": "Isi kolom berikut:\n- Pelanggan: pilih pelanggan dari dropdown (wajib). Informasi limit kredit ditampilkan otomatis\n- Tanggal SO: tanggal pesanan dibuat\n- Sumber SO: pilih asal pesanan, contoh Tokopedia, WhatsApp, Direct\n- Syarat Pembayaran: termin pembayaran yang berlaku\n- Pajak (%): persentase pajak\n- Biaya Pengiriman (Rp): ongkos kirim\n- Biaya Lainnya (Rp): biaya tambahan\n- Catatan: instruksi khusus dari pelanggan"
+    },
+    {
+      "type": "info",
+      "body": "Jika pelanggan memiliki Limit Kredit yang aktif, sistem menampilkan indikator kredit di samping nama pelanggan. Peringatan akan muncul jika total SO melebihi sisa limit kredit pelanggan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tab Item — Tambah Produk",
+      "body": "Di tab Item, klik Tambah Item. Untuk setiap produk, isi:\n- Produk: pilih dari katalog\n- Jumlah: kuantitas pesanan\n- Harga Satuan (Rp): harga jual (terisi otomatis, bisa diubah)\n- Diskon (%): diskon per item\n- Catatan: keterangan item\nPeriksa Subtotal, Nilai Pajak, dan Total di bagian ringkasan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Muat dari Quotation (Opsional)",
+      "body": "Jika ada penawaran yang sudah disetujui, klik tombol Muat dari Quotation dan pilih nomor penawaran. Data item akan terisi otomatis dari penawaran tersebut."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Simpan dan Konfirmasi",
+      "body": "Klik Simpan untuk menyimpan sebagai Draft, atau klik Konfirmasi untuk mengunci SO dan memulai proses pengiriman dan penagihan."
+    },
+    {
+      "type": "warning",
+      "body": "SO yang sudah dikonfirmasi tidak bisa diedit. Status SO: Draft → Submitted → Approved → Rejected. Setelah Approved, proses berlanjut ke pembuatan Surat Jalan."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Cara Mengelola Kategori dan Lokasi Aset",
+  "description": "Panduan membuat kategori aset dengan aturan depresiasi dan lokasi fisik aset sebelum mendaftarkan aset ke sistem",
+  "slug": "cara-mengelola-kategori-aset",
+  "module": "finance",
+  "subcategory": "aset",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["kategori aset", "lokasi aset", "depresiasi", "manajemen aset", "COA aset"],
+  "relatedArticles": ["cara-mendaftarkan-aset", "cara-menjalankan-depresiasi-batch"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Kategori Aset mendefinisikan aturan depresiasi default yang akan diterapkan ke semua aset dalam kategori tersebut. Lokasi Aset mendefinisikan di mana aset berada secara fisik. Kedua data ini harus dibuat sebelum mendaftarkan aset pertama."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Kategori Aset",
+      "body": "Dari menu utama, klik Keuangan → Manajemen Aset → Kategori Aset."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Kategori Baru",
+      "body": "Klik tombol Tambah Kategori. Form dialog akan terbuka dengan kolom:\n- Nama Kategori: nama yang deskriptif, contoh \"Kendaraan\", \"Peralatan Kantor\", \"Mesin Produksi\"\n- Akun Aset (COA): pilih akun Aset Tetap dari Bagan Akun yang akan digunakan untuk mencatat nilai aset\n- Akun Akumulasi Depresiasi (COA): pilih akun kontra-aset untuk akumulasi depresiasi\n- Akun Beban Depresiasi (COA): pilih akun Beban Depresiasi\n- Metode Depresiasi: pilih Garis Lurus (Straight Line) atau Saldo Menurun (Declining Balance)\n- Umur Manfaat: durasi dalam bulan, contoh 60 bulan untuk 5 tahun"
+    },
+    {
+      "type": "info",
+      "body": "Contoh pengaturan umum:\n- Kendaraan: umur manfaat 60 bulan (5 tahun), metode Garis Lurus\n- Peralatan Kantor: umur manfaat 48 bulan (4 tahun), metode Garis Lurus\n- Gedung: umur manfaat 240 bulan (20 tahun), metode Garis Lurus"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Simpan Kategori",
+      "body": "Klik Submit. Kategori baru akan tersedia sebagai pilihan saat mendaftarkan aset."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Buka Menu Lokasi Aset",
+      "body": "Dari menu utama, klik Keuangan → Manajemen Aset → Lokasi Aset."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Tambah Lokasi Baru",
+      "body": "Klik tombol Tambah Lokasi. Isi:\n- Nama Lokasi: contoh \"Kantor Pusat Jakarta\", \"Gudang Bekasi\", \"Cabang Surabaya\"\n- Keterangan atau alamat detail (opsional)\nKlik Submit untuk menyimpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Edit atau Hapus",
+      "body": "Gunakan ikon Edit untuk memperbarui data kategori atau lokasi. Kategori yang sudah digunakan oleh aset aktif tidak bisa dihapus."
+    }
+  ]
+}

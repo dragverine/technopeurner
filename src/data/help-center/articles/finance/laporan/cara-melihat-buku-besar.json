@@ -1,0 +1,52 @@
+{
+  "title": "Cara Melihat Buku Besar (General Ledger)",
+  "description": "Panduan membaca laporan buku besar untuk melihat riwayat seluruh transaksi per akun beserta saldo berjalan",
+  "slug": "cara-melihat-buku-besar",
+  "module": "finance",
+  "subcategory": "laporan",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["buku besar", "general ledger", "riwayat akun", "laporan keuangan", "audit"],
+  "relatedArticles": ["cara-melihat-neraca-keuangan", "cara-melihat-laporan-laba-rugi", "cara-mengelola-bagan-akun"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Buku Besar (General Ledger) menampilkan riwayat lengkap semua transaksi yang mempengaruhi setiap akun keuangan dalam periode tertentu. Ini adalah laporan paling detail dalam akuntansi — setiap entri jurnal yang diposting akan muncul di sini."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Buku Besar",
+      "body": "Dari menu utama, klik Keuangan → Laporan Keuangan → Buku Besar."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Atur Filter Laporan",
+      "body": "Sebelum membaca data, atur filter berikut:\n- Periode: tentukan Tanggal Mulai dan Tanggal Selesai yang ingin dilihat\n- Akun: pilih akun spesifik atau kosongkan untuk menampilkan semua akun\n- Tipe Akun: filter berdasarkan kelompok akun (Aset, Kewajiban, Pendapatan, dll)\n- Perusahaan: pilih perusahaan jika multi-entitas"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Baca Struktur Laporan",
+      "body": "Untuk setiap akun, laporan menampilkan:\n- Saldo Awal: saldo akun sebelum periode yang dipilih\n- Daftar Mutasi: setiap transaksi dalam periode, berisi tanggal, nomor jurnal, keterangan, nilai Debit atau Kredit\n- Saldo Berjalan: saldo akun setelah setiap transaksi\n- Saldo Akhir: saldo akun di akhir periode yang dipilih"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Telusuri Transaksi Sumber",
+      "body": "Klik baris transaksi untuk melihat detail jurnal asalnya. Klik link referensi untuk membuka dokumen sumber (faktur, surat jalan, dll) yang menghasilkan entri jurnal tersebut."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Ekspor ke Excel",
+      "body": "Klik tombol Ekspor untuk mengunduh buku besar dalam format Excel. Data yang diunduh mencakup semua akun dan transaksi sesuai filter yang aktif — berguna untuk keperluan audit atau pelaporan eksternal."
+    },
+    {
+      "type": "info",
+      "body": "Buku besar hanya menampilkan jurnal dengan status Posted. Jurnal berstatus Draft atau Cancelled tidak akan muncul di laporan ini."
+    }
+  ]
+}

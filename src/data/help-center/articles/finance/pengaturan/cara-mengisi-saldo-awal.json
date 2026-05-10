@@ -1,0 +1,66 @@
+{
+  "title": "Cara Mengisi Saldo Awal (Opening Balance)",
+  "description": "Panduan memasukkan saldo awal seluruh akun keuangan saat pertama kali menggunakan sistem Gilabs",
+  "slug": "cara-mengisi-saldo-awal",
+  "module": "finance",
+  "subcategory": "pengaturan",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["saldo awal", "opening balance", "migrasi", "neraca pembuka", "pengaturan"],
+  "relatedArticles": ["cara-mengatur-tahun-fiskal", "cara-mengelola-bagan-akun"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Saldo Awal adalah nilai masing-masing akun keuangan pada tanggal pertama kali perusahaan mulai menggunakan sistem Gilabs. Data ini biasanya diambil dari neraca keuangan terakhir sebelum migrasi. Proses ini dilakukan dua tahap: membuat baris saldo, lalu mem-posting-nya."
+    },
+    {
+      "type": "warning",
+      "body": "Proses posting saldo awal hanya bisa dilakukan satu kali dan tidak dapat dibatalkan. Pastikan semua angka sudah benar dan neraca sudah seimbang sebelum mem-posting."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Wizard Saldo Awal",
+      "body": "Dari menu utama, klik Keuangan → Pengaturan → Saldo Awal."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Isi Informasi Dasar",
+      "body": "Di bagian atas form, isi:\n- Perusahaan: pilih perusahaan dari dropdown\n- Tahun Fiskal: pilih tahun fiskal yang sudah dibuat dan diaktifkan sebelumnya"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tambahkan Baris Saldo per Akun",
+      "body": "Klik tombol Tambah Baris untuk setiap akun yang memiliki saldo awal. Untuk setiap baris, isi:\n- Akun: pilih akun dari Bagan Akun\n- Debit: isi nilai jika akun ini bersaldo Debit (Aset, Beban)\n- Kredit: isi nilai jika akun ini bersaldo Kredit (Kewajiban, Ekuitas, Pendapatan)\n- Keterangan: catatan opsional untuk baris ini\nPenting: setiap baris hanya boleh diisi salah satu — Debit atau Kredit, tidak boleh keduanya."
+    },
+    {
+      "type": "info",
+      "body": "Panduan umum pengisian:\n- Akun Kas/Bank → Debit\n- Akun Piutang Usaha → Debit\n- Akun Persediaan → Debit\n- Akun Aset Tetap → Debit\n- Akun Hutang Usaha → Kredit\n- Akun Modal → Kredit\n- Akun Laba Ditahan → Kredit"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Lanjut ke Ringkasan",
+      "body": "Setelah semua baris diisi, klik tombol Lanjut. Sistem akan menampilkan ringkasan simulasi saldo awal dengan kolom:\n- Akun\n- Debit\n- Kredit\n- Status setiap baris"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Pastikan Neraca Seimbang",
+      "body": "Di halaman ringkasan, perhatikan nilai Total Debit, Total Kredit, dan Selisih. Selisih harus bernilai nol (atau sangat kecil, di bawah Rp 0,005) sebelum bisa mem-posting. Jika ada selisih, kembali ke langkah sebelumnya dan periksa kembali angka yang dimasukkan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Posting Saldo Awal",
+      "body": "Setelah neraca seimbang, klik tombol Posting Saldo Awal. Sistem akan memposting semua baris sebagai jurnal pembuka dan mengunci data saldo awal agar tidak bisa diubah lagi."
+    },
+    {
+      "type": "info",
+      "body": "Jika ada kesalahan setelah diposting, hubungi Administrator sistem untuk penanganan lebih lanjut. Koreksi tidak bisa dilakukan sendiri melalui wizard ini."
+    }
+  ]
+}

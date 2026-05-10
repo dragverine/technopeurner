@@ -1,0 +1,40 @@
+{
+  "title": "Cara Mengelola Merek, Segmen, dan Tipe Produk",
+  "description": "Panduan menambah merek, segmen pasar, dan tipe produk untuk klasifikasi katalog yang lebih detail",
+  "slug": "cara-mengelola-merek",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["merek", "brand", "segmen", "tipe produk", "master data"],
+  "relatedArticles": ["cara-menambah-produk", "cara-mengelola-kategori-produk"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Merek, Segmen, dan Tipe Produk adalah data klasifikasi tambahan yang memungkinkan pengelompokan produk lebih detail. Ketiganya berguna untuk pelaporan dan analisis penjualan berdasarkan brand atau segmen pasar."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Kelola Merek Produk",
+      "body": "Dari menu utama, klik Data Master → Produk → Merek. Klik Buat, isi nama merek (contoh: Samsung, Unilever, Indomie), lalu klik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Kelola Segmen Produk",
+      "body": "Klik Data Master → Produk → Segmen. Klik Buat, isi nama segmen pasar (contoh: Premium, Economy, Mid-range), lalu klik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Kelola Tipe Produk",
+      "body": "Klik Data Master → Produk → Tipe. Klik Buat, isi nama tipe (contoh: Produk Jadi, Bahan Baku, Produk Setengah Jadi), lalu klik Simpan."
+    },
+    {
+      "type": "info",
+      "body": "Merek, Segmen, dan Tipe bisa dibuat langsung dari form produk tanpa perlu membuka menu masing-masing — cukup ketik nama baru di field yang sesuai dan sistem akan menyimpannya otomatis."
+    }
+  ]
+}

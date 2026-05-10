@@ -1,0 +1,58 @@
+{
+  "title": "Cara Membuat Purchase Order (PO)",
+  "description": "Panduan membuat Purchase Order kepada supplier dengan detail produk, harga, diskon, pajak, dan opsi muat dari Purchase Requisition atau Sales Order",
+  "slug": "cara-membuat-purchase-order",
+  "module": "erp",
+  "subcategory": "purchasing",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["purchase order", "PO", "pembelian", "supplier", "pengadaan"],
+  "relatedArticles": ["cara-membuat-permintaan-pembelian", "cara-menerima-barang"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Purchase Order (PO) adalah dokumen resmi yang dikirimkan kepada supplier sebagai konfirmasi pembelian. PO bisa dibuat langsung, atau dimuat dari Purchase Requisition (PR) maupun Sales Order (SO) yang sudah disetujui."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pesanan Pembelian",
+      "body": "Dari menu utama, klik Pembelian → Pesanan Pembelian."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat PO Baru",
+      "body": "Klik tombol Buat PO. Form dialog akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Informasi Order",
+      "body": "Di bagian Informasi Order:\n- Tanggal Order: tanggal PO dibuat (default hari ini)\n- Tanggal Jatuh Tempo: estimasi tanggal pengiriman dari supplier\n- Supplier (Pemasok): pilih supplier dari dropdown (wajib). Bisa buat supplier baru langsung jika belum ada\n- Termin Pembayaran: ketentuan pembayaran yang disepakati\n- Unit Bisnis: unit yang melakukan pembelian (wajib)\n- Pajak (%): persentase pajak yang berlaku\n- Biaya Pengiriman (Rp): ongkos kirim dari supplier\n- Biaya Lainnya (Rp): biaya tambahan\n- Catatan: instruksi khusus untuk supplier"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Muat dari PR atau SO (Opsional)",
+      "body": "Jika ada PR atau SO yang sudah disetujui:\n- Klik Muat dari PR: pilih Purchase Requisition yang disetujui — item akan terisi otomatis\n- Klik Muat dari SO: pilih Sales Order yang disetujui — berguna untuk pembelian yang terkait langsung dengan pesanan pelanggan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Tambah Item Manual",
+      "body": "Klik Tambah Item untuk menambah produk secara manual. Isi:\n- Produk: pilih dari katalog (wajib)\n- Qty: kuantitas yang dipesan\n- Harga Pembelian (Rp): harga per unit yang disepakati dengan supplier\n- Diskon (%): diskon per item jika ada\n- Catatan: keterangan item\nPeriksa ringkasan Subtotal, Nilai Pajak, dan Total di bagian bawah."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Simpan dan Kirim",
+      "body": "Klik Simpan untuk menyimpan sebagai Draft. Klik Kirim untuk memulai proses persetujuan internal. Setelah disetujui (Approved), PO bisa dicetak dan dikirimkan ke supplier."
+    },
+    {
+      "type": "warning",
+      "body": "PO yang sudah Approved dan dikirim ke supplier tidak bisa diubah. Jika ada revisi, koordinasikan dengan supplier dan buat PO revisi baru. Status PO: Draft → Submitted → Approved → Rejected → Closed."
+    }
+  ]
+}

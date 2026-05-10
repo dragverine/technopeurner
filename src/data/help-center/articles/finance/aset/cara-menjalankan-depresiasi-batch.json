@@ -1,0 +1,60 @@
+{
+  "title": "Cara Menjalankan Depresiasi Aset (Batch)",
+  "description": "Panduan menjalankan depresiasi semua aset aktif sekaligus untuk satu periode dengan preview dan konfirmasi sebelum dieksekusi",
+  "slug": "cara-menjalankan-depresiasi-batch",
+  "module": "finance",
+  "subcategory": "aset",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["depresiasi batch", "batch depreciation", "penyusutan", "aset tetap", "jurnal depresiasi"],
+  "relatedArticles": ["cara-mendaftarkan-aset", "cara-memproses-disposal-aset", "cara-melakukan-tutup-buku"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Depresiasi Batch menjalankan penyusutan nilai untuk semua aset aktif sekaligus dalam satu periode. Proses ini menghasilkan jurnal depresiasi otomatis dan harus dijalankan setiap akhir bulan sebelum tutup buku."
+    },
+    {
+      "type": "info",
+      "body": "Jalankan depresiasi batch di akhir setiap bulan atau akhir periode akuntansi, sebelum melakukan proses Tutup Buku."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Aset Tetap",
+      "body": "Dari menu utama, klik Keuangan → Manajemen Aset → Aset Tetap."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buka Tab Depresiasi Batch",
+      "body": "Klik tab Depresiasi Batch di halaman Aset Tetap."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Periode Depresiasi",
+      "body": "Di bagian atas form, pilih:\n- Bulan: pilih bulan dari dropdown (Januari hingga Desember)\n- Tahun: pilih tahun dari dropdown (tersedia 10 tahun ke belakang)\nPastikan memilih periode yang belum pernah dijalankan sebelumnya."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Preview Depresiasi",
+      "body": "Klik tombol Preview. Sistem menghitung dan menampilkan:\n- Total Nilai Depresiasi periode ini (format Rupiah)\n- Jumlah aset yang Berhasil (siap didepresiasi)\n- Jumlah aset yang Gagal atau Dilewati\n- Tabel 10 baris pertama berisi: Aset (kode + nama), Metode Depresiasi, Nilai Depresiasi, Nilai Buku setelah depresiasi, dan Status (Baru / Dilewati)\n- Ringkasan: \"X dari Y aset siap\" dan \"Z dilewati\"\nPeriksa tabel ini sebelum menjalankan."
+    },
+    {
+      "type": "warning",
+      "body": "Aset yang sudah didepresiasi untuk periode yang sama akan berstatus Dilewati (Skipped) dan tidak akan diproses ulang. Pastikan periode yang dipilih sudah benar."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Jalankan Depresiasi",
+      "body": "Setelah memverifikasi preview, klik tombol Jalankan Depresiasi (Run Depreciation). Sistem akan memproses semua aset dan menghasilkan jurnal depresiasi otomatis untuk setiap aset yang berstatus Baru. Hasil akhir ditampilkan dengan status per aset."
+    },
+    {
+      "type": "info",
+      "body": "Jurnal depresiasi yang dihasilkan bisa dilihat di menu Keuangan → Akunting → Jurnal Inventaris. Jurnal ini mengkredit Akumulasi Depresiasi dan mendebet Beban Depresiasi sesuai pemetaan kategori aset."
+    }
+  ]
+}

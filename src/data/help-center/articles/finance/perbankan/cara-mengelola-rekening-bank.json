@@ -1,0 +1,52 @@
+{
+  "title": "Cara Mengelola Rekening Bank",
+  "description": "Panduan menambah dan mengelola rekening bank perusahaan, pelanggan, dan supplier termasuk pengaturan akun COA yang terhubung",
+  "slug": "cara-mengelola-rekening-bank",
+  "module": "finance",
+  "subcategory": "perbankan",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["rekening bank", "bank account", "kas", "COA", "perbankan"],
+  "relatedArticles": ["cara-mencatat-transaksi-kas-bank", "cara-melakukan-transfer-bank", "cara-melakukan-rekonsiliasi-bank"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Menu Rekening Bank mengelola semua rekening bank yang terkait dengan perusahaan, pelanggan, maupun supplier. Rekening milik perusahaan dihubungkan ke akun COA sehingga setiap transaksi kas otomatis tercatat di jurnal."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Rekening Bank",
+      "body": "Dari menu utama, klik Keuangan → Perbankan & Pembayaran → Rekening Bank."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Rekening Baru",
+      "body": "Klik tombol Tambah Rekening. Form dialog akan terbuka dengan kolom berikut:\n- Perusahaan: pilih perusahaan (wajib)\n- Kode: kode singkat unik untuk rekening ini, contoh \"BCA-001\" (wajib)\n- Nama: nama deskriptif rekening, contoh \"Rekening Operasional BCA\" (wajib)\n- Nomor Rekening: nomor rekening bank (wajib)\n- Nama Pemilik Rekening: nama yang tertera di rekening (wajib)\n- Mata Uang: pilih IDR atau USD (wajib)\n- Telepon Bank: nomor kontak bank (opsional)\n- Alamat Bank: alamat cabang bank (opsional)\n- Akun COA: pilih akun Kas & Bank dari Bagan Akun — wajib untuk rekening perusahaan, opsional untuk rekening pihak lain\n- Status Aktif: toggle untuk mengaktifkan rekening"
+    },
+    {
+      "type": "info",
+      "body": "Kolom Akun COA sangat penting untuk rekening milik perusahaan. Tanpa akun COA yang terhubung, transaksi kas tidak akan menghasilkan jurnal yang benar."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Simpan Rekening",
+      "body": "Klik tombol Submit. Rekening baru akan muncul di daftar dan siap digunakan dalam transaksi pembayaran, transfer, dan rekonsiliasi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Lihat Riwayat Transaksi Rekening",
+      "body": "Klik nama rekening perusahaan untuk membuka halaman detail. Di sini Anda bisa melihat semua riwayat transaksi yang melibatkan rekening tersebut, lengkap dengan tanggal, keterangan, jumlah, dan saldo berjalan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Edit atau Nonaktifkan Rekening",
+      "body": "Klik ikon Edit pada baris rekening untuk mengubah data. Toggle status Aktif ke posisi nonaktif jika rekening sudah tidak digunakan. Rekening yang dinonaktifkan tidak akan muncul sebagai pilihan di form transaksi baru."
+    }
+  ]
+}

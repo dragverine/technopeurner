@@ -1,0 +1,52 @@
+{
+  "title": "Cara Mengatur Data Perusahaan",
+  "description": "Panduan mengisi dan memperbarui informasi perusahaan seperti nama, alamat, NPWP, NIB, dan logo yang digunakan di seluruh dokumen sistem",
+  "slug": "cara-mengatur-data-perusahaan",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["perusahaan", "profil bisnis", "NPWP", "NIB", "master data"],
+  "relatedArticles": ["cara-mengelola-divisi", "cara-mengelola-unit-bisnis"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Data perusahaan adalah informasi dasar yang ditampilkan di seluruh dokumen sistem — faktur, surat jalan, laporan, dan dokumen lainnya. Pastikan data ini lengkap dan akurat sebelum memulai operasional."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Perusahaan",
+      "body": "Dari menu utama, klik Data Master → Organisasi → Perusahaan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Edit Data Perusahaan",
+      "body": "Klik tombol Ubah atau ikon Edit pada kartu perusahaan yang tampil. Form pengisian akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Informasi Perusahaan",
+      "body": "Isi kolom berikut:\n- Nama Perusahaan: nama resmi perusahaan\n- Email: alamat email perusahaan\n- Nomor Telepon: nomor kontak utama\n- Alamat: alamat lengkap kantor\n- Provinsi, Kota/Kabupaten, Kecamatan: pilih via Location Picker\n- NPWP: nomor NPWP perusahaan, hanya angka\n- NIB: Nomor Induk Berusaha, hanya angka"
+    },
+    {
+      "type": "info",
+      "body": "NPWP dan NIB digunakan untuk keperluan dokumen perpajakan seperti Faktur Pajak. Pastikan angkanya benar karena akan tercetak di dokumen resmi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Lihat Lokasi di Peta",
+      "body": "Klik tab Peta di detail perusahaan untuk memverifikasi lokasi kantor terpetakan dengan benar di peta."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan Perubahan",
+      "body": "Klik Simpan. Data perusahaan langsung diperbarui di seluruh sistem dan akan muncul pada dokumen yang dicetak berikutnya."
+    }
+  ]
+}

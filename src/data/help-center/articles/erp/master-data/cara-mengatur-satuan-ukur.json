@@ -1,0 +1,44 @@
+{
+  "title": "Cara Mengatur Satuan Ukur (UoM)",
+  "description": "Panduan menambah dan mengelola satuan ukur produk seperti Pcs, Kg, Liter, dan Karton yang digunakan dalam transaksi dan stok",
+  "slug": "cara-mengatur-satuan-ukur",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["satuan ukur", "UoM", "unit of measure", "konversi satuan", "master data"],
+  "relatedArticles": ["cara-menambah-produk", "cara-mengelola-kemasan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Satuan Ukur mendefinisikan satuan yang digunakan untuk mengukur produk — Pcs, Kg, Liter, Dus, dan lainnya. Satuan yang tepat penting untuk akurasi pencatatan stok dan konversi antara satuan beli dan satuan jual."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Satuan Ukur",
+      "body": "Dari menu utama, klik Data Master → Produk → Satuan Ukur."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Satuan Baru",
+      "body": "Klik tombol Buat. Isi:\n- Nama Satuan: nama lengkap satuan (wajib), contoh Kilogram, Pieces, Liter\n- Singkatan/Kode: contoh kg, pcs, ltr\n- Deskripsi: keterangan tambahan (opsional)\nKlik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Edit atau Hapus",
+      "body": "Klik ikon Edit untuk memperbarui. Hapus hanya bisa dilakukan jika satuan belum digunakan oleh produk manapun."
+    },
+    {
+      "type": "info",
+      "body": "Jika produk dibeli dalam satuan berbeda dari satuan jualnya (contoh: dibeli per Karton, dijual per Pcs), isi kedua satuan di form produk dan atur Konversi-nya. Contoh: 1 Karton = 24 Pcs, maka Konversi = 24."
+    },
+    {
+      "type": "warning",
+      "body": "Satuan yang sudah digunakan oleh produk aktif tidak bisa dihapus. Nonaktifkan saja jika tidak ingin digunakan lagi di produk baru."
+    }
+  ]
+}

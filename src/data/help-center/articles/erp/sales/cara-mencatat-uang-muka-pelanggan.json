@@ -1,0 +1,52 @@
+{
+  "title": "Cara Mencatat Uang Muka Pelanggan (Down Payment)",
+  "description": "Panduan mencatat pembayaran uang muka dari pelanggan sebelum barang dikirim dan bagaimana DP otomatis diperhitungkan di faktur akhir",
+  "slug": "cara-mencatat-uang-muka-pelanggan",
+  "module": "erp",
+  "subcategory": "sales",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["uang muka", "down payment", "DP", "pelanggan", "faktur DP"],
+  "relatedArticles": ["cara-membuat-pesanan-penjualan", "cara-membuat-faktur-pelanggan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Uang Muka Pelanggan (Down Payment) adalah pembayaran awal yang diterima dari pelanggan sebelum barang dikirimkan. Saat faktur akhir dibuat, sistem akan otomatis mendeteksi dan mengurangi DP dari total tagihan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Uang Muka Pelanggan",
+      "body": "Dari menu utama, klik Penjualan → Uang Muka Pelanggan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Faktur DP Baru",
+      "body": "Klik tombol Buat Faktur DP. Form akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Detail Uang Muka",
+      "body": "Isi kolom berikut:\n- Pelanggan: pilih pelanggan yang membayar DP (wajib)\n- Sales Order: pilih SO yang terkait dengan pembayaran DP ini\n- Tanggal Invoice: tanggal faktur DP diterbitkan\n- Tanggal Jatuh Tempo: kapan DP harus sudah diterima\n- Jumlah DP (Rp): nominal uang muka yang diterima\n- Syarat Pembayaran: termin yang berlaku\n- Catatan: keterangan tambahan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Konfirmasi Faktur DP",
+      "body": "Klik Konfirmasi. Faktur DP diterbitkan dan tercatat sebagai piutang yang sudah terbayar sebagian."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "DP Otomatis Terpotong di Faktur Akhir",
+      "body": "Saat membuat Faktur Pelanggan final berdasarkan SO yang sama, sistem otomatis mendeteksi DP yang sudah ada di bagian Deteksi Uang Muka. Total tagihan akan otomatis dikurangi nilai DP — tidak perlu menghitung manual."
+    },
+    {
+      "type": "info",
+      "body": "Status Faktur DP mengikuti alur yang sama dengan faktur biasa: Draft → Submitted → Approved → Posted."
+    }
+  ]
+}

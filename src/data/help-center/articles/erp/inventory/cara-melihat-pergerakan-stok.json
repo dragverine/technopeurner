@@ -1,0 +1,60 @@
+{
+  "title": "Cara Melihat Pergerakan Stok",
+  "description": "Panduan melihat riwayat semua pergerakan stok masuk dan keluar per produk, per gudang, atau per periode untuk keperluan audit dan analisis",
+  "slug": "cara-melihat-pergerakan-stok",
+  "module": "erp",
+  "subcategory": "inventory",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["pergerakan stok", "stock movement", "riwayat stok", "stok masuk", "stok keluar"],
+  "relatedArticles": ["cara-melakukan-stock-opname", "cara-transfer-stok-antar-gudang", "cara-melihat-stock-ledger"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Pergerakan Stok mencatat setiap transaksi yang mempengaruhi jumlah stok — penerimaan barang, pengiriman, transfer gudang, retur, dan penyesuaian opname. Ini adalah catatan audit trail lengkap untuk semua perubahan stok."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pergerakan Stok",
+      "body": "Dari menu utama, klik Stok → Pergerakan Stok."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Filter berdasarkan Gudang",
+      "body": "Pilih gudang tertentu dari filter Gudang untuk melihat pergerakan di lokasi spesifik. Kosongkan untuk melihat semua gudang."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Filter berdasarkan Periode",
+      "body": "Isi Tanggal Mulai dan Tanggal Selesai untuk melihat pergerakan dalam rentang waktu tertentu."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Filter berdasarkan Produk",
+      "body": "Ketik nama atau kode produk di kolom pencarian untuk melihat riwayat pergerakan stok produk tertentu saja."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Baca Data Pergerakan",
+      "body": "Setiap baris menampilkan:\n- Tanggal Transaksi\n- Tipe Pergerakan: Masuk (dari GR, retur penjualan, opname+) atau Keluar (dari DO, retur pembelian, opname-) atau Transfer\n- Produk\n- Jumlah: positif untuk stok masuk, negatif untuk stok keluar\n- Dokumen Referensi: nomor GR, DO, PO, atau opname yang menyebabkan pergerakan\n- Saldo Stok setelah transaksi"
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Klik Referensi untuk Detail",
+      "body": "Klik nomor referensi di kolom Dokumen untuk membuka dokumen sumber yang menyebabkan pergerakan stok tersebut."
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Ekspor Data",
+      "body": "Klik Ekspor untuk mengunduh data pergerakan stok dalam format Excel sesuai filter yang aktif."
+    }
+  ]
+}

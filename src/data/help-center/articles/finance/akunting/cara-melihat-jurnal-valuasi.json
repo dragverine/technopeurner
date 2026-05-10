@@ -1,0 +1,46 @@
+{
+  "title": "Cara Melihat Jurnal Valuasi",
+  "description": "Panduan memantau jurnal yang dihasilkan dari proses valuasi stok dan revaluasi mata uang asing",
+  "slug": "cara-melihat-jurnal-valuasi",
+  "module": "finance",
+  "subcategory": "akunting",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["jurnal valuasi", "valuation journal", "revaluasi", "mata uang", "stok"],
+  "relatedArticles": ["cara-melihat-jurnal-inventaris", "cara-melihat-jurnal-transaksi"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Jurnal Valuasi adalah jurnal yang dihasilkan dari proses penilaian ulang nilai stok (inventory valuation) dan revaluasi mata uang asing. Jurnal ini memastikan nilai aset di neraca selalu mencerminkan kondisi terkini."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Jurnal Valuasi",
+      "body": "Dari menu utama, klik Keuangan → Akunting → Jurnal → Jurnal Valuasi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Filter dan Lihat Data",
+      "body": "Gunakan filter tanggal untuk mempersempit periode yang ingin dilihat. Jurnal ini berisi:\n- Penilaian Stok: penyesuaian nilai persediaan berdasarkan metode rata-rata bergerak\n- Revaluasi Mata Uang: penyesuaian selisih kurs untuk transaksi dalam mata uang asing"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Jalankan Rekonsiliasi Valuasi",
+      "body": "Jika ada run valuasi yang perlu diselesaikan, klik tombol Rekonsiliasi di baris run valuasi tersebut. Proses ini memposting jurnal valuasi yang masih pending."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Buka Kunci Run Valuasi",
+      "body": "Jika diperlukan, klik Buka Kunci untuk membuka run valuasi yang terkunci sehingga bisa diproses ulang."
+    },
+    {
+      "type": "info",
+      "body": "Jurnal valuasi yang sudah diposting tidak bisa diubah. Hubungi Administrator jika ada koreksi yang perlu dilakukan."
+    }
+  ]
+}

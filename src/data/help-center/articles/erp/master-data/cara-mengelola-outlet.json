@@ -1,0 +1,48 @@
+{
+  "title": "Cara Mengelola Outlet",
+  "description": "Panduan menambah dan mengatur data outlet atau cabang toko beserta lokasi di peta untuk keperluan manajemen POS dan kunjungan sales",
+  "slug": "cara-mengelola-outlet",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["outlet", "cabang", "toko", "POS", "peta", "master data"],
+  "relatedArticles": ["cara-mengatur-data-perusahaan", "cara-mengelola-area"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Outlet adalah lokasi fisik cabang atau toko perusahaan. Data outlet digunakan untuk pengelompokan transaksi POS, manajemen kunjungan sales, dan pelacakan kinerja per lokasi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Outlet",
+      "body": "Dari menu utama, klik Data Master → Outlet."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Outlet Baru",
+      "body": "Klik tombol Tambah Outlet. Form dialog akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Data Outlet",
+      "body": "Isi kolom berikut:\n- Nama Outlet: nama cabang atau toko (wajib)\n- Kode Outlet: kode singkat unik\n- Nomor Telepon: kontak outlet\n- Alamat: alamat fisik outlet\n- Provinsi, Kota/Kabupaten, Kecamatan: pilih via Location Picker\n- Area: pilih area penjualan yang mencakup outlet ini\n- Aktif: toggle status"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tandai Lokasi di Peta",
+      "body": "Klik tab Peta atau tombol Pilih di Peta untuk menandai lokasi outlet secara tepat. Klik di peta untuk menempatkan pin lokasi. Koordinat latitude dan longitude akan terisi otomatis."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan",
+      "body": "Klik Simpan. Outlet baru tersedia untuk digunakan di modul POS, perencanaan kunjungan sales, dan laporan kinerja per outlet."
+    }
+  ]
+}

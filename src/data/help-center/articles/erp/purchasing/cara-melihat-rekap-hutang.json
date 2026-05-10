@@ -1,0 +1,52 @@
+{
+  "title": "Cara Melihat Rekap Hutang",
+  "description": "Panduan memantau saldo hutang kepada supplier yang belum dibayar, filter berdasarkan jatuh tempo, dan ekspor laporan hutang",
+  "slug": "cara-melihat-rekap-hutang",
+  "module": "erp",
+  "subcategory": "purchasing",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["rekap hutang", "payable", "hutang supplier", "jatuh tempo", "laporan pembelian"],
+  "relatedArticles": ["cara-mencatat-faktur-pemasok", "cara-melakukan-pembayaran-ke-supplier"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Rekap Hutang menampilkan ringkasan seluruh faktur supplier yang belum dibayar. Gunakan menu ini untuk memantau kewajiban pembayaran yang masih outstanding dan mana yang sudah atau akan segera jatuh tempo."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Rekap Hutang",
+      "body": "Dari menu utama, klik Pembelian → Rekap Hutang."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Filter Data",
+      "body": "Gunakan filter berikut:\n- Supplier: tampilkan hutang ke supplier tertentu saja\n- Rentang Tanggal Jatuh Tempo: filter berdasarkan kapan tagihan jatuh tempo\n- Status: Belum Jatuh Tempo, Sudah Jatuh Tempo, atau Semua"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Baca Data Hutang",
+      "body": "Setiap baris menampilkan:\n- Nama Supplier\n- Nomor Faktur Supplier\n- Tanggal Faktur dan Tanggal Jatuh Tempo\n- Total Faktur\n- Sisa yang belum dibayar\n- Aging: sudah berapa hari melewati jatuh tempo"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Klik Supplier untuk Detail",
+      "body": "Klik nama supplier untuk melihat semua faktur yang belum lunas dari supplier tersebut, beserta detail nilai dan tanggal jatuh tempo masing-masing."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Ekspor Rekap",
+      "body": "Klik Ekspor untuk mengunduh data rekap hutang dalam format Excel — berguna untuk perencanaan kas dan laporan keuangan."
+    },
+    {
+      "type": "info",
+      "body": "Prioritaskan pembayaran untuk faktur dengan aging tertinggi (sudah paling lama melewati jatuh tempo) untuk menjaga kepercayaan dan hubungan baik dengan supplier."
+    }
+  ]
+}

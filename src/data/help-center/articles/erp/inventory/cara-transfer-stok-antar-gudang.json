@@ -1,0 +1,62 @@
+{
+  "title": "Cara Transfer Stok Antar Gudang",
+  "description": "Panduan memindahkan stok barang dari satu gudang ke gudang lain dengan pencatatan pergerakan stok otomatis di kedua lokasi",
+  "slug": "cara-transfer-stok-antar-gudang",
+  "module": "erp",
+  "subcategory": "inventory",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["transfer stok", "pindah gudang", "stock movement", "stock transfer"],
+  "relatedArticles": ["cara-menambah-gudang", "cara-melihat-pergerakan-stok"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Transfer stok digunakan untuk memindahkan barang dari satu gudang ke gudang lain — misalnya dari gudang pusat ke gudang cabang. Proses ini secara otomatis mengurangi stok di gudang asal dan menambah stok di gudang tujuan."
+    },
+    {
+      "type": "info",
+      "body": "Pastikan kedua gudang (asal dan tujuan) sudah terdaftar di sistem. Lihat panduan Cara Menambah Gudang Baru jika belum."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pergerakan Stok",
+      "body": "Dari menu utama, klik Stok → Pergerakan Stok."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Transfer Baru",
+      "body": "Klik tombol Transfer Stok di sudut kanan atas. Form transfer akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Gudang Asal dan Tujuan",
+      "body": "Pilih:\n- Gudang Asal: gudang yang stoknya akan dikurangi (wajib)\n- Gudang Tujuan: gudang yang akan menerima stok (wajib)\nKedua gudang tidak boleh sama."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tambahkan Barang",
+      "body": "Klik Tambah Barang. Untuk setiap produk yang dipindahkan:\n- Produk: pilih dari katalog\n- Jumlah: kuantitas yang dipindahkan (tidak boleh melebihi stok tersedia di gudang asal)\n- Catatan: keterangan opsional\nUlangi untuk setiap barang yang dipindah sekaligus."
+    },
+    {
+      "type": "warning",
+      "body": "Jika jumlah yang diisi melebihi stok tersedia di gudang asal, sistem akan menampilkan pesan error dan transfer tidak bisa dikonfirmasi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Isi Tanggal dan Catatan",
+      "body": "Isi:\n- Tanggal Transfer: tanggal pemindahan dilakukan\n- Catatan: alasan transfer atau keterangan tambahan (opsional)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Konfirmasi Transfer",
+      "body": "Klik Konfirmasi Transfer. Stok di gudang asal langsung berkurang dan stok di gudang tujuan langsung bertambah. Pergerakan tercatat di menu Pergerakan Stok dengan tipe Transfer."
+    }
+  ]
+}

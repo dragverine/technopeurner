@@ -1,0 +1,52 @@
+{
+  "title": "Cara Mengelola Divisi",
+  "description": "Panduan menambah, mengedit, dan menonaktifkan divisi dalam struktur organisasi perusahaan",
+  "slug": "cara-mengelola-divisi",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["divisi", "departemen", "organisasi", "master data"],
+  "relatedArticles": ["cara-mengelola-unit-bisnis", "cara-mengelola-posisi-jabatan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Divisi adalah pengelompokan departemen dalam struktur organisasi. Data ini digunakan saat mendaftarkan karyawan dan untuk keperluan pelaporan per divisi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Divisi",
+      "body": "Dari menu utama, klik Data Master → Organisasi → Divisi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Divisi Baru",
+      "body": "Klik tombol Buat. Form dialog akan terbuka dengan kolom:\n- Nama Divisi: nama yang deskriptif, contoh \"Operasional\", \"Keuangan\", \"Pemasaran\" (wajib)\n- Deskripsi: keterangan singkat fungsi divisi (opsional)\n- Aktif: toggle status aktif (default aktif)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Simpan Divisi",
+      "body": "Klik Simpan. Divisi baru langsung tersedia untuk dipilih saat mendaftarkan karyawan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Edit Divisi",
+      "body": "Klik ikon Edit pada baris divisi yang ingin diubah. Perbarui nama, deskripsi, atau status aktif lalu klik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Nonaktifkan Divisi",
+      "body": "Untuk menonaktifkan divisi yang sudah tidak digunakan, buka form edit dan toggle status Aktif ke posisi nonaktif. Divisi yang dinonaktifkan tidak akan muncul sebagai pilihan di form karyawan baru."
+    },
+    {
+      "type": "warning",
+      "body": "Divisi yang masih memiliki karyawan aktif tidak bisa dihapus. Pindahkan karyawan ke divisi lain terlebih dahulu sebelum menonaktifkan divisi tersebut."
+    }
+  ]
+}

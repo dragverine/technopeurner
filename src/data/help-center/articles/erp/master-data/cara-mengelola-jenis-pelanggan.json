@@ -1,0 +1,40 @@
+{
+  "title": "Cara Mengelola Jenis Pelanggan",
+  "description": "Panduan menambah dan mengatur tipe pelanggan untuk pengelompokan dan penerapan harga yang berbeda",
+  "slug": "cara-mengelola-jenis-pelanggan",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["jenis pelanggan", "tipe customer", "kategori pelanggan", "master data"],
+  "relatedArticles": ["cara-menambah-pelanggan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Jenis Pelanggan mengelompokkan pelanggan ke dalam kategori seperti Retail, Grosir, atau Korporat. Pengelompokan ini berguna untuk pelaporan dan penerapan harga atau termin yang berbeda per tipe."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Jenis Pelanggan",
+      "body": "Dari menu utama, klik Data Master → Pelanggan → Jenis Pelanggan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Jenis Baru",
+      "body": "Klik tombol Buat. Isi nama jenis pelanggan (contoh: Retail, Grosir, Korporat, Distributor) dan deskripsi singkat, lalu klik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Edit atau Hapus",
+      "body": "Klik ikon Edit untuk memperbarui, atau ikon Hapus untuk menghapus jenis yang tidak digunakan."
+    },
+    {
+      "type": "info",
+      "body": "Jenis Pelanggan juga bisa dibuat langsung dari form pendaftaran pelanggan — ketik nama baru di field Tipe Pelanggan tanpa perlu membuka menu ini terlebih dahulu."
+    }
+  ]
+}

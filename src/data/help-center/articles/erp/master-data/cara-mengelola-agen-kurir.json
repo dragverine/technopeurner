@@ -1,0 +1,34 @@
+{
+  "title": "Cara Mengelola Agen Kurir dan Sumber SO",
+  "description": "Panduan menambah agen kurir pengiriman dan sumber Sales Order untuk keperluan pembuatan surat jalan dan analisis asal pesanan",
+  "slug": "cara-mengelola-agen-kurir",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["kurir", "agen pengiriman", "sumber SO", "SO sources", "master data"],
+  "relatedArticles": ["cara-membuat-surat-jalan", "cara-membuat-pesanan-penjualan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Agen Kurir adalah data jasa pengiriman yang digunakan saat membuat surat jalan. Sumber SO mendefinisikan asal pesanan seperti Marketplace, WhatsApp, atau Walk-in — berguna untuk analisis channel penjualan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Tambah Agen Kurir",
+      "body": "Dari menu utama, klik Data Master → Pembayaran & Kurir → Agen Kurir. Klik Buat, isi:\n- Nama Kurir: nama jasa pengiriman (wajib), contoh JNE, J&T, SiCepat, Armada Sendiri\n- Kode: kode singkat unik\n- Keterangan: informasi tambahan (opsional)\nKlik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Sumber SO",
+      "body": "Dari menu utama, klik Data Master → Pembayaran & Kurir → Sumber SO. Klik Buat, isi nama sumber (contoh: Tokopedia, Shopee, WhatsApp, Direct Sales, Walk-in), lalu Simpan."
+    },
+    {
+      "type": "info",
+      "body": "Agen Kurir yang sudah ditambahkan akan tersedia sebagai pilihan di form Surat Jalan. Sumber SO akan tersedia di form Sales Order untuk melacak dari mana pesanan berasal."
+    }
+  ]
+}

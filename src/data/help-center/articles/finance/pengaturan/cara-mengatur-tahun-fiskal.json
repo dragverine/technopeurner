@@ -1,0 +1,66 @@
+{
+  "title": "Cara Mengatur Tahun Fiskal",
+  "description": "Panduan mendefinisikan tahun fiskal perusahaan sebagai dasar periode akuntansi dan pelaporan keuangan",
+  "slug": "cara-mengatur-tahun-fiskal",
+  "module": "finance",
+  "subcategory": "pengaturan",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["tahun fiskal", "fiscal year", "periode akuntansi", "pengaturan keuangan"],
+  "relatedArticles": ["cara-mengatur-pemetaan-akun", "cara-mengisi-saldo-awal"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Tahun Fiskal mendefinisikan periode akuntansi resmi perusahaan Anda. Pengaturan ini wajib dilakukan pertama kali sebelum memulai pencatatan transaksi keuangan apapun. Setiap tahun fiskal memiliki tiga status: Draft, Active, dan Locked."
+    },
+    {
+      "type": "warning",
+      "body": "Tahun fiskal harus dibuat dan diaktifkan sebelum Anda bisa mengisi Saldo Awal atau membuat jurnal apapun. Pastikan tanggal mulai dan selesai sudah benar karena akan mempengaruhi seluruh laporan keuangan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Pengaturan Keuangan",
+      "body": "Dari menu utama di sisi kiri, klik Keuangan → Pengaturan. Halaman Pengaturan Keuangan akan terbuka dengan beberapa panel di navigasi sebelah kiri."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Pilih Panel Tahun Fiskal",
+      "body": "Di navigasi pengaturan sebelah kiri, klik Tahun Fiskal. Daftar tahun fiskal yang sudah ada akan ditampilkan dalam bentuk tabel."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Buat Tahun Fiskal Baru",
+      "body": "Klik tombol Buat Tahun Fiskal. Form pengisian akan muncul dengan kolom berikut:\n- Perusahaan: pilih perusahaan dari dropdown\n- Nama: isi nama periode fiskal, contoh \"FY 2026\"\n- Tanggal Mulai: isi tanggal awal periode, contoh 2026-01-01\n- Tanggal Selesai: isi tanggal akhir periode, contoh 2026-12-31"
+    },
+    {
+      "type": "info",
+      "body": "Untuk perusahaan dengan tahun fiskal Januari–Desember, isi Tanggal Mulai: 2026-01-01 dan Tanggal Selesai: 2026-12-31. Untuk tahun fiskal April–Maret, isi 2026-04-01 s.d. 2027-03-31."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Simpan Tahun Fiskal",
+      "body": "Klik tombol Buat Tahun Fiskal di bagian bawah form. Tahun fiskal baru akan muncul di daftar dengan status Draft."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Aktifkan Tahun Fiskal",
+      "body": "Tahun fiskal yang baru dibuat masih berstatus Draft dan belum bisa digunakan. Klik tombol Aktifkan pada baris tahun fiskal tersebut. Statusnya akan berubah menjadi Active dan siap digunakan untuk pencatatan transaksi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Kunci Tahun Fiskal (Setelah Tutup Buku)",
+      "body": "Setelah proses tutup buku dilakukan, klik tombol Kunci pada tahun fiskal yang sudah selesai. Status akan berubah menjadi Locked dan tidak ada transaksi baru yang bisa diposting ke periode ini."
+    },
+    {
+      "type": "info",
+      "body": "Anda bisa menambahkan beberapa tahun fiskal sekaligus untuk periode yang berbeda. Tahun fiskal berstatus Draft bisa dihapus, tetapi yang sudah Active atau Locked tidak bisa dihapus."
+    }
+  ]
+}

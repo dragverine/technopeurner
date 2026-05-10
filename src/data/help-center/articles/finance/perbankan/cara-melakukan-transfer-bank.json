@@ -1,0 +1,56 @@
+{
+  "title": "Cara Melakukan Transfer Antar Bank",
+  "description": "Panduan mencatat perpindahan dana antar rekening bank perusahaan dengan jurnal debit-kredit otomatis",
+  "slug": "cara-melakukan-transfer-bank",
+  "module": "finance",
+  "subcategory": "perbankan",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["transfer bank", "antar rekening", "pemindahan dana", "perbankan"],
+  "relatedArticles": ["cara-mengelola-rekening-bank", "cara-mencatat-transaksi-kas-bank"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Transfer Bank digunakan untuk mencatat pemindahan dana dari satu rekening bank perusahaan ke rekening lainnya. Proses ini menghasilkan jurnal otomatis yang mendebet rekening tujuan dan mengkredit rekening asal."
+    },
+    {
+      "type": "info",
+      "body": "Fitur ini hanya untuk transfer antar rekening milik perusahaan. Untuk pembayaran ke supplier atau pihak luar, gunakan menu Pembayaran di modul ERP atau Finance."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Transfer Bank",
+      "body": "Dari menu utama, klik Keuangan → Perbankan & Pembayaran → Transfer Bank."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Transfer Baru",
+      "body": "Klik tombol Buat Transfer."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Detail Transfer",
+      "body": "Isi form transfer:\n- Rekening Asal: pilih rekening bank yang mengirim dana\n- Rekening Tujuan: pilih rekening bank yang menerima dana (tidak boleh sama dengan rekening asal)\n- Jumlah Transfer: nilai yang dipindahkan\n- Tanggal Transfer: tanggal pemindahan dana\n- Keterangan: catatan transfer, opsional"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Konfirmasi Transfer",
+      "body": "Klik Konfirmasi. Sistem akan membuat jurnal otomatis:\n- Debit: Rekening Bank Tujuan\n- Kredit: Rekening Bank Asal\nStatus transfer berubah menjadi Completed."
+    },
+    {
+      "type": "warning",
+      "body": "Transfer yang sudah dikonfirmasi dan berstatus Completed tidak bisa dibatalkan langsung. Jika ada kesalahan, buat jurnal penyesuaian manual atau hubungi tim Finance."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Pantau Status Transfer",
+      "body": "Daftar transfer menampilkan semua transfer dengan status: Pending (belum dikonfirmasi), Completed (sudah dikonfirmasi), atau Cancelled. Klik baris untuk melihat detail."
+    }
+  ]
+}

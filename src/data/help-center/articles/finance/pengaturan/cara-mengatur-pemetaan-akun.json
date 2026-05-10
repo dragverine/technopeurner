@@ -1,0 +1,54 @@
+{
+  "title": "Cara Mengatur Pemetaan Akun (Accounting Mapping)",
+  "description": "Panduan mengonfigurasi pemetaan akun COA agar transaksi dari modul Penjualan, Pembelian, dan Stok bisa diposting otomatis ke jurnal keuangan",
+  "slug": "cara-mengatur-pemetaan-akun",
+  "module": "finance",
+  "subcategory": "pengaturan",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["pemetaan akun", "accounting mapping", "COA", "jurnal otomatis", "pengaturan"],
+  "relatedArticles": ["cara-mengelola-bagan-akun", "cara-mengatur-tahun-fiskal"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Pemetaan Akun menghubungkan setiap jenis transaksi (penjualan, pembelian, stok, kas) ke akun yang tepat di Bagan Akun (COA). Tanpa konfigurasi ini, sistem akan menolak proses posting jurnal dari modul manapun."
+    },
+    {
+      "type": "warning",
+      "body": "Pemetaan akun bertanda wajib (required) harus diisi sebelum ada transaksi apapun yang diposting. Sistem akan menampilkan peringatan jika ada pemetaan wajib yang belum diisi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pemetaan Akun",
+      "body": "Dari menu utama, klik Keuangan → Pengaturan → Pemetaan Akun."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Perhatikan Peringatan Pemetaan Wajib",
+      "body": "Jika ada pemetaan wajib yang belum diisi, sistem menampilkan banner peringatan di bagian atas halaman yang menyebutkan jumlah pemetaan yang belum terisi. Prioritaskan untuk mengisi pemetaan-pemetaan tersebut terlebih dahulu."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Setiap Pemetaan Akun",
+      "body": "Untuk setiap kategori transaksi yang ditampilkan, klik dropdown di kolom Akun dan pilih akun COA yang sesuai. Tipe akun yang diperbolehkan sudah dibatasi otomatis oleh sistem, misalnya:\n- Pendapatan Penjualan → akun tipe Revenue\n- HPP / Harga Pokok Penjualan → akun tipe Cost of Goods Sold\n- Piutang Usaha → akun tipe Current Asset\n- Hutang Usaha → akun tipe Trade Payable\n- Persediaan → akun tipe Asset\n- Kas & Bank → akun tipe Cash & Bank\n- Beban Gaji → akun tipe Salary & Wages"
+    },
+    {
+      "type": "info",
+      "body": "Jika akun yang dipilih tidak sesuai dengan tipe yang dibutuhkan, sistem akan menampilkan peringatan ketidaksesuaian tipe di bawah dropdown. Pastikan memilih akun dengan tipe yang benar."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Simpan Pemetaan",
+      "body": "Setelah semua pemetaan diisi, klik tombol Simpan. Tombol ini hanya aktif jika ada perubahan yang belum disimpan. Pemetaan yang sudah disimpan akan langsung digunakan oleh sistem saat memposting transaksi berikutnya."
+    },
+    {
+      "type": "info",
+      "body": "Pastikan Bagan Akun (COA) sudah dibuat terlebih dahulu sebelum mengisi pemetaan. Buat akun-akun yang diperlukan di menu Keuangan → Akunting → Bagan Akun."
+    }
+  ]
+}

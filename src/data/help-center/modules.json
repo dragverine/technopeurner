@@ -6,9 +6,10 @@
       "description": "Enterprise Resource Planning — Kelola operasional bisnis secara terpadu",
       "color": "#2563EB",
       "subcategories": [
-        { "id": "inventory", "title": "Inventory", "description": "Kelola stok dan data barang" },
-        { "id": "purchasing", "title": "Purchasing", "description": "Manajemen pembelian dan supplier" },
-        { "id": "warehouse", "title": "Warehouse", "description": "Manajemen gudang dan penyimpanan" }
+        { "id": "master-data", "title": "Data Master", "description": "Konfigurasi data dasar perusahaan, produk, supplier, dan pelanggan" },
+        { "id": "sales", "title": "Penjualan", "description": "Kelola proses penjualan dari penawaran hingga pembayaran" },
+        { "id": "purchasing", "title": "Pembelian", "description": "Manajemen pembelian dan pengadaan barang dari supplier" },
+        { "id": "inventory", "title": "Inventaris & Stok", "description": "Kelola stok barang, pergerakan stok, dan stock opname" }
       ]
     },
     {
@@ -41,26 +42,22 @@
       "subcategories": [
         { "id": "employee", "title": "Employee", "description": "Kelola data karyawan" },
         { "id": "payroll", "title": "Payroll", "description": "Penggajian dan kompensasi" },
-        { "id": "attendance", "title": "Attendance", "description": "Absensi dan kehadiran" },
-        { "id": "leave-request", "title": "Leave Request", "description": "Manajemen pengajuan cuti" },
-        { "id": "overtime", "title": "Overtime", "description": "Manajemen lembur dan overtime" },
-        { "id": "evaluation", "title": "Evaluation", "description": "Penilaian kinerja dan review karyawan" },
-        { "id": "recruitment", "title": "Recruitment", "description": "Perekrutan dan hiring talenta baru" },
-        { "id": "holidays", "title": "Holidays", "description": "Manajemen hari libur dan cuti bersama" },
-        { "id": "work-schedules", "title": "Work Schedules", "description": "Pengaturan jadwal kerja dan shift" }
+        { "id": "attendance", "title": "Attendance", "description": "Absensi dan kehadiran" }
       ]
     },
     {
       "id": "finance",
       "title": "Finance",
-      "description": "Manajemen keuangan perusahaan",
+      "description": "Manajemen keuangan perusahaan secara menyeluruh",
       "color": "#14B8A6",
       "subcategories": [
-        { "id": "accounting", "title": "Accounting", "description": "Daftar akun dan chart of accounts" },
-        { "id": "invoice", "title": "Invoice", "description": "Kelola faktur dan tagihan" },
-        { "id": "journal", "title": "Journal", "description": "Jurnal dan catatan keuangan" },
-        { "id": "sales-journal", "title": "Sales Journal", "description": "Laporan jurnal penjualan" },
-        { "id": "report", "title": "Report", "description": "Laporan keuangan" }
+        { "id": "pengaturan", "title": "Pengaturan Keuangan", "description": "Konfigurasi awal sistem keuangan, tahun fiskal, pemetaan akun, dan pajak" },
+        { "id": "akunting", "title": "Akunting", "description": "Bagan akun, jurnal transaksi, dan penutupan periode" },
+        { "id": "perbankan", "title": "Perbankan & Pembayaran", "description": "Kelola rekening bank, transaksi kas, transfer, dan rekonsiliasi" },
+        { "id": "piutang-hutang", "title": "Piutang & Hutang", "description": "Hutang non-trade, faktur pajak, pembayaran, dan laporan aging" },
+        { "id": "anggaran", "title": "Anggaran & Gaji", "description": "Kelola anggaran perusahaan dan data gaji pokok karyawan" },
+        { "id": "aset", "title": "Manajemen Aset", "description": "Daftarkan aset, kelola depresiasi, disposal, dan revaluasi" },
+        { "id": "laporan", "title": "Laporan Keuangan", "description": "Buku besar, neraca keuangan, dan laporan laba rugi" }
       ]
     },
     {

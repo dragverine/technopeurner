@@ -1,0 +1,64 @@
+{
+  "title": "Cara Menambah dan Mengelola Pelanggan",
+  "description": "Panduan mendaftarkan pelanggan baru beserta alamat lengkap, limit kredit, kontak person, dan rekening bank ke dalam sistem ERP",
+  "slug": "cara-menambah-pelanggan",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["pelanggan", "customer", "limit kredit", "termin pembayaran", "master data"],
+  "relatedArticles": ["cara-membuat-pesanan-penjualan", "cara-mengelola-jenis-pelanggan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Data pelanggan harus terdaftar di sistem sebelum bisa membuat Sales Order atau Faktur Pelanggan. Form pelanggan memiliki empat tab: Tab Umum, Keuangan & Kontak, Rekening Bank, dan Kontak."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pelanggan",
+      "body": "Dari menu utama, klik Data Master → Pelanggan → Pelanggan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Pelanggan Baru",
+      "body": "Klik tombol Tambah Pelanggan. Form panel akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tab Umum — Informasi Dasar",
+      "body": "Isi kolom berikut:\n- Nama Pelanggan: nama lengkap atau nama perusahaan pelanggan (wajib)\n- Tipe Pelanggan: pilih tipe dari dropdown\n- Alamat: alamat pengiriman default\n- Provinsi, Kota/Kabupaten, Kecamatan, Desa/Kelurahan: pilih lokasi via Location Picker\n- Email: alamat email pelanggan\n- Website: URL website (opsional)\n- NPWP: nomor NPWP, hanya angka (opsional)\n- Kontak Person: nama PIC utama\n- Catatan: informasi tambahan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tab Keuangan & Kontak",
+      "body": "Isi pengaturan keuangan:\n- Tipe Bisnis Default: jenis bisnis yang biasa digunakan di transaksi\n- Sales Rep Default: pilih sales yang menangani pelanggan ini\n- Syarat Pembayaran Default: termin pembayaran yang berlaku\n- Tarif Pajak Default (%): persentase pajak default\n- Aktifkan Kontrol Kredit: toggle untuk mengaktifkan batas kredit\n- Limit Kredit (Rp): isi nilai batas kredit (hanya muncul jika Kontrol Kredit diaktifkan)"
+    },
+    {
+      "type": "info",
+      "body": "Limit Kredit berguna untuk mengendalikan risiko piutang. Jika hutang pelanggan sudah mendekati atau melebihi limit, sistem akan menampilkan peringatan saat membuat Sales Order baru."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Tab Kontak — Tambah Kontak Person",
+      "body": "Klik Tambah Kontak untuk setiap kontak tambahan:\n- Kontak Person: nama lengkap\n- Email: email kontak\n- Nomor Telepon: nomor HP atau kantor\n- Label: Kantor, HP, atau Fax\n- Utama: centang untuk kontak utama"
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Tab Rekening Bank — Tambah Rekening",
+      "body": "Jika perlu mencatat rekening pelanggan untuk refund, klik Tambah Rekening:\n- Bank: pilih bank\n- Mata Uang: pilih mata uang\n- Nomor Rekening: nomor rekening (wajib)\n- Nama Pemilik Rekening: nama di buku tabungan (wajib)\n- Cabang: nama cabang (opsional)\n- Utama: centang jika rekening utama"
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Simpan dan Ajukan Persetujuan",
+      "body": "Klik Submit lalu Ajukan Persetujuan. Setelah disetujui, pelanggan bisa digunakan dalam Sales Order dan Faktur."
+    }
+  ]
+}

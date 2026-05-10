@@ -1,0 +1,62 @@
+{
+  "title": "Cara Mendaftarkan Aset Baru",
+  "description": "Panduan mendaftarkan aset tetap perusahaan ke dalam sistem manajemen aset beserta pengaturan depresiasi",
+  "slug": "cara-mendaftarkan-aset",
+  "module": "finance",
+  "subcategory": "aset",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["aset", "aset tetap", "fixed asset", "register aset", "depresiasi"],
+  "relatedArticles": ["cara-mengelola-kategori-aset", "cara-menugaskan-aset", "cara-menjalankan-depresiasi-batch"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Manajemen Aset memungkinkan perusahaan mendaftarkan dan melacak seluruh aset tetap — kendaraan, mesin, peralatan kantor, gedung, dan lainnya. Setiap aset memiliki siklus hidup penuh dari pendaftaran hingga pelepasan."
+    },
+    {
+      "type": "info",
+      "body": "Sebelum mendaftarkan aset, pastikan Kategori Aset dan Lokasi Aset sudah dibuat terlebih dahulu. Lihat panduan Cara Mengelola Kategori dan Lokasi Aset."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Aset",
+      "body": "Dari menu utama, klik Keuangan → Manajemen Aset → Aset."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Daftarkan Aset Baru",
+      "body": "Klik tombol Daftarkan Aset. Form dialog akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Informasi Aset",
+      "body": "Isi kolom berikut di form:\n- Kode Aset: kode unik untuk aset ini, contoh \"KND-001\" untuk kendaraan pertama\n- Nama Aset: nama deskriptif, contoh \"Toyota Avanza 2024 Putih\"\n- Kategori: pilih kategori aset yang sudah dibuat sebelumnya\n- Lokasi: pilih lokasi fisik aset saat ini\n- Tanggal Perolehan: tanggal aset dibeli atau diterima\n- Biaya Perolehan: harga beli aset (wajib, dalam Rupiah)\n- Nilai Sisa: estimasi nilai aset di akhir umur manfaatnya (bisa 0)"
+    },
+    {
+      "type": "info",
+      "body": "Pengaturan metode dan umur manfaat depresiasi akan mengikuti konfigurasi Kategori Aset yang dipilih. Pastikan kategori sudah dikonfigurasi dengan benar sebelum mendaftarkan aset."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Simpan Aset",
+      "body": "Klik tombol Submit. Aset tersimpan dengan status Draft."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Aktifkan Aset",
+      "body": "Buka detail aset yang baru didaftarkan, lalu klik tombol Aktifkan. Status berubah menjadi Active dan aset sudah masuk dalam siklus depresiasi mulai periode berikutnya."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Lihat Detail dan Riwayat Aset",
+      "body": "Dari halaman detail aset, Anda bisa melihat:\n- Informasi dasar aset\n- Jadwal depresiasi (berapa yang didepresiasi per periode)\n- Riwayat transaksi aset (setiap aksi yang dilakukan)\n- Riwayat penugasan ke karyawan\n- Lampiran dokumen (faktur pembelian, BPKB, dll)"
+    }
+  ]
+}

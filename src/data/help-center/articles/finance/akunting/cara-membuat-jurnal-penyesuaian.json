@@ -1,0 +1,68 @@
+{
+  "title": "Cara Membuat Jurnal Penyesuaian",
+  "description": "Panduan membuat jurnal manual untuk koreksi atau pencatatan transaksi yang tidak dihasilkan otomatis oleh sistem, lengkap dengan alur persetujuan",
+  "slug": "cara-membuat-jurnal-penyesuaian",
+  "module": "finance",
+  "subcategory": "akunting",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["jurnal penyesuaian", "adjustment journal", "koreksi", "manual journal", "persetujuan"],
+  "relatedArticles": ["cara-mengelola-bagan-akun", "cara-melihat-jurnal-transaksi", "cara-melakukan-tutup-buku"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Jurnal Penyesuaian adalah jurnal yang dibuat secara manual oleh tim Finance untuk mencatat koreksi, akrual, penyusutan manual, atau transaksi lain yang tidak dihasilkan otomatis dari modul penjualan atau pembelian. Jurnal ini melalui alur persetujuan sebelum bisa diposting."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Jurnal Penyesuaian",
+      "body": "Dari menu utama, klik Keuangan → Akunting → Jurnal → Jurnal Penyesuaian."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Jurnal Baru",
+      "body": "Klik tombol Buat Jurnal. Form dialog akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Header Jurnal",
+      "body": "Isi bagian atas form:\n- Perusahaan: pilih perusahaan (wajib)\n- Tanggal Entri: tanggal transaksi (wajib)\n- Tipe Jurnal: pilih Penyesuaian (Adjustment)\n- Template Jurnal: pilih template jika tersedia untuk mengisi baris secara otomatis\n- Referensi: nomor referensi internal (opsional)\n- Keterangan: deskripsi singkat tujuan jurnal (opsional)\n- Mata Uang: pilih IDR atau USD\n- Kurs: isi kurs jika menggunakan mata uang asing (default: 1)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tambahkan Baris Jurnal",
+      "body": "Di bagian Baris Jurnal, klik Tambah Baris untuk setiap entri. Setiap baris memiliki:\n- Akun: pilih akun dari Bagan Akun (wajib)\n- Debit: isi nilai jika entri ini di sisi debit\n- Kredit: isi nilai jika entri ini di sisi kredit\n- Memo: catatan untuk baris ini (opsional)\nMinimum 2 baris diperlukan. Total Debit harus sama dengan total Kredit."
+    },
+    {
+      "type": "warning",
+      "body": "Indikator keseimbangan di bagian bawah form menampilkan total Debit, total Kredit, dan Selisih. Jurnal tidak bisa disubmit jika masih ada selisih (tidak seimbang)."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan sebagai Draft",
+      "body": "Klik Submit untuk menyimpan. Jurnal akan tersimpan dengan status Draft dan bisa diedit kembali."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Kirim untuk Persetujuan",
+      "body": "Buka detail jurnal, lalu klik Kirim untuk Persetujuan dari menu Aksi. Jurnal akan dikirim ke atasan untuk di-review."
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Posting Jurnal (Setelah Disetujui)",
+      "body": "Setelah disetujui, klik Posting dari menu Aksi. Jurnal akan resmi tercatat di buku besar dan tidak bisa diedit lagi."
+    },
+    {
+      "type": "info",
+      "body": "Jika ada kesalahan setelah diposting, gunakan aksi Reverse dari menu Aksi. Sistem akan membuat jurnal balik secara otomatis untuk membatalkan efek jurnal yang salah."
+    }
+  ]
+}

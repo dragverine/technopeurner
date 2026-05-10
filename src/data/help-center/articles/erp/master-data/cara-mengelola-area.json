@@ -1,0 +1,48 @@
+{
+  "title": "Cara Mengelola Area Penjualan",
+  "description": "Panduan menambah area penjualan dengan batas wilayah peta, kode area, dan manajer yang bertanggung jawab",
+  "slug": "cara-mengelola-area",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["area", "wilayah penjualan", "peta", "CRM", "master data"],
+  "relatedArticles": ["cara-mengelola-unit-bisnis", "cara-mengelola-outlet"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Area adalah wilayah operasional atau penjualan yang digunakan untuk mengelompokkan outlet dan pelanggan. Setiap area bisa ditampilkan di peta dan ditugaskan ke manajer atau tim sales tertentu."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Area",
+      "body": "Dari menu utama, klik Data Master → Organisasi → Area."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Area Baru",
+      "body": "Klik tombol Buat. Form area akan terbuka dengan kolom:\n- Nama Area: nama wilayah, contoh \"Area Jakarta Selatan\", \"Region Jawa Timur\" (wajib)\n- Kode Area: kode singkat unik untuk area ini (wajib)\n- Deskripsi: keterangan tambahan (opsional)\n- Provinsi, Kabupaten/Kota, Kecamatan: lokasi administratif area\n- Manajer Area: pilih karyawan yang bertanggung jawab\n- Warna Peta: pilih warna untuk tampilan area di peta\n- Aktif: toggle status"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tandai Batas Wilayah di Peta",
+      "body": "Gunakan alat gambar di peta interaktif untuk menandai batas wilayah area. Klik titik-titik di peta untuk membentuk poligon yang merepresentasikan batas area penjualan. Selesaikan dengan klik ganda atau klik titik awal."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tugaskan Karyawan",
+      "body": "Klik tombol Tugaskan Karyawan untuk menambahkan anggota tim yang bertugas di area ini. Karyawan yang ditugaskan akan bisa melihat data pelanggan dan outlet di area tersebut di aplikasi mereka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan",
+      "body": "Klik Simpan. Area baru tersedia di modul CRM untuk filter data dan pelaporan kinerja per area."
+    }
+  ]
+}

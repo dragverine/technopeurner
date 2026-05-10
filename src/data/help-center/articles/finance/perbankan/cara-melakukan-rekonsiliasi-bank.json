@@ -1,0 +1,66 @@
+{
+  "title": "Cara Melakukan Rekonsiliasi Bank",
+  "description": "Panduan lengkap mencocokkan mutasi rekening bank dari file statement dengan transaksi di sistem melalui wizard 4 langkah",
+  "slug": "cara-melakukan-rekonsiliasi-bank",
+  "module": "finance",
+  "subcategory": "perbankan",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["rekonsiliasi bank", "bank reconciliation", "mutasi bank", "statement bank", "pencocokan"],
+  "relatedArticles": ["cara-mengelola-rekening-bank", "cara-mencatat-transaksi-kas-bank"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Rekonsiliasi Bank adalah proses mencocokkan mutasi dari file statement bank dengan transaksi yang sudah dicatat di sistem. Proses ini dilakukan melalui wizard 4 langkah: Setup → Import Statement → Pencocokan → Ringkasan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Rekonsiliasi Bank",
+      "body": "Dari menu utama, klik Keuangan → Perbankan & Pembayaran → Rekonsiliasi Bank."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Mulai Rekonsiliasi Baru",
+      "body": "Klik tombol Mulai Rekonsiliasi. Wizard 4 langkah akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Langkah 1 — Setup",
+      "body": "Isi informasi awal rekonsiliasi:\n- Perusahaan: pilih perusahaan (wajib)\n- Rekening Bank: pilih rekening yang akan direkonsiliasi (wajib)\n- Tanggal Statement: tanggal akhir periode rekonsiliasi (wajib)\n- Saldo Statement: saldo akhir sesuai file statement bank (opsional, untuk verifikasi)\n- Format File: pilih format file yang akan diupload — csv, mt940, atau ofx\n- File: upload file mutasi bank yang diunduh dari internet banking\nKlik Import untuk memproses file."
+    },
+    {
+      "type": "info",
+      "body": "Download file mutasi dari internet banking dalam format yang didukung (CSV, MT940, atau OFX). Biasanya tersedia di menu e-statement atau mutasi rekening di aplikasi bank Anda."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Langkah 2 — Review Import",
+      "body": "Setelah import berhasil, sistem menampilkan:\n- Tanggal Statement dan Saldo Statement\n- Status rekonsiliasi saat ini\n- Tabel semua baris mutasi bank yang berhasil diimport dengan kolom: Tanggal, Referensi, Keterangan, Jumlah, dan Status\nStatus awal semua baris adalah Unmatched. Klik Lanjut untuk ke langkah pencocokan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Langkah 3 — Pencocokan",
+      "body": "Klik tombol Auto Match. Sistem akan otomatis mencocokkan baris mutasi bank dengan transaksi di sistem berdasarkan tanggal dan jumlah. Baris yang berhasil dicocokkan akan berstatus Auto Matched.\n\nUntuk baris yang tidak tercocokkan otomatis (Unmatched), lakukan pencocokan manual:\n1. Klik baris mutasi di panel kiri\n2. Di panel kanan, cari transaksi yang sesuai dari daftar Transaksi Kas-Bank\n3. Klik Match untuk mencocokkan\nJika baris tidak memiliki transaksi yang sesuai (contoh: biaya admin bank yang belum dicatat), klik Exclude dan isi alasan."
+    },
+    {
+      "type": "info",
+      "body": "Status baris mutasi: Unmatched (belum tercocok), Auto Matched (cocok otomatis), Manual Matched (cocok manual), Excluded (dikecualikan)."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Langkah 4 — Ringkasan dan Konfirmasi",
+      "body": "Halaman terakhir menampilkan:\n- Jumlah baris Matched, Excluded, dan Unmatched\n- Selisih antara saldo buku dan saldo statement\n- Saldo Buku (dari sistem)\n- Saldo Statement (dari bank)\nSelisih harus nol atau sangat kecil sebelum mengonfirmasi. Klik Konfirmasi untuk menyelesaikan rekonsiliasi. Status berubah menjadi Reconciled. Klik Kunci untuk mengunci data rekonsiliasi agar tidak bisa diubah."
+    },
+    {
+      "type": "warning",
+      "body": "Jika masih ada selisih, investigasi terlebih dahulu — mungkin ada transaksi yang terlewat dicatat atau ada perbedaan tanggal. Jangan konfirmasi jika selisih belum terjelaskan."
+    }
+  ]
+}

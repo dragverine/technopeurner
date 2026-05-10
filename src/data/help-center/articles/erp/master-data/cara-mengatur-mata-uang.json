@@ -1,0 +1,40 @@
+{
+  "title": "Cara Mengatur Mata Uang",
+  "description": "Panduan menambah mata uang asing dan mengatur kurs untuk transaksi multi-mata uang dalam sistem ERP",
+  "slug": "cara-mengatur-mata-uang",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["mata uang", "currency", "kurs", "multi currency", "master data"],
+  "relatedArticles": ["cara-mengatur-ketentuan-pembayaran", "cara-membuat-purchase-order"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Mata uang digunakan dalam transaksi jual-beli, terutama jika perusahaan bertransaksi dengan supplier atau pelanggan dari luar negeri. Sistem mendukung multi-mata uang dengan kurs yang bisa diatur."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Mata Uang",
+      "body": "Dari menu utama, klik Data Master → Pembayaran & Kurir → Mata Uang."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Mata Uang Baru",
+      "body": "Klik tombol Buat. Isi:\n- Kode: kode ISO mata uang, contoh USD, SGD, EUR (wajib)\n- Nama: nama lengkap, contoh US Dollar (wajib)\n- Simbol: simbol yang ditampilkan, contoh $ atau €\n- Kurs terhadap IDR: nilai tukar saat ini\nKlik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Perbarui Kurs",
+      "body": "Kurs mata uang berubah setiap hari. Buka Edit pada mata uang yang bersangkutan, perbarui nilai kurs, lalu Simpan. Kurs terbaru akan digunakan di transaksi berikutnya."
+    },
+    {
+      "type": "info",
+      "body": "Mata uang dasar perusahaan (IDR) sudah tersedia secara default dan tidak bisa dihapus. Tambahkan mata uang asing hanya jika benar-benar digunakan dalam transaksi."
+    }
+  ]
+}

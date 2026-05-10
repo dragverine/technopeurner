@@ -1,0 +1,58 @@
+{
+  "title": "Cara Menambah dan Mengelola Supplier",
+  "description": "Panduan mendaftarkan supplier baru beserta informasi kontak, termin pembayaran, dan rekening bank ke dalam sistem ERP",
+  "slug": "cara-menambah-supplier",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["supplier", "pemasok", "vendor", "rekening bank", "termin pembayaran"],
+  "relatedArticles": ["cara-membuat-purchase-order", "cara-mengelola-jenis-supplier"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Supplier adalah pemasok barang atau jasa yang dibeli perusahaan. Data supplier harus didaftarkan sebelum bisa membuat Purchase Order. Form supplier memiliki tiga tab: Informasi Dasar, Informasi Kontak, dan Rekening Bank."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Supplier",
+      "body": "Dari menu utama, klik Data Master → Supplier → Supplier."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Supplier Baru",
+      "body": "Klik tombol Tambah Supplier. Form dialog dengan tiga tab akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tab Informasi Dasar",
+      "body": "Isi kolom berikut:\n- Nama Pemasok: nama resmi supplier (wajib)\n- Tipe Pemasok: pilih atau buat tipe langsung dari dropdown\n- Termin Pembayaran: ketentuan pembayaran default, contoh COD, Net 30\n- Unit Bisnis: unit bisnis yang sering bertransaksi dengan supplier ini\n- Kontak Person: nama PIC utama di supplier\n- Email: alamat email supplier\n- Website: URL website (opsional)\n- NPWP: nomor NPWP, hanya angka (opsional)\n- Alamat: alamat kantor supplier\n- Catatan: informasi tambahan (opsional)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tab Informasi Kontak",
+      "body": "Tambahkan kontak person supplier. Untuk setiap kontak, isi:\n- Kontak Person: nama lengkap\n- Email: email kontak\n- Nomor Telepon: nomor yang bisa dihubungi\n- Label: jenis kontak — contoh Kantor, HP, atau Fax\n- Utama: centang jika ini kontak utama\nKlik Tambah Kontak untuk menambahkan lebih dari satu kontak."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Tab Rekening Bank",
+      "body": "Tambahkan rekening bank supplier untuk pembayaran hutang. Untuk setiap rekening, isi:\n- Bank: pilih bank dari dropdown\n- Mata Uang: pilih mata uang rekening\n- Nomor Rekening: nomor rekening (wajib)\n- Nama Pemilik Rekening: nama sesuai buku tabungan (wajib)\n- Cabang: nama cabang bank (opsional)\n- Utama: centang jika ini rekening utama\nKlik Tambah Rekening untuk menambahkan lebih dari satu rekening."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Simpan dan Ajukan Persetujuan",
+      "body": "Klik Submit. Supplier tersimpan dengan status Draft. Klik Ajukan Persetujuan lalu tunggu disetujui — setelah statusnya Disetujui, supplier siap digunakan dalam Purchase Order."
+    },
+    {
+      "type": "info",
+      "body": "Satu supplier bisa memiliki beberapa kontak dan beberapa rekening bank. Tandai yang paling sering digunakan dengan flag Utama."
+    }
+  ]
+}

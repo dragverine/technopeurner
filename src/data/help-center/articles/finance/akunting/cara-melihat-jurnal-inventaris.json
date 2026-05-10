@@ -1,0 +1,46 @@
+{
+  "title": "Cara Melihat Jurnal Inventaris",
+  "description": "Panduan memantau entri jurnal yang dihasilkan otomatis dari pergerakan stok, penerimaan barang, dan penyesuaian inventaris",
+  "slug": "cara-melihat-jurnal-inventaris",
+  "module": "finance",
+  "subcategory": "akunting",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["jurnal inventaris", "inventory journal", "pergerakan stok", "HPP", "akunting"],
+  "relatedArticles": ["cara-melihat-jurnal-transaksi", "cara-melihat-jurnal-valuasi"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Jurnal Inventaris menampilkan semua entri akuntansi yang dihasilkan dari pergerakan stok di modul ERP — termasuk penerimaan barang, pengiriman barang, transfer stok antar gudang, dan stock opname."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Jurnal Inventaris",
+      "body": "Dari menu utama, klik Keuangan → Akunting → Jurnal → Jurnal Inventaris."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Filter dan Cari",
+      "body": "Gunakan filter tanggal untuk menentukan periode. Gunakan kolom pencarian untuk mencari berdasarkan nomor dokumen sumber (nomor GR, nomor DO, dll)."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Baca Data Jurnal",
+      "body": "Contoh struktur jurnal inventaris:\n- Penerimaan Barang: Debit Persediaan, Kredit Hutang Usaha\n- Pengiriman Barang: Debit HPP, Kredit Persediaan\n- Stock Opname (selisih lebih): Debit Persediaan, Kredit Pendapatan Lain-lain\n- Stock Opname (selisih kurang): Debit Beban Selisih Stok, Kredit Persediaan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Lihat Dokumen Sumber",
+      "body": "Klik baris jurnal, lalu klik link Referensi untuk membuka dokumen sumber yang menghasilkan jurnal ini (misalnya Penerimaan Barang atau Surat Jalan terkait)."
+    },
+    {
+      "type": "info",
+      "body": "Jurnal ini bersifat read-only. Jika ada koreksi, selesaikan di level transaksi di modul ERP atau buat Jurnal Penyesuaian."
+    }
+  ]
+}

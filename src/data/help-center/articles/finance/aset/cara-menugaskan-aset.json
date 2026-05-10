@@ -1,0 +1,46 @@
+{
+  "title": "Cara Menugaskan dan Mengembalikan Aset ke Karyawan",
+  "description": "Panduan menugaskan aset tetap kepada karyawan tertentu dan memproses pengembalian aset saat tidak lagi digunakan",
+  "slug": "cara-menugaskan-aset",
+  "module": "finance",
+  "subcategory": "aset",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["tugaskan aset", "assign asset", "pengembalian aset", "return asset", "karyawan"],
+  "relatedArticles": ["cara-mendaftarkan-aset", "cara-memindahkan-lokasi-aset"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Fitur Tugaskan Aset memungkinkan pencatatan aset yang dipinjamkan atau digunakan oleh karyawan tertentu. Riwayat penugasan tersimpan lengkap sehingga mudah melacak siapa yang bertanggung jawab atas setiap aset."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Detail Aset",
+      "body": "Dari menu Keuangan → Manajemen Aset → Aset, cari dan klik aset yang akan ditugaskan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tugaskan ke Karyawan",
+      "body": "Di halaman detail aset, klik menu Aksi lalu pilih Tugaskan. Dialog akan terbuka dengan kolom:\n- Karyawan: cari dan pilih karyawan dari dropdown (gunakan kolom pencarian \"Search employee...\")\n- Catatan: keterangan tambahan, opsional\nKlik Submit untuk menyimpan penugasan."
+    },
+    {
+      "type": "info",
+      "body": "Setelah ditugaskan, nama karyawan yang memegang aset akan ditampilkan di halaman detail dan daftar aset. Tab Riwayat Penugasan menyimpan semua riwayat karyawan yang pernah memegang aset ini."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Kembalikan Aset",
+      "body": "Ketika aset dikembalikan oleh karyawan, buka detail aset, klik menu Aksi lalu pilih Kembalikan. Dialog pengembalian akan terbuka dengan kolom:\n- Tanggal Pengembalian: isi tanggal aset dikembalikan\n- Alasan Pengembalian: isi alasan atau keterangan\n- Catatan: catatan tambahan opsional\nKlik Submit untuk mencatat pengembalian."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Lihat Riwayat Penugasan",
+      "body": "Di halaman detail aset, buka tab Riwayat Penugasan untuk melihat daftar lengkap siapa saja yang pernah memegang aset ini beserta tanggal penugasan dan pengembaliannya."
+    }
+  ]
+}

@@ -1,62 +1,58 @@
 {
-  "title": "Cara Menambah Barang Baru",
-  "description": "Panduan lengkap menambahkan barang baru ke dalam sistem inventory ERP Gilabs",
+  "title": "Cara Melihat dan Memahami Data Inventaris",
+  "description": "Panduan membaca halaman Inventaris untuk memantau jumlah stok terkini setiap produk di setiap gudang beserta nilai persediaan",
   "slug": "cara-menambah-barang-baru",
   "module": "erp",
   "subcategory": "inventory",
   "author": "Tim Gilabs",
-  "createdAt": "2026-04-01",
-  "updatedAt": "2026-04-10",
-  "tags": ["inventory", "barang", "stok", "tambah"],
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["inventaris", "stok", "persediaan", "monitoring stok", "nilai stok"],
+  "relatedArticles": ["cara-mengelola-stok", "cara-melihat-pergerakan-stok", "cara-melakukan-stock-opname"],
   "content": [
     {
       "type": "text",
-      "body": "Artikel ini menjelaskan cara menambahkan barang baru ke dalam modul Inventory pada sistem ERP Gilabs. Pastikan Anda sudah login dan memiliki akses ke modul Inventory."
+      "body": "Halaman Inventaris menampilkan posisi stok terkini untuk setiap produk di setiap gudang. Ini adalah titik pantau utama tim gudang dan logistik untuk memastikan ketersediaan barang selalu akurat."
     },
     {
       "type": "step",
       "stepNumber": 1,
-      "title": "Buka Menu Inventory",
-      "body": "Pada sidebar aplikasi, klik menu Inventory lalu pilih sub-menu Daftar Barang.",
-      "image": {
-        "src": "/images/help/erp/inventory/tambah-barang-step-1.webp",
-        "alt": "Menu Inventory pada sidebar"
-      }
+      "title": "Buka Menu Inventaris",
+      "body": "Dari menu utama, klik Stok → Inventaris."
     },
     {
       "type": "step",
       "stepNumber": 2,
-      "title": "Klik Tombol Tambah Barang",
-      "body": "Di halaman Daftar Barang, klik tombol + Tambah Barang yang terletak di pojok kanan atas halaman.",
-      "image": {
-        "src": "/images/help/erp/inventory/tambah-barang-step-2.webp",
-        "alt": "Tombol tambah barang di pojok kanan atas"
-      }
+      "title": "Pilih Tampilan",
+      "body": "Gunakan tab tampilan:\n- List View: daftar semua produk dalam bentuk tabel\n- Tree View: tampilan hierarki per kategori produk\nPilih sesuai kebutuhan analisis."
     },
     {
       "type": "step",
       "stepNumber": 3,
-      "title": "Isi Data Barang",
-      "body": "Lengkapi form dengan informasi barang:\n- Nama Barang: Nama produk yang akan disimpan\n- SKU: Kode unik barang\n- Kategori: Pilih kategori yang sesuai\n- Harga Beli: Harga pembelian per unit\n- Harga Jual: Harga jual per unit\n- Stok Awal: Jumlah stok awal",
-      "image": {
-        "src": "/images/help/erp/inventory/tambah-barang-step-3.webp",
-        "alt": "Form input data barang baru"
-      }
-    },
-    {
-      "type": "info",
-      "body": "Pastikan SKU yang dimasukkan bersifat unik dan belum digunakan oleh barang lain dalam sistem."
+      "title": "Filter berdasarkan Gudang",
+      "body": "Gunakan filter Gudang di bagian atas untuk melihat stok di gudang tertentu saja. Jika dikosongkan, ditampilkan stok dari semua gudang."
     },
     {
       "type": "step",
       "stepNumber": 4,
-      "title": "Simpan Data",
-      "body": "Setelah semua data terisi dengan benar, klik tombol Simpan untuk menyimpan barang baru ke dalam sistem.",
-      "image": {
-        "src": "/images/help/erp/inventory/tambah-barang-step-4.webp",
-        "alt": "Tombol simpan data barang"
-      }
+      "title": "Cari Produk Tertentu",
+      "body": "Gunakan kolom pencarian untuk mencari produk berdasarkan nama atau kode produk."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Baca Data Inventaris",
+      "body": "Setiap baris produk menampilkan:\n- Kode dan Nama Produk\n- Satuan Ukur\n- Stok Tersedia: jumlah stok saat ini\n- Stok Minimum dan Maksimum: batas stok yang sudah dikonfigurasi\n- Nilai Stok: estimasi nilai persediaan berdasarkan harga pokok\n- Status: Normal, Di Bawah Minimum (butuh reorder), atau Di Atas Maksimum"
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Lihat Detail Produk",
+      "body": "Klik baris produk untuk membuka detail inventaris, termasuk breakdown stok per gudang dan riwayat pergerakan stok terakhir."
+    },
+    {
+      "type": "info",
+      "body": "Produk dengan stok di bawah Stok Minimum perlu segera dilakukan reorder melalui Purchase Requisition atau Purchase Order langsung."
     }
-  ],
-  "relatedArticles": ["cara-mengelola-stok"]
+  ]
 }

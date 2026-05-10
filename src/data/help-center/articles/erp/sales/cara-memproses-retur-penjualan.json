@@ -1,0 +1,52 @@
+{
+  "title": "Cara Memproses Retur Penjualan",
+  "description": "Panduan mencatat pengembalian barang dari pelanggan, menyesuaikan stok gudang, dan mengurangi nilai piutang pelanggan",
+  "slug": "cara-memproses-retur-penjualan",
+  "module": "erp",
+  "subcategory": "sales",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["retur penjualan", "return", "pengembalian barang", "stok masuk", "piutang"],
+  "relatedArticles": ["cara-membuat-surat-jalan", "cara-membuat-faktur-pelanggan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Retur Penjualan terjadi ketika pelanggan mengembalikan barang — karena rusak, tidak sesuai pesanan, atau alasan lain. Proses ini akan menambah kembali stok di gudang dan mengurangi nilai piutang dari pelanggan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Retur Penjualan",
+      "body": "Dari menu utama, klik Penjualan → Retur."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Retur Baru",
+      "body": "Klik tombol Buat Retur atau klik Buat dari Surat Jalan untuk membuat retur langsung dari DO tertentu."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Surat Jalan Sumber",
+      "body": "Pilih Surat Jalan yang menjadi dasar retur ini. Daftar produk yang dikirimkan akan otomatis terisi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Detail Retur",
+      "body": "Isi form retur:\n- Tanggal Retur: tanggal barang dikembalikan\n- Gudang Tujuan: gudang tempat barang retur akan disimpan kembali\n- Produk yang Diretur: pilih produk dari daftar\n- Jumlah Retur: berapa unit yang dikembalikan\n- Alasan Retur: pilih atau isi alasan, contoh Barang Rusak, Tidak Sesuai Spesifikasi, Salah Kirim\n- Catatan: informasi tambahan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Konfirmasi Retur",
+      "body": "Klik Konfirmasi. Efek yang terjadi:\n- Stok produk bertambah di gudang tujuan yang dipilih\n- Nilai piutang pelanggan berkurang sesuai nilai barang yang diretur\n- Jurnal akuntansi retur dibuat otomatis"
+    },
+    {
+      "type": "warning",
+      "body": "Pastikan barang fisik sudah benar-benar diterima kembali di gudang sebelum mengkonfirmasi retur di sistem. Konfirmasi retur yang salah bisa menyebabkan selisih stok."
+    }
+  ]
+}

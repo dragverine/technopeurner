@@ -1,0 +1,46 @@
+{
+  "title": "Cara Mengelola Posisi Jabatan",
+  "description": "Panduan menambah dan mengatur posisi jabatan karyawan dalam struktur organisasi perusahaan",
+  "slug": "cara-mengelola-posisi-jabatan",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["jabatan", "posisi", "struktur organisasi", "master data"],
+  "relatedArticles": ["cara-mengelola-divisi", "cara-mengelola-unit-bisnis"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Posisi Jabatan mendefinisikan peran atau jabatan yang tersedia di perusahaan. Data ini digunakan saat mendaftarkan karyawan baru ke sistem."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Posisi Jabatan",
+      "body": "Dari menu utama, klik Data Master → Organisasi → Posisi Jabatan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Jabatan Baru",
+      "body": "Klik tombol Buat. Isi form:\n- Nama Posisi Jabatan: nama jabatan, contoh \"Sales Executive\", \"Finance Manager\", \"Staff Gudang\" (wajib)\n- Deskripsi: keterangan tanggung jawab jabatan (opsional)\n- Aktif: toggle status aktif"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Simpan",
+      "body": "Klik Simpan. Jabatan baru tersedia untuk dipilih saat mendaftarkan atau memperbarui data karyawan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Edit atau Nonaktifkan",
+      "body": "Klik ikon Edit untuk memperbarui nama atau deskripsi. Nonaktifkan jabatan yang sudah tidak digunakan dengan toggle status Aktif."
+    },
+    {
+      "type": "warning",
+      "body": "Jabatan yang masih dipegang oleh karyawan aktif tidak bisa dihapus. Pastikan tidak ada karyawan yang menjabat posisi tersebut sebelum menonaktifkannya."
+    }
+  ]
+}

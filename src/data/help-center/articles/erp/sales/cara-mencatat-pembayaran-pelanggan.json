@@ -1,0 +1,58 @@
+{
+  "title": "Cara Mencatat Pembayaran dari Pelanggan",
+  "description": "Panduan mencatat penerimaan pembayaran dari pelanggan atas faktur yang sudah diterbitkan, termasuk pembayaran parsial dan multi-faktur",
+  "slug": "cara-mencatat-pembayaran-pelanggan",
+  "module": "erp",
+  "subcategory": "sales",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["pembayaran pelanggan", "pelunasan piutang", "penerimaan kas", "multi faktur"],
+  "relatedArticles": ["cara-membuat-faktur-pelanggan", "cara-melihat-rekap-piutang"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Setelah faktur diterbitkan dan dikirim ke pelanggan, pembayaran yang diterima harus dicatat ke sistem agar status piutang diperbarui. Satu pembayaran bisa mengalokasikan pelunasan untuk beberapa faktur sekaligus."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pembayaran Penjualan",
+      "body": "Dari menu utama, klik Penjualan → Pembayaran."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Pembayaran Baru",
+      "body": "Klik tombol Buat Pembayaran. Form akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Pelanggan",
+      "body": "Pilih nama pelanggan yang melakukan pembayaran. Setelah dipilih, daftar faktur yang belum lunas akan muncul di bagian bawah form."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Detail Pembayaran",
+      "body": "Isi kolom berikut:\n- Tanggal Pembayaran: tanggal dana diterima\n- Metode Pembayaran: Transfer Bank, Tunai, Kartu Debit, dll\n- Rekening Bank Tujuan: rekening perusahaan yang menerima pembayaran\n- Jumlah Diterima (Rp): total dana yang masuk\n- Referensi: nomor bukti transfer atau kwitansi (opsional)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Alokasikan ke Faktur",
+      "body": "Di bagian Alokasi, centang faktur-faktur yang dilunasi oleh pembayaran ini. Isi jumlah alokasi per faktur. Total alokasi tidak boleh melebihi jumlah yang diterima."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Konfirmasi Pembayaran",
+      "body": "Klik Konfirmasi. Efek yang terjadi:\n- Status faktur yang dilunasi penuh berubah menjadi Lunas\n- Faktur yang dibayar sebagian berstatus Dibayar Sebagian\n- Saldo piutang pelanggan berkurang\n- Saldo rekening bank perusahaan bertambah di jurnal"
+    },
+    {
+      "type": "info",
+      "body": "Pembayaran yang sudah dikonfirmasi bisa di-reverse jika ada kesalahan. Proses reverse akan membatalkan jurnal dan mengembalikan status faktur ke belum lunas."
+    }
+  ]
+}

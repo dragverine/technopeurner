@@ -1,0 +1,58 @@
+{
+  "title": "Cara Mencatat Transaksi Kas & Bank",
+  "description": "Panduan mencatat penerimaan (uang masuk) dan pengeluaran (uang keluar) kas yang tidak berasal dari modul penjualan atau pembelian",
+  "slug": "cara-mencatat-transaksi-kas-bank",
+  "module": "finance",
+  "subcategory": "perbankan",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["transaksi kas", "kas masuk", "kas keluar", "uang masuk", "uang keluar", "perbankan"],
+  "relatedArticles": ["cara-mengelola-rekening-bank", "cara-melakukan-transfer-bank", "cara-melihat-jurnal-kas-bank"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Transaksi Kas & Bank digunakan untuk mencatat arus masuk dan keluar uang yang tidak berasal dari transaksi penjualan atau pembelian, seperti pembayaran biaya sewa, utilitas, penerimaan non-operasional, atau pengeluaran lain-lain. Setiap transaksi menghasilkan jurnal otomatis."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Transaksi Kas-Bank",
+      "body": "Dari menu utama, klik Keuangan → Perbankan & Pembayaran → Transaksi Kas-Bank."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Transaksi Baru",
+      "body": "Klik tombol Buat Transaksi. Pertama pilih tipe transaksi:\n- Uang Masuk (Payment In): untuk penerimaan dana ke rekening perusahaan\n- Uang Keluar (Payment Out): untuk pengeluaran dana dari rekening perusahaan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Detail Transaksi",
+      "body": "Isi form transaksi:\n- Tanggal Transaksi: tanggal kejadian transaksi\n- Rekening Bank: pilih rekening perusahaan yang digunakan\n- Jumlah: nilai transaksi\n- Keterangan: deskripsi transaksi, contoh \"Pembayaran sewa kantor Mei 2026\"\n- Akun Lawan: pilih akun COA yang menjadi lawan transaksi:\n  → Untuk Uang Keluar: pilih akun Beban (Expense), contoh Beban Sewa\n  → Untuk Uang Masuk: pilih akun Pendapatan atau akun lain yang sesuai"
+    },
+    {
+      "type": "info",
+      "body": "Akun Lawan menentukan bagaimana transaksi ini dicatat di jurnal. Untuk pengeluaran operasional, pilih akun beban yang sesuai. Konsultasikan dengan tim Finance jika tidak yakin akun mana yang harus dipilih."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Simpan sebagai Draft",
+      "body": "Klik Simpan untuk menyimpan transaksi dengan status Draft. Draft bisa diedit kembali sebelum diposting."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Posting Transaksi",
+      "body": "Jika data sudah benar, klik Posting. Jurnal akan dibuat secara otomatis:\n- Uang Keluar: Debit Akun Lawan, Kredit Rekening Bank\n- Uang Masuk: Debit Rekening Bank, Kredit Akun Lawan\nStatus berubah menjadi Posted dan transaksi tidak bisa diedit lagi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Reverse Transaksi (Jika Ada Kesalahan)",
+      "body": "Jika transaksi yang sudah diposting ternyata salah, buka detail transaksi dan klik Reverse. Sistem akan membuat jurnal balik secara otomatis. Status berubah menjadi Reversed."
+    }
+  ]
+}

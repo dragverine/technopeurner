@@ -1,0 +1,40 @@
+{
+  "title": "Cara Mengelola Kategori Produk",
+  "description": "Panduan menambah dan mengatur kategori produk untuk pengelompokan katalog dan analisis laporan per kategori",
+  "slug": "cara-mengelola-kategori-produk",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["kategori produk", "klasifikasi", "katalog", "master data"],
+  "relatedArticles": ["cara-menambah-produk", "cara-mengelola-merek"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Kategori Produk mengelompokkan produk ke dalam kelas-kelas tertentu, seperti Elektronik, Makanan, atau Peralatan Kantor. Kategori berguna untuk pencarian produk yang cepat dan analisis laporan penjualan per kategori."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Kategori",
+      "body": "Dari menu utama, klik Data Master → Produk → Kategori."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Kategori Baru",
+      "body": "Klik tombol Buat. Isi:\n- Nama Kategori: nama yang deskriptif (wajib)\n- Kategori Induk: pilih kategori induk jika ini adalah sub-kategori (opsional)\n- Deskripsi: keterangan singkat (opsional)\nKlik Simpan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Edit atau Hapus",
+      "body": "Klik ikon Edit untuk memperbarui. Klik ikon Hapus untuk menghapus — kategori yang masih digunakan produk aktif tidak bisa dihapus."
+    },
+    {
+      "type": "info",
+      "body": "Kategori juga bisa dibuat langsung dari form produk dengan mengetik nama baru di field Kategori — tidak perlu membuka menu ini terlebih dahulu."
+    }
+  ]
+}

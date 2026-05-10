@@ -1,0 +1,58 @@
+{
+  "title": "Cara Melihat Laporan Laba & Rugi (Profit & Loss)",
+  "description": "Panduan membaca laporan laba rugi untuk mengetahui pendapatan, beban, laba kotor, dan laba bersih perusahaan dalam satu periode",
+  "slug": "cara-melihat-laporan-laba-rugi",
+  "module": "finance",
+  "subcategory": "laporan",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["laba rugi", "profit loss", "P&L", "pendapatan", "beban", "laporan keuangan"],
+  "relatedArticles": ["cara-melihat-neraca-keuangan", "cara-melihat-buku-besar", "cara-melakukan-tutup-buku"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Laporan Laba & Rugi (Profit & Loss / P&L) menampilkan kinerja keuangan perusahaan selama satu periode — mulai dari pendapatan, dikurangi harga pokok penjualan dan beban operasional, hingga laba atau rugi bersih yang dihasilkan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Laba & Rugi",
+      "body": "Dari menu utama, klik Keuangan → Laporan Keuangan → Laba & Rugi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Pilih Periode Laporan",
+      "body": "Tentukan Tanggal Mulai dan Tanggal Selesai untuk periode yang ingin dianalisis. Contoh:\n- Q1 2026: 1 Januari 2026 s.d. 31 Maret 2026\n- Semester 1: 1 Januari s.d. 30 Juni 2026\n- Tahunan: 1 Januari s.d. 31 Desember 2026"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Aktifkan Perbandingan Periode",
+      "body": "Aktifkan toggle Perbandingan untuk menampilkan dua periode berdampingan — misalnya Q1 2026 vs Q1 2025. Ini memudahkan analisis pertumbuhan atau penurunan kinerja."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Baca Struktur Laporan",
+      "body": "Laporan Laba Rugi tersusun sebagai berikut:\n1. PENDAPATAN\n  - Pendapatan Penjualan Bersih (setelah retur)\n2. HARGA POKOK PENJUALAN (HPP/COGS)\n3. LABA KOTOR = Pendapatan - HPP\n4. BEBAN OPERASIONAL\n  - Beban Gaji & Upah\n  - Beban Sewa\n  - Beban Pemasaran\n  - Beban Depresiasi\n  - Beban Operasional lainnya\n5. LABA OPERASI = Laba Kotor - Beban Operasional\n6. PENDAPATAN / BEBAN LAIN-LAIN\n7. LABA BERSIH SEBELUM PAJAK\n8. PAJAK PENGHASILAN\n9. LABA BERSIH = Laba Sebelum Pajak - Pajak\n\nMargin laba (%) ditampilkan di sebelah nilai nominal untuk setiap baris."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Analisis Margin",
+      "body": "Perhatikan persentase margin yang ditampilkan di sebelah setiap nilai:\n- Gross Margin = Laba Kotor / Pendapatan × 100%\n- Net Margin = Laba Bersih / Pendapatan × 100%\nBandingkan margin antar periode untuk mengidentifikasi tren kinerja."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Ekspor Laporan",
+      "body": "Klik tombol Ekspor untuk mengunduh laporan laba rugi dalam format Excel — siap untuk presentasi ke manajemen, pemegang saham, atau keperluan pelaporan pajak."
+    },
+    {
+      "type": "info",
+      "body": "Laporan ini menggunakan semua jurnal berstatus Posted dalam periode yang dipilih. Untuk laporan final periode tutup buku, pastikan semua jurnal sudah diposting dan proses Tutup Buku sudah dilakukan."
+    }
+  ]
+}

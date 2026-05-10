@@ -1,0 +1,56 @@
+{
+  "title": "Cara Melakukan Revaluasi Aset",
+  "description": "Panduan menyesuaikan nilai buku aset agar mencerminkan nilai wajar terkini, dengan alur pengajuan dan persetujuan",
+  "slug": "cara-melakukan-revaluasi-aset",
+  "module": "finance",
+  "subcategory": "aset",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["revaluasi aset", "penilaian ulang", "nilai wajar", "surplus revaluasi", "aset tetap"],
+  "relatedArticles": ["cara-mendaftarkan-aset", "cara-memproses-disposal-aset"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Revaluasi Aset adalah penyesuaian nilai buku aset agar mencerminkan nilai wajar terkini berdasarkan penilaian independen. Proses ini melewati alur persetujuan sebelum dikonfirmasi dan akan mempengaruhi perhitungan depresiasi periode berikutnya."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Tab Revaluasi Aset",
+      "body": "Dari menu utama, klik Keuangan → Manajemen Aset → Aset Tetap, lalu pilih tab Revaluasi Aset."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Revaluasi Baru",
+      "body": "Klik tombol Buat Revaluasi Baru."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Form Revaluasi",
+      "body": "Isi form berikut:\n- Aset: cari dan pilih aset yang akan direvaluasi. Kode dan nama aset ditampilkan untuk konfirmasi\n- Nilai Aset Baru: isi nilai wajar baru hasil penilaian independen (format angka dengan desimal, contoh: 150000000.00)\n- Tanggal Revaluasi: tanggal efektif revaluasi\n- Keterangan: alasan revaluasi, contoh \"Penilaian ulang oleh KJPP per Maret 2026\" (opsional)"
+    },
+    {
+      "type": "info",
+      "body": "Sistem otomatis menghitung Delta Revaluasi — selisih antara nilai wajar baru dan nilai buku saat ini. Delta positif = kenaikan nilai, Delta negatif = penurunan nilai."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Ajukan untuk Persetujuan",
+      "body": "Klik Submit untuk Persetujuan (Submit for Approval). Revaluasi tidak bisa langsung dikonfirmasi — harus melewati persetujuan manajemen terlebih dahulu."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Konfirmasi Setelah Disetujui",
+      "body": "Setelah status berubah menjadi Approved, klik Konfirmasi. Sistem akan:\n1. Memperbarui nilai buku aset\n2. Membuat jurnal revaluasi otomatis: Debit Aset Tetap (kenaikan nilai), Kredit Surplus Revaluasi (ekuitas)\n3. Menghitung ulang nilai depresiasi per periode untuk sisa umur manfaat aset"
+    },
+    {
+      "type": "warning",
+      "body": "Revaluasi yang sudah dikonfirmasi akan langsung mempengaruhi besaran depresiasi bulanan yang dihasilkan di periode berikutnya. Konsultasikan dengan auditor atau akuntan perusahaan sebelum melakukan revaluasi."
+    }
+  ]
+}

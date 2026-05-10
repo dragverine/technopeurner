@@ -1,0 +1,58 @@
+{
+  "title": "Cara Mencatat Pembayaran di Modul Finance",
+  "description": "Panduan mencatat dan mengalokasikan pembayaran ke faktur atau hutang melalui menu Pembayaran Finance, termasuk cara mereverse pembayaran yang salah",
+  "slug": "cara-mencatat-pembayaran-finance",
+  "module": "finance",
+  "subcategory": "piutang-hutang",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["pembayaran", "payment", "alokasi", "reverse payment", "finance"],
+  "relatedArticles": ["cara-mencatat-hutang-non-trade", "cara-mengelola-rekening-bank"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Menu Pembayaran di modul Finance digunakan untuk mencatat pembayaran yang dikelola langsung oleh tim Finance, serta mengalokasikannya ke faktur-faktur yang belum lunas. Dilengkapi fitur reverse jika ada kesalahan pencatatan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pembayaran",
+      "body": "Dari menu utama, klik Keuangan → Piutang & Hutang → Pembayaran."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Pembayaran Baru",
+      "body": "Klik tombol Buat Pembayaran. Form dialog akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Detail Pembayaran",
+      "body": "Isi kolom berikut:\n- Tanggal Pembayaran: tanggal dana berpindah\n- Pihak: nama supplier, vendor, atau pihak yang menerima pembayaran\n- Rekening Bank: pilih rekening perusahaan yang digunakan untuk membayar\n- Jumlah: total dana yang dibayarkan\n- Metode: transfer bank, tunai, cek, dll\n- Referensi: nomor referensi transfer atau bukti pembayaran (opsional)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Alokasikan ke Faktur",
+      "body": "Di bagian Alokasi, pilih faktur-faktur yang akan dilunasi dengan pembayaran ini. Isi jumlah alokasi per faktur. Total alokasi tidak boleh melebihi jumlah pembayaran."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Posting Pembayaran",
+      "body": "Klik Posting. Jurnal pembayaran dibuat otomatis — mendebet akun hutang yang teralokasi dan mengkredit rekening bank. Status berubah menjadi Posted dan saldo faktur yang terkait berkurang."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Reverse Pembayaran (Jika Ada Kesalahan)",
+      "body": "Buka detail pembayaran yang sudah diposting, lalu klik Reverse. Dialog konfirmasi akan muncul dengan peringatan tentang dampak jurnal yang akan dibatalkan. Klik Konfirmasi untuk menjalankan reverse. Sistem membuat jurnal balik otomatis dan status berubah menjadi Reversed."
+    },
+    {
+      "type": "info",
+      "body": "Pembayaran yang di-reverse akan mengembalikan saldo faktur ke kondisi sebelum pembayaran. Anda bisa membuat pembayaran baru yang benar setelah proses reverse selesai."
+    }
+  ]
+}

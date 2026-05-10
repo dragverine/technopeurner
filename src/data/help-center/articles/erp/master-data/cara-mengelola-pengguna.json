@@ -1,0 +1,52 @@
+{
+  "title": "Cara Mengelola Pengguna dan Hak Akses",
+  "description": "Panduan menambah pengguna baru, mengatur peran (role), dan menentukan izin akses menu dan fitur di sistem ERP",
+  "slug": "cara-mengelola-pengguna",
+  "module": "erp",
+  "subcategory": "master-data",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["pengguna", "user", "hak akses", "role", "permission", "master data"],
+  "relatedArticles": ["cara-mengatur-data-perusahaan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Manajemen Pengguna mengontrol siapa yang bisa mengakses sistem dan fitur apa yang bisa mereka gunakan. Setiap pengguna diberikan satu peran (role) yang menentukan seluruh hak aksesnya."
+    },
+    {
+      "type": "warning",
+      "body": "Hanya Administrator yang memiliki akses ke menu Pengguna. Berhati-hatilah saat memberikan akses penuh — berikan akses sesuai kebutuhan kerja masing-masing pengguna."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pengguna",
+      "body": "Dari menu utama, klik Data Master → Pengguna."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Pengguna Baru",
+      "body": "Klik tombol Tambah Pengguna. Form akan terbuka:\n- Nama Lengkap: nama pengguna\n- Email: alamat email yang digunakan sebagai username login (wajib)\n- Nomor Telepon: nomor HP pengguna\n- Peran (Role): pilih peran yang sesuai dari dropdown"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Simpan dan Kirim Undangan",
+      "body": "Klik Simpan. Sistem otomatis mengirimkan email undangan ke pengguna baru berisi instruksi untuk mengatur password dan login pertama kali."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Kelola Peran (Role)",
+      "body": "Untuk menambah atau mengubah peran, klik tab Peran di halaman Pengguna:\n- Klik Tambah Peran, beri nama peran, contoh \"Sales\", \"Finance\", \"Gudang\"\n- Klik Atur Izin untuk memilih menu dan fitur yang bisa diakses oleh peran tersebut\n- Centang izin yang diperlukan, lalu Simpan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Nonaktifkan Pengguna",
+      "body": "Untuk pengguna yang sudah tidak bekerja di perusahaan, buka detail pengguna dan klik Nonaktifkan. Pengguna yang dinonaktifkan tidak bisa login lagi."
+    }
+  ]
+}

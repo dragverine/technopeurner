@@ -1,0 +1,58 @@
+{
+  "title": "Cara Membuat Permintaan Pembelian (Purchase Requisition)",
+  "description": "Panduan membuat permintaan pengadaan barang internal sebelum Purchase Order dikirimkan ke supplier, lengkap dengan alur persetujuan",
+  "slug": "cara-membuat-permintaan-pembelian",
+  "module": "erp",
+  "subcategory": "purchasing",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["permintaan pembelian", "purchase requisition", "PR", "pengadaan", "persetujuan"],
+  "relatedArticles": ["cara-membuat-purchase-order", "cara-menerima-barang"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Purchase Requisition (PR) adalah dokumen internal yang diajukan oleh departemen atau unit bisnis untuk meminta pengadaan barang. PR harus disetujui terlebih dahulu sebelum bisa dibuatkan Purchase Order ke supplier."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Permintaan Pembelian",
+      "body": "Dari menu utama, klik Pembelian → Permintaan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat PR Baru",
+      "body": "Klik tombol Buat Permintaan. Form dialog akan terbuka dengan dua tab."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tab Informasi Dasar",
+      "body": "Isi kolom berikut:\n- Tanggal Permintaan: tanggal PR dibuat\n- Tanggal Kebutuhan: kapan barang dibutuhkan\n- Unit Bisnis: unit yang mengajukan permintaan (wajib)\n- Catatan: alasan atau keterangan permintaan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tab Item — Tambah Barang",
+      "body": "Di tab Item, klik Tambah Item untuk setiap barang yang dibutuhkan:\n- Produk: pilih barang dari katalog (wajib)\n- Jumlah (Qty): kuantitas yang dibutuhkan (wajib)\n- Satuan: satuan ukur produk\n- Catatan: keterangan spesifik untuk item ini\nUlangi untuk setiap barang yang diminta."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan dan Ajukan",
+      "body": "Klik Simpan untuk menyimpan sebagai Draft. Klik Ajukan Persetujuan untuk mengirimkan PR ke atasan atau bagian purchasing untuk di-review."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Pantau Status Persetujuan",
+      "body": "Status PR: Draft → Submitted (Menunggu Persetujuan) → Approved (Disetujui) → Rejected (Ditolak). PR yang sudah Approved bisa digunakan sebagai dasar pembuatan Purchase Order."
+    },
+    {
+      "type": "warning",
+      "body": "PR yang sudah diajukan (Submitted) tidak bisa diedit lagi. Jika ada perubahan sebelum disetujui, hubungi atasan untuk menolak PR tersebut agar bisa dibuat ulang."
+    }
+  ]
+}
