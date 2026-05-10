@@ -1,0 +1,113 @@
+{
+  "title": "Modul POS - Table Management (F&B) - Panduan Lengkap",
+  "description": "Panduan lengkap mengelola meja di Mode B F&B mencakup table assignment, status tracking, occupancy management, table merge/split, dan performance analytics.",
+  "slug": "modul-pos-table-management-panduan",
+  "module": "pos",
+  "subcategory": "table-management",
+  "author": "Tim GIMS",
+  "createdAt": "2026-05-05",
+  "updatedAt": "2026-05-05",
+  "tags": ["pos", "table", "f&b", "floor-plan", "occupancy", "seating", "reservation", "status"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Table Management adalah fitur di Mode B (F&B/Restaurant) untuk mengelola meja, status occupancy, customer assignment, dan optimize seating. Interface visual floor plan menampilkan semua meja dengan real-time status updates."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Table States & Transitions"
+    },
+    {
+      "type": "text",
+      "body": "**Table Status Flow:**\n```\nAVAILABLE (kosong)\n    ↓ [Customer datang]\n    ↓\nOCCUPIED (customer duduk & order)\n    ↓ [Selesai makan, bayar]\n    ↓\nPENDING_PAYMENT (waiting settlement)\n    ↓ [Payment done, lepas meja]\n    ↓\nCLEANING (staff membersihkan)\n    ↓ [Clean done]\n    ↓\nAVAILABLE (siap customer baru)\n```\n\n**Also:**\n- RESERVED: Table di-reserve untuk customer future\n- DIRTY: Table perlu dibersihkan (interim status)\n\n**Table Status Details:**\n\n| Status | Meaning | Actions |\n|--------|---------|----------|\n| AVAILABLE | Meja kosong, siap | Assign customer, Reserve |\n| OCCUPIED | Customer duduk & order | View order, Add item, Handle |\n| PENDING_PAYMENT | Selesai makan, bayar | Process payment, Release |\n| CLEANING | Dibersihkan | Mark clean |\n| DIRTY | Kotor, needs clean | Call for cleaning |\n| RESERVED | Di-reserve | View reservation, Release |\n"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Floor Plan & Table Display"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Visual Floor Plan",
+          "body": "**Main View:**\n- Bird's eye view layout restoran\n- Each meja shown as rectangular block\n- Color-coded by status:\n  * GREEN: Available (kosong)\n  * BLUE: Occupied (ada customer)\n  * YELLOW: Pending payment (tunggu bayar)\n  * GRAY: Reserved\n  * RED: Dirty (needs clean)\n\n**Table Block Display:**\nTable 1: 4 seats, AVAILABLE\nTable 3: 2/4 Pax, 18 min, OCCUPIED\n\n**Interactive:**\n- Click table untuk view detail\n- Drag table (jika layout configurable)\n- Right-click untuk quick actions",
+          "image": {
+            "src": "/images/help/pos/table-management/floor-plan.webp",
+            "alt": "Denah lantai restoran dengan meja"
+          }
+        },
+        {
+          "title": "Table Sections",
+          "body": "Floor plan bisa divided into sections (areas):\n\n**Example Layout:**\n```\nFRONT SECTION\n  [Table 1] [Table 2] [Table 3]\n  [Table 4] [Table 5] [Table 6]\n\nBACK SECTION\n  [Table 7] [Table 8]\n  [Table 9] [Table 10]\n\nTERRACE\n  [Table 11] [Table 12] [Table 13]\n```\n\n**Benefit:**\n- Server focus satu section\n- Section status summary\n- Workload balancing\n\n**Configuration:**\n- Admin setup sections\n- Assign sections ke servers\n- Section headers di display"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Table Operations"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Assign Table to Customer",
+          "body": "**Proses:**\n\n1. **Customer Datang:**\n   - \"Berapa orang? Meja untuk 2?\"\n   - Assess group size\n\n2. **Select Available Table:**\n   - Look di floor plan\n   - Find available table (GREEN)\n   - Consider:\n     * Size: Capacity >= pax count\n     * Location: Quiet vs central\n     * Server availability\n\n3. **Assign Table:**\n   - Click table\n   - Dialog muncul:\n     * Table confirmation: \"Table 3 (4 seats)\"\n     * Number of guests*: Input pax (default: 1)\n     * Assign server (optional): Select server name\n     * Special notes (optional): \"Birthday\", \"VIP\", etc\n   - Click 'Confirm Assignment'\n\n4. **Table Status Update:**\n   - Table status → OCCUPIED (BLUE)\n   - Display: Table 3 | 2 Pax | Time: 0 min\n   - Timestamp assignment recorded\n   - Order linked ke table\n\n5. **Next Step:**\n   - Server approach table\n   - Present menu\n   - Take order"
+        },
+        {
+          "title": "Modify Table Assignment",
+          "body": "Setelah customer duduk, bisa modify:\n\n1. **Change Pax Count:**\n   - Customer group grow/shrink\n   - Click table → 'Edit'\n   - Update pax: 2 → 4\n   - Save\n   - Display update\n\n2. **Change Server:**\n   - Reassign ke server lain\n   - Click table → 'Reassign Server'\n   - Select new server\n   - Old server notified\n   - New server take over service\n\n3. **Add Note:**\n   - Click table → 'Add Note'\n   - Input: \"Birthday - surprise dessert\"\n   - Shared ko staff"
+        },
+        {
+          "title": "Merge Tables (Large Group)",
+          "body": "Customer group besar, combine 2+ tables.\n\n**Proses:**\n\n1. **Select Tables:**\n   - Holding 8 people, need 2 tables\n   - Click table 3 (first)\n   - Hold Shift, click table 4 (second)\n   - Both highlight (both select)\n\n2. **Merge Option:**\n   - Right-click → 'Merge Tables'\n   - Or click 'Merge' button\n   - Dialog: \"Merge Table 3 + Table 4?\"\n   - Click 'Confirm'\n\n3. **System Execute:**\n   - Tables merged logically (linked)\n   - Both display same order\n   - One master table (3) untuk control\n   - Child table (4) show \"Merged ke Table 3\"\n   - Single seat count (4 + 4 = 8 seats)\n   - Single bill (or split option)\n\n4. **Order Management:**\n   - Order applies to entire merged group\n   - Kitchen see: \"Merged Table 3+4, 8 Pax\"\n   - Settlement: Single bill atau split\n   - Release: Both tables released together\n\n**Unmerge:**\n- After payment/guest leave\n- System auto-unmerge\n- Tables available separately"
+        },
+        {
+          "title": "Split Bill (Separate Payment)",
+          "body": "Customer want separate bills (e.g., business meeting, split cost).\n\n**Proses:**\n\n1. **Create Split Order:**\n   - Add items normally\n   - When settle: Click 'Split Bill'\n   - Dialog: \"How many splits?\"\n   - Input: 2 splits (for 2 payers)\n\n2. **Assign Items to Splits:**\n   - Display: Item list dengan checkbox per split\n   - Assign items:\n     * Split 1: Steak, Drink\n     * Split 2: Salad, Dessert\n   - System calculate per-split total\n\n3. **Process Payments Separately:**\n   - Settle split 1: Steak + Drink = Rp 150.000\n   - Customer 1 bayar\n   - Order status: Partial paid\n   - Settle split 2: Salad + Dessert = Rp 80.000\n   - Customer 2 bayar\n   - Order status: Fully paid\n\n4. **Receipt:**\n   - 2 separate receipts (one per split)\n   - Linked ke original order\n   - For accounting"
+        },
+        {
+          "title": "Release Table (Finish Service)",
+          "body": "Customer selesai, meja dilepas.\n\n**Proses:**\n\n1. **Payment Done:**\n   - Settlement completed\n   - Order status: PAID/COMPLETED\n\n2. **Release Table:**\n   - Click table → 'Release Table'\n   - Or click 'Release' button\n   - Dialog: \"Release table?\"\n   - Option: Mark dirty atau clean\n\n3. **System Update:**\n   - Table status → AVAILABLE (jika clean)\n   - Or DIRTY (jika need clean)\n   - Order final status: COMPLETED\n   - Duration recorded: e.g., \"Seated 45 min\"\n\n4. **Table Ready:**\n   - Table available untuk next customer\n   - History: Customer, duration, revenue\n   - Server can take next customer"
+        },
+        {
+          "title": "Clean Table",
+          "body": "After customer leave, prepare table untuk guest baru.\n\n**Workflow:**\n\n1. **Table Released (DIRTY):**\n   - Table status: DIRTY / CLEANING\n   - Appear red di floor plan\n\n2. **House Keeping Staff:**\n   - Take cloth, clean table\n   - Check seat conditions\n   - Refill condiments\n   - Set table untuk next customer\n   - ~5-10 min typically\n\n3. **Mark Clean:**\n   - Staff click table → 'Mark Clean'\n   - Or click 'Clean' button\n   - Dialog: \"Table ready?\"\n   - Click 'Confirm'\n   - Table status → AVAILABLE (GREEN)\n\n4. **Next Customer:**\n   - Table appear available\n   - Greeter seat next customer\n   - Cycle repeat"
+        },
+        {
+          "title": "Reservation Management",
+          "body": "Reserve table untuk future customer.\n\n**Proses:**\n\n1. **Reserve Table:**\n   - Click available table\n   - Click 'Reserve'\n   - Dialog:\n     * Customer name*\n     * Party size*\n     * Reservation time*: e.g., \"19:00\"\n     * Phone: Contact customer\n     * Notes: \"VIP\", \"Birthday\", etc\n   - Click 'Reserve'\n\n2. **Table Status:**\n   - Table → RESERVED (GRAY)\n   - Display: \"Reserved - John Doe, 4pax, 19:00\"\n   - Not available untuk other customers\n\n3. **At Reservation Time:**\n   - Customer arrive\n   - Staff: \"Hi, I see reservation for John\"\n   - Click 'Confirm Arrival'\n   - Table → OCCUPIED\n   - Proceed normal service\n\n4. **No-Show Handling:**\n   - If customer not arrive by 19:30 (buffer)\n   - Staff click 'Release Reservation'\n   - Table → AVAILABLE\n   - Note: \"No-show at 19:00\"\n   - Can offer table to walk-in\n\n5. **Cancel Reservation:**\n   - Customer call: \"Can't make it\"\n   - Staff cancel reservation\n   - Table → AVAILABLE\n   - Note: \"Cancelled by customer\""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Table Monitoring & Analytics"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Real-Time Occupancy",
+          "body": "Manager dapat monitor table occupancy in real-time.\n\n**Dashboard:**\n- Total tables: 12\n- Occupied: 8\n- Available: 3\n- Dirty/Cleaning: 1\n- Reserved: 0\n\n**Occupancy Rate:**\n- Current: 66% (8 of 12)\n- Average today: 58%\n- Peak: 85% (at 19:30)\n\n**Wait List:**\n- Customers waiting: 2\n- Est. wait: 15 min (next table release)\n- Alert: High occupancy, walk-in queue building"
+        },
+        {
+          "title": "Table Performance Metrics",
+          "body": "**Per-Table Analytics:**\n\n1. **Turn-Around Time:**\n   - Avg time customer seated to left\n   - Example: Table 3 avg 42 min\n   - Benchmark: Fast service = 30-40 min\n   - Identify: Slow service table (if > 60 min)\n\n2. **Revenue per Table:**\n   - Total revenue from table today\n   - Example: Table 3 = Rp 450.000 (lunch) + Rp 300.000 (dinner)\n   - Per-turn: Rp 375.000 average\n\n3. **Turnover Rate:**\n   - How many times table used per service\n   - Example: Lunch 3 turns, Dinner 2 turns = 5 turns/day\n   - Benchmark: Good = 4-5 turns/service\n\n4. **Peak Usage:**\n   - Which tables busiest?\n   - Which tables least used?\n   - Reposition seating for optimization\n\n**Daily Report:**\n```\nTABLE PERFORMANCE - May 5, 2026\n\nTable 1  │ 4 covers │ 175 min │ Rp 750K │ 2.6 turns │ Efficient\nTable 2  │ 3 covers │ 240 min │ Rp 600K │ 1.5 turns │ Slow\nTable 3  │ 5 covers │ 210 min │ Rp 1.1M │ 2.3 turns │ Good\n```"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Best Practices"
+    },
+    {
+      "type": "text",
+      "body": "1. **Optimal Seating:**\n   - Match table size to party (not too big, not squished)\n   - Prevent overload (rushing food)\n   - Improve comfort (higher satisfaction)\n\n2. **Server Assignments:**\n   - Balance workload (1-2 servers per section)\n   - Consistent server throughout meal (better service)\n   - Train floating server untuk assist\n\n3. **Table Cleaning:**\n   - Clean immediately after customer leave\n   - Don't let tables stay dirty\n   - Quick turnaround = higher revenue\n\n4. **Reservation Confirmation:**\n   - Confirm reservation day before (reduce no-show)\n   - Have buffer table (for walk-in)\n   - Manage expectations on wait time\n\n5. **Occupancy Management:**\n   - Monitor occupancy rate\n   - Adjust staffing based on demand\n   - Track bottleneck (slow tables)\n\n6. **Customer Feedback:**\n   - Note special requests/preferences\n   - Follow up (\"Did you enjoy?\")\n   - Use feedback untuk improve service"
+    }
+  ]
+}

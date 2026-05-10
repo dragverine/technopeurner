@@ -1,0 +1,163 @@
+{
+  "title": "Modul POS - Reports & Analytics - Panduan Lengkap",
+  "description": "Panduan lengkap POS reporting & analytics mencakup sales report, cashier performance, product analytics, discount tracking, inventory variance, table occupancy, dan export formats.",
+  "slug": "modul-pos-reports-analytics-panduan",
+  "module": "pos",
+  "subcategory": "reports-analytics",
+  "author": "Tim GIMS",
+  "createdAt": "2026-05-05",
+  "updatedAt": "2026-05-05",
+  "tags": ["pos", "reports", "analytics", "dashboard", "export", "performance", "sales", "metrics"],
+  "content": [
+    {
+      "type": "text",
+      "body": "POS Reports & Analytics menyediakan comprehensive insights tentang sales performance, cashier efficiency, product trend, discount impact, dan inventory health. Real-time dashboard, scheduled reports, dan multiple export format support decision-making & compliance."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Dashboard Overview"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Real-Time KPI Dashboard",
+          "body": "**Access:** POS > Reports > Dashboard\n\n**Key Metrics Display:**\n\n```\n┌─────────────────────────────────────────┐\n│ POS DASHBOARD - Today, May 5, 2026      │\n├─────────────────────────────────────────┤\n│                                          │\n│ Outlet: Jakarta Pusat                    │\n│ Date: May 5, 2026 | Refresh: Auto (30s) │\n│                                          │\n│ ┌───────────┬───────────┬───────────┐   │\n│ │ Gross     │ Discount  │ Net Sales │   │\n│ │ Sales     │ Applied   │           │   │\n│ │ Rp 5.2M   │ Rp 450K   │ Rp 4.75M  │   │\n│ │ ↑ 12%     │ (8.6%)    │ ↑ 8%      │   │\n│ └───────────┴───────────┴───────────┘   │\n│                                          │\n│ ┌───────────┬───────────┬───────────┐   │\n│ │ Transactions   │ Avg Trx │ Void Rate │\n│ │ 86            │ Rp 55K  │ 2.3%      │\n│ │ ↑ 5%          │ ↑ 3%    │ ↓ 0.5%    │\n│ └───────────┴───────────┴───────────┘   │\n│                                          │\n│ ┌───────────┬───────────┬───────────┐   │\n│ │ Cashiers  │ Top Item  │ Table    │   │\n│ │ Working   │ Sold      │ Turnover │   │\n│ │ 4         │ Bakso     │ 4.2x     │   │\n│ │           │ (156 pcs) │ ↑ 1.1x   │   │\n│ └───────────┴───────────┴───────────┘   │\n│                                          │\n└─────────────────────────────────────────┘\n```\n\n**Time Filter:**\n- Today\n- This Week\n- This Month\n- Custom Range\n\n**Outlet Filter:**\n- Single outlet\n- Multiple outlet (compare)\n- All outlet (corporate)\n\n**Auto-Refresh:**\n- Update every 30 sec (optional)\n- Keep data current\n- Manual refresh button"
+        },
+        {
+          "title": "Visual Charts",
+          "body": "**Sales Trend:**\n- Line chart: Hourly sales throughout day\n- Peak identification (lunch, dinner)\n- Compare previous day/week\n\n**Product Mix:**\n- Pie chart: Revenue by product category\n- Bar chart: Top 10 products by qty/revenue\n- Trend: Best seller, new item performance\n\n**Payment Method:**\n- Pie: Cash vs Card vs QRIS breakdown\n- Trend: Payment preference changes\n\n**Hourly Breakdown:**\n- Stacked bar: Transactions, revenue, discount per hour\n- Identify slow hours (opportunity)\n- Plan staffing based on traffic"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Sales Reports"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Daily Sales Summary",
+          "body": "**Purpose:** Overall sales performance untuk hari/periode tertentu.\n\n**Report Detail:**\n```\nDAILY SALES SUMMARY\nJakarta Pusat Outlet | May 5, 2026\n\n═════════════════════════════════════════════\nSALES BREAKDOWN\n─────────────────────────────────────────────\nGross Sales (sebelum discount):   Rp 5,200,000\nDiscount Applied:                 Rp   450,000\n─────────────────────────────────────────────\nSubtotal:                         Rp 4,750,000\nTax (11% PPN):                    Rp   522,500\n═════════════════════════════════════════════\nNET SALES:                        Rp 5,272,500\n═════════════════════════════════════════════\n\nTRANSACTION DETAIL\n─────────────────────────────────────────────\nTotal Transactions:               86\nAverage Transaction Value:        Rp 55,310\nTransaction Count by Status:\n  • Completed: 84\n  • Voided: 2 (2.3%)\n  • Returned: 1 item\n\nPAYMENT BREAKDOWN\n─────────────────────────────────────────────\nCash:                            Rp 3,200,000 (60.6%)\nCard:                            Rp 1,500,000 (28.4%)\nQRIS:                            Rp   572,500 (10.8%)\nMulti-Payment:                   Rp     0\n\nDISCOUNT ANALYSIS\n─────────────────────────────────────────────\nTotal Discount:                   Rp 450,000\nAverage Discount per Trx:         Rp   5,233\nDiscount Rate:                    8.6%\nDiscount by Type:\n  • Item-level:                  Rp 250,000 (55.6%)\n  • Order-level:                 Rp 150,000 (33.3%)\n  • Voucher:                     Rp  50,000 (11.1%)\n\nTAX SUMMARY\n─────────────────────────────────────────────\nTaxable Amount:                  Rp 4,750,000\nPPN Rate:                         11%\nTotal Tax:                        Rp   522,500\nTax Rate (effective):             9.9%\n\n═════════════════════════════════════════════\n```"
+        },
+        {
+          "title": "Hourly Sales Breakdown",
+          "body": "**Purpose:** Identify sales pattern throughout day.\n\n**Report:**\n```\nHOURLY SALES BREAKDOWN - May 5, 2026\n\nHour  | Trans | Gross Sales | Discount | Net Sales | Avg/Trx\n──────┼───────┼─────────────┼──────────┼───────────┼─────────\n08:00 |   2   | Rp  150,000 | Rp 12K   | Rp 138K   | Rp 69K\n09:00 |   5   | Rp  320,000 | Rp 18K   | Rp 302K   | Rp 60.4K\n10:00 |   8   | Rp  480,000 | Rp 25K   | Rp 455K   | Rp 56.9K\n11:00 |  14   | Rp  880,000 | Rp 45K   | Rp 835K   | Rp 59.6K (PEAK)\n12:00 |  12   | Rp  750,000 | Rp 35K   | Rp 715K   | Rp 59.6K\n13:00 |   8   | Rp  420,000 | Rp 20K   | Rp 400K   | Rp 50K\n14:00 |   5   | Rp  280,000 | Rp 15K   | Rp 265K   | Rp 53K\n15:00 |   3   | Rp  150,000 | Rp 10K   | Rp 140K   | Rp 46.7K\n──────┼───────┼─────────────┼──────────┼───────────┼─────────\nTOTAL |  86   | Rp5,200,000 | Rp 450K  | Rp 4.75M  | Rp 55.3K\n\nINSIGHT: Peak sales at 11:00 (lunch), dip 14:00-15:00 (post-lunch)\n```"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Cashier Performance"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Cashier Report",
+          "body": "**Purpose:** Evaluate individual cashier performance & identify patterns.\n\n**Report:**\n```\nCAHIER PERFORMANCE REPORT - May 5, 2026\n\nCashier: Ahmad | Shift: 08:00-16:00\n─────────────────────────────────────────────\nTransactions Processed:   48\nGross Sales:              Rp 2,650,000\nNet Sales:                Rp 2,400,000\nAverage Transaction:      Rp 50,000\n\nDiscount Applied:\n  Count: 8 discounts\n  Total: Rp 180,000 (6.8% of sales)\n  Avg: Rp 22,500 per discount\n\nVoid/Return:\n  Void: 1 (2.1% void rate)\n  Return: 0\n  Loss: Rp 45,000\n\nAccuracy:\n  Payment discrepancy: Rp 0\n  Drawer variance: Rp 0 (100% accurate)\n\n─────────────────────────────────────────────\n\nCashier: Siti | Shift: 09:00-17:00\n─────────────────────────────────────────────\nTransactions Processed:   28\nGross Sales:              Rp 1,550,000\nNet Sales:                Rp 1,450,000\nAverage Transaction:      Rp 51,800\n\nDiscount Applied:\n  Count: 5 discounts\n  Total: Rp 125,000 (8.1% of sales)\n  Avg: Rp 25,000 per discount\n\nVoid/Return:\n  Void: 0\n  Return: 1 item\n  Loss: Rp 0\n\nAccuracy:\n  Payment discrepancy: Rp 5,000\n  Drawer variance: Rp 5,000 (Acceptable)\n\n─────────────────────────────────────────────\n\nCOMPARATIVE ANALYSIS:\n• Ahmad: High transaction count, low discount rate, 0 variance (excellent)\n• Siti: Moderate transaction count, higher discount rate, 5K variance (good)\n• Budi: TBD...\n```"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Product Analytics"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Best Sellers & Trend",
+          "body": "**Purpose:** Understand product performance untuk inventory & promotion.\n\n**Report:**\n```\nTOP PRODUCTS BY REVENUE - May 5, 2026\n\nRank | Product      | Category      | Qty  | Revenue    | % Total\n──────┼──────────────┼───────────────┼──────┼────────────┼─────────\n  1  | Bakso        | Main Course   | 156  | Rp 3,900K  | 75%\n  2  | Es Teh       | Beverage      |  45  | Rp   225K   | 4.3%\n  3  | Gorengan     | Side Dish     |  38  | Rp   190K   | 3.6%\n  4  | Sambal       | Condiment     |  32  | Rp   128K   | 2.4%\n  5  | Kopi Ais     | Beverage      |  28  | Rp   140K   | 2.7%\n  6  | Tahu Goreng  | Side Dish     |  22  | Rp   110K   | 2.1%\n\nTRENDING UP (vs last week):\n✓ Bakso: +15% (promotional impact)\n✓ Kopi Ais: +8% (warmer weather)\n✓ Sambal: +5% (new supplier better quality)\n\nTRENDING DOWN (vs last week):\n✗ Es Teh: -3% (mild increase in hot beverage)\n✗ Tahu Goreng: -2% (seasonal)\n\nLOW MOVERS (needs attention):\n≈ Juice: 12 qty, Rp 72K (consider remove/promote)\n```"
+        },
+        {
+          "title": "Product Profitability",
+          "body": "**Purpose:** Understand margin & profitability per product.\n\n**Report:**\n```\nPRODUCT PROFITABILITY - May 5, 2026\n\nProduct  | Qty  | Revenue    | COGS      | Margin | Margin %\n─────────┼──────┼────────────┼───────────┼────────┼──────────\nBakso    | 156  | Rp 3,900K  | Rp 1,560K | Rp 2.34M | 60%\nEs Teh   |  45  | Rp   225K  | Rp   90K  | Rp   135K | 60%\nGorengan |  38  | Rp   190K  | Rp   114K | Rp    76K | 40%\nSambal   |  32  | Rp   128K  | Rp    64K | Rp    64K | 50%\nKopi Ais |  28  | Rp   140K  | Rp    56K | Rp    84K | 60%\n\nINSIGHT:\n• Bakso: Highest margin ($) & % - focus on this\n• Gorengan: Lowest margin % - consider price increase\n• Overall margin: 58% (healthy)\n```"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Discount & Promotion Analysis"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Discount Tracking",
+          "body": "**Purpose:** Monitor discount impact on revenue & profitability.\n\n**Report:**\n```\nDISCOUNT ANALYSIS - May 5, 2026\n\nTOTAL DISCOUNT: Rp 450,000\nDISCOUNT RATE: 8.6% of gross sales\n\nBY TYPE:\n• Item-level:   Rp 250K (55.6%) - Specific product promo\n• Order-level:  Rp 150K (33.3%) - Bulk/minimum purchase\n• Voucher:      Rp  50K (11.1%) - Promo code redemption\n\nBY AMOUNT RANGE:\n• < Rp 25K:     42 instances (7.4K avg)\n• Rp 25-50K:    12 instances (35K avg)\n• Rp 50-100K:    5 instances (75K avg)\n• > Rp 100K:     1 instance (150K - required approval)\n\nBY CASHIER:\nAhmad:  Rp 180K discount, 8 instances (6.8% rate)\nSiti:   Rp 125K discount, 5 instances (8.1% rate)\nBudi:   Rp 145K discount, 7 instances (9.3% rate)\n\nMONITOR: Budi has higher discount rate - may need retraining\n\nROI ANALYSIS:\nPromo: Buy Bakso get 15% off (last 3 days)\n• Cost: Rp 200K (discounted revenue)\n• Result: Bakso qty +25% vs normal\n• Revenue gain: Rp 300K (net positive)\n• ROI: +50% ✓ SUCCESS\n```"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Inventory & Stock Analysis"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Stock Movement Report",
+          "body": "**Purpose:** Track inventory flow for replenishment & forecasting.\n\n**Report:**\n```\nSTOCK MOVEMENT - May 5, 2026\n\nItem          | Opening | Inbound | Sales | Void | Closing | Variance\n──────────────┼─────────┼─────────┼───────┼──────┼─────────┼──────────\nBakso         | 200 pcs | 50 pcs  | 156   | 2    | 92 pcs  | 0 pcs\nEs Teh        | 100 bot | 48 bot  | 45    | 0    | 103 bot | 0 bot\nGorengan      |  80 pcs | 40 pcs  | 38    | 0    | 82 pcs  | 0 pcs\nSambal        |  50 pcs | 20 pcs  | 32    | 0    | 38 pcs  | 0 pcs\nKopi Ais      |  60 bot | 30 bot  | 28    | 0    | 62 bot  | 0 bot\n\nLOW STOCK ALERT:\n⚠ Bakso: 92 pcs (near minimum 100) - REORDER SOON\n⚠ Sambal: 38 pcs (at minimum 50) - REORDER URGENT\n```"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Table Occupancy (F&B Mode Only)"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Table Analytics",
+          "body": "**Purpose:** Optimize restaurant seating & service (Mode B only).\n\n**Report:**\n```\nTABLE OCCUPANCY REPORT - May 5, 2026\n\nTABLE PERFORMANCE:\nTable | Pax | Turnover | Avg Time | Revenue   | Profit\n──────┼─────┼──────────┼──────────┼───────────┼───────────\n  1   | 2   | 4.2x     | 45 min   | Rp 450K   | Rp 270K\n  2   | 4   | 3.1x     | 60 min   | Rp 680K   | Rp 408K\n  3   | 4   | 2.8x     | 65 min   | Rp 520K   | Rp 312K\n  4   | 6   | 2.0x     | 90 min   | Rp 420K   | Rp 252K\n\nPEAK OCCUPANCY:\n• Time: 11:30-13:00 (lunch rush)\n• Utilization: 95% (all tables occupied)\n• Avg wait: 15-20 min for seating\n• Revenue: Rp 1.8M (highest hourly)\n\nSLOW PERIOD:\n• Time: 14:00-17:00 (post-lunch)\n• Utilization: 20% (low traffic)\n• Opportunity: Happy hour promo\n\nAVERAGE TURN-AROUND: 62.75 min\nTARGET: 60 min\nSTATUS: Slightly slow - improve efficiency\n```"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Export & Scheduled Reports"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Export Format",
+          "body": "**Available Export Formats:**\n\n1. **PDF:**\n   - Professional format\n   - For printing & archiving\n   - Charts included\n   - Digital signature support\n\n2. **Excel (.xlsx):**\n   - Spreadsheet format\n   - Multiple sheets (summary, detail, chart)\n   - Formulas & sorting\n   - Import ke accounting system\n\n3. **CSV (.csv):**\n   - Comma-separated values\n   - Raw data for analysis\n   - Import ke BI tools\n   - Lightweight\n\n**How to Export:**\n1. Generate report\n2. Click 'Export' button\n3. Select format (PDF / Excel / CSV)\n4. Choose filename\n5. Download\n6. Save locally / send ke stakeholder"
+        },
+        {
+          "title": "Scheduled Reports",
+          "body": "**Automated Report Generation:**\n\nAdmin dapat schedule report untuk otomatis generate & email.\n\n**Setup:**\n1. Navigate: Admin > Reports > Schedule\n2. Create new schedule:\n   - Report type: Daily Sales Summary\n   - Frequency: Daily\n   - Time: 18:00 (end of day)\n   - Format: PDF\n   - Recipients: \n     * Manager (manager@pos.com)\n     * Finance (finance@company.com)\n3. Save\n4. System auto-generate & email setiap hari 18:00\n\n**Scheduled Report Options:**\n- Daily (end of day)\n- Weekly (every Monday)\n- Monthly (1st of month)\n- Custom (specific dates)\n\n**Benefit:**\n- Automatic insights\n- Manager alerted immediately\n- No manual report request\n- Data-driven decisions"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Business Intelligence Integration"
+    },
+    {
+      "type": "text",
+      "body": "**Data Export untuk BI Tools:**\n\nPOS data dapat export ke Excel/CSV, kemudian import ke Power BI / Looker untuk advanced analytics.\n\n**Typical BI Dashboard:**\n- Real-time sales trend\n- Revenue forecast\n- Customer segment analysis\n- Seasonal pattern\n- Profitability forecast\n- Staff performance vs target\n- Regional comparison (multi-outlet)\n\n**API Available:**\n- Query: `/api/v1/pos/reports/sales`\n- Format: JSON\n- Authentication: API key\n- Rate limit: 100 req/min\n- Use for integration dengan BI platform"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Compliance & Audit"
+    },
+    {
+      "type": "text",
+      "body": "**Report Retention:**\n- Keep minimum 7 years (tax regulation)\n- Immutable records (cannot modify historical data)\n- Audit trail: Who access, when, what\n\n**Tax Compliance:**\n- Daily sales summary exportable untuk tax filing\n- Format: Sesuai tax authority requirement (pajak)\n- Timestamp: ISO 8601 with timezone\n- Digital signature: Available for signed reports\n\n**Internal Audit:**\n- Regular review of sales pattern\n- Identify anomalies\n- Cross-check dengan payment reconciliation\n- Document adjustments"
+    }
+  ]
+}

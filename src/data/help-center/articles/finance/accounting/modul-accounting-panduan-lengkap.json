@@ -1,0 +1,405 @@
+{
+  "title": "Modul Accounting - Panduan Lengkap",
+  "description": "Panduan lengkap menggunakan Modul Accounting dalam sistem Finance Gilabs mencakup Chart of Accounts, Journal Entries, Sales Journal, Purchase Journal, Adjustment Journal, dan Financial Closing",
+  "slug": "modul-accounting-panduan-lengkap",
+  "module": "finance",
+  "subcategory": "accounting",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-04-19",
+  "updatedAt": "2026-04-19",
+  "tags": ["finance", "accounting", "chart of accounts", "journal", "closing"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Modul Accounting adalah bagian core dari sistem Finance yang mengelola semua catatan akuntansi perusahaan. Modul ini terdiri dari beberapa sub-menu yang saling terintegrasi untuk memberikan laporan keuangan yang akurat."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Overview Modul Accounting"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Akses Modul Accounting"
+    },
+    {
+      "type": "text",
+      "body": "Pada sidebar, klik menu Finance untuk melihat submenu:\n- Chart of Accounts\n- Journal Entries\n- Sales Journal\n- Purchase Journal\n- Adjustment Journal\n- Financial Closing"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Alur Kerja Accounting"
+    },
+    {
+      "type": "text",
+      "body": "1. Setup Chart of Accounts (Struktur akun)\n2. Catat transaksi via Journal Entry atau otomatis dari Sales/Purchase\n3. Review Sales Journal & Purchase Journal\n4. Buat Adjustment Journal jika diperlukan\n5. Financial Closing untuk tutup periode\n6. Generate Financial Reports"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Chart of Accounts"
+    },
+    {
+      "type": "text",
+      "body": "Merupakan daftar lengkap semua akun yang digunakan untuk mencatat transaksi keuangan."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Membuka Chart of Accounts"
+    },
+    {
+      "type": "text",
+      "body": "Klik menu Finance → Accounting → Chart of Accounts"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Fitur-Fitur Utama"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "1. Melihat Daftar Akun"
+    },
+    {
+      "type": "text",
+      "body": "Tabel menampilkan:\n- Kode: ID akun unik\n- Nama: Nama akun lengkap\n- Tipe: Klasifikasi (Asset, Liability, Equity, Revenue, Expense, dll)\n- Status Postable: Apakah bisa diposting di jurnal\n- Aktif: Status aktif/inactive"
+    },
+    {
+      "type": "image",
+      "src": "/images/help/finance/accounting/coa-view-list.webp",
+      "alt": "Daftar akun di Chart of Accounts"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "2. Search & Filter"
+    },
+    {
+      "type": "text",
+      "body": "- Search: Cari berdasarkan kode atau nama akun\n- Filter Tipe: Filter berdasarkan tipe akun\n- Filter Status: Filter aktif/inactive"
+    },
+    {
+      "type": "image",
+      "src": "/images/help/finance/accounting/coa-search-filter.webp",
+      "alt": "Fitur search dan filter pada Chart of Accounts"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "3. Membuat Akun Baru"
+    },
+    {
+      "type": "text",
+      "body": "Langkah-langkah:\n\n1. Klik tombol + Create\n2. Form dialog muncul dengan field:\n   - Kode Akun (required): Kode unik, max 50 karakter\n   - Nama Akun (required): Nama deskriptif, max 200 karakter\n   - Tipe Akun (required): Pilih dari dropdown\n   - Akun Induk (optional): Pilih parent akun untuk hierarchy\n   - Postable: Toggle untuk tujuan posting (parent=OFF, detail=ON)\n   - Aktif: Toggle untuk status aktif\n3. Klik Save untuk simpan\n\nContoh:\n- Kode: 10000, Nama: ASSET, Tipe: Asset, Parent: kosong, Postable: OFF, Aktif: ON\n- Kode: 10100, Nama: Current Asset, Tipe: Current Asset, Parent: 10000, Postable: OFF, Aktif: ON\n- Kode: 10110, Nama: Cash, Tipe: Current Asset, Parent: 10100, Postable: ON, Aktif: ON"
+    },
+    {
+      "type": "image",
+      "src": "/images/help/finance/accounting/coa-create-form.webp",
+      "alt": "Form membuat akun baru di Chart of Accounts"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "4. Edit & Hapus Akun"
+    },
+    {
+      "type": "text",
+      "body": "- Edit: Klik akun, ubah data, klik Save\n- Hapus: Klik delete icon (hanya bisa jika tidak ada transaksi)"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Best Practices Chart of Accounts"
+    },
+    {
+      "type": "info",
+      "body": "- Gunakan kode konsisten (1XXXX=Asset, 2XXXX=Liability, dll)\n- Buat struktur hierarki yang jelas\n- Akun parent jangan di-posting (Postable=OFF)\n- Hanya akun leaf/detail yang diposting (Postable=ON)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Journal Entries"
+    },
+    {
+      "type": "text",
+      "body": "Pencatatan transaksi keuangan manual dengan format debet-kredit."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Membuka Journal Entries"
+    },
+    {
+      "type": "text",
+      "body": "Klik menu Finance → Accounting → Journal Entries"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Fitur-Fitur Utama"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "1. Melihat Daftar Journal Entry"
+    },
+    {
+      "type": "text",
+      "body": "Tabel menampilkan:\n- Tanggal: Tanggal transaksi\n- Nomor Referensi: Referensi dari dokumen asal\n- Deskripsi: Penjelasan transaksi\n- Total Debet/Kredit: Jumlah transaksi\n- Status: Posted atau Draft"
+    },
+    {
+      "type": "image",
+      "src": "/images/help/finance/accounting/je-view-list.webp",
+      "alt": "Daftar Journal Entries"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "2. Membuat Journal Entry Baru"
+    },
+    {
+      "type": "text",
+      "body": "Langkah-langkah:\n\n1. Klik tombol + Create\n2. Form header dengan field:\n   - Tanggal Transaksi: Pilih tanggal kejadian\n   - Nomor Referensi (optional): From Invoice/PO number\n   - Deskripsi: Deskripsi transaksi singkat\n   - Departemen (optional): Pilih dept\n   - Catatan (optional): Catatan tambahan\n3. Bagian Line Items - Tambah detail akun:\n   - Klik Add Line\n   - Akun: Pilih dari postable accounts\n   - Deskripsi: Deskripsi line item\n   - Debet: Jumlah debet (jika ada)\n   - Kredit: Jumlah kredit (jika ada)\n4. Validasi: Sistem akan check total debet = total kredit\n5. Klik Save untuk draft atau Post untuk finalisasi\n\nContoh Journal Entry - Pembayaran Utang:\n- Tanggal: 15-04-2026\n- Referensi: INV-026-001\n- Deskripsi: Pembayaran Invoice Supplier PT ABC\n- Line Items:\n  * Utang Usaha | Pembayaran ke Supplier | 5.000.000 | -\n  * Bank BCA | Transfer ke rekening | - | 5.000.000\n  * TOTAL | | 5.000.000 | 5.000.000"
+    },
+    {
+      "type": "image",
+      "src": "/images/help/finance/accounting/je-create-form.webp",
+      "alt": "Form membuat Journal Entry baru"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "3. Edit Journal Entry"
+    },
+    {
+      "type": "text",
+      "body": "- Draft: Bisa diedit, klik entry → ubah → Save\n- Posted: Tidak bisa diedit, harus buat adjustment entry"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "4. Posting Journal Entry"
+    },
+    {
+      "type": "text",
+      "body": "- Status awal: Draft (belum affect laporan)\n- Setelah Post: Jurnal akan masuk laporan keuangan (tidak bisa diubah)"
+    },
+    {
+      "type": "info",
+      "body": "Tips Journal Entry:\n- Selalu pastikan debet = kredit\n- Gunakan nomor referensi dari dokumen asal\n- Buat deskripsi yang jelas untuk audit trail\n- Post jurnal di akhir hari/periode"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Sales Journal"
+    },
+    {
+      "type": "text",
+      "body": "Laporan otomatis dari semua transaksi penjualan yang telah diposting."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Membuka Sales Journal"
+    },
+    {
+      "type": "text",
+      "body": "Klik menu Finance → Accounting → Sales Journal"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Fitur-Fitur Utama"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "Kolom-Kolom"
+    },
+    {
+      "type": "text",
+      "body": "- Tanggal: Tanggal penjualan\n- Referensi: Nomor invoice/SO\n- Pelanggan: Nama customer\n- Akun Pendapatan: Account yang di-credit\n- Piutang Usaha: Piutang account yang di-debet\n- Jumlah: Nilai penjualan\n- Status: Posted/Draft"
+    },
+    {
+      "type": "image",
+      "src": "/images/help/finance/accounting/sj-view-list.webp",
+      "alt": "Daftar Sales Journal"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "Fitur"
+    },
+    {
+      "type": "text",
+      "body": "- Search: Cari berdasarkan referensi atau customer\n- Filter Tanggal: Filter by date range\n- Filter Customer: Filter by specific customer\n- Export: Download to Excel untuk analisis\n- Print: Print laporan"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "Analisis"
+    },
+    {
+      "type": "text",
+      "body": "- Monitor total penjualan per periode\n- Identifikasi top customers\n- Track trend penjualan"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Purchase Journal"
+    },
+    {
+      "type": "text",
+      "body": "Laporan otomatis dari semua transaksi pembelian yang telah diposting."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Membuka Purchase Journal"
+    },
+    {
+      "type": "text",
+      "body": "Klik menu Finance → Accounting → Purchase Journal"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Fitur-Fitur Utama"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "Kolom-Kolom"
+    },
+    {
+      "type": "text",
+      "body": "- Tanggal: Tanggal pembelian\n- Referensi: Nomor invoice supplier/PO\n- Supplier: Nama supplier\n- Akun Expense: Account yang di-debet\n- Hutang Usaha: Hutang account yang di-credit\n- Jumlah: Nilai pembelian\n- Status: Posted/Draft"
+    },
+    {
+      "type": "image",
+      "src": "/images/help/finance/accounting/pj-view-list.webp",
+      "alt": "Daftar Purchase Journal"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "Fitur"
+    },
+    {
+      "type": "text",
+      "body": "- Search: Cari berdasarkan referensi atau supplier\n- Filter Tanggal: Filter by date range\n- Filter Supplier: Filter by specific supplier\n- Export: Download to Excel\n- Print: Print laporan"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "body": "Analisis"
+    },
+    {
+      "type": "text",
+      "body": "- Monitor total pembelian per periode\n- Identifikasi top suppliers\n- Track purchase trends"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Adjustment Journal"
+    },
+    {
+      "type": "text",
+      "body": "Jurnal khusus untuk entry koreksi/penyesuaian di akhir periode."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Membuka Adjustment Journal"
+    },
+    {
+      "type": "text",
+      "body": "Klik menu Finance → Accounting → Adjustment Journal"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Kegunaan Umum"
+    },
+    {
+      "type": "text",
+      "body": "- Penyesuaian inventori: Adjust stock berdasarkan opname\n- Depreciation: Catat penyusutan aset tetap\n- Accruals: Catat beban/pendapatan yang masih harus dibayar\n- Koreksi: Perbaiki error di periode sebelumnya"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Cara Membuat"
+    },
+    {
+      "type": "text",
+      "body": "Sama seperti Journal Entry biasa, tapi diberi label khusus \"Adjustment\" untuk tracking."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Financial Closing"
+    },
+    {
+      "type": "text",
+      "body": "Proses menutup periode akuntansi dan mempersiapkan periode baru."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Membuka Financial Closing"
+    },
+    {
+      "type": "text",
+      "body": "Klik menu Finance → Accounting → Financial Closing"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Proses Closing"
+    },
+    {
+      "type": "text",
+      "body": "1. Prepare: Validasi semua jurnal sudah dipost\n2. Run Close: Sistem akan:\n   - Lock periode (tidak bisa entry baru)\n   - Tutup revenue/expense accounts ke retained earning\n   - Prepare opening balances untuk periode berikutnya\n3. Verify: Cek balance sheet balanced"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Kondisi Close"
+    },
+    {
+      "type": "text",
+      "body": "- Semua journal entries harus posted\n- Sales & purchase transactions harus completed\n- Adjustment entries sudah dibuat"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "body": "Setelah Close"
+    },
+    {
+      "type": "text",
+      "body": "- Periode sebelumnya menjadi read-only\n- Periode baru siap menerima transaksi\n- Financial reports ready untuk publish"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Workflow Lengkap"
+    },
+    {
+      "type": "text",
+      "body": "START PERIODE (Misal: April 2026)\n  ↓\n1. Setup Chart of Accounts (jika baru)\n  ↓\n2. Catat Daily Transactions\n   - Sales Entry → Auto create in Sales Journal\n   - Purchase Entry → Auto create in Purchase Journal\n   - Manual → Via Journal Entry\n  ↓\n3. Mid-period Review\n   - Check Sales Journal\n   - Check Purchase Journal\n   - Reconcile accounts\n  ↓\n4. End of Period\n   - Make Adjustment Entries (depreciation, accrual, dll)\n   - Review all journals\n   - Verify Chart of Accounts balance\n  ↓\n5. Financial Closing\n   - Run close process\n   - Verify balance sheet\n   - Generate financial reports\n  ↓\nEND PERIOD → START NEW PERIOD"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Troubleshooting"
+    },
+    {
+      "type": "text",
+      "body": "Q: Journal tidak bisa dipost?\nA: Cek apakah debet = kredit, dan semua akun valid.\n\nQ: Bikin entry salah?\nA: Jika masih Draft - edit langsung. Jika sudah Posted - buat reverse entry atau adjustment.\n\nQ: Laporan tidak balance?\nA: Validate semua posting entries, cek Chart of Accounts hierarchy."
+    }
+  ]
+}

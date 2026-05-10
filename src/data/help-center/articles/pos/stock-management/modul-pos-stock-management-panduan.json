@@ -1,0 +1,120 @@
+{
+  "title": "Modul POS - Stock Management - Panduan Lengkap",
+  "description": "Panduan lengkap manajemen stok di POS mencakup stock validation, deduction, reversal, low stock alerts, recipe explosion, dan inventory reconciliation.",
+  "slug": "modul-pos-stock-management-panduan",
+  "module": "pos",
+  "subcategory": "stock-management",
+  "author": "Tim GIMS",
+  "createdAt": "2026-05-05",
+  "updatedAt": "2026-05-05",
+  "tags": ["pos", "stock", "inventory", "deduction", "reversal", "recipe", "alert", "reconciliation"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Stock Management di POS mengintegrasikan inventory control dengan transaksi penjualan. Setiap order memicu deduction stok secara otomatis, dengan support untuk STOCK mode (direct qty) dan RECIPE mode (ingredient explosion). Stock validation, low-stock alerts, dan reconciliation ensure inventory accuracy."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Stock Modes"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "STOCK Mode (Direct Item)",
+          "body": "**Definition:** Product tracked sebagai item individual.\n\n**Examples:**\n- Bakso (dapat dijual langsung)\n- Minuman botol (dapat dijual langsung)\n- Barang dagangan / merchandise\n- Finished goods\n\n**Stock Tracking:**\n- Unit: pcs (pieces), botol, box, dll\n- Simple qty tracking\n- When sold: Qty decrease directly\n\n**Deduction Process:**\nWhen order PAID/COMPLETED:\n1. System check: Item is STOCK mode?\n2. Get qty ordered: e.g., 2\n3. Get current stock: e.g., 100\n4. Deduct: 100 - 2 = 98\n5. Update database: Stock = 98\n6. Transaction recorded: -2 pcs\n\n**Example:**\n- Order: Bakso × 2 + Es Teh × 3\n- Deduction:\n  * Bakso stock: 100 - 2 = 98\n  * Es Teh stock: 50 - 3 = 47\n- Stok update immediate (real-time)",
+          "image": {
+            "src": "/images/help/pos/stock-management/stock-mode.webp",
+            "alt": "Mode STOCK untuk tracking item individual"
+          }
+        },
+        {
+          "title": "RECIPE Mode (Ingredient-Based)",
+          "body": "**Definition:** Product buat dari recipe, stok track per ingredient.\n\n**Examples:**\n- Nasi Goreng (from: beras, minyak, telur, bumbu)\n- Salad (from: vegetables, dressing)\n- Juice (from: fruit, sugar, water)\n- Cocktail (from: spirits, mixers)\n\n**Recipe Structure:**\n```\nNasi Goreng (1 porsi):\n  - Beras: 200 gram\n  - Telur: 1 butir (50 gram)\n  - Minyak: 20 ml\n  - Bawang: 5 gram\n  - Garam: 1 gram\n  - Kecap manis: 10 ml\n```\n\n**Stock Tracking:**\n- Track ingredient level (berat/volume/butir)\n- Not track finished product qty\n- Composite product\n\n**Deduction Process (Recipe Explosion):**\nWhen order PAID/COMPLETED:\n1. System check: Item is RECIPE mode?\n2. Get qty ordered: e.g., 2 porsi Nasi Goreng\n3. Get recipe: Beras 200g/porsi, etc\n4. Calculate ingredient needed:\n   - Beras: 200g × 2 = 400g\n   - Telur: 50g × 2 = 100g (2 butir)\n   - Minyak: 20ml × 2 = 40ml\n   - Etc\n5. Deduct dari ingredient stock:\n   - Beras stock: 2000g - 400g = 1600g\n   - Telur stock: 300 butir - 2 = 298 butir\n   - Minyak stock: 500ml - 40ml = 460ml\n   - Etc\n6. Transaction recorded: Per ingredient deduction\n\n**Example Output:**\n```\nOrder: Nasi Goreng × 2, Salad × 1\n\nIngredient Deduction:\n  Beras: -400g (for 2 nasi goreng)\n  Telur: -2 butir\n  Minyak: -40ml\n  Sayuran: -200g (for 1 salad)\n  Dressing: -50ml\n```"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Stock Validation Flow"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Stock Check saat Order DRAFT",
+          "body": "**During Shopping (DRAFT status):**\n- No stock check (tentative)\n- Customer bisa add unlimited item\n- Stock tidak dipengaruhi\n\n**Reason:**\n- Order belum confirm\n- Item bisa dihapus\n- Check nanti saat confirm"
+        },
+        {
+          "title": "Stock Validation saat Order CONFIRMED",
+          "body": "**When Customer Confirm (CONFIRMED status):**\n\n1. **System Trigger Validation:**\n   - Check: Each item stok sufficient?\n\n2. **Validation Logic:**\n\n   **For STOCK Mode:**\n   - Get ordered qty: 2\n   - Get available stock: 100\n   - Check: 100 >= 2? YES → OK\n   - If NO (stock insufficient): ERROR\n\n   **For RECIPE Mode:**\n   - Get ordered qty: 2 porsi\n   - Get recipe: Beras 200g/porsi, etc\n   - Calculate needed: Beras 400g, Telur 2, etc\n   - Get available: Beras 300g, Telur 5, etc\n   - Check each ingredient:\n     * Beras: 300 >= 400? NO → ERROR (insufficient)\n     * Telur: 5 >= 2? YES → OK\n     * Minyak: 500ml >= 40ml? YES → OK\n   - If any ingredient insufficient: ERROR\n\n3. **Validation Result:**\n\n   **If All OK:**\n   - Order status → CONFIRMED\n   - Stock reserved (not deducted yet)\n   - Ready untuk payment\n\n   **If Insufficient:**\n   - Order remain DRAFT\n   - Error message: \"Insufficient stock for item X\"\n   - Cashier options:\n     a. Reduce qty untuk item X\n     b. Remove item X\n     c. Cancel order\n   - Customer: Choose alternative atau wait restock\n\n4. **Concurrent Validation:**\n   - If 2 order confirm simultaneously (race condition):\n     * First order validated OK, stok reserved\n     * Second order validated OK initially, but stok now reserved\n     * System use `FOR UPDATE` lock untuk prevent overstock\n     * Ensure only 1 order can reserve stock"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Stock Deduction & Reversal"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Stock Deduction (Order PAID/COMPLETED)",
+          "body": "**Trigger:** When order status change to PAID atau COMPLETED\n\n**Process:**\n1. Order moved to PAID\n2. System identify: Item mode (STOCK vs RECIPE)\n3. Calculate deduction amount\n4. Execute deduction:\n   - Update stock in database\n   - Create inventory transaction record\n   - Timestamp recorded\n5. Result:\n   - Stock updated real-time\n   - Inventory transaction queryable\n   - For reconciliation later\n\n**Stock Transaction Record:**\n- Document setiap deduction untuk audit\n- Info:\n  * Item/ingredient\n  * Qty deducted\n  * Order reference\n  * Timestamp\n  * Warehouse/outlet\n  * Batch/serial (jika applicable)\n\n**Example Log:**\n```\n2026-05-05 14:32:00 | Bakso | -2 pcs | ORD-1001 | POS-Jakarta | OK\n2026-05-05 14:45:00 | Es Teh | -3 botol | ORD-1002 | POS-Jakarta | OK\n2026-05-05 15:01:00 | Beras | -400g | ORD-1003 | POS-Jakarta | OK\n```"
+        },
+        {
+          "title": "Stock Reversal (Void/Return)",
+          "body": "**Trigger:** When order voided or item returned\n\n**Process:**\n\n1. **Void Order:**\n   - Order status: PAID → VOIDED\n   - System identify: Items to reverse\n   - Qty return: Same as original\n   - Execute reversal:\n     * STOCK mode: Add qty back\n     * RECIPE mode: Add ingredient back\n\n   Example:\n   - Original order: Bakso × 2\n   - Void executed:\n     * Bakso stock: 98 + 2 = 100 (back to original)\n   - Transaction recorded: +2 pcs (reversal)\n\n2. **Return Item:**\n   - Order status: COMPLETED → RETURN\n   - System identify: Items returned\n   - Qty return: Partial (as selected)\n   - Execute reversal:\n     * Proportional reversal\n\n   Example:\n   - Original order: Bakso × 2, Es Teh × 3\n   - Return: 1 Bakso\n   - Reversal:\n     * Bakso: 98 + 1 = 99\n     * Es Teh: No reversal (not returned)\n   - Transaction recorded: +1 Bakso (return)\n\n3. **Concurrent Safety:**\n   - If reversal & deduction race condition\n   - System lock prevent inconsistency\n   - Sequential execution"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Low Stock Alert"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Alert Configuration",
+          "body": "**Per-Item Minimum Stock:**\nAdmin configure minimum level untuk trigger alert.\n\n```\nBakso:\n  Current stock: 50 pcs\n  Minimum: 20 pcs (trigger yellow alert)\n  Critical: 5 pcs (trigger red alert)\n\nEs Teh:\n  Current: 30 botol\n  Minimum: 15 botol\n  Critical: 3 botol\n\nBeras:\n  Current: 500g\n  Minimum: 200g\n  Critical: 50g\n```"
+        },
+        {
+          "title": "Alert Trigger",
+          "body": "**When Order Confirm/Complete:**\n\n1. Stock deduction executed\n2. System check: Stock now < minimum?\n3. If YES:\n   - Yellow alert: \"Low stock for item X\"\n   - Show di POS screen\n   - Notify manager via app/bell\n\n4. If stock < critical:\n   - Red alert: \"CRITICAL STOCK for item X\"\n   - Urgent notification\n   - Prevent accepting new order dengan item ini\n\n**Alert Display:**\n```\n⚠ LOW STOCK WARNING\n• Bakso: 18 pcs (minimum 20)\n• Es Teh: 12 botol (minimum 15)\n\nRECOMMENDATION:\nReorder immediately\nContact supplier\n```\n\n**Actions:**\n- Manager see alert\n- Manager order restock (via Purchase module)\n- Or manual restock (if physical stock available)\n- Update stock in system\n- Alert cleared when stock > minimum"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Inventory Reconciliation"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Physical Count vs System",
+          "body": "**Daily/Periodic Reconciliation:**\n\n1. **System Calculation:**\n   - Opening stock (start of day)\n   - + Inbound (purchase, return)\n   - - Outbound (sales, void)\n   - = Expected stock\n\n   Example:\n   ```\n   Bakso - System Calculation:\n   Opening: 200 pcs\n   + Inbound (receive): 50 pcs\n   - Sales (ORD-1001-1010): 25 pcs\n   - Void (ORD-1011): 2 pcs\n   - Return (ORD-1012): 1 pcs\n   = Expected: 222 pcs\n   ```\n\n2. **Physical Count:**\n   - Staff physically count items\n   - Record actual qty\n   - May different dari system (shrinkage, error)\n\n   Example:\n   ```\n   Bakso - Physical Count:\n   Actual: 220 pcs\n   ```\n\n3. **Variance Calculation:**\n   ```\n   Expected: 222 pcs\n   Actual: 220 pcs\n   Variance: -2 pcs (shortage)\n   ```\n\n4. **Root Cause Analysis:**\n   - Small variance (< 2%): Normal shrinkage\n   - Large variance: Investigation needed\n     * POS recording error?\n     * Theft?\n     * Waste?\n     * Manual error?\n\n5. **Adjustment:**\n   - If variance identified\n   - Update system to match actual\n   - Document reason\n   - Prevent future occurrence"
+        },
+        {
+          "title": "Stock Audit Report",
+          "body": "**Daily Stock Report:**\n```\nSTOCK REPORT - May 5, 2026\n\nBakso:\n  Opening: 200 pcs\n  Inbound: 50 pcs (receive)\n  Outbound: 25 pcs (sales)\n  Adjustments: -1 pcs (waste)\n  Expected: 224 pcs\n  Physical: 222 pcs\n  Variance: -2 pcs (0.9%)\n\nEs Teh:\n  Opening: 100 botol\n  Inbound: 48 botol (receive)\n  Outbound: 45 botol (sales)\n  Expected: 103 botol\n  Physical: 103 botol\n  Variance: 0 (Perfect match)\n\n[More items...]\n\nTOTAL VARIANCE: -5 items (0.3%)\nCLASS: ACCEPTABLE (< 1%)\n```"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Best Practices"
+    },
+    {
+      "type": "text",
+      "body": "1. **Accurate Setup:**\n   - Configure STOCK vs RECIPE mode correctly\n   - Set recipe accurately (prevent under/over deduction)\n   - Set minimum stock realistically\n\n2. **Regular Reconciliation:**\n   - Daily physical count\n   - Compare dengan system\n   - Investigate variance > 2%\n   - Document all adjustments\n\n3. **Alert Response:**\n   - Monitor low stock alerts\n   - Reorder promptly\n   - Prevent out-of-stock situation\n   - Maintain quality of service\n\n4. **Training:**\n   - Train staff on stock importance\n   - Proper recording di POS\n   - Accurate physical count\n   - Minimize waste\n\n5. **System Audit:**\n   - Periodic (monthly/quarterly) full audit\n   - Verify transaction logs\n   - Check for anomalies\n   - Prevent/detect fraud\n\n6. **Integration:**\n   - POS stock sync dgn Inventory module\n   - Purchase order based on POS demand\n   - Accurate forecasting\n   - Optimize cash flow"
+    }
+  ]
+}

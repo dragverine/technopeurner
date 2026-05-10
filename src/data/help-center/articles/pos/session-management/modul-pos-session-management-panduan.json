@@ -1,0 +1,138 @@
+{
+  "title": "Modul POS - Session Management - Panduan Lengkap",
+  "description": "Panduan lengkap mengelola POS session mencakup pembukaan shift, penutupan shift, cash reconciliation, dan handling variance dengan compliance & audit trail.",
+  "slug": "modul-pos-session-management-panduan",
+  "module": "pos",
+  "subcategory": "session-management",
+  "author": "Tim GIMS",
+  "createdAt": "2026-05-05",
+  "updatedAt": "2026-05-05",
+  "tags": ["pos", "session", "shift", "open", "close", "reconciliation", "cash", "cashier"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Session Management adalah proses pembukaan dan penutupan shift di POS. Setiap operator (cashier) wajib membuka session pada awal shift dan menutupnya dengan reconciliation kas di akhir shift. Ini memastikan akurasi kas, tracking pengguna, dan audit compliance."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Fitur Utama"
+    },
+    {
+      "type": "card",
+      "items": [
+        {
+          "title": "Open Shift",
+          "body": "Buka session baru dengan pencatatan cash awal dan operator"
+        },
+        {
+          "title": "Shift Monitoring",
+          "body": "Monitor transaction selama shift berjalan"
+        },
+        {
+          "title": "Close Shift",
+          "body": "Tutup session dengan reconciliation cash"
+        },
+        {
+          "title": "Variance Handling",
+          "body": "Handle cash kekurangan/kelebihan dengan approval"
+        },
+        {
+          "title": "Shift Report",
+          "body": "Generate laporan detail shift untuk management"
+        },
+        {
+          "title": "Audit Trail",
+          "body": "Catat semua aktivitas session untuk compliance"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Session Lifecycle"
+    },
+    {
+      "type": "text",
+      "body": "```\nNO SESSION\n    ↓\n[OPEN SESSION]\n    ↓ Set opening cash\n    ↓ Assign operator & outlet\n    ↓\nSESSION OPEN\n    ↓ (Transactions happen here)\n    ↓\n[CLOSE SESSION]\n    ↓ Count closing cash\n    ↓ System calculate expected\n    ↓ Calculate variance\n    ↓ Manager approval (if variance > threshold)\n    ↓\nSESSION CLOSED\n    ↓ Report generated\n    ↓ Ready untuk shift berikutnya\n```"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Panduan Penggunaan"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Membuka POS Session (Step-by-Step)",
+          "body": "Langkah-langkah detail membuka shift di awal hari.\n\n1. Launch POS Application:\n   - Open POS aplikasi di cashier device/terminal\n   - Login dengan user account (auto-verify role cashier/operator)\n\n2. Klik Tombol 'Open Shift':\n   - Locate button di main dashboard POS\n   - Atau shortcut keyboard: F5 (configurable)\n   - Jika sudah ada session OPEN → show warning \"Session already open\"\n\n3. Form Pembukaan Session Muncul:\n   Fields:\n   a. Outlet/Warehouse* (required):\n      - Dropdown pilih outlet tempat bekerja\n      - Default: Outlet yg sudah di-assign ke user\n      - Jika hanya 1 outlet: Auto-selected\n      - Jika multiple: User pilih\n   \n   b. Employee* (required):\n      - Auto-filled dengan user yg login (tidak bisa diubah)\n      - For audit & responsibility tracking\n   \n   c. Opening Cash* (required):\n      - Input jumlah cash awal dalam rupiah\n      - Numeric input dengan thousand separator\n      - Contoh: 500000 atau 500.000 (sistem parse)\n      - Validasi: Tidak bisa negatif\n      - Default: Rp 0 (jika tidak ada float/awal hari)\n   \n   d. Notes (optional):\n      - Text field untuk catatan tambahan\n      - Contoh: \"Float dari manager: 500rb, plus cash leftover kemarin: 100rb\"\n      - Max 255 characters\n      - Helpful untuk reconciliation nanti\n\n4. Validasi Sistem:\n   Sebelum session bisa dibuka, sistem check:\n   a. Employee assign ke outlet ini? → If no: Error \"Employee not assigned\"\n   b. Outlet dalam status ACTIVE? → If no: Error \"Outlet inactive\"\n   c. Opening cash >= 0? → If no: Error \"Cannot be negative\"\n   d. No active session untuk outlet ini? → If yes: Error \"Session already open\"\n\n5. Confirm Pembukaan:\n   - Klik tombol 'Confirm Open Shift'\n   - Atau tekan Enter\n   - System execute:\n     * Create session record di database\n     * Set status = OPEN\n     * Record opening_at = current timestamp (UTC)\n     * Save opening_cash amount\n     * Initialize transaction counter = 0\n\n6. Success Message:\n   - Toast notif: \"Shift opened successfully\"\n   - Screen show session info:\n     * Session ID\n     * Operator name\n     * Outlet name\n     * Opening cash: Rp 500.000\n     * Time opened: 08:00:00\n     * Status badge: OPEN (green)\n\n7. Ready untuk Transaksi:\n   - Operator siap create order & process payment\n   - Session ID ada di header/footer screen untuk reference\n   - Next order button active\n\nNotes:\n- Opening cash bisa berbeda tiap hari (depends on float management)\n- Wajib open session sebelum bisa create order\n- Cannot skip - sistem prevent create order tanpa session OPEN",
+          "image": {
+            "src": "/images/help/pos/pos-open-session-form.webp",
+            "alt": "Form membuka POS session"
+          }
+        },
+        {
+          "title": "Shift Monitoring & Transaction Tracking",
+          "body": "Monitoring aktivitas selama session berjalan.\n\nSession Info Display:\nSelama shift berlangsung, info berikut di-display di POS screen:\n\n1. Session Header (top bar):\n   - Operator name: \"Ahmad Santoso\"\n   - Outlet: \"Jakarta Pusat\"\n   - Session status: \"OPEN\"\n   - Current time: HH:MM:SS (live update)\n\n2. Session Summary Panel:\n   Real-time aggregate saat shift berjalan:\n   - Transactions today: 45 (count)\n   - Revenue (cash): Rp 3.000.000\n   - Revenue (card): Rp 1.500.000\n   - Revenue (QRIS): Rp 500.000\n   - Total revenue: Rp 5.000.000\n   - Total discount: Rp 200.000 (-)\n   - Avg transaction: Rp 111.111\n   - Current time on shift: 08:00 - 16:30 (duration)\n\n3. Quick Stats:\n   - Items sold: 1200 pcs\n   - Top product: Bakso (150 pcs)\n   - Top payment method: Cash (60%)\n   - Void/Return count: 5 (with manager approval count)\n\n4. Alerts & Warnings:\n   - Stock low for product X\n   - Payment gateway disconnected\n   - Printer offline\n   - Pending manager approvals: 2 (discount requests)\n\n5. Transaction Log (scrollable):\n   Recent transactions list dengan:\n   - Order #, Time, Amount, Payment method, Status\n   - Click to view detail order\n\n6. Quick Actions:\n   - New Order button (primary)\n   - View transactions\n   - Check stock\n   - Request manager approval (if needed)\n   - Close Shift (only after min shift time, e.g., 1 hour)\n\nMonitoring Best Practices:\n- Glance at summary every 30 min untuk ensure smooth operation\n- Alert notification jika ada issue (payment fail, printer error)\n- Manager bisa remote check session status\n- Auto-lock screen after 5 min inactivity (security)"
+        },
+        {
+          "title": "Menutup POS Session (Close Shift & Reconciliation)",
+          "body": "Proses tutup shift dengan cash reconciliation & variance handling.\n\n1. Klik Tombol 'Close Shift':\n   - Locate button di main POS screen\n   - Atau shortcut: Ctrl+E\n   - Validasi: Session status = OPEN?\n   - Validasi: Min shift time passed? (e.g., 1 hour)\n   - If validation fail: Show error msg\n\n2. Closing Session Dialog Muncul:\n   Form dengan section-section:\n\n   SECTION A: Shift Summary (READ-ONLY)\n   - Opening cash (read-only): Rp 500.000\n   - Transactions count: 45\n   - Cash sales: Rp 3.000.000\n   - Card sales: Rp 1.500.000\n   - QRIS sales: Rp 500.000\n   - Refunds/returns: -Rp 50.000\n   - Discount given: -Rp 200.000\n   - Expected cash calculation:\n     * Opening: +Rp 500.000\n     * + Cash sales: +Rp 3.000.000\n     * - Refunds: -Rp 50.000\n     * = Expected: Rp 3.450.000\n\n   SECTION B: Physical Count (INPUT)\n   - Closing Cash*: [INPUT] Rp ______\n     * Operator manually count cash di drawer\n     * Input amount\n     * Validasi: > 0 and numeric\n     * Auto format dengan thousand separator\n\n   SECTION C: Variance Calculation (READ-ONLY)\n   - Expected cash: Rp 3.450.000\n   - Closing cash: Rp 3.500.000 (dari input user)\n   - Variance: Rp 50.000 (positive/overage)\n   - Status: \"MATCHED\" atau \"VARIANCE\"\n   - Color code:\n     * Green: Variance Rp 0 (perfect match)\n     * Yellow: Variance -Rp 0 to ±Rp 100.000 (acceptable)\n     * Red: Variance > ±Rp 100.000 (requires approval)\n\n3. Variance Cases:\n\n   CASE A: MATCHED (Variance Rp 0)\n   - Status: \"Perfect! Cash matches.\"\n   - Action: Click 'Confirm Close'\n   - Process: Session close immediately\n   - Success msg: \"Session closed successfully\"\n\n   CASE B: SMALL VARIANCE (±Rp 0 - Rp 100.000)\n   - Status: \"Minor discrepancy (acceptable range)\"\n   - Input Reason: Dropdown\n     * \"Rounding error\"\n     * \"Missed transaction\"\n     * \"Loose coins\"\n     * \"Other: [input text]\"\n   - Action: Click 'Confirm Close'\n   - Process: Session close, variance noted\n   - Report: Variance recorded untuk follow-up\n\n   CASE C: LARGE VARIANCE (> ±Rp 100.000)\n   - Status: \"ATTENTION: Large variance detected\"\n   - Warning: \"This requires manager approval\"\n   - Input fields:\n     * Variance reason (required):\n       - \"Unidentified\"\n       - \"Cash theft suspicion\"\n       - \"Transaction error\"\n       - \"Other: [explain]\"\n     * Acknowledgment checkbox: \"I confirm counting is accurate\"\n   - Manager approval required:\n     * Show notification to manager\n     * Manager review & sign (PIN/fingerprint)\n     * If approve: Session close with variance noted\n     * If reject: Cashier recount & retry\n\n4. Session Close Execution:\n   a. System write to database:\n      - Set session status = CLOSED\n      - Record closed_at = current timestamp\n      - Save closing_cash amount\n      - Calculate & save variance amount\n      - Save notes & reason\n   \n   b. Generate Shift Report:\n      - Compile all transaction data\n      - Calculate summary (revenue, discount, void, etc)\n      - Create PDF report\n   \n   c. Stock Reconciliation:\n      - Calculate expected inventory (initial - sold + return)\n      - For physical count verification next day\n   \n   d. Close session:\n      - Session locked, no more transaction add\n      - Cashier bisa view history\n      - Next order require new session\n\n5. Post-Close Actions:\n   a. Report generation:\n      - Option: Print report\n      - Option: Email to manager\n      - Option: Save PDF locally\n   \n   b. Handover:\n      - New cashier buka session baru\n      - Old cashier sign off\n   \n   c. Follow-up:\n      - If variance: Manager investigate next day\n      - If large variance: Incident report\n\nBest Practices:\n- Count cash carefully, avoid rush\n- Reconcile saat end of shift\n- Document any discrepancy\n- Manager approval untuk variance > threshold\n- Keep report untuk audit trail",
+          "image": {
+            "src": "/images/help/pos/pos-close-session-reconciliation.webp",
+            "alt": "Form menutup POS session dengan reconciliation"
+          }
+        },
+        {
+          "title": "Variance Handling & Manager Approval",
+          "body": "Handling cash variance dengan proper workflow & documentation.\n\nVariance Types:\n\n1. UNDERAGE (Kekurangan Kas):\n   Example: Expected Rp 3.450.000, Actual Rp 3.400.000 → Variance -Rp 50.000\n   \n   Actions:\n   - Prompt: \"Cash shortage detected\"\n   - Cashier acknowledge\n   - Reason selection: \n     * \"Forgot to record transaction\"\n     * \"Overpayment to customer\"\n     * \"Suspected cash slip\"\n     * \"Other\"\n   - Manager notification sent\n   - Manager review & approve/reject\n   - Approve: Session close, variance documented\n   - Reject: Cashier recount & retry\n\n2. OVERAGE (Kelebihan Kas):\n   Example: Expected Rp 3.450.000, Actual Rp 3.500.000 → Variance +Rp 50.000\n   \n   Actions:\n   - Prompt: \"Cash excess detected\"\n   - Possible reasons:\n     * \"Customer overpayment\"\n     * \"Tips/bonus from manager\"\n     * \"Found cash from previous day\"\n     * \"Other\"\n   - Input reason\n   - Manager notification (for large amounts)\n   - Document for accounting\n\n3. LARGE VARIANCE (> Rp 100.000 in either direction):\n   - Always require manager approval\n   - Escalate to supervisor if manager unavailable\n   - Incident investigation initiated\n   - Root cause analysis needed\n\nManager Approval Workflow:\n\n1. Notification:\n   - Manager get notified (app notification, SMS, bell icon)\n   - Info: Operator name, outlet, amount, variance\n   - Action required: Approve or Reject\n\n2. Manager Review:\n   - Manager view session detail\n   - Review transactions (transaction list link)\n   - Check for anomalies\n   - Verify operator reason\n\n3. Manager Decision:\n   - Option A: APPROVE\n     * Signature/PIN verification\n     * Add comment if needed\n     * Click Approve button\n     * System: Session close, variance accepted\n   \n   - Option B: REJECT\n     * Add comment (reason rejection)\n     * Click Reject button\n     * System: Revert to cashier\n     * Cashier get notification\n     * Cashier must recount or investigate\n\n4. Documentation:\n   - Variance amount\n   - Reason (from cashier)\n   - Manager approval status & timestamp\n   - Manager signature/approval\n   - All recorded dalam audit trail\n\n5. Follow-up:\n   - Daily report: Variance summary\n   - Weekly: Variance trend analysis\n   - Cashier with frequent variance: Training needed\n   - Pattern detection: Potential fraud alert\n\nAudit Trail:\n- Setiap variance event recorded:\n  * Cashier name, outlet, time\n  * Expected vs actual vs variance\n  * Reason, notes\n  * Manager approval status\n  * Timestamp\n- Accessible untuk compliance & investigation"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Shift Report"
+    },
+    {
+      "type": "text",
+      "body": "After session close, system generate comprehensive shift report.\n\n**Report Contents:**\n\n1. **Header:**\n   - Outlet name & location\n   - Shift date & time (08:00 - 16:30)\n   - Operator name & ID\n   - Report generated at: timestamp\n\n2. **Cash Summary:**\n   - Opening cash: Rp 500.000\n   - Cash sales: Rp 3.000.000\n   - Refunds: -Rp 50.000\n   - Closing cash: Rp 3.500.000\n   - Variance: Rp 50.000 (+ over)\n   - Variance status: Approved/Pending\n\n3. **Revenue Summary:**\n   - Total transactions: 45\n   - Revenue by payment method:\n     * Cash: Rp 3.000.000 (60%)\n     * Card: Rp 1.500.000 (30%)\n     * QRIS: Rp 500.000 (10%)\n   - Total discount: Rp 200.000\n   - Net revenue: Rp 4.800.000\n\n4. **Product Analytics:**\n   - Top 10 selling items\n   - Items by category\n   - Avg price per category\n\n5. **Transaction Exceptions:**\n   - Void/return count: 3\n   - Void amount: Rp 150.000\n   - Return amount: Rp 75.000\n   - Manager approvals: 2 (for discounts)\n\n6. **Inventory:**\n   - Expected stock: [calculated]\n   - Actual count: [from inventory module]\n   - Variance: [difference]\n\n7. **Export Options:**\n   - Print to PDF\n   - Email to manager\n   - Save locally\n   - Export to Excel"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Business Rules"
+    },
+    {
+      "type": "text",
+      "body": "1. **Session Rules:**\n   - Max 1 OPEN session per operator per outlet\n   - Cannot create order without OPEN session\n   - Session time: Min 1 hour, max 12 hours (configurable)\n   - Cannot open new session if previous not closed\n\n2. **Cash Rules:**\n   - Opening cash >= 0 (not negative)\n   - Closing cash must be counted physically\n   - Variance reconciliation mandatory\n   - Variance > threshold require manager approval\n\n3. **Operator Rules:**\n   - Must assign to outlet sebelum open session\n   - One operator per session (not shared)\n   - Operator can view own session only (unless manager)\n\n4. **Time Rules:**\n   - Session time recorded in UTC (stored)\n   - Display in local timezone (outlet timezone)\n   - Timestamp immutable (audit compliance)\n\n5. **Audit Rules:**\n   - All session actions logged\n   - Variance documented\n   - Manager approval tracked\n   - Retain logs minimum 7 years"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Troubleshooting"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Q: Cannot open session - 'Employee not assigned to outlet'",
+          "body": "A: User belum di-assign ke outlet yg ingin dibuka session.\n\nSolusi:\n1. Login as manager/admin\n2. Go to Organization → Outlets\n3. Buka outlet tersebut\n4. Click 'Assign Employees'\n5. Add employee\n6. Save\n7. Retry open session"
+        },
+        {
+          "title": "Q: Cannot close session - 'Minimum shift time not reached'",
+          "body": "A: Shift terlalu singkat (kurang dari minimum, default 1 jam).\n\nSolusi:\n- Tunggu sampai min time tercapai\n- Atau contact admin untuk override (jika emergency)\n- Min time configurable di settings"
+        },
+        {
+          "title": "Q: Variance > Rp 100.000 but no manager available to approve",
+          "body": "A: Manager tidak available untuk approve large variance.\n\nSolusi:\n1. Contact supervisor/director\n2. Supervisor can override & approve\n3. Escalate dalam hierarchy\n4. Document reason & attempt to reach manager\n5. If emergency: Contact IT support untuk emergency approval"
+        },
+        {
+          "title": "Q: Cannot recount cash - 'Session already closed'",
+          "body": "A: Session sudah close, tidak bisa di-modify.\n\nSolusi:\n- Session permanent setelah close\n- Untuk variance: Lihat shift report\n- For investigation: Contact manager\n- Next shift: Open new session"
+        }
+      ]
+    }
+  ]
+}

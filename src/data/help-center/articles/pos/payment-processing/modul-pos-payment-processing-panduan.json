@@ -1,0 +1,135 @@
+{
+  "title": "Modul POS - Payment Processing - Panduan Lengkap",
+  "description": "Panduan lengkap memproses pembayaran di POS mencakup berbagai metode pembayaran, multi-payment, tax calculation, receipt, dan refund handling.",
+  "slug": "modul-pos-payment-processing-panduan",
+  "module": "pos",
+  "subcategory": "payment-processing",
+  "author": "Tim GIMS",
+  "createdAt": "2026-05-05",
+  "updatedAt": "2026-05-05",
+  "tags": ["pos", "payment", "cash", "card", "qris", "receipt", "tax", "multi-payment", "refund"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Payment Processing adalah tahap final dalam order untuk mengumpulkan uang dari customer. POS support berbagai payment methods (cash, card, QRIS, dll) dengan kemampuan multi-payment, automatic tax calculation, dan receipt generation."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Payment Methods"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "1. CASH (Tunai)",
+          "body": "Metode pembayaran paling sederhana & cepat.\n\n**Proses:**\n1. Order total: Rp 63.000\n2. Click 'Pay' → Payment dialog\n3. Select 'Cash' method\n4. Input nominal uang dari customer: Rp 100.000\n5. System auto-hitung kembalian:\n   - Change = Rp 100.000 - Rp 63.000 = Rp 37.000\n6. Display:\n   - Amount due: Rp 63.000\n   - Amount received: Rp 100.000\n   - Change: Rp 37.000\n7. Review & confirm\n8. Click 'Accept Payment'\n9. Payment status: PAID\n\n**Validasi:**\n- Amount received harus >= total order\n- Jika < total: Warning \"Insufficient payment\"\n- Accept only after amount enough\n\n**Pembayaran Pas (exact):**\n- Customer give: Rp 63.000\n- Change: Rp 0\n- System allow\n\n**Overpayment (kelebihan):**\n- Customer give: Rp 100.000 untuk order Rp 63.000\n- Change: Rp 37.000\n- Cashier berikan kembalian\n- Overage amount recorded (untuk variance reconciliation nanti)",
+          "image": {
+            "src": "/images/help/pos/payment-processing/cash-payment.webp",
+            "alt": "Proses pembayaran tunai"
+          }
+        },
+        {
+          "title": "2. DEBIT/CREDIT CARD",
+          "body": "Pembayaran via kartu debit atau kredit menggunakan EDC (Electronic Data Capture) machine.\n\n**Prerequisites:**\n- EDC machine terhubung ke device\n- EDC initialized & tested\n- Payment gateway active\n\n**Proses:**\n1. Click 'Pay' → Payment dialog\n2. Select 'Debit/Credit Card'\n3. Amount to charge: Rp 63.000 (auto-filled)\n4. Prompt: \"Please tap/swipe card\"\n5. Customer tap/swipe kartu di EDC\n6. EDC process transaksi\n7. Possible results:\n   a. APPROVED: Transaksi success\n      - Display: \"Approved\"\n      - Receipt dari EDC printed\n      - Payment status: PAID\n   b. DECLINED: Kartu ditolak\n      - Display: \"Card declined\"\n      - Reason: Insufficient funds, invalid card, etc\n      - Cashier ask: Retry atau switch method?\n   c. TIMEOUT: EDC tidak respond\n      - Timeout default: 60 second\n      - Ask customer: Try again atau gunakan method lain?\n\n**PIN/Signature:**\n- EDC may require PIN entry (untuk kartu debit)\n- Or signature (untuk kartu kredit)\n- Process otomatis di EDC (POS tidak perlu handle)\n\n**Error Handling:**\n- If EDC offline: Switch to cash atau QRIS\n- If declined: Retry atau alternative method\n- If timeout: Retry atau alternative\n\n**Receipt:**\n- EDC print merchant copy & customer copy\n- POS also print receipt (dengan payment method detail)"
+        },
+        {
+          "title": "3. QRIS (Indonesian Digital Payment)",
+          "body": "Pembayaran via QR code yang di-scan customer menggunakan mobile banking/e-wallet.\n\n**Supported Apps:**\n- Dana, OVO, GoPay, LinkAja, GCash, DANA, Alipay, WeChat Pay, dll\n\n**Proses:**\n1. Click 'Pay' → Payment dialog\n2. Select 'QRIS'\n3. Amount: Rp 63.000 (auto-filled)\n4. System generate QR code (dari payment provider)\n5. Display QR code di screen/tablet\n6. Customer scan dengan app mobile banking\n7. Customer confirm di app mereka\n8. Konfirmasi terima di payment provider (bank/fintech)\n9. System get notification → Payment successful\n10. Display: \"Payment received\"\n11. Payment status: PAID\n12. Receipt printed\n\n**Timeout:**\n- Default: 5 menit untuk customer scan & pay\n- If timeout: Ask customer payment sudah masuk atau retry\n\n**Error Handling:**\n- QRIS invalid: Regenerate & ask customer retry\n- Network error: Retry atau switch method\n- Payment not confirmed: Wait 30 sec atau ask customer check app\n\n**Advantages:**\n- Fast & safe (no cash handling)\n- Customer prefer untuk digital payment\n- Auto reconciliation dengan bank\n- Digital receipt (bisa email/SMS ke customer)"
+        },
+        {
+          "title": "4. MULTI-PAYMENT (Kombinasi)",
+          "body": "Customer pembayaran dengan 2+ metode untuk satu order.\n\n**Use Cases:**\n- Cash Rp 100.000 + QRIS Rp 50.000 = Total Rp 150.000\n- Loyalty points + Cash combination\n- Corporate account + personal payment\n\n**Proses:**\n1. Order total: Rp 150.000\n2. Click 'Pay' → Payment dialog\n3. Select method pertama: 'Cash'\n4. Input amount: Rp 100.000\n5. Confirm cash payment\n6. Remaining: Rp 50.000 (auto-calculate)\n7. Display: \"Remaining balance: Rp 50.000\"\n8. Ask: \"Continue dengan method lain?\"\n9. Click 'Add Payment Method'\n10. Select method kedua: 'QRIS'\n11. Amount: Rp 50.000 (pre-filled)\n12. Generate QR code\n13. Customer scan & pay\n14. Confirm di app\n15. System verify\n16. Payment status: PAID (semua metode terpenuhi)\n17. Receipt show: Semua metode yg digunakan\n\n**Validasi:**\n- Total pembayaran harus = order total (tidak boleh lebih/kurang)\n- Max 3 metode per order (configurable)\n- Jika melebihi: Error \"Max payment methods reached\"\n\n**Receipt Multi-Payment:**\n- Breakdown semua metode:\n  * Cash: Rp 100.000\n  * QRIS: Rp 50.000\n  * Total: Rp 150.000\n\n**Refund untuk Multi-Payment:**\n- Jika ada return: Refund proportional ke setiap metode\n- Atau customer choose: Refund ke method tertentu"
+        },
+        {
+          "title": "5. CEK (Corporate/B2B)",
+          "body": "Pembayaran via cek untuk transaksi B2B atau corporate orders.\n\n**Proses:**\n1. Click 'Pay' → Payment dialog\n2. Select 'Check'\n3. Input fields:\n   - Check number*: Nomor cek\n   - Bank name*: Bank penerbit\n   - Check date*: Tanggal cek (tanggal jatuh tempo)\n   - Amount: Auto-filled (order total)\n4. Review & confirm\n5. Payment status: PAID (tapi reconciliation beda)\n6. Cek disimpan untuk clearing ke bank\n\n**Validasi:**\n- Check number tidak boleh duplicate (dalam periode tertentu)\n- Bank name harus valid\n- Check date minimal hari ini (post-dated check)\n\n**Processing:**\n- Cek tidak langsung clear\n- Finance team clearing sesuai check date\n- Reconciliation dengan bank\n- If rejected: Follow-up ke customer\n\n**Receipt:**\n- Print check detail untuk record"
+        },
+        {
+          "title": "6. LAINNYA (Custom Methods)",
+          "body": "Payment methods custom sesuai business needs.\n\n**Examples:**\n- Loyalty points/program\n- Voucher/gift card\n- Corporate account/credit\n- Employee discount\n- Store credit\n\n**Proses:**\n1. Similar ke method lain\n2. Input method-specific fields\n3. System validate (verify code, balance, eligibility)\n4. Deduct dari balance\n5. Record transaction\n6. Generate receipt\n\n**Configuration:**\n- Admin configure custom methods\n- Set validation rules\n- Set integration points"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Tax Calculation"
+    },
+    {
+      "type": "text",
+      "body": "**PPN (Pajak Pertambahan Nilai) - Sales Tax:**\n- Standard rate: 11% (dapat berubah per government regulation)\n- Configurable per outlet\n- Applied pada: Subtotal - Discount (jika applicable)\n- Example:\n  * Subtotal: Rp 100.000\n  * Discount: Rp 10.000\n  * Taxable amount: Rp 90.000\n  * PPN 11%: Rp 9.900\n  * Total: Rp 99.900\n\n**PPh (Pajak Penghasilan) - Income Tax:**\n- Applicable untuk certain categories (opsional)\n- Configurable by item/category\n- Usually deducted dari amount (tidak add ke total)\n\n**No Tax Products:**\n- Beberapa produk exempt (e.g., makanan essential)\n- Configuration di master data\n- Tidak dikenakan PPN\n\n**Tax Display di Receipt:**\n- Subtotal: Rp 100.000\n- Discount: -Rp 10.000\n- Subtotal setelah discount: Rp 90.000\n- PPN (11%): +Rp 9.900\n- TOTAL: Rp 99.900\n\n**Tax Reporting:**\n- All taxes tracked untuk tax compliance\n- Daily/monthly tax summary report\n- Integration dengan finance module"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Receipt Generation & Printing"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Receipt Format",
+          "body": "**Header:**\n- Outlet/Store name\n- Address & location\n- Phone number\n- NPWP (Tax ID)\n\n**Transaction Info:**\n- Receipt number (unique)\n- Date & time\n- Cashier name\n- Order number\n- Table # (jika F&B)\n\n**Itemized List:**\n- Product name | Qty | Unit price | Line total\n- One line per item\n- All items detail\n\n**Summary:**\n- Subtotal\n- Discount (if any)\n- Tax (PPN, PPh, etc)\n- Total\n\n**Payment:**\n- Payment method(s)\n- Amount paid\n- Change (jika cash)\n- Reference # (jika card/QRIS)\n\n**Footer:**\n- Thank you message\n- Company tagline\n- QR code (untuk loyalty/feedback)\n- Receipt ID (untuk digital receipt)\n- Timestamp\n\n**Receipt Copy:**\n- Merchant copy: Untuk toko records\n- Customer copy: Untuk customer (untuk return)\n- Both printed atau select as needed"
+        },
+        {
+          "title": "Printing Options",
+          "body": "**1. Auto Print:**\n- Default: Print automatic setelah payment confirmed\n- Printer: Thermal 80mm atau 58mm\n- Auto feed & cut\n- Settings: Configure di POS admin\n\n**2. Manual Print:**\n- Operator click 'Print Receipt'\n- Print ke selected printer\n- Use case: Reprint lost receipt, customer request\n\n**3. Email Receipt:**\n- If customer provide email\n- System send receipt via email (PDF attached)\n- Auto-send after payment\n- Or manual resend dari order history\n\n**4. SMS Receipt:**\n- If customer provide phone number\n- Send short summary via SMS\n- Format: Concise (order no, total, method, outlet)\n- Cheaper & faster than email\n\n**5. Digital Display:**\n- Show receipt di screen\n- Customer can screenshot\n- Or take photo\n\n**Printer Management:**\n- Setup: Admin configure printer port\n- Test: Admin can test print\n- Offline detection: If printer down → show warning\n- Queue: If printer busy → queue transaksi"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Refund & Payment Reversal"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Void Order Refund (Full)",
+          "body": "Saat order di-void sebelum completion, payment harus di-refund.\n\n**Automatic Refund Trigger:**\n1. Order status PAID → VOIDED\n2. System trigger refund process\n3. Refund method sama dengan original payment\n\n**Refund Proses (by method):**\n\n**A. CASH Void:**\n- Original payment: Cash Rp 63.000\n- Refund: Return cash Rp 63.000 ke customer\n- Cashier: Ambil uang dari drawer, berikan ke customer\n- Record: Refund amount, refund time, reason\n\n**B. CARD Void:**\n- Original payment: Card Rp 63.000\n- Refund: Auto-reverse transaksi di EDC/bank\n- Timeline: 1-5 business days (tergantung bank)\n- No immediate cash refund (batasan kartu)\n- Record: Refund reference # (dari bank)\n\n**C. QRIS Void:**\n- Original payment: QRIS Rp 63.000\n- Refund: Auto-reverse di payment provider\n- Timeline: Usually instant (fintech) atau same-day (bank)\n- Amount return ke customer's account\n- Record: Refund reference #\n\n**D. Multi-Payment Void:**\n- Original: Cash Rp 50.000 + QRIS Rp 13.000\n- Refund proportional:\n  * Cash Rp 50.000 → return cash\n  * QRIS Rp 13.000 → auto-reverse\n- Or customer choose: Return semua ke 1 method (QRIS saja, dll)\n\n**E. Check Void:**\n- Original: Check Rp 63.000\n- Refund: No refund (cek not cashed yet)\n- Or negotiate: Customer issue new check\n\n**Refund Receipt:**\n- Generate refund receipt (negative amount)\n- Show: Original order #, refund amount, method, reason\n- Timestamp & approval\n\n**Refund Record:**\n- Linked ke original order\n- Audit trail complete\n- For compliance & dispute resolution"
+        },
+        {
+          "title": "Return Item Refund (Partial)",
+          "body": "Saat customer return beberapa item (tidak semua order).\n\n**Initiating Return:**\n1. Open completed order\n2. Click 'Return Items'\n3. Select items to return (checkbox)\n4. Input quantity per item\n5. Calculate partial refund\n6. Manager approval (jika > threshold)\n\n**Refund Calculation (Partial):**\n- Original order: 3 items total Rp 63.000\n- Customer return: 1 item = Rp 20.000 (out of Rp 63.000)\n- Refund calculation:\n  * Item price: Rp 20.000\n  * Proportional discount: Rp 20.000 / Rp 70.000 (before discount) × Rp 10.000 = Rp 2.857\n  * Proportional tax: Rp 20.000 / Rp 70.000 × Rp 7.000 (tax) = Rp 2.000\n  * Total refund: Rp 20.000 - Rp 2.857 + Rp 2.000 = Rp 19.143 (aprox)\n  * Simplified: Rp 20.000 (exact item price)\n\n**Refund by Method:**\n- Same as void order\n- But partial amount\n- Record: Item returned, reason, quantity\n\n**Return Receipt:**\n- Show: Original order #, returned items, refund amount\n- Negative amount\n- Authorization info\n\n**Return Processing:**\n- Item discard atau return ke supplier\n- Inventory: Stock reversal\n- Finance: Refund accounted"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Payment Validation & Security"
+    },
+    {
+      "type": "text",
+      "body": "**Amount Validation:**\n- Total tidak bisa 0 (order must have items)\n- Total harus > 0\n- Amount received harus >= total (untuk cash)\n- Multi-payment total harus = order total\n\n**Payment Method Validation:**\n- Check method enabled untuk outlet ini\n- Verify configuration active\n- Check payment gateway status (online/offline)\n\n**Security Measures:**\n- Secure payment gateway (SSL/TLS)\n- PCI DSS compliance untuk card payment\n- Token-based untuk QRIS/digital wallet\n- No storage raw card data (PAS handled by EDC/provider)\n- Timeout untuk payment request (prevent hanging)\n- Limit retry attempt (prevent brute force, fraud)\n- Manager approval untuk large transactions\n- Audit log semua payment events\n\n**Payment Reconciliation:**\n- Daily payment reconciliation dgn bank/provider\n- Verify received amount match recorded\n- Investigate discrepancy\n- Report variance"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Troubleshooting"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Q: EDC not responding during card payment",
+          "body": "A: EDC machine tidak terkoneksi atau offline.\n\nCheck:\n1. EDC power on?\n2. Connection to device (USB/Bluetooth) active?\n3. Payment gateway network available?\n\nSolusi:\n1. Check physical connection\n2. Restart EDC\n3. Switch payment method (cash/QRIS)\n4. Contact IT support jika persistently offline"
+        },
+        {
+          "title": "Q: QRIS payment timeout - customer already paid but system not confirmed",
+          "body": "A: Customer sudah scan & pay QRIS, tapi system belum terima konfirmasi.\n\nSolusi:\n1. Wait 30 sec lebih (payment provider proses)\n2. Manually verify: Check payment provider dashboard\n3. If confirmed: Manually mark payment received (admin action)\n4. If not confirmed: Ask customer retry\n5. If issue persist: Contact payment provider support"
+        },
+        {
+          "title": "Q: Change calculation wrong for cash payment",
+          "body": "A: Sistem hitung kembalian tidak sesuai.\n\nCheck:\n1. Verify amount received (customer berikan berapa?)\n2. Verify order total (tepat?)\n3. Verify tax calculation (benar?)\n\nSolusi:\n1. Manual override: Recalculate & input correct change\n2. Report ke admin (jika system error)\n3. Log ticket untuk investigation"
+        },
+        {
+          "title": "Q: Cannot refund paid order - EDC/QRIS provider error",
+          "body": "A: Reverse payment gagal di provider.\n\nSolusi:\n1. Retry refund (sometimes transient error)\n2. If failed: Manual refund (cashier return cash)\n3. Record: Reason, EDC reference, manual action taken\n4. Contact payment provider (trace transaksi)\n5. Reconcile nanti saat provider reply"
+        }
+      ]
+    }
+  ]
+}

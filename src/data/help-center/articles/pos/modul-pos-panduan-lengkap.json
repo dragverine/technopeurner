@@ -1,0 +1,265 @@
+{
+  "title": "Modul POS - Point of Sale - Panduan Lengkap",
+  "description": "Panduan lengkap menggunakan Modul POS dalam sistem GIMS mencakup manajemen session, order, payment processing, kitchen display system, dan reconciliation dengan dua mode operasi (Goods & F&B).",
+  "slug": "modul-pos-panduan-lengkap",
+  "module": "pos",
+  "subcategory": "live-operations",
+  "author": "Tim GIMS",
+  "createdAt": "2026-05-05",
+  "updatedAt": "2026-05-05",
+  "tags": ["pos", "point-of-sale", "sales", "penjualan", "payment", "order", "shift", "warehouse", "outlet", "kitchen", "f&b"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Modul POS (Point of Sale) adalah sistem penjualan real-time untuk mengelola transaksi di outlet/toko dengan efisien. Modul ini mendukung dua mode operasi: Mode A (Penjualan Goods/Retail) dan Mode B (Food & Beverage/Restaurant) dengan fitur lengkap dari pembukaan shift hingga reconciliation."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Fitur Utama"
+    },
+    {
+      "type": "card",
+      "items": [
+        {
+          "title": "POS Session Management",
+          "body": "Buka dan tutup shift dengan pencatatan kas awal dan akhir"
+        },
+        {
+          "title": "Order Management",
+          "body": "Buat, ubah, dan kelola order dari draft hingga selesai"
+        },
+        {
+          "title": "Payment Processing",
+          "body": "Terima pembayaran dengan berbagai metode (cash, card, QRIS)"
+        },
+        {
+          "title": "Kitchen Display System",
+          "body": "Tampilkan order ke kitchen dan track status persiapan"
+        },
+        {
+          "title": "Table Management",
+          "body": "Kelola meja dan status pelanggan (F&B mode)"
+        },
+        {
+          "title": "Stock Management",
+          "body": "Pengurangan stok otomatis saat order selesai"
+        },
+        {
+          "title": "Receipt & Printing",
+          "body": "Cetak struk/receipt untuk pelanggan"
+        },
+        {
+          "title": "Discount & Promo",
+          "body": "Terapkan diskon per item atau per order"
+        },
+        {
+          "title": "Void & Return",
+          "body": "Batalkan order dan kembalikan stok"
+        },
+        {
+          "title": "Shift Reconciliation",
+          "body": "Tutup shift dengan perhitungan kas dan laporan"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Mode Operasi POS"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Mode A - Penjualan Goods (Retail)",
+          "body": "Mode ini digunakan untuk penjualan retail barang dagangan biasa.\n\nAlur Order:\n1. DRAFT: Operator menambah item ke keranjang\n2. CONFIRMED: Order diconfirm, stok dicek\n3. PAID: Pembayaran diterima, stok dikurangi\n4. COMPLETED: Struk dicetak, order selesai\n5. VOIDED (optional): Order dibatalkan dengan reversal stok\n\nKarakteristik:\n- Cepat & sederhana\n- Tidak ada KDS (Kitchen Display System)\n- Transaksi langsung dari pembayaran\n- Cocok untuk toko retail, supermarket, minimarket"
+        },
+        {
+          "title": "Mode B - Food & Beverage (Restoran)",
+          "body": "Mode ini digunakan untuk bisnis F&B dengan kitchen coordination dan table management.\n\nAlur Order:\n1. DRAFT: Staff mencatat order di meja\n2. SENT_TO_KITCHEN: Order dikirim ke kitchen display\n3. IN_PROGRESS: Kitchen sedang memasak\n4. READY: Makanan siap disajikan\n5. SERVED: Makanan sudah diantar ke meja\n6. PAID: Pembayaran diterima, stok dikurangi\n7. COMPLETED: Meja dilepas, order selesai\n8. VOIDED (optional): Order dibatalkan dengan manager approval\n\nKarakteristik:\n- Kitchen coordination terpadu\n- Table status tracking\n- Multi-station kitchen support\n- Cocok untuk restoran, kafe, warung makan"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Panduan Penggunaan"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Mengakses Modul POS",
+          "body": "1. Pada sidebar aplikasi, klik menu POS untuk melihat submenu yang tersedia.\n2. Dari submenu POS, pilih salah satu: Live Operations (untuk transaksi), Reports (untuk laporan), atau Settings (untuk konfigurasi).\n3. Untuk Mode A (Goods): Klik 'POS Cashier' untuk mulai transaksi penjualan.\n4. Untuk Mode B (F&B): Klik 'F&B Operations' untuk masuk mode restoran.",
+          "image": {
+            "src": "/images/help/pos/pos-main-menu.webp",
+            "alt": "Menu POS di sidebar"
+          }
+        },
+        {
+          "title": "Membuka POS Session (Shift Buka)",
+          "body": "Setiap hari operator harus membuka session baru untuk memulai transaksi.\n\nLangkah-langkah:\n1. Buka aplikasi POS dan klik tombol 'Open Shift'.\n2. Dialog muncul dengan form:\n   - Outlet/Warehouse: Pilih outlet tempat bekerja (auto-select jika hanya satu)\n   - Employee: Auto-filled dengan user yang login (tidak bisa diubah)\n   - Opening Cash*: Isi jumlah kas awal (rupiah). Contoh: Rp 500.000\n   - Notes (optional): Catatan tambahan, misalnya \"Kas dari manager: 500rb + float 100rb = 600rb\"\n3. Klik tombol 'Confirm Open Shift'.\n4. Sistem validasi:\n   - Opening cash tidak boleh negatif\n   - Employee harus assign ke outlet tersebut\n   - Outlet harus dalam status ACTIVE\n5. Session dibuka, status berubah menjadi OPEN. Timestamp opening_at terrecord. Operator siap melayani transaksi.",
+          "image": {
+            "src": "/images/help/pos/pos-open-session.webp",
+            "alt": "Form membuka POS session"
+          }
+        },
+        {
+          "title": "Membuat Order - Mode A (Goods/Retail)",
+          "body": "Proses penjualan retail dari penambahan item sampai pembayaran.\n\n1. Pada layar POS, klik tombol 'New Order' atau tekan shortcut.\n2. Interface terbagi 3 area:\n   - LEFT: Kategori produk (Makanan, Minuman, dll) & pencarian produk\n   - CENTER: Daftar produk (dengan harga, gambar, stok)\n   - RIGHT: Shopping cart & order summary\n\n3. Tambah Item ke Keranjang:\n   a. Cari produk dengan search atau browse kategori\n   b. Klik produk → quantity dialog muncul\n   c. Input jumlah (default 1), klik Add\n   d. Item muncul di cart dengan line total (qty × price)\n   e. Ulangi hingga semua item terpilih\n   \n   Contoh: Beli 2 x Bakso (Rp 25.000) + 3 x Es Teh (Rp 5.000)\n   Cart akan tampilkan:\n   - Bakso × 2 = Rp 50.000\n   - Es Teh × 3 = Rp 15.000\n   - Subtotal = Rp 65.000\n   - PPN (10%) = Rp 6.500 (jika applicable)\n   - TOTAL = Rp 71.500\n\n4. Modifikasi Item (jika diperlukan):\n   - Ubah Qty: Klik item di cart, input qty baru, save\n   - Hapus Item: Klik icon trash di item, konfirmasi\n   - Special Notes: Klik item, tambah notes (\"tidak pedas\", \"tambah gula\")\n\n5. Terapkan Diskon (opsional):\n   a. Klik tombol 'Discount'\n   b. Pilih tipe diskon: Percentage (%) atau Fixed Amount (Rp)\n   c. Input nilai diskon\n   d. Confirm → total di-recalculate\n   Contoh: Diskon 10% dari Rp 71.500 = Rp 7.150, total akhir Rp 64.350\n\n6. Review Order:\n   - Pastikan semua item & qty benar\n   - Cek diskon sudah tertera\n   - Cek total harga sudah sesuai\n   - Status order = DRAFT\n\n7. Confirm Order:\n   - Klik tombol 'Confirm Order'\n   - Sistem cek stok: Apakah stok cukup untuk semua item?\n   - Jika stok kurang: Warning muncul, pilih (a) reduce qty atau (b) cancel\n   - Jika stok OK: Status order berubah → CONFIRMED\n\n8. Proses Pembayaran:\n   - Metode Pembayaran muncul: Cash, Debit Card, Credit Card, QRIS, Cek, Lainnya\n   - Untuk CASH: Input nominal uang dari customer (auto-hitung kembalian)\n   - Untuk CARD: Input nomor kartu / scan (jika terkoneksi payment gateway)\n   - Untuk QRIS: Tampilkan QR code untuk customer scan\n   - Konfirmasi → Status order → PAID\n\n9. Generate Receipt:\n   - Sistem auto-generate struk\n   - Tampilan: Order number, tanggal, item, harga, metode bayar, kembalian\n   - Opsi: Print (printer terkoneksi), Email, atau Simpan PDF\n   - Order status → COMPLETED\n   - Stok otomatis dikurangi di inventory\n\n10. Selesai:\n    - Order muncul di list transaksi hari ini\n    - Receipt tersimpan di order history\n    - Next order: Klik 'New Order' lagi",
+          "image": {
+            "src": "/images/help/pos/pos-create-order-goods.webp",
+            "alt": "Interface membuat order Mode A (Goods)"
+          }
+        },
+        {
+          "title": "Membuat Order - Mode B (F&B/Restoran)",
+          "body": "Proses penjualan F&B dengan kitchen coordination dan table management.\n\n1. Masuk Mode F&B:\n   - Dari menu POS, pilih 'F&B Operations'\n   - Interface menampilkan floor plan dengan daftar meja\n   - Status meja: Available (kosong), Occupied (terisi), Reserved, Pending Payment\n\n2. Assign Meja ke Pelanggan:\n   - Customer datang, pilih meja kosong (status Available)\n   - Klik meja → status berubah Occupied\n   - Assign jumlah pax (orang): input di form\n   - Meja sekarang \"claimed\" oleh staff, pelanggan bisa memesan\n\n3. Buat Order di Meja:\n   a. Staff approach meja dengan tablet/device\n   b. Klik meja yang Occupied\n   c. Order form terbuka\n   d. Tambah item:\n      - Cari menu (kategori: appetizer, main, dessert, drink)\n      - Click produk → quantity dialog\n      - Input qty + special request (\"no garlic\", \"medium done\")\n      - Add to order → item di cart\n   e. Item tampil di cart dengan status DRAFT\n\n4. Send Order ke Kitchen:\n   - Setelah staff selesai catat pesanan di meja\n   - Klik tombol 'Send to Kitchen'\n   - Dialog konfirmasi dengan review item\n   - Klik 'Confirm Send'\n   - Status order → SENT_TO_KITCHEN\n   - Order langsung muncul di Kitchen Display System (KDS)\n\n5. Kitchen Display System (KDS):\n   - Di kitchen, peralatan tampil order dengan detail:\n     * Meja #3 - 2 Pax\n     * Item: Nasi Goreng × 2 (special request: no garlic)\n     * Item: Gado-gado × 1 (spicy)\n   - Kitchen staff mark item READY saat masak selesai\n   - KDS auto-notify front-of-house untuk pickup\n\n6. Serve Makanan:\n   - Setelah Kitchen mark READY\n   - FoH staff ambil makanan dari kitchen pass\n   - Antar ke meja → mark SERVED di sistem\n   - Order status → SERVED\n   - Meja masih OCCUPIED (waiting untuk bayar)\n\n7. Proses Pembayaran (sama seperti Mode A):\n   - Customer done makan, minta bill\n   - Staff klik meja → open settlement dialog\n   - Review item & total harga\n   - Terima pembayaran (cash/card/QRIS)\n   - Order status → PAID\n   - Stok otomatis dikurangi\n   - Print receipt (billing)\n\n8. Lepas Meja:\n   - Setelah pembayaran selesai\n   - Staff klik tombol 'Release Table'\n   - Meja status berubah → Available (siap untuk customer berikutnya)\n   - Order status → COMPLETED\n   - Transaksi tertutup",
+          "image": {
+            "src": "/images/help/pos/pos-create-order-fnb.webp",
+            "alt": "Interface membuat order Mode B (F&B)"
+          }
+        },
+        {
+          "title": "Payment Methods & Processing",
+          "body": "Modul POS support multiple payment methods untuk fleksibilitas pembayaran.\n\n1. CASH (Tunai):\n   - Method paling sederhana & cepat\n   - Alur: Confirm payment → Input nominal uang masuk → System hitung kembalian\n   - Contoh: Order Rp 25.000, customer kasih Rp 50.000 → kembalian Rp 25.000\n   - Untuk pembayaran pas: Input nominal yg sama dgn total\n   - Kembalian Rp 0\n\n2. DEBIT/CREDIT CARD:\n   - Requires EDC (Electronic Data Capture) machine terhubung\n   - Alur: Confirm payment → Tap/Swipe kartu di EDC → Pin/Signature → Receipt EDC\n   - Timeout default: 60 detik\n   - Jika failed: Operator bisa retry atau switch method lain\n\n3. QRIS (Indonesian Digital Payment):\n   - QR code di-generate oleh sistem\n   - Customer scan QR dengan aplikasi (Dana, OVO, LinkAja, GCash, dll)\n   - Konfirmasi auto dari bank/fintech\n   - Order status → PAID saat ada konfirmasi\n\n4. MULTI-PAYMENT (Kombinasi):\n   - Customer bayar dengan 2+ method\n   - Contoh: Cash Rp 100.000 + QRIS Rp 50.000 untuk order Rp 150.000\n   - Input method pertama (Cash Rp 100.000) → remaining = Rp 50.000\n   - Input method kedua (QRIS Rp 50.000) → order selesai\n   - Kedua metode tercatat di receipt\n\n5. CEK (untuk B2B/corporate orders):\n   - Input nomor cek & bank\n   - Record: Nomor cek, nilai, bank, tanggal cair\n   - Status: PAID (tapi reconciliation beda)\n\n6. LAINNYA (custom methods):\n   - Loyalty points, voucher, gift card\n   - Proses: Verify code → Deduct balance → Complete\n\nFitur Payment:\n- Tax Calculation: Auto-hitung PPN/PPh jika applicable\n- Receipt Print: Auto print receipt setelah payment\n- Payment History: Tercatat di order untuk audit\n- Payment Reversal: Untuk void transaction (butuh manager approval)",
+          "image": {
+            "src": "/images/help/pos/pos-payment-methods.webp",
+            "alt": "Payment methods di POS"
+          }
+        },
+        {
+          "title": "Discount & Promotion",
+          "body": "Terapkan diskon kepada customer dengan fleksibilitas tinggi.\n\n1. Jenis Diskon:\n   a. ITEM-LEVEL: Diskon ke individual item\n      - Contoh: Bakso (Rp 25.000) dapat diskon 20% = Rp 5.000, harga akhir Rp 20.000\n      - Alur: Click item di cart → Apply discount → Pilih tipe (% atau Rp) → Input nilai\n   \n   b. ORDER-LEVEL: Diskon ke seluruh order\n      - Contoh: Order total Rp 100.000 dapat diskon Rp 10.000 (promo member)\n      - Alur: Click tombol 'Order Discount' → Input nilai → Apply\n   \n   c. VOUCHER: Diskon dengan kode promo\n      - Contoh: Promo \"BELI2GRATIS1\" → Enter kode di checkout\n      - System verify voucher active & applicable\n      - Auto-calculate diskon → Apply\n\n2. Discount Types:\n   - Percentage (%): Diskon 10%, 20%, 50% dari harga\n   - Fixed Amount (Rp): Diskon Rp 5.000, Rp 10.000, dll\n   - Buy X Get Y: Beli 2 gratis 1, dll (complex promo)\n\n3. Manager Approval:\n   - Diskon besar (> threshold, default Rp 50.000) butuh approval manager\n   - Alur: Cashier apply diskon → System check > threshold → Request approval\n   - Manager scan ID/PIN → Approve/Reject\n   - Jika approve: Diskon executed\n   - Jika reject: Diskon batal\n\n4. Audit Trail:\n   - Semua diskon tercatat: Who, When, Amount, Reason\n   - Untuk control & compliance\n   - Report: Diskon per hari, per cashier, per tipe diskon",
+          "image": {
+            "src": "/images/help/pos/pos-discount-promo.webp",
+            "alt": "Aplikasi diskon dan promo"
+          }
+        },
+        {
+          "title": "Void & Return Order",
+          "body": "Batalkan order atau kembalikan item dengan proper workflow.\n\n1. VOID ENTIRE ORDER:\n   Use case: Customer berubah pikiran, order salah, atau order belum disiap.\n   \n   Alur:\n   a. Buka order yang ingin di-void\n   b. Click tombol 'Void Order'\n   c. Dialog konfirmasi muncul:\n      - Pilih reason: \"Customer request\", \"Wrong item\", \"Out of stock\", \"Other\"\n      - Input notes: Penjelasan detail\n   d. Manager approval required (jika order sudah CONFIRMED/PAID)\n      - Manager scan ID/PIN → Approve void\n   e. Jika approved:\n      - Order status → VOIDED\n      - Stok dikembalikan (reversal)\n      - Payment (jika sudah ada) → di-refund\n   f. Record audit trail untuk compliance\n\n   Validasi:\n   - Hanya void order dengan status DRAFT, CONFIRMED, PAID\n   - Tidak bisa void order yang COMPLETED (gunakan Return)\n   - Void PAID order auto-trigger refund process\n\n2. RETURN ITEMS:\n   Use case: Customer sudah dapat order (COMPLETED) tapi ada item rusak/tidak sesuai.\n   \n   Alur:\n   a. Buka order yang sudah COMPLETED\n   b. Click tombol 'Return Items'\n   c. Dialog tampil daftar item di order, checkbox setiap item\n   d. Pilih item yang di-return (bisa partial, tidak harus semua)\n   e. Input quantity di-return (jika qty > 1)\n   f. Reason: \"Damaged\", \"Wrong preparation\", \"Not as ordered\", \"Other\"\n   g. Manager approval (selalu required untuk return)\n   h. Jika approved:\n      - Return order created (linked ke original order)\n      - Stok dikembalikan (reversal)\n      - Refund calculated & processed\n      - Item bisa di-rework atau discard\n   i. Record audit untuk inventory & finance\n\n   Validasi:\n   - Return hanya untuk order COMPLETED/SERVED\n   - Deadline return: Default 24 jam (configurable)\n   - Stok reversal otomatis\n   - Payment reversal sesuai jumlah item di-return\n\n3. Approval Workflow:\n   - Void/Return > threshold (default Rp 50.000) = Manager approval\n   - Void/Return < threshold = Cashier bisa approve sendiri\n   - Audit: Setiap void/return tercatat di system\n   - Report: Daily void/return summary untuk management review",
+          "image": {
+            "src": "/images/help/pos/pos-void-return.webp",
+            "alt": "Proses void dan return order"
+          }
+        },
+        {
+          "title": "Kitchen Display System (KDS) - Mode B F&B",
+          "body": "Kitchen Display System adalah tampilan order digital di kitchen untuk koordinasi order preparation.\n\nFitur KDS:\n1. Order Terbaru Muncul Otomatis:\n   - Saat order di-send dari FoH, order langsung tampil di KDS\n   - Order diurutkan by time (FIFO - First In First Out)\n   - Prioritas: Hot items (nasi, masakan panas) dulu, cold items (dessert, drink) belakangan\n\n2. Order Detail di KDS:\n   - Nomor meja & jumlah pax\n   - List item dgn qty & special request\n   - Timer: Waktu sejak order masuk (untuk track preparation time)\n   - Status color code:\n     * BLUE: Baru masuk (0-2 menit)\n     * YELLOW: Sedang dimasak (2-10 menit)\n     * RED: Overdue (> estimated time)\n\n3. Kitchen Workflow:\n   a. Chef lihat order di KDS\n   b. Mark item \"COOKING\" → item highlight di KDS\n   c. Saat item ready → Mark \"READY\"\n   d. FoH notified via audio/visual alert\n   e. FoH staff pick item dari pass & antar ke meja\n   f. Mark \"SERVED\" di system\n\n4. Multi-Station Kitchen:\n   - Order dapat di-route ke multiple stations (grill, fryer, expedite)\n   - Setiap station hanya lihat item relevan\n   - Contoh:\n     * Grill station: Steak, Grilled Fish\n     * Fryer station: Fried Chicken, Fries\n     * Expedite (assembly): Salad, Plating\n   - Order READY hanya jika semua station complete\n\n5. KDS Control:\n   - Operator punya touchscreen di kitchen\n   - Buttons: Ready, Delayed, Reprep, Cancel\n   - Delayed: Informa FoH order akan delay (estimate waktu)\n   - Reprep: Order kembali ke status IN_PROGRESS (salah prepare)\n   - Cancel: Batalkan order (sync ke POS)\n\n6. Reports di KDS:\n   - Order wait time: Tracking avg preparation time\n   - Items per hour: Throughput metric\n   - Peak hour tracking: Untuk staffing optimization",
+          "image": {
+            "src": "/images/help/pos/pos-kitchen-display.webp",
+            "alt": "Kitchen Display System interface"
+          }
+        },
+        {
+          "title": "Menutup POS Session (Shift Tutup)",
+          "body": "End-of-day reconciliation untuk menutup shift dan validate cash.\n\nProses:\n1. Klik tombol 'Close Shift' di main POS screen.\n2. System show summary hari ini:\n   - Total orders: 45\n   - Total revenue: Rp 5.000.000\n   - Total discount: Rp 200.000\n   - Payment breakdown: Cash Rp 3.000.000, Card Rp 1.500.000, QRIS Rp 500.000\n\n3. Dialog reconciliation muncul:\n   a. Opening Cash (read-only): Rp 500.000\n   b. Closing Cash*: Input jumlah kas di drawer (manual count by operator)\n      - Contoh: Operator hitung, ada uang Rp 5.200.000\n   c. Expected Cash (calculated): Rp 5.200.000\n      - Formula: Opening + Cash sales - Cash refund + Cash in/out\n   d. Variance (calculated): Closing - Expected\n      - Jika Rp 5.200.000 - Rp 5.200.000 = Rp 0 (Matched!)\n      - Jika ada perbedaan, show warning (underage/overage)\n\n4. Variance Handling:\n   - Match (Rp 0): Klik 'Confirm Close' → Session closed sukses\n   - Underage (negative variance, e.g., -Rp 50.000):\n     * Notes muncul: \"Cash shortage Rp 50.000. Reason?\"\n     * Operator input reason & acknowledgment\n     * Manager approval required\n     * Close session → Variance dicatat untuk follow-up\n   - Overage (positive variance, e.g., +Rp 30.000):\n     * Notes muncul: \"Cash excess Rp 30.000. Reason?\"\n     * Bisa input reason (extra payment, tips, dll)\n     * Manager approval\n     * Close session\n\n5. Shift Report Generate:\n   - System buat shift report dengan detail:\n     * Tanggal shift & operator\n     * Opening/closing cash\n     * Variance & acknowledgment\n     * Transaction summary (qty, total, by payment method)\n     * Discount summary\n     * Return/void summary\n     * Inventory delta (stok awal - stok akhir)\n   - Report bisa di-email ke manager atau print\n\n6. Session Close Completed:\n   - Session status → CLOSED\n   - Closed_at timestamp recorded\n   - No more transaction bisa di-add ke session ini\n   - New session harus di-open untuk transaksi besok\n\nNotes:\n- Wajib reconcile setiap hari (tidak bisa skip)\n- Variance > Rp 100.000 butuh manager signature\n- Audit trail semua close session untuk compliance",
+          "image": {
+            "src": "/images/help/pos/pos-close-session.webp",
+            "alt": "Form menutup POS session dengan reconciliation"
+          }
+        },
+        {
+          "title": "Receipt & Printing",
+          "body": "Generate dan print receipt/struk untuk customer & record.\n\nReceipt Details:\n- Header: Nama outlet/toko, alamat, telepon, NPWP\n- Receipt number: Auto-generated unique ID\n- Transaction info: Tanggal, waktu, kasir, payment method\n- Item list: Daftar produk, qty, harga per unit, subtotal\n- Discount applied: Jika ada diskon per item atau order\n- Tax: PPN, PPh (jika applicable)\n- Payment summary:\n  * Subtotal: Rp ...\n  * Discount: Rp ... (-)\n  * Tax: Rp ... (+)\n  * TOTAL: Rp ...\n  * Payment method & amount\n  * Change (jika cash): Rp ...\n- Footer: Thank you message, QR code (untuk loyalty/feedback)\n\nPrint Options:\n1. Auto Print (default):\n   - Setelah order PAID, receipt auto-print ke printer terkoneksi\n   - Printer config: Thermal 80mm atau 58mm\n   - Automatic feed & cut\n\n2. On-Demand Print:\n   - Operator bisa print ulang receipt dari order history\n   - Use case: Receipt hilang, customer minta copy\n   - Max print: 3x (configurable) untuk control\n\n3. Email Receipt:\n   - Jika customer beri email → Receipt bisa di-email\n   - Format: PDF attachment\n   - Auto-send setelah payment confirmed\n\n4. SMS Receipt (optional):\n   - Jika customer beri nomor HP → Receipt bisa SMS\n   - Format: Short summary (order no, total, method)\n\nReceipt Retention:\n- All receipts saved di system (digital backup)\n- Store print history: Kapan, berapa kali, siapa print\n- For audit & compliance (minimal 7 tahun per regulasi)"
+        },
+        {
+          "title": "Stock Management & Deduction",
+          "body": "Automatic stock deduction saat order selesai, dengan support untuk STOCK & RECIPE modes.\n\nStock Deduction Flow:\n1. Order DRAFT: Stok tidak berkurang (item masih di cart)\n\n2. Order CONFIRMED: \n   - Stock check dilakukan\n   - Jika STOCK mode: System check available quantity\n   - Jika RECIPE mode: System cek bahan-bahan resep tersedia\n   - If insufficient: Warning & ask to reduce qty\n\n3. Order PAID/COMPLETED:\n   - Stock deduction executed\n   - STOCK mode: Direct qty reduce\n     * Contoh: Bakso qty 2 → stok -2\n   - RECIPE mode: Recipe explosion\n     * Contoh: 1 Nasi Goreng (resep: 200g beras, 50g telur, 20g minyak)\n     * Stok berkurang: Beras -200g, Telur -50g, Minyak -20g\n   - Inventory transaction recorded (untuk traceability)\n\n4. Void/Return:\n   - Stock reversal terjadi\n   - STOCK mode: Qty di-add kembali\n   - RECIPE mode: Bahan-bahan di-add kembali\n   - Reversal transaction recorded dengan reference ke order\n\n5. Stock Alert:\n   - Jika stok minimum tercapai → Alert di POS\n   - Contoh: \"Bakso stock remaining: 5 pcs (minimum: 10)\"\n   - Kasir inform manager untuk restock\n\nInventory Reconciliation:\n- System record semua deduction/reversal per order\n- Daily inventory report: Expected vs Actual\n- Stock variance tracking untuk loss control\n- Integration dengan Purchase Order untuk auto-reorder"
+        },
+        {
+          "title": "Table Management - Mode B (F&B)",
+          "body": "Manage meja, status, dan occupancy untuk F&B operations.\n\nTable States:\n1. AVAILABLE: Meja kosong & siap digunakan\n2. OCCUPIED: Meja terisi customer & ada order\n3. RESERVED: Meja di-reserve untuk customer tertentu (future)\n4. PENDING_PAYMENT: Customer selesai makan, menunggu bayar\n5. DIRTY: Meja sudah dibersihkan (transition to AVAILABLE)\n\nTable Assignment:\n- Floor plan display: Visualisasi layout meja\n- Drag & assign table: Click meja → assign customer\n- Multi-meja: Group table untuk large group (merge meja)\n- Waitlist: Jika semua meja penuh, customer masuk waitlist\n\nTable Status Tracking:\n- Time tracking: Berapa lama customer duduk (duration)\n- Turn-around time: Dari assign → payment selesai\n- Waitlist time: Berapa lama customer menunggu\n- Peak hour detection: Auto-suggest staff untuk seat customer\n\nTable Merge/Split:\n- Merge: Combine 2-3 meja untuk large party\n  * Contoh: Rombongan 8 orang → merge 2 meja\n  * Order bisa shared atau separate per meja\n- Split: Pisah bill untuk different payer\n  * Contoh: Rombongan bekerja → split bill per orang\n\nTable Cleaning Log:\n- Mark table \"DIRTY\" setelah customer pergi\n- Staff cleanup & mark \"CLEAN\" → AVAILABLE\n- Cleaning time tracked (untuk efficiency)\n\nTable Performance Metrics:\n- Average turn-around time: Typical customer stay\n- Seats per hour: Throughput metric\n- Peak occupancy: Busiest hours\n- For capacity planning & staffing optimization"
+        },
+        {
+          "title": "User Roles & Permissions di POS",
+          "body": "Different roles dengan different permissions untuk operasi POS.\n\nRoles:\n\n1. CASHIER:\n   Permissions:\n   - Open/Close session\n   - Create order (DRAFT, CONFIRM)\n   - Process payment\n   - Apply discount (kecil, < threshold)\n   - Print receipt\n   - View transaction history\n   \n   Restrictions:\n   - Tidak bisa void order > threshold\n   - Tidak bisa refund manual\n   - Tidak bisa modify price\n\n2. WAIT STAFF (F&B mode):\n   Permissions:\n   - Assign table\n   - Create order (DRAFT)\n   - Send to kitchen\n   - Mark served\n   - Cannot process payment (cashier only)\n   \n   Restrictions:\n   - Tidak bisa access payment\n   - Tidak bisa void/return\n   - View only transaction\n\n3. KITCHEN STAFF (F&B mode):\n   Permissions:\n   - View KDS (Kitchen Display System)\n   - Mark item ready\n   - View order detail\n   \n   Restrictions:\n   - Tidak bisa modify order\n   - Tidak bisa process payment\n   - View only KDS\n\n4. SUPERVISOR/MANAGER:\n   Permissions:\n   - All cashier permissions\n   - Approve void/return\n   - Approve large discount\n   - View reports & analytics\n   - Reconcile shift\n   - Resolve issues\n   \n   Restrictions:\n   - Tidak bisa delete transaction (hanya void)\n\n5. POS ADMIN:\n   Permissions:\n   - Configure settings (outlets, tables, printers)\n   - Manage users & roles\n   - View all reports\n   - Audit trail\n   - System maintenance\n   \n   Restrictions:\n   - Tidak bisa process normal transaction (admin only)\n\nPermission Scopes:\n- Own Orders: Hanya lihat order sendiri\n- Outlet: Hanya lihat outlet assigned\n- Division: Semua outlet di division\n- All: Semua outlet (admin/director level)\n\nAudit Trail:\n- Setiap action tercatat: Who, What, When, Where\n- For compliance & issue resolution"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Fitur Lanjutan"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Multi-Payment Support",
+          "body": "Customer bisa membayar dengan kombinasi beberapa metode pembayaran.\n\nUse Case:\n- Pembayaran Rp 150.000 dengan cash Rp 100.000 + kartu debit Rp 50.000\n- Loyalty point + cash combination\n- Corporate account + personal payment\n\nAlur:\n1. Input payment method pertama & amount\n2. System calculate remaining balance\n3. Jika remaining > 0, input method kedua\n4. Ulangi hingga total payment = order total\n5. Semua metode tercatat di receipt\n\nValidasi:\n- Total payment harus = order total (tidak bisa lebih/kurang)\n- Max 3 metode per order (configurable)\n- Refund calculation berdasarkan metode yang digunakan"
+        },
+        {
+          "title": "Loyalty Integration",
+          "body": "Integrate dengan sistem loyalty untuk earn & redeem points.\n\nFeatures:\n- Point earning: Auto-earn points saat transaksi (configurable per outlet)\n- Point redemption: Customer bisa redeem points untuk discount\n- Member tier: Different earning rate per tier (bronze, silver, gold)\n- Receipt show: Point earned & remaining balance\n- Integration dengan membership module\n\nAlur:\n1. Identify customer: Scan kartu atau input nomor member\n2. System check: Points, tier, eligibility\n3. Offer redemption: \"Anda punya 5000 points, mau pakai?\"\n4. Process: Deduct points, apply discount\n5. Receipt: Show points earned + used"
+        },
+        {
+          "title": "Analytics & Reporting",
+          "body": "Comprehensive reports untuk business insights.\n\nReports:\n- Daily sales summary: Total, by method, by category\n- Cashier performance: Transaction count, avg value, errors\n- Product analytics: Top sellers, slow movers, margin analysis\n- Discount tracking: Total discount, by type, by approver\n- Void/Return analysis: Reasons, amounts, approval\n- Peak hours: Traffic pattern, revenue trend\n- Inventory variance: Expected vs actual stock\n- Table occupancy (F&B): Avg stay, turn-around, peak hours\n\nExport:\n- PDF, Excel, CSV formats\n- Scheduled reports (daily/weekly/monthly)\n- Email distribution"
+        },
+        {
+          "title": "System Configuration",
+          "body": "Admin setup untuk konfigurasi POS sesuai kebutuhan outlet.\n\nSettings:\n- Tax configuration: PPN rate, PPh rate\n- Discount threshold: Amount untuk trigger manager approval\n- Discount types: Percentage, fixed, voucher\n- Payment methods: Enable/disable per outlet\n- Receipt format: Logo, message, font size\n- Printer config: Port, model, auto-cut\n- Opening balance: Default opening cash\n- Roles & permissions: Configure per outlet\n- Table layout (F&B): Upload floor plan\n- Category & menu: Link ke product master\n\nBackup & Recovery:\n- Auto backup transaction data\n- Offline mode support (limited)\n- Data sync saat connection restored"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Business Rules & Validasi"
+    },
+    {
+      "type": "text",
+      "body": "1. **Order DRAFT**: Tidak ada validasi stok, customer bisa add unlimited\n\n2. **Order CONFIRMED**: \n   - Stok harus cukup untuk semua item\n   - Jika tidak cukup, ask to reduce qty atau cancel\n   - Cannot modify item qty setelah CONFIRMED (harus void & buat baru)\n\n3. **Order PAID**: \n   - Total payment harus = order total\n   - Multi-payment kombinasi allowed\n   - Stock deduction executed\n   - Cannot add/remove item setelah PAID\n\n4. **Discount**:\n   - Item discount applied sebelum tax calculation\n   - Order discount applied ke subtotal\n   - Max discount per item/order: 99% (cannot free item)\n   - Discount > threshold butuh manager approval\n\n5. **Void Order**:\n   - Cannot void order dengan status COMPLETED > 24 jam (use return)\n   - Void PAID order auto-refund\n   - Manager approval required\n\n6. **Return**:\n   - Hanya untuk order COMPLETED\n   - Return window: Default 24 jam\n   - Partial return allowed (tidak harus full)\n   - Stok reversal otomatis\n\n7. **Session**:\n   - Hanya 1 session OPEN per operator per outlet\n   - Cannot create order tanpa session OPEN\n   - Must close session sebelum shift selesai\n   - Variance reconciliation wajib\n\n8. **Stock**:\n   - Stock tidak bisa negatif (sistem prevent)\n   - Recipe explosion otomatis untuk RECIPE mode\n   - Stock reversal saat void/return\n   - Low stock warning saat order"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Troubleshooting & FAQ"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Q: Cannot open shift - error 'Outlet not assigned'",
+          "body": "A: Employee (user) harus di-assign ke outlet sebelum bisa buka session.\n\nSolusi:\n1. Login sebagai admin/manager\n2. Go to Organization → Outlets\n3. Buka outlet tersebut\n4. Klik 'Assign Employees'\n5. Add employee yang ingin buka shift\n6. Save\n7. Employee sekarang bisa buka shift di outlet tersebut"
+        },
+        {
+          "title": "Q: Stok tidak berkurang setelah order selesai",
+          "body": "A: Bisa karena beberapa alasan:\n\nCheck:\n1. Order status = PAID atau COMPLETED? (stok hanya berkurang di status ini)\n2. Product configured sebagai STOCK atau RECIPE?\n3. Inventory module active & product linked ke warehouse?\n4. Ada error di system log?\n\nSolusi:\n1. Verify order status di order detail\n2. Jika status belum PAID, proses payment\n3. Check product configuration di master data\n4. Verify warehouse/outlet linked ke product\n5. Contact admin jika masih error"
+        },
+        {
+          "title": "Q: Cannot process payment - 'EDC not connected'",
+          "body": "A: EDC (Electronic Data Capture) untuk kartu tidak terkoneksi.\n\nSolusi:\n1. Check physical connection EDC ke cashier device (USB/Bluetooth)\n2. Restart EDC & POS device\n3. Test connection: Admin → Settings → Devices → Test EDC\n4. Jika masih error, switch payment method ke cash/QRIS\n5. Contact IT support untuk EDC troubleshooting"
+        },
+        {
+          "title": "Q: Manager approval stuck - tidak bisa submit",
+          "body": "A: Manager approval untuk discount/void tidak bisa submit.\n\nCheck:\n1. Manager user ada? (Verify di User Management)\n2. Manager device online & logged in?\n3. Manager punya permission 'approve_discount' / 'approve_void'?\n4. Request timeout? (Default 5 menit)\n\nSolusi:\n1. Cashier cancel & retry\n2. Verify manager online\n3. Manager check POS untuk pending approvals (notification panel)\n4. Approve di device manager\n5. If timeout, use fallback: Cashier proceed (note in system) & reconcile later"
+        },
+        {
+          "title": "Q: Printer tidak print receipt",
+          "body": "A: Receipt tidak keluar dari printer.\n\nCheck:\n1. Printer on & connected?\n2. Printer port configured correctly di POS settings?\n3. Thermal paper ada?\n4. Any print error di system log?\n\nSolusi:\n1. Check printer on/offline light\n2. Admin → Settings → Devices → Test Printer\n3. Verify port (COM3, LPT1, USB, Bluetooth)\n4. Restart printer & POS\n5. Try manual print dari order history\n6. Contact IT jika hardware issue"
+        },
+        {
+          "title": "Q: Cash variance > Rp 100.000, cannot close shift",
+          "body": "A: Shift reconciliation fail, ada kekurangan/kelebihan kas.\n\nAction:\n1. Recount cash di drawer (verify Closing Cash)\n2. Jika amount correct, input variance reason\n3. Contact manager untuk approval\n4. Manager review & signature\n5. System allow close dgn variance noted\n6. Follow-up investigation besok untuk identify cause"
+        },
+        {
+          "title": "Q: Cannot void order - 'Manager approval timeout'",
+          "body": "A: Request void order expired menunggu manager approval.\n\nSolusi:\n1. Cashier cancel void request\n2. Call/notify manager untuk handle\n3. Manager login & check pending approvals\n4. Manager approve/reject void request\n5. Cashier can retry void\n6. If manager tidak available, escalate ke supervisor"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Best Practices"
+    },
+    {
+      "type": "text",
+      "body": "1. **Reconciliation**: Always reconcile cash setiap tutup shift - jangan skip!\n\n2. **Discount Control**: Implement manager approval untuk discount besar untuk prevent abuse\n\n3. **Stock Accuracy**: Regular stock audit, verify sistem vs physical count\n\n4. **Receipt Keeping**: Simpan receipt untuk complaint/return reference\n\n5. **Payment Security**: Protect payment info, jangan share EDC PIN, enable payment encryption\n\n6. **KDS Management** (F&B): Prioritize hot items dulu, monitor prep time, communicate delays early\n\n7. **Table Turnover** (F&B): Optimize seating untuk maximize revenue, monitor peak hours\n\n8. **Audit Trail**: Leverage audit log untuk compliance, investigate discrepancy\n\n9. **Training**: Ensure semua cashier/staff trained proper POS operation & workflow\n\n10. **Backup**: Regular backup transaction data, setup recovery procedure"
+    }
+  ]
+}

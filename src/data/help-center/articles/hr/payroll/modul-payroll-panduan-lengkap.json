@@ -1,0 +1,253 @@
+  {
+  "title": "Modul HRD - Payroll (Gaji) - Panduan Lengkap",
+  "description": "Panduan lengkap menggunakan Modul Payroll dalam sistem HRD GIMS mencakup setup struktur gaji, processing payroll bulanan, perhitungan pajak, tunjangan, potongan, dan distribusi salary slip.",
+  "slug": "modul-payroll-panduan-lengkap",
+  "module": "hr",
+  "subcategory": "payroll",
+  "author": "Tim GIMS",
+  "createdAt": "2026-04-19",
+  "updatedAt": "2026-04-19",
+  "tags": ["hr", "payroll", "gaji", "salary", "tax", "pajak"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Modul Payroll mengelola seluruh proses penggajian karyawan dari setup struktur gaji, processing bulanan, perhitungan pajak, hingga distribusi salary slip dan transfer gaji ke rekening bank."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Cara Akses Modul Payroll"
+    },
+    {
+      "type": "timeline",
+      "items": [
+        {
+          "title": "Buka Menu HRD",
+          "body": "Pada sidebar aplikasi, klik menu HRD untuk melihat submenu yang tersedia.",
+          "image": {
+            "src": "/images/help/hr/payroll/menu-hrd.webp",
+            "alt": "Menu HRD di sidebar"
+          }
+        },
+        {
+          "title": "Pilih Submenu Payroll",
+          "body": "Dari submenu HRD, klik Payroll untuk membuka halaman manajemen payroll bulanan.",
+          "image": {
+            "src": "/images/help/hr/payroll/menu-payroll.webp",
+            "alt": "Submenu Payroll"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Komponen Gaji"
+    },
+    {
+      "type": "card",
+      "items": [
+        {
+          "title": "Base Salary",
+          "body": "Fixed monthly salary untuk karyawan PKWTT. Tidak berubah setiap bulan (kecuali ada promotion/demotion)"
+        },
+        {
+          "title": "Allowances",
+          "body": "Tunjangan transportasi, makan, rumah, performance bonus, shift allowance, dll"
+        },
+        {
+          "title": "Overtime Pay",
+          "body": "Dari modul Attendance. Calculation: Hours × Hourly Rate × Rate Multiplier (1.5x-3.0x)"
+        },
+        {
+          "title": "Deductions",
+          "body": "Potongan: Tax (PPh 21), BPJS Kesehatan, BPJS TK, loan repayment, advance gaji"
+        },
+        {
+          "title": "Gross vs Net",
+          "body": "Gross = Base + Allowances + Overtime. Net = Gross - Tax - BPJS - Other Deductions"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Alur Kerja Payroll Bulanan (6 Fase)"
+    },
+    {
+      "type": "timeline",
+      "items": [
+        {
+          "title": "Fase 1: Validate Data (HR Team)",
+          "body": "Sebelum memproses payroll, pastikan semua data sudah lengkap dan akurat untuk menghindari kesalahan perhitungan gaji.\n\nCheck Data:\n1. Buka HRD → Payroll Validation\n2. Pilih bulan yang akan diproses\n3. Sistem melakukan validasi otomatis:\n   ✓ Attendance data completed\n   ✓ Leave requests processed\n   ✓ Overtime approved\n   ✓ Employee active & assigned salary structure\n   ✓ No missing bank account (for transfer)\n4. Fix any issues found\n\nJika ada item yang belum ✅, fix masalah tersebut sebelum lanjut ke tahap Generate. Klik setiap issue untuk melihat detail dan data mana yang perlu dikerjakan.",
+          "image": {
+            "src": "/images/help/hr/payroll/payroll-validation.webp",
+            "alt": "Data validation untuk payroll"
+          }
+        },
+        {
+          "title": "Fase 2: Setup Salary Structure (Admin)",
+          "body": "Salary Structure adalah template yang mendefinisikan komponen gaji dan rules perhitungan untuk setiap karyawan.\n\nCara Setup:\n1. Di menu HRD → Payroll, pilih Salary Structure\n2. Klik + New Salary Structure\n3. Isi informasi:\n   - Structure Name: Nama struktur (ex: \"Junior Staff\", \"Manager\")\n   - Description: Deskripsi (opsional)\n4. Tambah Salary Components:\n   - Base Salary: Rp X.XXX.XXX\n   - Add Allowance: Transport, Meal, Performance, etc.\n   - Add Deduction Rules: BPJS%, Tax Rules\n5. Set Calculation Rules:\n   - Pro-rata for joining/leaving\n   - Overtime multiplier\n   - Tax calculation method\n6. Klik Save\n\nSalary Structure yang sudah disimpan dapat di-assign ke karyawan melalui Employee profile → Tab Work Information.",
+          "image": {
+            "src": "/images/help/hr/payroll/salary-structure-setup.webp",
+            "alt": "Setup salary structure"
+          }
+        },
+        {
+          "title": "Fase 3: Assign Structure & Input Special Items",
+          "body": "Assign Salary Structure ke Karyawan:\n1. Buka Employee detail\n2. Tab Work Information → Pilih Salary Structure\n3. Set Effective Date (kapan struktur berlaku)\n4. Klik Save\n\nInput Special Items (Bonus, Advance, Adjustment):\nSebelum generate payroll, masukkan bonus, advance gaji, atau adjustment khusus.\n\n1. Buka HRD → Payroll → Special Items\n2. Klik + Add Special Item\n3. Isi:\n   - Employee: Pilih karyawan\n   - Type: Bonus, Advance, Adjustment\n   - Amount: Rp X.XXX.XXX\n   - Description: Alasan/catatan\n   - Effective Month: Bulan berlaku\n4. Klik Save\n\nContoh:\n- Top performer bonus: Rp 2.000.000\n- Advance salary: Rp 1.000.000\n- Adjustment (restitution): -Rp 500.000",
+          "image": {
+            "src": "/images/help/hr/payroll/special-items-input.webp",
+            "alt": "Input special items untuk payroll"
+          }
+        },
+        {
+          "title": "Fase 4: Generate Payroll",
+          "body": "Proses ini menjalankan kalkulasi otomatis gaji untuk semua karyawan berdasarkan attendance, overtime, dan special items.\n\nCara Generate:\n1. Buka HRD → Payroll → Payroll Batch\n2. Klik + Create Payroll Batch\n3. Isi informasi:\n   - Month/Period: April 2026\n   - Processing Date: 26/04/2026 (kapan payroll diproses)\n   - Description: (opsional)\n4. Klik Generate\n5. Tunggu 3-5 menit (sistem menghitung untuk semua karyawan)\n6. Status berubah → COMPLETED\n\nResult yang ditampilkan:\n- Total Gross Salary: Rp XXX.XXX.XXX\n- Total Deductions: Rp XX.XXX.XXX\n- Total Net Salary: Rp XXX.XXX.XXX (yang ditransfer ke karyawan)\n- Summary by deduction type (Tax, BPJS, etc.)\n- Employee list dengan detail perhitungan individual\n\nSetelah COMPLETED, salary slips sudah tergenerate, summary sheet menampilkan total gross/deductions/net, dan bank transfer file siap dibuat.",
+          "image": {
+            "src": "/images/help/hr/payroll/payroll-generate.webp",
+            "alt": "Generate payroll batch"
+          }
+        },
+        {
+          "title": "Fase 5: Review & Approval",
+          "body": "Manager atau Director melakukan review dan approval terhadap payroll batch sebelum execution.\n\nCara Review & Approve:\n1. Buka Payroll Batch detail\n2. Review summary:\n   - Total amount yang akan transfer\n   - Employee count\n   - Deduction breakdown\n3. View sample salary slip (click 3-5 employees untuk verify calculation)\n4. Jika ada error, klik Cancel Batch untuk revise\n5. Jika OK, klik Approve Payroll Batch\n6. Approver info: Nama, role, timestamp terekam\n7. Status: APPROVED\n\nSetelah APPROVED, payroll batch ter-lock dan tidak bisa di-edit lagi untuk menjaga audit trail dan compliance.",
+          "image": {
+            "src": "/images/help/hr/payroll/payroll-review-approve.webp",
+            "alt": "Review dan approval payroll"
+          }
+        },
+        {
+          "title": "Fase 6: Create Salary Slips & Bank Transfer",
+          "body": "Finance Team melakukan execution: membuat salary slip, mengirim email, dan generate bank transfer file.\n\nCreate Salary Slips:\n1. Di Payroll Batch detail, klik + Create Salary Slips\n2. Konfigurasi:\n   - Distribution Method: Email, Print, Portal\n   - Send Email: ON/OFF (kirim ke email karyawan)\n   - Email Template: Pilih template (default atau custom)\n3. Klik Create\n4. Salary slips generated untuk semua karyawan\n5. Email dikirim (jika enabled)\n6. Status: SLIPS_CREATED\n\nGenerate Bank Transfer File:\n1. Klik + Generate Bank Transfer\n2. Isi:\n   - Bank: Pilih bank (BCA, Mandiri, BRI, dll)\n   - Transfer Date: Tanggal transfer (biasanya last working day of month)\n   - File Format: IBIS, IDEMPOTENT, atau format lain sesuai bank requirement\n3. Klik Generate\n4. File otomatis didownload (.txt atau .csv)\n5. Validasi file sebelum kirim ke bank:\n   - Check total amount\n   - Verify account numbers\n   - Confirm employee list\n\nProcess Bank Transfer:\n1. Login ke banking portal\n2. Upload file dari sistem payroll\n3. Verify details (total amount, employee count)\n4. Approve transfer request\n5. Transfer diproses oleh bank (biasanya same day atau next working day)\n6. Back to system: Klik Mark as Transferred\n7. Status berubah → TRANSFERRED\n8. Update GL dengan salary payable entries\n\nSetelah mark transferred, GL entries otomatis update dengan mendebit salary payable dan mengkredit cash/bank account.",
+          "image": {
+            "src": "/images/help/hr/payroll/payroll-execute.webp",
+            "alt": "Create salary slip dan bank transfer"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Detail Perhitungan Gaji"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Gross Salary Calculation",
+          "body": "GROSS SALARY = Base Salary + Allowances + Overtime\n\nContoh:\n- Base Salary: Rp 5.000.000\n- Transport Allowance: Rp 500.000\n- Meal Allowance: Rp 300.000\n- Performance Bonus: Rp 1.000.000\n- Overtime (12 hours × Rp 62.500 × 1.5x): Rp 900.000\n---\n- GROSS SALARY: Rp 7.700.000"
+        },
+        {
+          "title": "Income Tax (PPh 21) Calculation",
+          "body": "Formula:\nTaxable Income = Gross Salary - Non-Taxable Allowance - BPJS\nPPh 21 = (Taxable Income - PTKP Threshold) × Tax Rate\n\nPTKP (Personal Tax Free Allowance) 2026:\n- TK/0 (Single): Rp 54.000.000/tahun (Rp 4.500.000/bulan)\n- K/1 (Married + 1 dep): Rp 58.500.000/tahun (Rp 4.875.000/bulan)\n- K/2 (Married + 2 dep): Rp 63.000.000/tahun (Rp 5.250.000/bulan)\n- K/3 (Married + 3 dep): Rp 67.500.000/tahun (Rp 5.625.000/bulan)\n\nTax Rate: 5-30% (progressive bracket)\n\nContoh Perhitungan:\n- Gross: Rp 7.700.000\n- BPJS Kesehatan (1%): Rp 77.000\n- Taxable Income: Rp 7.623.000\n- PTKP (TK/0): Rp 4.500.000\n- Base for Tax: Rp 3.123.000\n- PPh 21 (5% bracket): Rp 156.150",
+          "image": {
+            "src": "/images/help/hr/payroll/payroll-tax-calculation.webp",
+            "alt": "Perhitungan PPh 21"
+          }
+        },
+        {
+          "title": "BPJS Kesehatan & Ketenagakerjaan",
+          "body": "BPJS Kesehatan (Health Insurance):\n- Rate: 1% dari gross salary (employee contribution)\n- Paid to: Badan Penyelenggara Jaminan Sosial Kesehatan\n- Example: Rp 7.700.000 × 1% = Rp 77.000\n\nBPJS Ketenagakerjaan (Work Accident Insurance):\n- Rate: 0.73% dari gross salary (employee contribution)\n- Paid to: Badan Penyelenggara Jaminan Sosial Ketenagakerjaan\n- Example: Rp 7.700.000 × 0.73% = Rp 56.210\n\nNote: Employer contributions are separate (recorded di GL, tidak dalam employee salary slip)"
+        },
+        {
+          "title": "Net Salary (Take Home Pay)",
+          "body": "NET SALARY = Gross - PPh 21 - BPJS Kesehatan - BPJS TK - Other Deductions\n\nExample:\n- Gross Salary: Rp 7.700.000\n- PPh 21: -Rp 156.150\n- BPJS Kesehatan: -Rp 77.000\n- BPJS TK: -Rp 56.210\n- Advance Salary: -Rp 500.000\n---\n- NET SALARY: Rp 6.910.640 ← Transfer ke rekening karyawan",
+          "image": {
+            "src": "/images/help/hr/payroll/payroll-net-salary.webp",
+            "alt": "Perhitungan net salary"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Salary Slip & Distribution"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Struktur Salary Slip",
+          "body": "Salary slip adalah dokumen detail gaji yang diberikan ke karyawan setiap bulan.\n\nBagian-bagian Salary Slip:\n\nHeader:\n- Nama perusahaan & logo\n- Periode gaji (April 2026)\n- Nomor slip gaji\n\nEmployee Info:\n- Nama karyawan\n- Employee ID\n- Jabatan\n- Departemen\n- Bank account (masked)\n\nEarnings (Penghasilan):\n- Base Salary: Rp 5.000.000\n- Transport: Rp 500.000\n- Meal: Rp 300.000\n- Performance Bonus: Rp 1.000.000\n- Overtime: Rp 900.000\n- TOTAL EARNINGS: Rp 7.700.000\n\nDeductions (Potongan):\n- Income Tax (PPh 21): Rp 156.150\n- BPJS Kesehatan: Rp 77.000\n- BPJS TK: Rp 56.210\n- Advance Deduction: Rp 500.000\n- TOTAL DEDUCTIONS: Rp 789.360\n\nSummary:\n- Total Earnings: Rp 7.700.000\n- Total Deductions: Rp 789.360\n- NET SALARY: Rp 6.910.640 ← Transfer ke rekening karyawan\n\nFooter:\n- Approved by: [Finance Manager]\n- Date: 28 April 2026\n- Tanda tangan digital (optional)",
+          "image": {
+            "src": "/images/help/hr/payroll/payroll-salary-slip.webp",
+            "alt": "Contoh salary slip"
+          }
+        },
+        {
+          "title": "Distribution Methods",
+          "body": "Method 1: Email Distribution (Recommended)\n- Salary slip dikirim via email ke karyawan\n- Format: PDF attachment\n- Karyawan bisa download & print\n- Otomatis dikirim saat create slips\n\nMethod 2: Manual Print\n- Admin print salary slips\n- Distribute secara langsung ke karyawan\n- Printed copy untuk personal records\n\nMethod 3: Online Portal Access\n- Karyawan login ke portal\n- View & download salary slip sendiri\n- Available kapan saja untuk reference",
+          "image": {
+            "src": "/images/help/hr/payroll/payroll-distribution.webp",
+            "alt": "Metode distribusi salary slip"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Payroll Reporting & Integration"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Jenis-jenis Report",
+          "body": "1. Payroll Report\nMenampilkan ringkasan gaji semua karyawan per bulan.\n- Total Earnings\n- Total Deductions (by type: tax, BPJS, other)\n- Total Net Salary\n- Bank transfer info\n- Prepared by & approval info\n\n2. Tax Report (PPh 21)\nDetail PPh 21 per employee untuk tax filing.\n- Employee name & NPWP\n- Gross salary (monthly)\n- Tax deducted (monthly)\n- PTKP status\n- Cumulative tax year-to-date\nBisa export untuk laporan ke Kantor Pajak (SPT)\n\n3. BPJS Report\nDetail kontribusi BPJS per employee.\n- Employee name & BPJS member ID\n- BPJS Kesehatan deducted\n- BPJS TK deducted\n- Employer contribution amount\nBisa export untuk BPJS claim/billing\n\n4. Bank Transfer Report\nDetail transfer yang sudah diproses.\n- Employee name & bank account\n- Net salary transferred\n- Transfer date & status\n- Bank reference number"
+        },
+        {
+          "title": "GL Integration (General Ledger)",
+          "body": "Setiap payroll batch yang transferred otomatis create GL entries:\n\nDebit Side:\n- Salary Expense: Rp 315.000.000\n- Employer BPJS: Rp 8.500.000\n- Employer Tax Risk: Rp 1.200.000\n\nCredit Side:\n- Salary Payable: Rp 272.500.000 (dibalik saat transfer)\n- Tax Payable (PPh 21): Rp 42.500.000\n- BPJS Payable: Rp 8.500.000 + employee portion\n- Cash/Bank: Rp 272.500.000 (saat transfer)\n\nGL entries otomatis posted → Finance modul dapat reconcile",
+          "image": {
+            "src": "/images/help/hr/payroll/payroll-gl-integration.webp",
+            "alt": "GL Integration untuk payroll"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Skenario Praktis"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Skenario Lengkap: Process Payroll April 2026 (50 Karyawan)",
+          "body": "Timeline lengkap processing payroll bulan April untuk 50 karyawan dengan struktur gaji yang sudah ada.\n\n📅 25 April: VALIDATE DATA (HR Team)\n- Buka HRD → Payroll Validation\n- Pilih April 2026\n- Check data completeness ✓\n- Fix any issues found\n- Status: READY\n\n📅 25 April: INPUT SPECIAL ITEMS (Finance Team)\n- Input bonus untuk top performers (5 karyawan): Rp 3.000.000 each\n- Input advance salary untuk 2 karyawan: Rp 2.000.000 each\n- Total special items: Rp 19.000.000\n- Status: PREPARED\n\n📅 26 April: GENERATE PAYROLL (Finance Team)\n- Buka HRD → Payroll → Payroll Batch\n- Create New Batch: \"Payroll April 2026\"\n- Processing Date: 28/04/2026\n- Klik Generate\n- Tunggu 3-5 menit (sistem menghitung untuk 50 karyawan)\n- Status: COMPLETED\n- Result:\n  * Total Gross: Rp 315.000.000\n  * Total Deductions: Rp 42.500.000\n  * Total Net: Rp 272.500.000\n\n📅 27 April: REVIEW & APPROVE (Finance Manager)\n- Buka Payroll Batch detail\n- Review summary: Rp 272.500.000 transfer amount ✓\n- View 5 sample salary slip → verify calculation ✓\n- Klik Approve Payroll Batch\n- Approver: Ibu Sinta (Finance Manager)\n- Status: APPROVED\n\n📅 27 April: CREATE SALARY SLIPS (Finance Team)\n- Klik + Create Salary Slips\n- Distribution Method: Email\n- Send Email: ON\n- Klik Create\n- Salary slips generated untuk 50 karyawan\n- Email sent otomatis\n- Status: SLIPS_CREATED\n\n📅 27 April: GENERATE BANK TRANSFER (Finance Team)\n- Klik + Generate Bank Transfer\n- Bank: BCA\n- Transfer Date: 28/04/2026\n- File Format: IBIS\n- Download file\n- Validate:\n  * Total: Rp 272.500.000 ✓\n  * Employee count: 50 ✓\n  * Account numbers valid ✓\n\n📅 28 April: PROCESS BANK TRANSFER (Finance)\n- Login banking portal (BCA online)\n- Upload file\n- Verify: Total Rp 272.500.000 for 50 employees\n- Approve transfer\n- Bank process transfer (same day)\n- Back to system: Klik Mark as Transferred\n- Status: TRANSFERRED\n- GL updated otomatis\n\n📅 30 April: REPORTING (Finance/HR)\n- Generate Payroll Report\n- Generate Tax Report (PPh 21) untuk tax filing\n- Export BPJS Report untuk BPJS claim\n- Archive batch data\n- Close month\n\n✅ Result: Semua 50 karyawan sudah receive salary, salary slips distributed, transfer completed, GL integrated!",
+          "image": {
+            "src": "/images/help/hr/payroll/payroll-scenario-complete.webp",
+            "alt": "Payroll processing selesai"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Tips & Troubleshooting"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Pertanyaan Umum",
+          "body": "Q: Berapa lama proses generate payroll?\nA: Tergantung jumlah karyawan. Biasanya 2-5 menit untuk 50-100 karyawan.\n\nQ: Bisa edit salary slip setelah generate?\nA: Tidak. Salary slip is locked setelah generate. Jika ada error, batalkan batch dan regenerate.\n\nQ: Bagaimana cara handle late joining karyawan?\nA: Masukkan joining date di employee record. System otomatis pro-rate gaji sesuai hari kerja.\n\nQ: Bisa adjust gaji untuk karyawan tertentu?\nA: Ya, via Special Items (Adjustment type). Keluar terpisah di salary slip dengan catatan alasan.\n\nQ: Bagaimana tax calculation untuk part-time?\nA: Sama seperti regular employee. System otomatis calculate berdasarkan gross salary.\n\nQ: Berapa frequency payroll? Bulanan saja?\nA: Bisa bulanan, semi-bulanan, atau weekly (tergantung kebijakan perusahaan). Setup di Payroll Configuration."
+        },
+        {
+          "title": "Troubleshooting",
+          "body": "Masalah: Generate payroll error / tidak bisa lanjut\nSolusi: Check data validation terlebih dahulu. Biasanya ada missing attendance atau invalid employee data.\n\nMasalah: Tax calculated wrong\nSolusi: Verify PTKP status di employee record. Cek juga non-taxable allowance setup di salary structure.\n\nMasalah: Email salary slip tidak terkirim\nSolusi: Verify email address di employee record. Check email server configuration di system settings.\n\nMasalah: Bank transfer file rejected\nSolusi: Verify bank format di file generation. Cek account numbers & names sesuai bank records. Contact bank untuk error code.\n\nMasalah: Salary slip format berbeda dari expected\nSolusi: Edit salary slip template di configuration. Bisa customize header, footer, layout sesuai preference."
+        },
+        {
+          "title": "Best Practices",
+          "body": "1. Validate data every payroll cycle - Check attendance, leave, overtime before generate\n\n2. Keep salary structure updated - Update PTKP & tax rates annually\n\n3. Review sample salary slips - Always check 3-5 samples before approve\n\n4. Archive data properly - Keep all payroll batches for audit trail & tax compliance\n\n5. Reconcile GL monthly - Ensure payroll entries match finance records\n\n6. Communicate with employees - Distribute salary slip on time, answer questions\n\n7. Secure sensitive data - Salary & tax info adalah confidential, store carefully\n\n8. Have contingency plan - Know procedure jika bank transfer failed, system down, etc"
+        }
+      ]
+    }
+  ]
+}

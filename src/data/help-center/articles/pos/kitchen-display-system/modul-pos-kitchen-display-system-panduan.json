@@ -1,0 +1,110 @@
+{
+  "title": "Modul POS - Kitchen Display System (KDS) - Panduan Lengkap",
+  "description": "Panduan lengkap menggunakan Kitchen Display System untuk koordinasi order antara front-of-house dan kitchen, tracking progress persiapan, dan management multi-station kitchen.",
+  "slug": "modul-pos-kitchen-display-system-panduan",
+  "module": "pos",
+  "subcategory": "kitchen-display-system",
+  "author": "Tim GIMS",
+  "createdAt": "2026-05-05",
+  "updatedAt": "2026-05-05",
+  "tags": ["pos", "kds", "kitchen", "f&b", "display", "order", "preparation", "station", "coordination"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Kitchen Display System (KDS) adalah digital display di kitchen untuk menerima order dari front-of-house (FoH), track persiapan item, dan coordinate antar kitchen stations. KDS hanya aktif di Mode B (F&B/Restaurant), untuk sinkronisasi realtime antara pelayanan customer dan persiapan kitchen."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "KDS Architecture"
+    },
+    {
+      "type": "text",
+      "body": "**KDS Display Locations:**\n- Main KDS screen: Central display untuk semua order\n- Station KDS: Per-station display (Grill, Fryer, Beverage, Expedite)\n- Manager tablet: For monitor & control\n- FoH tablet/device: For order sending & status check\n\n**Data Flow:**\n```\nFoH Create Order\n    ↓\n[Send to Kitchen]\n    ↓\nOrder Transmitted to KDS\n    ↓\nKitchen Staff View KDS\n    ↓\n[Start Cooking]\n    ↓\nMark Item Ready/Done\n    ↓\nNotify FoH (Bell/Alert)\n    ↓\nFoH Pickup & Serve\n```"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "KDS Screen Layout"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Main KDS Display",
+          "body": "**Layout Sections:**\n\n1. **Header (Top Bar):**\n   - Current time (HH:MM:SS)\n   - Session info: Outlet, date\n   - Total pending orders\n   - Connection status (online/offline)\n\n2. **Orders Queue (Main Area):**\n   - List orders dengan color-coded status:\n     * BLUE: Fresh order (< 2 min)\n     * YELLOW: Being prepared (2-10 min)\n     * RED: Overdue (> est. time)\n   - Per order display:\n     * Order number\n     * Table number & pax count\n     * Order received time\n     * Elapsed time (live counter)\n     * Items list dengan qty & notes\n     * Assigned station(s)\n\n3. **Quick Stats (Right Side):**\n   - Orders total: X\n   - Average prep time: Y min\n   - Busiest station: Z\n\n4. **Controls (Bottom Bar):**\n   - Settings button (configure KDS)\n   - Help button\n   - Logout button\n\n**Order Card Display:**\n```\n┌─────────────────────────────────────┐\n│ TABLE #3 (2 PAX) | 08:30 | 5 min   │\n├─────────────────────────────────────┤\n│ • Nasi Goreng × 2 (no garlic)       │\n│ • Gado-gado × 1 (medium spicy)      │\n│ • Es Teh × 3                        │\n├─────────────────────────────────────┤\n│ [Grill] [Fryer] [Expedite]          │\n│ Status: IN_PROGRESS                 │\n└─────────────────────────────────────┘\n```"
+        },
+        {
+          "title": "Station-Specific Display",
+          "body": "Each kitchen station punya own KDS tablet/screen.\n\n**Station KDS Layout:**\n- Only show items relevant ke station ini\n- Example Grill station: Steak, grilled fish, grilled chicken\n- Example Fryer station: Fried chicken, fries, etc\n\n**Display Details:**\n```\nGRILL STATION\n┌─────────────────────────────┐\n│ ORDER #1 - TABLE 3          │\n│ Steak × 1 (medium done)     │\n│ [COOKING] - 6 min elapsed   │\n│ Est. ready: 4 min more      │\n│ [Ready] [Delay] [Reprep]    │\n├─────────────────────────────┤\n│ ORDER #2 - TABLE 5          │\n│ Grilled Fish × 2            │\n│ [QUEUED]                    │\n│ [Start] [Skip]              │\n├─────────────────────────────┤\n│ ORDER #3 - TABLE 1          │\n│ Steak × 1 (rare)            │\n│ [QUEUED]                    │\n└─────────────────────────────┘\nNext: Start Cooking Order #2\n```"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Kitchen Workflow"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Step 1: Receive Order (Kitchen Staff)",
+          "body": "1. **Order Arrives di KDS:**\n   - FoH staff send order dari tablet mereka\n   - Order instantly muncul di KDS screen\n   - Audio/visual alert (bell, beep)\n   - New order highlight (blue color)\n   - Kitchen staff see order\n\n2. **Order Info:**\n   - Table number & pax\n   - All items dengan qty\n   - Special request/notes per item\n   - Timestamp order diterima\n\n3. **Acknowledge Order:**\n   - Kitchen staff click 'Start Cooking' atau similar\n   - Order color change: Blue → Yellow (in progress)\n   - Timestamp cooking start recorded"
+        },
+        {
+          "title": "Step 2: Prepare Items",
+          "body": "1. **Kitchen Staff mengambil order:**\n   - Read order detail dari KDS\n   - Gather ingredients\n   - Start cooking\n\n2. **Progress Tracking:**\n   - Order show elapsed time (live countdown)\n   - Color change saat milestone:\n     * Yellow: 2-10 min (normal progress)\n     * Red: > 10 min (overdue/slow)\n   - Alerts: If taking too long\n\n3. **Multi-Item Order:**\n   - Prepare items sequentially atau parallel\n   - Example:\n     * Nasi Goreng: Start first (longest)\n     * Gado-gado: Start after (shorter)\n     * Es Teh: Last (instant)\n   - Coordinate timing untuk semua siap bersamaan\n\n4. **Quality Check:**\n   - Before mark ready: Check plating, taste, temperature\n   - Fix issues immediately\n   - Ensure consistency"
+        },
+        {
+          "title": "Step 3: Mark Item Ready",
+          "body": "1. **Item Selesai & Ready di Pass:**\n   - Staff click 'Ready' untuk item (atau seluruh order)\n   - Status update di KDS\n   - FoH get notified (bell, notification)\n\n2. **What Changes:**\n   - Item status: COOKING → READY\n   - Display pada KDS: Green / Ready indicator\n   - Order remain on KDS (sampai FoH confirm pickup)\n\n3. **Station Status:**\n   - If all station items for order ready:\n     * Order → READY (semua item done)\n     * Pass to expediter/FoH\n   - If partial:\n     * Order → PARTIAL READY\n     * Show which items ready, which pending\n\n4. **Expiration:**\n   - Item too long di pass: Notification\n   - Prevent cold dishes from sitting too long\n   - Auto-alert after 5-10 min (configurable)"
+        },
+        {
+          "title": "Step 4: Multi-Station Coordination",
+          "body": "**Scenario:** Order dengan items dari multiple stations\n\nOrder: Steak (grill) + Fried Chicken (fryer) + Salad (prep) + Drink (bar)\n\n1. **Order Split ke Stations:**\n   - FoH send order\n   - System auto-route:\n     * Grill station: Steak\n     * Fryer station: Fried Chicken\n     * Prep station: Salad\n     * Bar: Drink\n   - Each station see relevant items saja\n\n2. **Parallel Cooking:**\n   - All 4 station start simultaneously\n   - Each work at own pace\n   - No blocking (tidak tunggu station lain)\n\n3. **Coordination:**\n   - Grill: \"Steak ready\" (but wait untuk other stations)\n   - Fryer: \"Fried chicken ready\" (hold di pass)\n   - Prep: \"Salad ready\"\n   - Bar: \"Drink ready\"\n   - When ALL items ready → Expediter/Lead assemble & check\n   - Then mark ORDER READY\n   - Send ke FoH\n\n4. **Central Queue:**\n   - Main KDS show: Order ready when ALL stations done\n   - Not when first station ready\n   - Prevent incomplete orders going out\n\n5. **Problem Handling:**\n   - If one station slow: Auto-alert\n   - Lead kitchen coordinate expedite\n   - Prevent bottleneck"
+        },
+        {
+          "title": "Step 5: Issue Handling - Reprep, Delay, Cancel",
+          "body": "**Scenario A: Salah Persiapan (Wrong Item)**\n\n1. Kitchen realize buat salad salah (ngasih yang pedes, tapi customer \"not spicy\")\n2. Click 'Reprep' button di KDS\n3. System update:\n   - Item status → REPREP (being redone)\n   - Note: \"Redoing - wrong preparation\"\n   - Restart timer\n4. Kitchen start ulang item\n5. When fixed: Click 'Ready' again\n\n**Scenario B: Item Delayed (Out of Stock/Issue)**\n\n1. Kitchen realize item out of stock (e.g., \"Beef habis\")\n2. Click 'Delay' button\n3. Dialog muncul: Input reason & estimated delay\n4. System broadcast:\n   - KDS notify: \"Order #3 delayed - beef out of stock, ETA 15 min\"\n   - FoH get alert (untuk inform customer)\n   - Customer: \"Steak akan prepare, tunggu 15 menit\"\n5. Update: \"Beef dari storage\" atau \"Switch menu?\"\n6. Either:\n   - Kitchen proceed saat beef available\n   - Or customer change menu\n\n**Scenario C: Customer Cancel Item**\n\n1. Customer change mind: \"Cancel salad, ganti somay\"\n2. FoH update order di KDS: Remove salad item\n3. KDS update di prep station:\n   - Prep station see: \"Salad item REMOVED\"\n   - Click 'Confirm Cancel'\n   - Don't prep salad\n4. Add new item (somay) jika ada\n\n**Scenario D: Full Order Cancel**\n\n1. Customer ingin cancel seluruh order\n2. FoH click 'Void Order' di POS\n3. System transmit cancel to KDS:\n   - All stations see: \"ORDER CANCELLED - #3\"\n   - Red alert / different color\n   - Don't prepare\n4. Kitchen acknowledge cancel"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Station Management"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Configuring Kitchen Stations",
+          "body": "Admin setup stations sesuai kitchen layout.\n\n**Common Stations:**\n- Grill: Steak, grilled fish, grilled chicken\n- Fryer: Fried items, fries\n- Saute: Stir-fry, sauces\n- Pastry: Desserts, breads\n- Beverage/Bar: Drinks, coffee\n- Prep/Salad: Cold items\n- Expediter/Assembly: Final plating\n\n**Per-Station Settings:**\n- Station name\n- Menu items assigned\n- Display device (KDS tablet)\n- Default prep time per item\n- Alert threshold (yellow/red timing)\n\n**Example Configuration:**\n```\nStation: Grill\nItems: Steak, Grilled Fish, Grilled Chicken\nDevice: Tablet at grill station\nDefault prep time: 12 min\nYellow alert: > 8 min\nRed alert: > 12 min\n```"
+        },
+        {
+          "title": "Station Workflow",
+          "body": "**Typical Grill Station Workflow:**\n\n1. **Display Show Items to Cook:**\n   - ORDER #1: Steak rare (grill)\n   - ORDER #2: Grilled fish (grill)\n   - ORDER #3: Chicken grilled (grill)\n\n2. **Station Lead Prioritize:**\n   - Look at order time (FIFO)\n   - Look at est. prep time (express orders first)\n   - Start cooking based priority\n\n3. **Start Cooking:**\n   - Click 'Start' button untuk order #1\n   - Put steak on grill\n   - Timer start\n   - KDS update order color\n\n4. **During Cooking:**\n   - Flip, season, check\n   - Monitor timer on KDS\n   - Adjust based on item type\n\n5. **Item Ready:**\n   - Place di pass area\n   - Click 'Ready' button\n   - KDS notify other stations & FoH\n\n6. **Expediter Assemble:**\n   - Wait untuk all stations items\n   - Plate together\n   - Quality check\n   - Send ke FoH\n\n7. **FoH Pickup & Serve:**\n   - FoH come to pass\n   - Take plated order\n   - Verify all items\n   - Serve ke table\n   - Mark SERVED di POS"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Performance Metrics"
+    },
+    {
+      "type": "text",
+      "body": "**KDS Analytics:**\n\n1. **Average Prep Time (per item):**\n   - Track: How long typically steak take?\n   - Data: Sum(prep_time) / count(items)\n   - Use: Set realistic timers, identify bottlenecks\n\n2. **Station Efficiency:**\n   - Orders/hour per station\n   - Downtime tracking\n   - Peak load times\n\n3. **Order Completion Rate:**\n   - On-time vs late orders\n   - Delay reasons\n   - Trends\n\n4. **Bottleneck Detection:**\n   - Which station slow?\n   - When does it happen?\n   - Root cause analysis\n\n5. **Report Dashboard:**\n   - Daily KDS report\n   - Trending: Prep times, efficiency\n   - Alert history (delays, errors)\n   - Staff performance (if individual tracking)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Best Practices"
+    },
+    {
+      "type": "text",
+      "body": "1. **Order Priority:**\n   - FIFO (First In First Out) generally\n   - But expedite express orders\n   - Coordinate dgn FoH untuk rush timing\n\n2. **Communication:**\n   - Use delay notification early\n   - Don't silent about issues\n   - Inform FoH → Inform customer\n\n3. **Quality Over Speed:**\n   - Don't rush & sacrifice quality\n   - Better late & good than early & bad\n   - Check before marking ready\n\n4. **Multi-Task Management:**\n   - Start long-cook items first\n   - Overlap cooking (grill + fryer simultaneously)\n   - Coordinate timing\n\n5. **Station Lead Coordination:**\n   - Lead guide team\n   - Adapt to demand\n   - Help if bottleneck\n\n6. **KDS Monitor:**\n   - Glance regularly\n   - Check for new orders\n   - Monitor overdue items (red alerts)\n   - Act on delays early"
+    }
+  ]
+}

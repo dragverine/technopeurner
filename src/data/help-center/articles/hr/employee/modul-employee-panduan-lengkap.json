@@ -1,0 +1,182 @@
+{
+  "title": "Modul HRD - Employee (Karyawan) - Panduan Lengkap",
+  "description": "Panduan lengkap menggunakan Modul Employee dalam sistem HRD GIMS mencakup manajemen data karyawan, validasi, approval workflow, dan integrasi dengan departemen.",
+  "slug": "modul-employee-panduan-lengkap",
+  "module": "hr",
+  "subcategory": "employee",
+  "author": "Tim GIMS",
+  "createdAt": "2026-04-19",
+  "updatedAt": "2026-04-19",
+  "tags": ["hr", "employee", "karyawan", "data karyawan", "approval", "workflow"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Modul Employee adalah fondasi dari sistem HRD yang mengelola informasi lengkap setiap karyawan perusahaan. Modul ini terintegrasi dengan berbagai sistem seperti Attendance, Leave Request, Payroll, dan Finance."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Fitur Utama"
+    },
+    {
+      "type": "card",
+      "items": [
+        {
+          "title": "Daftar Karyawan",
+          "body": "Lihat semua karyawan dengan filter dan pencarian canggih"
+        },
+        {
+          "title": "Buat Karyawan Baru",
+          "body": "Tambah data karyawan melalui form multi-tab dengan validasi"
+        },
+        {
+          "title": "Kelola Data",
+          "body": "Edit, approve, atau nonaktifkan karyawan sesuai workflow"
+        },
+        {
+          "title": "Area Assignment",
+          "body": "Assign karyawan ke multiple area kerja"
+        },
+        {
+          "title": "Approval Workflow",
+          "body": "Proses persetujuan untuk data karyawan baru"
+        },
+        {
+          "title": "Status Management",
+          "body": "Kelola active, inactive, contract end status"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Panduan Penggunaan"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Mengakses Modul Employee",
+          "body": "1. Pada sidebar aplikasi, klik menu HRD untuk melihat submenu yang tersedia.\n2. Dari submenu HRD, klik Employee untuk membuka halaman manajemen karyawan lengkap.",
+          "image": {
+            "src": "/images/help/hr/employee/employee-list-view.webp",
+            "alt": "Halaman daftar karyawan"
+          }
+        },
+        {
+          "title": "Daftar Karyawan & Filter",
+          "body": "Menampilkan semua karyawan dengan kolom: Employee Code (otomatis), Name, Division, Position, Email, Status, dan Approval Status.\n\nFilter Tersedia:\n- Division: Cari karyawan per divisi\n- Position: Filter berdasarkan jabatan\n- Area: Filter berdasarkan area kerja\n- Status: Active, Inactive, Contract End\n- Approval Status: Draft, Pending, Approved, Rejected\n\nContoh: Search \"Ahmad\" → tampilkan semua dengan nama Ahmad. Filter Division=\"Sales\" + Position=\"Sales Rep\" → Lihat sales rep di divisi sales.",
+          "image": {
+            "src": "/images/help/hr/employee/employee-filter-search.webp",
+            "alt": "Filter dan pencarian Employee List"
+          }
+        },
+        {
+          "title": "Membuat Karyawan Baru (5 Langkah)",
+          "body": "Proses penambahan karyawan melalui beberapa tahap data entry dan approval:\n\n1. Buka Form: Pada Employee list, klik tombol + New Employee untuk membuka form penambahan karyawan baru.\n\n2. Tab Personal Data: Lengkapi informasi pribadi (field dengan * adalah wajib):\n   - Full Name*: Nama lengkap sesuai KTP\n   - Email*: Email aktif & unik\n   - Phone: Nomor telepon\n   - Date of Birth: Tanggal lahir\n   - Gender: Laki-laki atau Perempuan\n   - Religion: Agama\n   - Address: Alamat rumah\n   - City & Zip Code: Kota dan kode pos\n\n3. Tab Work Information: Lengkapi informasi pekerjaan:\n   - Division*: Divisi/departemen\n   - Position*: Jabatan\n   - Join Date*: Tanggal mulai bekerja\n   - Employment Type*: PKWTT, PKWT, Outsourced, Intern\n   - Contract End Date: Jika PKWT, tentukan tanggal berakhir kontrak\n   - Total Leave Quota*: Jumlah hari cuti per tahun\n   - Manager/Supervisor: Atasan langsung\n\n4. Tab Tax & Benefits: Lengkapi informasi pajak dan benefit:\n   - PTKP Status*: TK/0, K/1, K/2, K/3 (untuk perhitungan PPh 21)\n   - Disability Status: Centang jika ada disabilitas\n   - Bank Name: Pilih bank untuk transfer gaji\n   - Bank Account Number: Nomor rekening karyawan\n   - NPWP: Nomor Pokok Wajib Pajak (opsional)\n\n5. Review & Submit: Periksa semua data, pastikan field * lengkap, kemudian klik Submit. Status berubah menjadi PENDING.",
+          "image": {
+            "src": "/images/help/hr/employee/employee-create-form.webp",
+            "alt": "Form membuat karyawan baru"
+          }
+        },
+        {
+          "title": "Detail Karyawan & Pengeditan",
+          "body": "Setelah karyawan dibuat dengan status PENDING, klik nama karyawan untuk membuka halaman detail dengan berbagai informasi dan aksi.\n\nTab yang tersedia:\n- Overview: Informasi singkat dan tombol aksi\n- Personal Data: Data pribadi karyawan\n- Work Information: Informasi kerja\n- Tax & Benefits: Data pajak & benefit\n- Areas: Area kerja yang di-assign\n- Documents: Dokumen karyawan\n\nUntuk edit: Field dengan warna gelap tidak bisa diedit (locked). Hanya admin/manager dengan permission tertentu yang bisa edit. Setiap perubahan akan dicatat di audit trail.",
+          "image": {
+            "src": "/images/help/hr/employee/employee-detail-view.webp",
+            "alt": "Halaman detail karyawan"
+          }
+        },
+        {
+          "title": "Area Assignment",
+          "body": "Satu karyawan bisa di-assign ke multiple area kerja.\n\nUse Case:\n- Manager Sales bisa mengawasi area Jabodetabek + Bandung\n- Sales Rep bisa visit area Jakarta + Tangerang\n- Admin bisa handle multiple branches\n\nCara Assign Area:\n1. Buka halaman detail karyawan\n2. Klik tab Areas\n3. Klik tombol + Add Area\n4. Dialog form: Pilih area dari dropdown (Jakarta Pusat, Jakarta Utara, Surabaya, dll)\n5. Klik Save untuk confirm\n\nCara Remove Area:\n1. Di tab Areas, lihat daftar area yang sudah di-assign\n2. Klik tombol Remove di sebelah area yang ingin dihapus\n3. Konfirmasi penghapusan\n\nValidasi:\n- Satu karyawan minimal harus assign ke 1 area\n- Tidak bisa assign ke area yang sama 2x",
+          "image": {
+            "src": "/images/help/hr/employee/employee-area-assignment.webp",
+            "alt": "Area assignment untuk karyawan"
+          }
+        },
+        {
+          "title": "Approval Workflow",
+          "body": "Setelah karyawan baru dibuat dengan status PENDING, harus di-approve oleh authorized user sebelum bisa active.\n\nStatus Karyawan:\n- DRAFT: Belum disubmit. Actions: Edit, Delete, Submit\n- PENDING: Menunggu approval. Actions: Edit, Approve, Reject\n- APPROVED: Sudah disetujui. Actions: Activate, Deactivate\n- REJECTED: Ditolak approval. Actions: Edit, Resubmit, Delete\n- ACTIVE: Aktif bekerja. Actions: Edit, Deactivate\n- INACTIVE: Tidak aktif. Actions: Activate, Delete\n- CONTRACT_END: Kontrak berakhir. Actions: Rehire, Archive\n\nCara Approve Karyawan:\n1. Buka halaman Employee list\n2. Filter status Pending untuk lihat daftar karyawan pending approval\n3. Klik nama karyawan yang akan di-approve\n4. Klik tombol Approve di bagian atas\n5. Dialog konfirmasi muncul, klik Confirm Approval\n6. Status berubah menjadi APPROVED\n\nCatatan: Hanya user dengan role \"Manager\" atau \"Admin\" yang bisa approve. Setelah approve, karyawan bisa di-activate untuk mulai bekerja.\n\nCara Reject Karyawan:\n1. Buka detail karyawan dengan status PENDING\n2. Klik tombol Reject\n3. Dialog muncul, pilih alasan rejection dari dropdown\n4. Isi Comments (optional): Alasan detail kenapa ditolak\n5. Klik Confirm Reject\n6. Status berubah menjadi REJECTED\n\nYang bisa dilakukan setelah reject:\n- Karyawan bisa di-edit dan di-resubmit untuk approval ulang\n- Atau bisa didelete dari sistem",
+          "image": {
+            "src": "/images/help/hr/employee/employee-approval-workflow.webp",
+            "alt": "Workflow approval karyawan"
+          }
+        },
+        {
+          "title": "Employee Status Management",
+          "body": "Activate Employee (Membuat Aktif)\n\nKapan perlu activate?\n- Setelah approval selesai, karyawan siap bekerja\n- Setelah rehire (karyawan lama yang kembali)\n- Setelah inactive period selesai\n\nCara activate:\n1. Buka detail karyawan dengan status APPROVED atau INACTIVE\n2. Klik tombol Activate\n3. Status berubah menjadi ACTIVE\n4. Karyawan sekarang bisa:\n   - Clock in/out di Attendance\n   - Ajukan Leave Request\n   - Masuk ke Payroll\n\n---\n\nDeactivate Employee (Menonaktifkan)\n\nKapan perlu deactivate?\n- Karyawan resign/keluar\n- Karyawan cuti panjang\n- Karyawan dihentikan sementara\n\nCara deactivate:\n1. Buka detail karyawan ACTIVE\n2. Klik tombol Deactivate\n3. Dialog form muncul:\n   - Inactive Reason: Pilih alasan (Resignation, Leave, Termination, dll)\n   - Effective Date: Tanggal mulai inactive\n   - Notes (optional): Catatan tambahan\n4. Klik Confirm\n5. Status berubah menjadi INACTIVE\n\nKonsekuensi:\n- Karyawan tidak bisa clock in di Attendance\n- Tidak muncul di dropdown untuk new transaction\n- Data tetap tersimpan (soft delete)\n\n---\n\nContract End Management\n\nJika Employment Type = PKWT (Kontrak):\n1. Sistem otomatis akan tandai sebagai CONTRACT_END saat tanggal kontrak berakhir\n2. Manager akan menerima notifikasi untuk renewal atau release\n3. Bisa dipilih untuk:\n   - Renew Contract: Extend kontrak (ubah Contract End Date)\n   - Release: Akhiri kontrak (deactivate)\n   - Rehire: Jadikan permanent (ubah Employment Type ke PKWTT)",
+          "image": {
+            "src": "/images/help/hr/employee/employee-status-management.webp",
+            "alt": "Status management karyawan"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Skenario Praktis"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Skenario 1: Onboarding Karyawan Baru",
+          "body": "Karyawan baru \"Budi Santoso\" akan menjadi Sales Rep di divisi Sales dengan kontrak 1 tahun.\n\nLangkah-langkah:\n\n1. Buka modul Employee → klik + New Employee\n\n2. Tab Personal Data, isi:\n   - Full Name: Budi Santoso\n   - Email: budi.santoso@company.com\n   - Phone: +62812345678\n   - Date of Birth: 12/05/1995\n   - Gender: Male\n   - Religion: Islam\n   - Address: Jl. Merdeka 123, Jakarta Pusat\n   - City: Jakarta, Zip Code: 12345\n\n3. Tab Work Information, isi:\n   - Division: Sales\n   - Position: Sales Rep\n   - Join Date: 01/04/2026\n   - Employment Type: PKWT (Contract)\n   - Contract End Date: 31/03/2027\n   - Total Leave Quota: 12\n   - Manager: Andi Wijaya\n\n4. Tab Tax & Benefits, isi:\n   - PTKP Status: TK/0\n   - Bank Name: BCA\n   - Bank Account: 1234567890\n\n5. Klik Submit → Status menjadi PENDING\n\n6. Manager atau Admin approve:\n   - Buka detail Budi Santoso\n   - Klik Approve\n   - Status berubah ke APPROVED\n\n7. Activate karyawan:\n   - Di halaman detail Budi, klik Activate\n   - Status berubah ke ACTIVE\n   - Budi bisa mulai bekerja besok hari\n\n8. Assign ke Area (opsional):\n   - Tab Areas → + Add Area\n   - Assign ke area \"Jakarta Pusat\"\n   - Budi sekarang bisa melayani customer di area tersebut\n\nResult: Budi sudah siap bekerja, bisa clock in di Attendance, dan termasuk di Payroll bulan berikutnya.",
+          "image": {
+            "src": "/images/help/hr/employee/employee-onboarding.webp",
+            "alt": "Proses onboarding karyawan baru"
+          }
+        },
+        {
+          "title": "Skenario 2: Update Data Karyawan (Promosi)",
+          "body": "Karyawan \"Siti Nurhaliza\" awalnya \"Staff\" dipromosikan menjadi \"Senior Staff\".\n\nLangkah-langkah:\n\n1. Cari Siti Nurhaliza di halaman Employee list\n2. Buka detail → Tab Work Information\n3. Klik Edit\n4. Ubah Position: dari Staff → Senior Staff\n5. Ubah Salary (jika ada field): Naikkan sesuai promosi\n6. Klik Save/Update\n7. Konfirmasi: Data sudah terupdate, perubahan berlaku otomatis untuk attendance dan payroll\n\nCatatan:\n- Jika ada field yang tidak bisa diedit (tertutup), itu berarti ada restriction dari admin\n- Contact admin jika butuh unlock field tertentu",
+          "image": {
+            "src": "/images/help/hr/employee/employee-update-promotion.webp",
+            "alt": "Update data karyawan promosi"
+          }
+        },
+        {
+          "title": "Skenario 3: Employee Resign / Deactivate",
+          "body": "Karyawan \"Ahmad Riyanto\" resign per 30 April 2026.\n\nLangkah-langkah:\n\n1. Buka detail Ahmad Riyanto\n2. Klik Deactivate\n3. Isi form:\n   - Inactive Reason: Resignation\n   - Effective Date: 30/04/2026\n   - Notes: Resign dengan penggantian sudah siap\n4. Klik Confirm\n5. Status berubah ke INACTIVE\n\nKonsekuensi:\n- Ahmad tidak bisa clock in mulai 30/04/2026\n- Tidak muncul di dropdown \"Manager\" untuk karyawan baru\n- Data Ahmad tetap tersimpan untuk audit/history\n- Jika ada leave request pending, akan ditandai untuk review\n\nJika Ahmad nanti kembali (rehire):\n- Buka detail Ahmad → Klik Activate\n- Status kembali ke ACTIVE\n- Atau buat data baru jika butuh reset (jarang dilakukan)",
+          "image": {
+            "src": "/images/help/hr/employee/employee-resign.webp",
+            "alt": "Proses deactivasi karyawan resign"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Integrasi Antar Modul"
+    },
+    {
+      "type": "text",
+      "body": "Modul Employee terintegrasi dengan beberapa modul lain dalam sistem GIMS:\n\n1. Integrasi dengan Attendance\nSetiap karyawan ACTIVE otomatis bisa clock in/out di Attendance module. Data dicatat hadir, telat, atau absent, dan muncul di attendance report per division.\n\n2. Integrasi dengan Leave Request\nKaryawan ACTIVE bisa ajukan leave request dengan quota dari field Total Leave Quota. Quota otomatis dikurangi saat leave di-approve dan dapat notifikasi leave approval dari manager.\n\n3. Integrasi dengan Payroll\nKaryawan ACTIVE otomatis included di salary processing setiap bulan. Bank account dari field Bank Account Number di-gunakan untuk transfer gaji, dan PTKP Status dipakai untuk hitung PPh 21 (tax).\n\n4. Integrasi dengan Organization\nDivision dan Position harus sudah dibuat sebelum create employee. Jika belum ada, buat dulu di menu Organization. Employee muncul di reporting per division."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Tips & Troubleshooting"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Pertanyaan Umum",
+          "body": "Q: Berapa lama proses approval karyawan baru?\nA: Biasanya 1-2 hari kerja tergantung manager. Set reminder jika pending terlalu lama.\n\nQ: Bisa ganti Email karyawan?\nA: Ya, buka tab Personal Data → Edit → ubah Email → Save. Email harus unik (tidak duplicate).\n\nQ: Kalau kontrak 6 bulan, gimana caranya?\nA: Pilih Employment Type PKWT, set Contract End Date 6 bulan dari Join Date. Sistem otomatis notify untuk renewal/release.\n\nQ: Bisa delete karyawan yang sudah active?\nA: Tidak bisa delete karyawan ACTIVE (protect dari accidentally delete). Harus deactivate dulu.\n\nQ: Berapa banyak area bisa di-assign?\nA: Unlimited. Satu karyawan bisa handle multiple area."
+        },
+        {
+          "title": "Troubleshooting",
+          "body": "Masalah: Tidak bisa submit karyawan\nSolusi: Pastikan semua field * (required) sudah terisi\n\nMasalah: Email duplicate error\nSolusi: Email sudah dipakai karyawan lain. Gunakan email unik.\n\nMasalah: Tidak bisa edit field tertentu\nSolusi: Field locked untuk protection. Contact admin untuk unlock.\n\nMasalah: Karyawan tidak muncul di attendance\nSolusi: Pastikan status karyawan = ACTIVE. Inactive/Draft tidak bisa clock in.\n\nMasalah: Attendance tidak ada di Payroll\nSolusi: Sync delay 1-2 jam. Tunggu atau contact IT untuk manual sync."
+        },
+        {
+          "title": "Best Practices",
+          "body": "1. Update data tepat waktu - Jangan tunggu akhir bulan untuk update payroll-related data\n\n2. Lengkapi NPWP & Bank Account - Penting untuk payroll & perpajakan\n\n3. Assign Manager untuk setiap karyawan - Untuk approval chain dan reporting\n\n4. Review data sebelum activate - Double-check nama, division, join date\n\n5. Archive data resign - Keep employee record untuk audit trail & history"
+        }
+      ]
+    }
+  ]
+}

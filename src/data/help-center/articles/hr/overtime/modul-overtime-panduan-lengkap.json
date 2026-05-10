@@ -1,0 +1,202 @@
+{
+  "title": "Modul HRD - Overtime (Lembur) - Panduan Lengkap",
+  "description": "Panduan lengkap menggunakan Modul Overtime dalam sistem HRD GIMS mencakup overtime request (manual & auto-detected), approval workflow, rate multiplier calculation (1.5x untuk weekday, 2.0x untuk weekend), compensation tracking, monthly limit enforcement, dan integration dengan payroll untuk perhitungan gaji lembur.",
+  "slug": "modul-overtime-panduan-lengkap",
+  "module": "hr",
+  "subcategory": "overtime",
+  "author": "Tim GIMS",
+  "createdAt": "2026-04-21",
+  "updatedAt": "2026-04-21",
+  "tags": ["hr", "overtime", "lembur", "overtime-request", "overtime-approval", "overtime-pay", "rate-multiplier", "weekday", "weekend"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Modul Overtime mengelola seluruh proses overtime (lembur) karyawan mulai dari submission (manual atau auto-detected dari attendance), approval workflow multi-level, rate multiplier berbeda (weekday 1.5x, weekend 2.0x), compensation calculation, compliance dengan monthly limit, hingga integration dengan payroll untuk automatic payment processing. Modul ini terintegrasi dengan Attendance untuk auto-detection jam kerja tambahan, Payroll untuk gaji lembur calculation, dan Notification system untuk approval workflow."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Fitur Utama"
+    },
+    {
+      "type": "card",
+      "items": [
+        {
+          "title": "Overtime Request (Manual & Auto-Detected)",
+          "body": "Support 3 jenis overtime submission: manual claim dari employee, auto-detected dari attendance clock-out, dan pre-approved untuk planned overtime"
+        },
+        {
+          "title": "Approval Workflow",
+          "body": "Multi-level approval (Manager approval dengan optional minute adjustment) sebelum overtime diproses untuk payroll"
+        },
+        {
+          "title": "Rate Multiplier Otomatis",
+          "body": "System auto-calculate overtime rate berdasarkan hari (1.5x weekday, 2.0x weekend/holiday) dari standard hourly rate"
+        },
+        {
+          "title": "Monthly Limit Tracking",
+          "body": "Monitor total approved overtime per employee per bulan dengan enforcement limit (biasanya 20 jam/bulan sesuai labor law)"
+        },
+        {
+          "title": "Auto-Detection dari Attendance",
+          "body": "Ketika employee clock-out dengan working hours lebih dari jadwal, system otomatis generate overtime record untuk manager approval"
+        },
+        {
+          "title": "Compensation Calculation",
+          "body": "Auto-calculate overtime compensation (approved minutes × hourly rate × multiplier) ready untuk payroll processing"
+        },
+        {
+          "title": "Overtime Reports & Analytics",
+          "body": "Generate laporan overtime usage, cost analysis, monthly trends, dan employee contribution untuk management review"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Cara Akses Modul Overtime"
+    },
+    {
+      "type": "timeline",
+      "items": [
+        {
+          "title": "Buka Menu HRD",
+          "body": "Pada sidebar aplikasi, klik menu HRD untuk melihat submenu yang tersedia.",
+          "image": {
+            "src": "/images/help/hr/overtime/menu-hrd.webp",
+            "alt": "Menu HRD di sidebar"
+          }
+        },
+        {
+          "title": "Pilih Submenu Overtime",
+          "body": "Dari submenu HRD, klik Overtime untuk membuka halaman manajemen overtime/lembur karyawan.",
+          "image": {
+            "src": "/images/help/hr/overtime/menu-overtime.webp",
+            "alt": "Submenu Overtime"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Jenis-Jenis Overtime Request"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Manual Claim (Pengajuan Manual oleh Employee)",
+          "body": "Employee secara manual submit overtime claim untuk jam kerja tambahan yang dilakukan.\n\n---\n\nKARATERISTIK:\n\n• Initiation: Employee submit via system (self-service)\n• Timing: Bisa submit hari kerja tersebut atau hari berikutnya\n• Duration: Employee specify start & end time\n• Rate: Auto-calculated berdasarkan date (weekday 1.5x atau weekend 2.0x)\n• Status: PENDING (menunggu manager approval)\n• Required Info:\n  - Date: Tanggal overtime (YYYY-MM-DD)\n  - Start Time: Jam mulai (HH:MM format)\n  - End Time: Jam selesai (HH:MM format)\n  - Reason: Alasan lembur (max 500 karakter)\n  - Task Details (optional): Apa yang dikerjakan\n\n---\n\nEXAMPLE FLOW:\n\n1. Employee \"Budi\" selesai kerja 20:00 (biasanya 17:00)\n2. Budi buka Overtime → Click \"+ Request Overtime\"\n3. Isi form:\n   • Date: 10 April 2026\n   • Start Time: 17:00\n   • End Time: 20:00\n   • Reason: \"Urgent project finish for client deadline\"\n4. Duration auto-calculated: 3 hours (180 minutes)\n5. Rate auto-determined: Weekday → 1.5x\n6. Click Submit → Status PENDING\n7. Manager \"Andi\" receive notification\n8. Andi review & approve atau reject\n9. If approved → masuk payroll calculation\n\n---\n\nRULES:\n\n✓ Employee hanya bisa submit untuk jam kerja yang sudah lewat (tidak future OT)\n✓ End time harus > start time (sistem validate)\n✓ Max duration per request: 12 jam (system limit)\n✓ Reason required (tidak bisa kosong)\n✓ Hanya pending overtime yang bisa diedit/dibatalkan\n✓ Approved overtime tidak bisa diedit (final untuk payroll)",
+          "image": {
+            "src": "/images/help/hr/overtime/manual-claim.webp",
+            "alt": "Manual overtime claim"
+          }
+        },
+        {
+          "title": "Auto-Detected (Otomatis dari Attendance Clock-Out)",
+          "body": "Sistem otomatis detect overtime ketika employee clock-out dengan working hours lebih dari scheduled.\n\n---\n\nKARATERISTIK:\n\n• Trigger: Employee clock-out, actual duration > scheduled duration\n• Detection: Otomatis di background (seamless)\n• Status: PENDING (awaiting manager approval)\n• Rate: Auto-calculated berdasarkan date\n• Source: Linked ke Attendance Record (traceable)\n• No action needed dari employee (automatic)\n\n---\n\nEXAMPLE FLOW:\n\n1. Employee \"Siti\" jadwal: 09:00-17:00 (8 jam)\n2. Siti clock in: 09:00\n3. Siti busy with task (meetings, client call)\n4. Siti clock out: 19:00 (2 jam lebih)\n5. System calculate:\n   • Scheduled: 8 hours\n   • Actual: 10 hours\n   • Overtime: 2 hours (120 minutes)\n6. System auto-create OT record:\n   • Type: AUTO_DETECTED\n   • Status: PENDING\n   • Duration: 120 minutes\n   • Rate: Weekday 1.5x (10 April is Wednesday)\n   • Linked to Attendance Record ID\n7. Manager notification sent\n8. Manager review (optional adjust) & approve\n9. Included di payroll\n\n---\n\nRULES:\n\n✓ Auto-trigger jika actual hours > scheduled hours\n✓ Min 15 minutes overtime (tidak dihitung jika < 15 min)\n✓ Reason auto-filled: \"Auto-detected from clock out time\"\n✓ Employee TIDAK bisa edit auto-detected OT (system-generated)\n✓ Employee bisa cancel jika PENDING (request withdraw)\n✓ Manager approval required sebelum payroll processing\n✓ Linked to specific Attendance Record (traceable, no manipulation)\n\n---\n\nWHEN AUTO-DETECTION HAPPENS:\n\n✓ Regular weekday overtime (clock out after 17:00)\n✓ Weekend worked (scheduled off, tapi clock in → clock out)\n✓ Holiday worked (national holiday, tapi clock in → clock out)\n✓ Night shift extended (scheduled 22:00-06:00, clock out 07:00)\n✓ Flexible schedule (scheduled 07:00-10:00 core flexibility)",
+          "image": {
+            "src": "/images/help/hr/overtime/auto-detected.webp",
+            "alt": "Auto-detected overtime from attendance"
+          }
+        },
+        {
+          "title": "Pre-Approved (Overtime Terencana Sebelumnya)",
+          "body": "Manager pre-approve overtime untuk planned/expected working hours sebelum actually worked (untuk project planning).\n\n---\n\nKARATERISTIK:\n\n• Submission: Manager submit on behalf of employee (planned)\n• Timing: Before work actually happens (advance approval)\n• Status: APPROVED (tidak perlu approval lagi)\n• Use case: Untuk project dengan known deadlines\n• Employee: Hanya kerja sesuai pre-approved jam\n• Duration: Planned hours (bisa berbeda dengan actual)\n\n---\n\nEXAMPLE FLOW:\n\n1. Project Manager \"David\" plan: Sistem deployment 15-16 April (2 hari)\n2. Need team overtime: 4 jam/hari untuk deployment prep\n3. David log in sebagai HR/manager\n4. Create Pre-Approved OT untuk team:\n   • Date: 15 April\n   • Start Time: 18:00\n   • End Time: 22:00\n   • Duration: 4 hours (planned)\n   • Employee: \"Budi, Siti, Ahmad\" (batch)\n   • Reason: \"System deployment preparation\"\n5. Status: APPROVED (sudah approved, langsung go)\n6. Employee see di dashboard: Pre-approved OT ready\n7. 15 April:\n   • Budi clock out 22:00 (sesuai pre-approved)\n   • Siti clock out 22:30 (lebih 30 min)\n   • Ahmad clock out 21:30 (kurang 30 min)\n8. Actual vs Planned:\n   • Budi: 4 hours approved ✓\n   • Siti: 4.5 hours actual (manager adjust approved to 4.5)\n   • Ahmad: 3.5 hours actual (less than planned, OK)\n9. Payroll: Calculate berdasarkan approved_minutes (flexible)\n\n---\n\nRULES:\n\n✓ Only manager/HR bisa create pre-approved OT\n✓ Status immediately APPROVED (no pending step)\n✓ Approved minutes = planned minutes (at creation)\n✓ Employee notified (informational)\n✓ Employee bisa work lebih atau kurang dari planned\n✓ Manager adjust actual_minutes after work completed\n✓ Payroll use approved_minutes (manager-adjusted)",
+          "image": {
+            "src": "/images/help/hr/overtime/pre-approved.webp",
+            "alt": "Pre-approved planned overtime"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Panduan Penggunaan"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Cara Submit Overtime (Employee)",
+          "body": "Prosedur lengkap untuk employee mengajukan manual overtime claim.\n\n---\n\nSTEP-BY-STEP:\n\n1. Buka halaman Overtime\n   - Menu HRD → Overtime\n   - Tampil: Monthly Summary, My Requests, Request Form\n\n2. Check Monthly Balance\n   - Lihat \"This Month Overtime\"\n   - Total approved: XX hours\n   - Remaining quota: YY hours (vs 20 jam limit)\n   - Pastikan masih dalam limit\n\n3. Klik + Request Overtime\n   - Form appear dengan fields:\n     • Date: YYYY-MM-DD format\n     • Start Time: HH:MM (ex: 17:00)\n     • End Time: HH:MM (ex: 20:00)\n     • Reason: Alasan lembur (required, max 500 chars)\n     • Task Details: Apa yang dikerjakan (optional)\n\n4. System Validation Otomatis\n   - ✓ Date valid (tidak future, tidak > 30 hari lalu)\n   - ✓ Time logical (end > start)\n   - ✓ Duration calculated (end - start)\n   - ✓ Rate determine (weekday 1.5x atau weekend 2.0x)\n   - Jika ada error, display message jelas\n\n5. Preview Calculation\n   - Tampil:\n     • Date: Tuesday, 10 April 2026\n     • Time: 17:00-20:00 (3 hours)\n     • Rate: 1.5x (weekday rate)\n     • Your hourly rate: Rp 50.000\n     • Estimated comp: 3h × Rp 50k × 1.5 = Rp 225.000\n\n6. Submit\n   - Klik \"Submit Overtime Request\"\n   - Status: PENDING\n   - Manager notification sent\n   - Employee dapat track di \"My Requests\"\n\n---\n\nSTATUS WORKFLOW:\n\n- PENDING: Menunggu manager approval\n- APPROVED: Manager approve, included di payroll\n- REJECTED: Manager reject, not paid\n- CANCELED: Employee cancel (only when PENDING)\n\n---\n\nKEY POINTS:\n\n✓ Submit ASAP after OT worked (same day or next day)\n✓ Provide clear reason (helps manager understand)\n✓ Actual end time (don't estimate)\n✓ Only PENDING request bisa di-cancel\n✓ Approved OT final (tidak bisa edit, ready payroll)",
+          "image": {
+            "src": "/images/help/hr/overtime/submit-ot.webp",
+            "alt": "Submitting overtime request"
+          }
+        },
+        {
+          "title": "Cara Approve/Reject Overtime (Manager)",
+          "body": "Prosedur untuk manager melakukan approval atau rejection overtime requests.\n\n---\n\nMANAGER DASHBOARD:\n\n1. Buka Overtime halaman\n   - Tab \"Pending Requests\" (requests yang perlu diapprove)\n   - Default: sorted by date (oldest first)\n   - Filter options: By employee, By status, Date range\n\n2. Review OT Request\n   - Klik request untuk expand/detail\n   - Lihat:\n     • Employee: Name, ID, Division\n     • Date, Time, Duration\n     • Reason & Task Details\n     • Calculated rate (1.5x atau 2.0x)\n     • Estimated compensation\n   - Cross-check:\n     • Valid reason? (work-related atau legit)\n     • Time realistic? (not too long)\n     • Project/deadline context?\n\n3. Decide: Approve atau Reject\n   \n   APPROVE:\n   - Default: Approve with actual_minutes as-is\n   - Optional: Adjust approved_minutes (if too much)\n   - Example: Employee claim 4 hours, manager reduce to 3 hours\n   - Klik \"Approve Overtime\"\n   - Status → APPROVED\n   - Notification to employee\n   \n   REJECT:\n   - Klik \"Reject Overtime\"\n   - Dialog popup:\n     • Reason: Select dari list atau custom\n       - \"Not justified (work could finish during regular hours)\"\n       - \"Excessive duration (more than reasonable)\"\n       - \"Missing documentation\"\n       - \"Other (explain)\"\n     • Message: Provide feedback ke employee\n   - Status → REJECTED\n   - Notification to employee dengan reason\n\n4. Special Handling\n   - Weekend/Holiday OT: Require additional approval from director\n   - Excessive OT (>4 jam): Flag untuk review\n   - Pattern: If employee frequently OT, discuss workload\n\n5. Team Monitoring\n   - Tab \"Team Summary\"\n   - View: Total approved OT per team member this month\n   - Ensure: Fair distribution (not concentrate to few)\n   - Alert: If approaching company limit (20 jam/bulan)\n\n---\n\nBEST PRACTICES:\n\n✓ Approve/reject within 24 hours (timely)\n✓ Provide feedback jika reject (help employee understand)\n✓ Monitor team OT trend (prevent pattern overwork)\n✓ Adjust if necessary (manager discretion untuk approve_minutes)\n✓ Escalate unusual case (director untuk big OT)\n✓ Discuss dengan employee jika pattern (workload issue?)",
+          "image": {
+            "src": "/images/help/hr/overtime/approve-ot.webp",
+            "alt": "Approving overtime requests"
+          }
+        },
+        {
+          "title": "Overtime Rate & Compensation Calculation",
+          "body": "Cara kerja overtime rate determination dan compensation calculation.\n\n---\n\nRATE MULTIPLIER DETERMINATION:\n\nSystem otomatis determine rate berdasarkan date:\n\n1. WEEKDAY (Monday-Friday): Rate = 1.5x\n   - Example:\n     • 10 April 2026 (Wednesday): 1.5x\n     • Standard hourly rate: Rp 50.000\n     • OT rate: Rp 50.000 × 1.5 = Rp 75.000/jam\n\n2. WEEKEND (Saturday/Sunday): Rate = 2.0x\n   - Example:\n     • 13 April 2026 (Saturday): 2.0x\n     • Standard hourly rate: Rp 50.000\n     • OT rate: Rp 50.000 × 2.0 = Rp 100.000/jam\n\n3. NATIONAL HOLIDAY: Rate = 3.0x (highest)\n   - Example:\n     • 10 April 2026 (Idul Fitri): 3.0x\n     • Standard hourly rate: Rp 50.000\n     • OT rate: Rp 50.000 × 3.0 = Rp 150.000/jam\n\n---\n\nCOMPENSATION CALCULATION FORMULA:\n\nCompensation = Approved Minutes × (Hourly Rate / 60) × Rate Multiplier\n\nExample 1 (Weekday OT):\n- Date: 10 April (Wednesday, weekday)\n- Approved minutes: 180 (3 hours)\n- Hourly rate: Rp 50.000\n- Rate multiplier: 1.5x\n- Calculation: 180 × (50000/60) × 1.5 = Rp 225.000\n\nExample 2 (Weekend OT):\n- Date: 13 April (Saturday, weekend)\n- Approved minutes: 360 (6 hours)\n- Hourly rate: Rp 60.000\n- Rate multiplier: 2.0x\n- Calculation: 360 × (60000/60) × 2.0 = Rp 720.000\n\nExample 3 (Holiday OT):\n- Date: 15 April (National Holiday)\n- Approved minutes: 240 (4 hours)\n- Hourly rate: Rp 40.000\n- Rate multiplier: 3.0x\n- Calculation: 240 × (40000/60) × 3.0 = Rp 480.000\n\n---\n\nMONTHLY TRACKING:\n\nSystem track monthly totals per employee:\n- Total Requested Minutes: Sum of actual_minutes (all OT)\n- Total Approved Minutes: Sum of approved_minutes (APPROVED only)\n- Total Rejected Minutes: Sum of actual_minutes (REJECTED only)\n- Request count: Breakdown by status (PENDING, APPROVED, REJECTED)\n\nExample April 2026 Summary (Employee \"Budi\"):\n- 10 April: 180 min (weekday) → APPROVED → Comp: Rp 225.000\n- 12 April: 120 min (weekday) → APPROVED → Comp: Rp 150.000\n- 13 April: 360 min (weekend) → APPROVED → Comp: Rp 540.000\n- 15 April: 240 min (holiday) → REJECTED → No payment\n- Total approved: 660 minutes (11 hours)\n- Total compensation: Rp 915.000\n\n---\n\nPAYROLL INTEGRATION:\n\n1. At month-end, Payroll module query approved OT\n2. Calculate total compensation (sum all approved OT)\n3. Add to gross salary (Rp 915.000 dalam example)\n4. Calculate tax & BPJS based on total gross\n5. Result: Net salary meningkat due to OT\n\n---\n\nKEY POINTS:\n\n✓ Rate otomatis determined (no manual input)\n✓ System use approved_minutes (manager-adjusted)\n✓ Compensation formula consistent (transparent)\n✓ Monthly tracking help planning/budgeting\n✓ Payroll integration seamless (automatic inclusion)\n✓ Rate multiplier reflect labor cost (higher for premium times)",
+          "image": {
+            "src": "/images/help/hr/overtime/rate-calculation.webp",
+            "alt": "Overtime rate and compensation calculation"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Skenario Praktis"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Skenario 1: Manual Overtime Claim (Weekday)",
+          "body": "Karyawan \"Budi Santoso\" submit manual overtime karena project deadline urgent.\n\nSITUASI:\n- Hari: Selasa, 10 April 2026 (weekday)\n- Project: Module development, deadline 11 April\n- Regular shift: 09:00-17:00\n- Actual work: 17:00-20:00 (3 jam overtime)\n- Monthly OT balance: 8/20 jam digunakan\n\nSTEP-BY-STEP:\n\n1. Pagi (10:00)\n   - Budi discuss dengan manager Andi\n   - \"Pak, deadline module tomorrow. I need 3 hours OT today.\"\n   - Andi: \"OK, request via sistem. I'll approve.\"\n\n2. Sore (17:30)\n   - Budi busy with development work\n\n3. Malam (20:00)\n   - Budi finish, exit dari office\n\n4. Submit OT (20:15)\n   - Budi buka app, Overtime menu\n   - Check balance: 8/20 jam, remaining 12 jam ✓\n   - Klik \"+ Request Overtime\"\n   - Form:\n     • Date: 10 April 2026\n     • Start Time: 17:00\n     • End Time: 20:00\n     • Reason: \"Module unit testing, critical deadline 11 April\"\n   - Duration auto-calc: 180 minutes (3 hours)\n   - Rate auto-determined: Weekday → 1.5x\n   - Estimated comp: 3h × Rp 50k × 1.5 = Rp 225.000\n   - Klik \"Submit\"\n   - Status: PENDING\n\n5. Manager Notification (20:20)\n   - Andi receive notification\n   - Dashboard: \"1 Pending Overtime Request\"\n\n6. Manager Review (next morning, 08:00)\n   - Andi login, check Overtime\n   - Review Budi's request:\n     • Valid reason: Yes (deadline)\n     • Duration: 3 hours (reasonable)\n     • Timing: Weekday (1.5x rate)\n     • Team impact: None (module dev can proceed tomorrow)\n   - Klik \"Approve Overtime\"\n   - Status → APPROVED\n\n7. Payroll Processing (1 Mei)\n   - Finance process April payroll\n   - Include Budi OT: 180 min × 1.5x = Rp 225.000\n   - Total salary: Base + OT + other = final salary\n\nRESULT:\nBudi successfully claim 3 hours weekday OT. Module complete on-time. Received Rp 225.000 OT pay in April salary.\n\n---\n\nKEY POINTS:\n\n✓ Submit same day or next day (not too delayed)\n✓ Manager approve quickly (turnaround < 24 jam)\n✓ Rate auto-calculated (weekday 1.5x)\n✓ Compensation transparent (employee know exact amount)\n✓ Payroll include automatic (no manual entry)"
+        },
+        {
+          "title": "Skenario 2: Auto-Detected Overtime (Weekend)",
+          "body": "System otomatis detect overtime ketika employee bekerja di weekend.\n\nSITUASI:\n- Hari: Sabtu, 13 April 2026 (weekend, normally off)\n- Project: System deployment (production release)\n- Jadwal: Normally off (tidak ada regular shift)\n- Actual work: 10:00-16:00 (6 jam)\n- Monthly OT: 5/20 jam digunakan\n\nSTEP-BY-STEP:\n\n1. Sabtu Pagi (08:00)\n   - Karyawan \"Siti\" coordinate dengan project manager\n   - \"I can come Saturday for deployment support. Need 6 hours.\"\n   - Project manager: \"OK, noted. Please clock in/out accordingly.\"\n\n2. Sabtu Morning (10:00)\n   - Siti clock in\n   - Attendance status: CHECKED_IN (weekend work)\n\n3. Sabtu Afternoon (16:00)\n   - Siti clock out (deployment complete)\n   - Attendance: CHECKED_OUT\n   - System calculate: 10:00-16:00 = 6 hours work\n\n4. Auto-Detection (Background process)\n   - System detect:\n     • Date: 13 April (Saturday, weekend)\n     • Work duration: 6 hours (360 minutes)\n     • Rate: 2.0x (weekend rate, auto-determined)\n   - System auto-create OT record:\n     • Type: AUTO_DETECTED\n     • Status: PENDING\n     • Duration: 360 minutes\n     • Rate: 2.0x\n     • Reason: \"Auto-detected from clock out time\"\n     • AttendanceRecordID: Linked to attendance\n\n5. Manager Notification (Background)\n   - Manager \"Andi\" receive notification\n   - Dashboard: \"1 Auto-Detected Overtime (Pending)\"\n\n6. Manager Review (Monday, 15 April)\n   - Andi login, check Overtime\n   - Review Siti auto-detected:\n     • Type: AUTO_DETECTED (from attendance)\n     • Date: Saturday (weekend, 2.0x rate)\n     • Duration: 6 hours\n     • Source: Attendance Record (traceable, no manipulation)\n     • Compensation: 360 × Rp 60k/60 × 2.0 = Rp 720.000\n   - Klik \"Approve Overtime\"\n   - Status → APPROVED\n\n7. Payroll Processing (1 Mei)\n   - Finance process April payroll\n   - Include Siti OT: 360 min × 2.0x = Rp 720.000\n   - Total salary: Base + OT + other = final\n\nRESULT:\nSiti weekend OT auto-detected & approved. No manual submit needed. Received Rp 720.000 OT pay (2.0x rate for weekend).\n\n---\n\nKEY POINTS:\n\n✓ Auto-detection seamless (no employee action)\n✓ Traceable to attendance (linked to clock in/out)\n✓ Rate auto-calculated (weekend 2.0x)\n✓ Manager approval required (before payroll)\n✓ Compensation clear (higher for weekend)\n✓ No manipulation risk (system-generated, linked to attendance)"
+        },
+        {
+          "title": "Skenario 3: Pre-Approved Planned OT (Project Deployment)",
+          "body": "Manager pre-approve planned overtime untuk project deployment dengan 2 hari intensive work.\n\nSITUASI:\n- Project: System upgrade (2 hari deployment)\n- Tanggal: 18-19 April 2026 (Thursday-Friday)\n- Planned OT: 4 jam/hari (pre-approved)\n- Team: 3 employees (Budi, Siti, Ahmad)\n- Status: Pre-approved (sudah disetujui advance)\n\nSTEP-BY-STEP:\n\n1. Planning Phase (14 April)\n   - Project Manager \"David\" plan deployment\n   - Need team: 4 hours each day (preparation & monitoring)\n   - Need OT approval in advance\n   - Create pre-approved OT records:\n\n2. Create Pre-Approved OT (14 April, by manager)\n   - Andi (manager) login\n   - Menu: Overtime → Create Pre-Approved\n   - Batch create untuk team:\n     • Date: 18 April (Thursday)\n     • Start Time: 18:00\n     • End Time: 22:00\n     • Employees: Budi, Siti, Ahmad\n     • Reason: \"System upgrade deployment - Day 1\"\n     • Status: APPROVED (langsung, tidak pending)\n   - Employees notified (informational)\n\n3. Execution Day 1 (18 April)\n   - 18:00: Team start deployment work\n   - Budi clock out: 22:00 (sesuai plan)\n   - Siti clock out: 22:30 (30 min extra)\n   - Ahmad clock out: 21:30 (30 min less)\n   - System record:\n     • Budi: 240 min (4 hours) actual, 240 min approved ✓\n     • Siti: 270 min (4.5 hours) actual, 240 min pre-approved\n     • Ahmad: 210 min (3.5 hours) actual, 240 min pre-approved\n\n4. Manager Adjustment (19 April morning)\n   - Andi review actual vs planned:\n     • Budi: On track (240 min approved = actual) ✓\n     • Siti: Worked more (270 min actual), manager adjust → approve 270 min\n     • Ahmad: Worked less (210 min actual), manager approve as-is (OK)\n   - Update approved_minutes accordingly\n\n5. Execution Day 2 (19 April)\n   - Same process\n   - 18:00-22:00: Deployment continue & finalize\n   - Clock out, actual recorded\n\n6. Final Review (20 April)\n   - Andi review all actual OT vs approved\n   - Finalize approved_minutes\n   - Status: APPROVED (ready payroll)\n\n7. Payroll Processing (1 Mei)\n   - Finance process April payroll\n   - Include team deployment OT:\n     • Budi: 480 min (pre-approved, on track)\n     • Siti: 510 min (adjusted up for extra 30 min Day 1)\n     • Ahmad: 420 min (approved as-is, less than planned)\n   - Total: 1410 minutes approved\n   - Calculate compensation & include in salary\n\nRESULT:\nPre-approved OT allow flexibility. Plan in advance, execute with flexibility (more/less than planned), manager adjust as needed. Payroll process smoothly with approved_minutes.\n\n---\n\nKEY POINTS:\n\n✓ Manager pre-approve in advance (project planning)\n✓ Status immediately APPROVED (no pending step)\n✓ Employee flexibility (work more/less than planned)\n✓ Manager adjust approved_minutes after execution\n✓ Payroll use adjusted approved_minutes (final)\n✓ Transparent communication (team know in advance)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Tips & Troubleshooting"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Pertanyaan Umum",
+          "body": "Q: Apa perbedaan antara manual claim, auto-detected, dan pre-approved OT?\nA: Manual = employee submit setelah bekerja extra hours. Auto-detected = system automatically generate dari attendance clock-out jika exceeds scheduled. Pre-approved = manager approve in advance untuk planned/expected OT.\n\nQ: Bagaimana jika manager reject OT request?\nA: Status → REJECTED. Employee get notification dengan reason. OT tidak diproses untuk payroll (no compensation). Employee bisa request again dengan different dates/explanation.\n\nQ: Berapa rate untuk weekday vs weekend vs holiday?\nA: Weekday = 1.5x (Mon-Fri after regular hours). Weekend = 2.0x (Sat-Sun, normally off). Holiday = 3.0x (national holidays, highest rate).\n\nQ: Apakah OT otomatis bayar atau perlu approval dulu?\nA: OT need manager approval (PENDING → APPROVED) sebelum processed untuk payroll. Auto-detected OT juga perlu approval.\n\nQ: Berapa maksimal OT per bulan yang dibolehkan?\nA: 20 jam/bulan (typical company policy, per labor law). Jika exceed, butuh director-level approval (exceptional case).\n\nQ: Bisa kah edit OT yang sudah approved?\nA: Tidak. Hanya PENDING OT yang bisa di-edit atau di-cancel. Approved OT final untuk payroll.\n\nQ: Apakah weekend OT dapat hari libur atau uang?\nA: Tergantung policy. Biasanya uang (compensation calculation). Atau bisa negotiate dengan manager untuk rest day compensation.\n\nQ: Bagaimana traceability auto-detected OT?\nA: Auto-detected OT linked ke Attendance Record ID. Dapat verify dari attendance data jika ada pertanyaan."
+        },
+        {
+          "title": "Troubleshooting",
+          "body": "Masalah: Overtime request tidak bisa submit, error \"Invalid time\"\nSolusi: Verify waktu format (HH:MM), end time > start time. Jika masih error, restart app atau contact support.\n\nMasalah: Auto-detected OT tidak muncul meskipun overtime worked\nSolusi: Check attendance record (apakah sudah di-clock out?). OT detection butuh valid attendance record. Jika clock-out tidak recorded, OT tidak auto-detected (need manual claim).\n\nMasalah: OT di-reject tapi alasan tidak jelas\nSolusi: Check notification atau message dari manager. Jika tidak jelas, contact manager langsung untuk discuss. Manager bisa re-open request dengan feedback.\n\nMasalah: Sudah approve OT tapi belum muncul di payroll\nSolusi: Verify OT status = APPROVED. Check date (OT harus untuk current/past month). Finance process payroll usually end of month. OT akan include saat process payroll (not immediate).\n\nMasalah: Overtime compensation amount berbeda dari calculated\nSolusi: Verify: 1) hourly rate (dari payroll master), 2) approved_minutes (manager-adjusted?), 3) rate multiplier (weekday/weekend/holiday). Contact Finance jika masih ada discrepancy.\n\nMasalah: Employee complained OT tidak dibayar padahal sudah approved\nSolusi: Check 1) Status APPROVED (tidak REJECTED), 2) Included dalam payroll (ask Finance), 3) Salary slip show OT component. May need Finance adjustment jika missed."
+        },
+        {
+          "title": "Best Practices",
+          "body": "1. Submit OT Timely\n   - Submit same day atau next day after OT worked\n   - Don't delay (harder to remember, verification issues)\n   - Accurate time (actual start/end, not estimated)\n\n2. Provide Clear Reason\n   - Explain WHY overtime needed (helps manager understand context)\n   - \"Urgent client request\" vs vague \"project work\"\n   - Reason help manager decide approve/reject fairly\n\n3. Monitor Monthly Balance\n   - Check OT balance regularly (vs 20 jam limit)\n   - Plan OT usage (don't hit limit in first 2 weeks)\n   - Communicate dengan manager jika approaching limit\n\n4. Manager: Approve Timely\n   - Approve/reject within 24 hours (not delay)\n   - Provide feedback jika reject (help employee understand)\n   - Adjust approved_minutes jika necessary (manager discretion)\n\n5. Manager: Monitor Team OT\n   - Track team OT trend (fair distribution)\n   - Alert jika one employee frequently OT\n   - Discuss workload (is it project-based atau overload?)\n   - Escalate pattern (if team hitting monthly limit often)\n\n6. Plan Projects Better\n   - Schedule better (minimize OT need)\n   - For known deadlines, pre-approve OT in advance\n   - Allocate resources (prevent individual overload)\n   - Manage expectations (realistic deadlines)\n\n7. Finance: Reconcile OT Payroll\n   - Verify OT approved minutes in payroll\n   - Check compensation calculation (formula correct)\n   - Reconcile vs bank transfers (ensure payment)\n   - Archive for audit trail\n\n8. Employee Health First\n   - OT should be exception, not routine\n   - If frequent OT, discuss dengan manager (workload balance)\n   - Ensure adequate rest (OT can cause fatigue)\n   - Monitor health (report issues immediately)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Integrasi Antar Modul"
+    },
+    {
+      "type": "text",
+      "body": "Modul Overtime terintegrasi dengan beberapa modul lain:\n\n1. Integrasi dengan Attendance\nWhen employee clock-out dengan working duration > scheduled duration, Attendance module otomatis trigger Overtime module untuk create auto-detected OT record. OT linked ke specific Attendance Record ID (traceable, prevents manipulation). Clock in/out time menjadi source of truth untuk overtime calculation.\n\n2. Integrasi dengan Payroll\nApproved overtime otomatis extract oleh Payroll module saat processing bulan tersebut. System calculate compensation: ApprovedMinutes × (HourlyRate / 60) × RateMultiplier. Compensation included dalam gross salary untuk tax & BPJS calculation. OT payment seamless dan automatic.\n\n3. Integrasi dengan Notification System\nWhen employee submit OT request, Notification system otomatis create approval notification untuk manager. Notification tracked dengan is_manager_notified flag. Manager dapat view pending OT requests dalam notification dashboard.\n\n4. Integrasi dengan Employee Module\nEmployee data (hourly rate, division, grade) dari Employee module digunakan untuk: 1) Verify employee dapat OT (employment type check), 2) Fetch hourly rate untuk compensation calculation, 3) Enrich OT response dengan employee name, code, division.\n\n5. Integrasi dengan Holiday Module\nHoliday master data digunakan untuk determine OT rate multiplier (holiday OT = 3.0x). System check: apakah OT date adalah national/collective/company holiday? If yes, rate automatically 3.0x (highest). Helps ensure proper compensation untuk premium time."
+    }
+  ]
+}

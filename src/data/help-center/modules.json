@@ -41,7 +41,13 @@
       "subcategories": [
         { "id": "employee", "title": "Employee", "description": "Kelola data karyawan" },
         { "id": "payroll", "title": "Payroll", "description": "Penggajian dan kompensasi" },
-        { "id": "attendance", "title": "Attendance", "description": "Absensi dan kehadiran" }
+        { "id": "attendance", "title": "Attendance", "description": "Absensi dan kehadiran" },
+        { "id": "leave-request", "title": "Leave Request", "description": "Manajemen pengajuan cuti" },
+        { "id": "overtime", "title": "Overtime", "description": "Manajemen lembur dan overtime" },
+        { "id": "evaluation", "title": "Evaluation", "description": "Penilaian kinerja dan review karyawan" },
+        { "id": "recruitment", "title": "Recruitment", "description": "Perekrutan dan hiring talenta baru" },
+        { "id": "holidays", "title": "Holidays", "description": "Manajemen hari libur dan cuti bersama" },
+        { "id": "work-schedules", "title": "Work Schedules", "description": "Pengaturan jadwal kerja dan shift" }
       ]
     },
     {
@@ -50,8 +56,10 @@
       "description": "Manajemen keuangan perusahaan",
       "color": "#14B8A6",
       "subcategories": [
+        { "id": "accounting", "title": "Accounting", "description": "Daftar akun dan chart of accounts" },
         { "id": "invoice", "title": "Invoice", "description": "Kelola faktur dan tagihan" },
         { "id": "journal", "title": "Journal", "description": "Jurnal dan catatan keuangan" },
+        { "id": "sales-journal", "title": "Sales Journal", "description": "Laporan jurnal penjualan" },
         { "id": "report", "title": "Report", "description": "Laporan keuangan" }
       ]
     },

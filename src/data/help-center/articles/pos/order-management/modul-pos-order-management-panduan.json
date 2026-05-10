@@ -1,0 +1,134 @@
+{
+  "title": "Modul POS - Order Management - Panduan Lengkap",
+  "description": "Panduan lengkap mengelola order di POS mencakup Mode A (Goods/Retail) dan Mode B (F&B) dari pembuatan order hingga completion dengan berbagai workflow.",
+  "slug": "modul-pos-order-management-panduan",
+  "module": "pos",
+  "subcategory": "order-management",
+  "author": "Tim GIMS",
+  "createdAt": "2026-05-05",
+  "updatedAt": "2026-05-05",
+  "tags": ["pos", "order", "goods", "fnb", "restaurant", "draft", "confirmed", "payment", "completed"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Order Management adalah core dari POS untuk mencatat transaksi penjualan. POS support dua mode operasi: Mode A (Goods/Retail) untuk penjualan cepat di toko, dan Mode B (F&B/Restaurant) untuk restoran dengan kitchen coordination. Setiap order punya lifecycle dari draft sampai completion dengan berbagai status transitions."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Mode Operasi & Order Lifecycle"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Mode A - Goods/Retail (Penjualan Barang)",
+          "body": "Mode ini untuk penjualan retail barang dagangan biasa, cocok untuk toko, supermarket, minimarket.\n\n**Order Status Flow:**\n```\nDRAFT → CONFIRMED → PAID → COMPLETED\n                 ↘ VOIDED (cancel with reversal)\n```\n\n**Status Details:**\n\n1. **DRAFT**: Order dalam keranjang belanja\n   - Items dapat ditambah/dikurangi\n   - No stok impact\n   - No payment collected\n   - Duration: Usually minutes\n   - Action: Add/remove items, confirm, apply discount\n\n2. **CONFIRMED**: Order siap dibayar\n   - Stok sudah validated (cukup atau tidak)\n   - Items tidak boleh diubah\n   - Waiting for payment\n   - Duration: Seconds sampai menit\n   - Action: Process payment\n\n3. **PAID**: Pembayaran sudah diterima\n   - Stok deduction executed\n   - Receipt generated\n   - Payment recorded\n   - Duration: Very short\n   - Action: Print receipt, complete order\n\n4. **COMPLETED**: Order selesai\n   - Final state\n   - Receipt printed\n   - Stok updated\n   - Available untuk return (if within window)\n   - Action: Can view history, cannot modify\n\n5. **VOIDED**: Order dibatalkan\n   - Dapat void dari DRAFT/CONFIRMED/PAID\n   - Stok reversal jika sudah deducted\n   - Requires manager approval (if > threshold)\n   - Final state\n   - Action: Can view detail, cannot undo"
+        },
+        {
+          "title": "Mode B - F&B/Restaurant (Makanan & Minuman)",
+          "body": "Mode ini untuk restoran/kafe dengan kitchen coordination dan table management.\n\n**Order Status Flow:**\n```\nDRAFT → SENT_TO_KITCHEN → IN_PROGRESS → READY → SERVED → PAID → COMPLETED\n                                                        ↘ VOIDED (with approval)\n```\n\n**Status Details:**\n\n1. **DRAFT**: Order dalam pemesanan di meja\n   - Staff mencatat menu yang dipesan customer\n   - Items dapat ditambah/dikurangi\n   - No kitchen notification\n   - Duration: Few minutes while ordering\n   - Action: Add items, send to kitchen\n\n2. **SENT_TO_KITCHEN**: Order dikirim ke kitchen display\n   - Order tampil di KDS (Kitchen Display System)\n   - Kitchen mulai persiapan\n   - Status transmitted ke kitchen devices\n   - Duration: Few seconds\n   - Action: Wait for kitchen preparation\n\n3. **IN_PROGRESS**: Kitchen sedang memasak\n   - Kitchen staff mark item sedang dikerjakan\n   - KDS show progress\n   - Front-of-house notified\n   - Duration: Minutes (depends recipe)\n   - Action: Wait for ready notification\n\n4. **READY**: Makanan siap disajikan\n   - Kitchen mark items ready di KDS\n   - Audio/visual alert to FoH\n   - FoH staff ambil dari kitchen pass\n   - Duration: Minutes at pass window\n   - Action: Deliver to table\n\n5. **SERVED**: Makanan sudah di-deliver ke meja\n   - FoH staff antar ke meja\n   - Customer mulai makan\n   - Duration: Customer eating time (30min - 1hour)\n   - Action: Wait for customer finish, settle payment\n\n6. **PAID**: Pembayaran sudah diterima\n   - Customer finish makan, minta bill\n   - Payment processed\n   - Stok deduction executed\n   - Receipt generated\n   - Duration: Payment processing time\n   - Action: Release table\n\n7. **COMPLETED**: Order & meja selesai\n   - Meja di-release (available untuk customer baru)\n   - Stok updated\n   - Transaction closed\n   - Final state\n   - Action: Next customer dapat meja\n\n8. **VOIDED**: Order dibatalkan (anytime)\n   - Dapat void dari status apapun kecuali COMPLETED (use return)\n   - Manager approval required\n   - Stok reversal jika sudah deducted\n   - Payment reversal jika sudah paid\n   - Final state\n   - Action: Can view detail"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Membuat Order - Mode A (Goods/Retail)"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Step 1: Mulai Order Baru",
+          "body": "1. Pastikan session sudah OPEN (lihat Session Management)\n2. Klik tombol 'New Order' di main POS screen\n3. Interface muncul dengan 3 area:\n   - LEFT: Product categories & search\n   - CENTER: Product list\n   - RIGHT: Shopping cart\n4. Order baru dengan status DRAFT tercipta di background\n5. Order number auto-generated (e.g., ORD-202605051001)"
+        },
+        {
+          "title": "Step 2: Tambah Item ke Keranjang",
+          "body": "1. **Find Product:**\n   - Browse by category (Makanan, Minuman, Snack, dll)\n   - Atau search by name/barcode\n   - Click product untuk select\n\n2. **Input Quantity:**\n   - Dialog muncul: \"Quantity?\"\n   - Default: 1\n   - Input desired quantity\n   - Click 'Add' button\n\n3. **Item Muncul di Cart:**\n   - Display: [Product name] × [qty] = Rp [subtotal]\n   - Can see unit price, qty, line total\n   - Click item untuk modify qty\n   - Click X button untuk remove\n\n4. **Repeat untuk Items Lain:**\n   - Add multiple items\n   - Cart accumulate\n   - Real-time cart total update\n\n**Example:**\n- Add Bakso × 2 = Rp 50.000\n- Add Es Teh × 3 = Rp 15.000\n- Add Gorengan × 1 = Rp 5.000\n- Cart Total: Rp 70.000",
+          "image": {
+            "src": "/images/help/pos/order-management/add-item-cart.webp",
+            "alt": "Menambahkan item ke keranjang"
+          }
+        },
+        {
+          "title": "Step 3: Review & Modifikasi Item",
+          "body": "1. **Check Cart:**\n   - Ensure semua item benar\n   - Qty sesuai dengan order\n   - Harga reasonable\n\n2. **Modify Item (if needed):**\n   - Click item di cart\n   - Change qty (input new amount, click update)\n   - Add special notes (e.g., \"no garlic\", \"extra spicy\")\n   - Click save\n\n3. **Remove Item (if needed):**\n   - Click X / trash icon\n   - Confirm remove\n   - Item removed dari cart\n   - Total recalculated\n\n4. **Stock Alert:**\n   - If item stok habis → warning shown\n   - Can remove item atau use substitute\n   - Or wait for restock (if same day delivery available)"
+        },
+        {
+          "title": "Step 4: Confirm Order (Stock Validation)",
+          "body": "1. **Click 'Confirm Order' button**\n   - System move to next stage: CONFIRMED\n   - Trigger stock validation\n\n2. **Stock Validation:**\n   - System check: apakah stok cukup untuk semua item?\n   - For STOCK mode: Check available qty >= order qty\n   - For RECIPE mode: Check all ingredients available\n   - Results:\n     * OK: \"Stock sufficient, proceeding\"\n     * INSUFFICIENT: \"Stock not enough for item X, please reduce qty or remove\"\n\n3. **Handling Insufficient Stock:**\n   - Option A: Reduce qty untuk item tertentu\n     * Adjust quantity di cart\n     * Reconfirm\n   - Option B: Remove item\n     * Delete dari cart\n     * Reconfirm\n   - Option C: Cancel order\n     * Discard order\n     * Start new order\n\n4. **Order Status → CONFIRMED:**\n   - Once stock validation pass\n   - Status change to CONFIRMED\n   - Items locked (cannot modify)\n   - Ready untuk payment"
+        },
+        {
+          "title": "Step 5: Apply Discount (Optional)",
+          "body": "1. **Click 'Discount' button** (if order total > 0)\n   - Dialog muncul: \"Apply Discount?\"\n\n2. **Select Discount Type:**\n   - Percentage (%): e.g., 10%, 20%, 50%\n   - Fixed Amount (Rp): e.g., Rp 5.000, Rp 10.000\n   - Voucher code: Enter promo code\n\n3. **Input Discount Value:**\n   - For %: Input percentage\n   - For Rp: Input amount\n   - For voucher: Scan/enter code, system validate\n   - Preview: \"Total akan jadi Rp XXX\"\n\n4. **Manager Approval (if > threshold):**\n   - If discount > Rp 50.000 (threshold configurable)\n   - Require manager PIN/approval\n   - Manager notification sent\n   - Manager approve/reject\n   - If approve: Discount applied, continue\n   - If reject: Discount cancelled, ask for different amount\n\n5. **Confirm Discount:**\n   - Click 'Apply' button\n   - Discount calculated & deducted from total\n   - Cart total updated\n   - Show: Original price, discount amount, new total\n\n**Example:**\n- Subtotal: Rp 70.000\n- Discount 10%: -Rp 7.000\n- New total: Rp 63.000"
+        },
+        {
+          "title": "Step 6: Payment Processing",
+          "body": "1. **Order ready untuk payment**\n   - Status: CONFIRMED\n   - Items & discount finalized\n   - Total amount: Rp 63.000 (in example)\n\n2. **Select Payment Method:**\n   - Click 'Pay' atau 'Checkout' button\n   - Payment method dialog muncul:\n     * Cash (Tunai)\n     * Debit/Credit Card\n     * QRIS\n     * Multi-payment (2+ methods)\n     * Other (Cek, Voucher, etc)\n\n3. **Process Payment:**\n   - See Payment Processing section untuk detail\n   - Collect payment from customer\n   - Verify & confirm\n   - Payment executed\n\n4. **Order Status → PAID:**\n   - Once payment confirmed\n   - Status change to PAID\n   - Stock deduction executed\n   - Receipt auto-generated\n\n5. **Receipt & Completion:**\n   - Receipt displayed\n   - Print receipt (auto atau manual)\n   - Order status → COMPLETED\n   - Transaction finished\n   - Next order: Click 'New Order' again"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Membuat Order - Mode B (F&B/Restaurant)"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Step 1: Assign Table to Customer",
+          "body": "1. **Enter F&B Mode:**\n   - From menu, select 'F&B Operations'\n   - Screen show floor plan dengan meja-meja\n   - Meja status: Available (kosong), Occupied (terisi), Reserved, Pending Payment\n\n2. **Customer Datang:**\n   - Greet customer\n   - Assess group size: Berapa orang?\n\n3. **Assign Meja:**\n   - Click meja kosong (status Available)\n   - Dialog muncul:\n     * Table selection confirmed\n     * Input number of guests (pax)\n     * Select server (optional)\n   - Click 'Confirm Assignment'\n   - Meja status → Occupied\n   - Meja di-reserve untuk grup ini"
+        },
+        {
+          "title": "Step 2: Buat Order di Meja",
+          "body": "1. **Staff approach meja dengan device/tablet**\n   - Click meja yang Occupied\n   - Order form terbuka\n   - Order created dgn status DRAFT\n   - Order linked ke table_id\n\n2. **Tambah Menu Item:**\n   - Staff browse menu (kategori: appetizer, main, dessert, drink)\n   - Click product untuk select\n   - Quantity dialog muncul\n   - Input qty + special request\n     * Example: \"medium done\", \"no garlic\", \"extra sauce\"\n   - Click 'Add to Order'\n\n3. **Multiple Items:**\n   - Repeat untuk items lain\n   - Accumulate di order cart\n   - Real-time total update\n\n4. **Customization:**\n   - Staff bisa add note per item\n   - Untuk kitchen coordination\n   - Example: \"Steak - medium done, no butter\""
+        },
+        {
+          "title": "Step 3: Send Order ke Kitchen",
+          "body": "1. **Order dalam status DRAFT:**\n   - Staff selesai catat semua item\n   - Click tombol 'Send to Kitchen'\n   - Dialog konfirmasi muncul\n   - Review semua item sebelum send\n\n2. **Send Confirmation:**\n   - Click 'Confirm Send'\n   - System execute:\n     * Order status → SENT_TO_KITCHEN\n     * Timestamp recorded\n     * Order transmitted ke KDS (Kitchen Display System)\n\n3. **Kitchen Notification:**\n   - Order muncul di KDS screens\n   - Kitchen staff see:\n     * Table number & pax count\n     * Item list dgn qty & special request\n     * Timestamp (when order sent)\n   - Kitchen mulai persiapan\n\n4. **Front-of-House Notification:**\n   - FoH device show: \"Order sent to kitchen\"\n   - Server dapat assist customer sambil tunggu"
+        },
+        {
+          "title": "Step 4: Track Kitchen Progress",
+          "body": "1. **During Preparation:**\n   - FoH staff dapat view order status\n   - Kitchen mark items: \"Cooking\", \"Ready\", \"Done\"\n   - KDS show progress\n   - Estimated time untuk completion\n\n2. **Order Progress Display:**\n   - Status: IN_PROGRESS\n   - Item status individual:\n     * Nasi Goreng: IN_PROGRESS (8 min)\n     * Es Teh: READY (ready pick up)\n     * Gorengan: READY (ready pick up)\n   - Color coding:\n     * Blue: Fresh order\n     * Yellow: Being prepared\n     * Green: Ready for pickup\n     * Red: Overdue (preparing too long)\n\n3. **Notification to FoH:**\n   - When items READY: Audio/visual alert\n   - Server notified untuk pickup\n   - \"Order #3 ready for pickup\"\n\n4. **Multiple Kitchen Stations:**\n   - Order can be split across stations\n   - Grill station: Steak, grilled fish\n   - Fryer station: Fried items\n   - Beverage station: Drinks\n   - Expediter: Plating & final check\n   - Order READY only when ALL stations complete"
+        },
+        {
+          "title": "Step 5: Serve & Deliver Makanan",
+          "body": "1. **Items Ready di Kitchen Pass:**\n   - All items finished\n   - Plating done\n   - Quality check pass\n   - Ready untuk delivery\n\n2. **FoH Pickup:**\n   - Server ambil plate dari kitchen pass\n   - Verify item sesuai order\n   - Check temperature, presentation\n   - If issue: Return ke kitchen untuk rework\n\n3. **Deliver ke Meja:**\n   - Server antar ke table\n   - Serve dengan good service\n   - Customer confirm semua item ada\n\n4. **Mark Served:**\n   - FoH staff click 'Served' di order\n   - System update: Order status → SERVED\n   - Timestamp recorded\n   - Meja status: Still OCCUPIED\n   - Customer dapat makan\n\n5. **Multi-Course Order:**\n   - Jika order punya multiple courses\n   - Kitchen prepare sequentially\n   - Serve one course at time\n   - Mark served per course (bisa batch)\n   - Order tidak langsung COMPLETED (wait settle payment)"
+        },
+        {
+          "title": "Step 6: Payment & Settle",
+          "body": "1. **Customer Finish Makan:**\n   - Staff observe: Customer selesai/tidak?\n   - When finish: \"Can I get the check, please?\"\n\n2. **Prepare Bill:**\n   - Click order → 'Settle Payment' / 'Close Table'\n   - Bill display:\n     * Order items & price\n     * Subtotal\n     * Discount (if any)\n     * Tax (if applicable)\n     * Total amount\n\n3. **Process Payment:**\n   - See Payment Processing section\n   - Collect payment from customer\n   - Process via payment method\n   - Verify & confirm\n\n4. **Order Status → PAID:**\n   - Once payment confirmed\n   - Status change to PAID\n   - Stock deduction executed\n   - Receipt generated\n\n5. **Release Table:**\n   - Click 'Release Table' / 'Close Table'\n   - Order status → COMPLETED\n   - Table status → Available (ready untuk customer baru)\n   - Clean table (mark DIRTY → CLEAN)\n   - Transaction finished"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Order Modification & Special Cases"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Mengubah Order Sebelum Confirm",
+          "body": "While order dalam status DRAFT (sebelum confirm):\n\n1. **Change Quantity:**\n   - Click item di cart\n   - Change qty (increase/decrease)\n   - Save\n   - Cart total recalculated\n\n2. **Remove Item:**\n   - Click X / trash icon\n   - Confirm remove\n   - Item removed\n\n3. **Add Item:**\n   - Add more products\n   - No limit saat DRAFT\n\n4. **Add Special Notes:**\n   - Click item → Add notes\n   - Untuk kitchen (F&B) atau special request\n   - Example: \"no garlic\", \"extra spicy\", \"nut allergy\"\n\nAfter CONFIRMED: Items locked, cannot modify without void & rebuat order"
+        },
+        {
+          "title": "Add Item Setelah Order Confirmed (F&B Mode)",
+          "body": "In F&B Mode, customer bisa add item saat order sedang di-prepare di kitchen.\n\nProses:\n1. Customer: \"Add one more Es Teh\"\n2. Staff: Open order → Click 'Add Item'\n3. Add item ke existing order\n4. Choose: Send immediately or batch with existing order\n5. If send immediately: New item go separate ke kitchen\n6. Kitchen prepare, add to same table order\n7. Serve saat ready\n8. Payment: Include all items at settlement\n\nNote: Modify hanya bisa DRAFT. Untuk add item after CONFIRMED di F&B:\n- Create separate order line item (linked to same table)\n- Or void & recreate (complex)\n- Best practice: Ask customer to order saat masih DRAFT"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Business Rules"
+    },
+    {
+      "type": "text",
+      "body": "1. **Order Creation:**\n   - Require active OPEN session\n   - Auto-generate unique order number\n   - Start with DRAFT status\n   - Link to operator, session, outlet\n\n2. **DRAFT Status:**\n   - Items unlimited dapat ditambah/dikurang\n   - No stock impact\n   - Can stay DRAFT indefinitely (not practical)\n   - Can discard DRAFT order\n\n3. **CONFIRMED Status:**\n   - Stock validated (must be sufficient)\n   - Items locked (cannot modify)\n   - Transition to PAID after payment\n   - Transition to VOIDED if cancelled\n\n4. **PAID Status:**\n   - Stock deduction executed\n   - Payment recorded\n   - Receipt generated\n   - Transition to COMPLETED\n\n5. **COMPLETED Status:**\n   - Final state (immutable)\n   - Cannot modify items/payment\n   - Available untuk return (if within window)\n   - Kept untuk history & reporting\n\n6. **VOIDED Status:**\n   - Requires manager approval (if > threshold)\n   - Stock reversal executed\n   - Payment reversal (if already paid)\n   - Final state\n   - Cannot undo\n\n7. **F&B Specific (Mode B):**\n   - Order linked to table\n   - Table status transition with order\n   - Multiple orders can be pending per table (for add items)\n   - Settlement consolidate all orders per table"
+    }
+  ]
+}

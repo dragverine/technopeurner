@@ -22,14 +22,21 @@ export interface ArticleImage {
 }
 
 export interface ArticleContentBlock {
-  type: 'text' | 'step' | 'info' | 'warning' | 'image';
+  type: 'text' | 'step' | 'info' | 'warning' | 'image' | 'heading' | 'card' | 'collapsible' | 'timeline';
   title?: string;
   body?: string;
+  level?: number; // for heading (1-4)
   stepNumber?: number;
   image?: ArticleImage;
   src?: string;
   alt?: string;
   caption?: string;
+  items?: Array<{
+    title?: string;
+    body?: string;
+    image?: ArticleImage;
+  }>; // for card grid, collapsible items, timeline items
+  icon?: string; // emoji or icon identifier
 }
 
 export interface Article {

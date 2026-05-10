@@ -1,0 +1,208 @@
+{
+  "title": "Modul HRD - Attendance (Absensi) - Panduan Lengkap",
+  "description": "Panduan lengkap menggunakan Modul Attendance dalam sistem HRD GIMS mencakup clock in/out, manajemen jadwal kerja, holiday management, overtime tracking, dan reporting.",
+  "slug": "modul-attendance-panduan-lengkap",
+  "module": "hr",
+  "subcategory": "attendance",
+  "author": "Tim GIMS",
+  "createdAt": "2026-04-19",
+  "updatedAt": "2026-04-19",
+  "tags": ["hr", "attendance", "absensi", "clock in", "overtime", "holiday", "jadwal kerja"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Modul Attendance mengelola seluruh proses pencatatan kehadiran karyawan mulai dari clock in/out harian, manajemen jadwal kerja, holiday management, overtime tracking, hingga reporting dan statistics. Modul ini terintegrasi dengan Employee untuk validasi karyawan dan Payroll untuk perhitungan gaji."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Fitur Utama"
+    },
+    {
+      "type": "card",
+      "items": [
+        {
+          "title": "Clock In/Out",
+          "body": "Pencatatan kehadiran harian dengan multiple check-in types (Normal, WFH, Field Work)"
+        },
+        {
+          "title": "Work Schedule Management",
+          "body": "Setup dan assign jadwal kerja (Fixed, Flexible, Night, Rotating) ke karyawan"
+        },
+        {
+          "title": "Holiday Management",
+          "body": "Manajemen hari libur (nasional, collective, company) dan validasi otomatis"
+        },
+        {
+          "title": "Overtime Tracking",
+          "body": "Request dan approval overtime dengan rate multiplier (1.5x, 2.0x, 3.0x)"
+        },
+        {
+          "title": "Manual Entry",
+          "body": "Admin dapat input/edit attendance data untuk koreksi atau spesial cases"
+        },
+        {
+          "title": "Reports & Statistics",
+          "body": "Generate laporan kehadiran, overtime, dan statistics per employee atau division"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Cara Akses Modul Attendance"
+    },
+    {
+      "type": "timeline",
+      "items": [
+        {
+          "title": "Buka Menu HRD",
+          "body": "Pada sidebar aplikasi, klik menu HRD untuk melihat submenu yang tersedia.",
+          "image": {
+            "src": "/images/help/hr/attendance/menu-hrd.webp",
+            "alt": "Menu HRD di sidebar"
+          }
+        },
+        {
+          "title": "Pilih Submenu Attendance",
+          "body": "Dari submenu HRD, klik Attendance untuk membuka halaman manajemen absensi dan kehadiran karyawan.",
+          "image": {
+            "src": "/images/help/hr/attendance/menu-attendance.webp",
+            "alt": "Submenu Attendance"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Panduan Penggunaan"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Clock In / Clock Out (Pencatatan Kehadiran)",
+          "body": "Karyawan mencatat kehadiran setiap hari melalui clock in di pagi hari dan clock out saat pulang.\n\n📌 CHECK-IN TYPES:\n\n1. NORMAL Check-In\n   - Karyawan berada di kantor (office)\n   - Kerja sesuai jadwal regular\n   - Waktu: Sesuai jadwal start time\n   - Cara clock in: Klik tombol Check In di halaman Attendance\n\n2. WFH (Work From Home) Check-In\n   - Karyawan bekerja dari rumah\n   - Ada approval dari manager (biasanya advance)\n   - Validasi: Work schedule harus allow WFH\n   - Cara clock in: Pilih type \"WFH\" sebelum check in\n\n3. FIELD WORK Check-In\n   - Karyawan di lapangan (customer visit, sales, dll)\n   - Ada target location/area\n   - GPS validation (opsional) untuk security\n   - Cara clock in: Pilih type \"Field Work\" + tentukan location\n\n---\n\nCLOCK IN PROCEDURE:\n\n1. Buka halaman Attendance\n2. Klik tombol + Check In\n3. Muncul dialog:\n   - Check-in Type: Pilih Normal / WFH / Field Work\n   - Location (jika applicable): Kantor / Rumah / Area kerja\n   - Notes (optional): Keterangan tambahan\n4. Klik Confirm Check In\n5. Sistem mencatat waktu dan type\n6. Status: CHECKED_IN\n\n---\n\nCLOCK OUT PROCEDURE:\n\n1. Saat pulang, buka halaman Attendance\n2. Klik tombol Check Out (button akan muncul jika sudah check in)\n3. Dialog muncul:\n   - Check-out Time: Otomatis diisi (bisa di-adjust jika perlu)\n   - Notes (optional): Keterangan tambahan\n4. Klik Confirm Check Out\n5. Sistem mencatat waktu checkout\n6. Status: CHECKED_OUT\n7. Working hours dihitung otomatis = Check-out time - Check-in time\n\n---\n\nSTATUS ATTENDANCE:\n\n- CHECKED_IN: Sudah check in, menunggu checkout\n- CHECKED_OUT: Sudah check out, attendance selesai\n- ON_LEAVE: Libur (leave request approved)\n- ON_HOLIDAY: Hari libur (nasional/collective/company)\n- ABSENT: Tidak hadir & tidak ada keterangan\n- LATE: Hadir tapi lebih dari start time\n- EARLY_LEAVE: Pulang lebih awal dari end time\n\n---\n\nVALIDATION RULES:\n\n✓ Karyawan hanya bisa check in pada jam kerja (sesuai jadwal)\n✓ Tidak bisa check in 2x dalam sehari (otomatis reject)\n✓ Check out harus setelah check in (tidak bisa mundur waktu)\n✓ WFH harus pre-approved oleh manager\n✓ Field work butuh location info untuk tracking\n✓ Tidak bisa checkout jika ada overlapping dengan holiday",
+          "image": {
+            "src": "/images/help/hr/attendance/clock-in-out.webp",
+            "alt": "Clock in/out process"
+          }
+        },
+        {
+          "title": "Work Schedule Management",
+          "body": "Work Schedule adalah template jadwal kerja yang di-assign ke karyawan untuk menentukan jam kerja harian.\n\n---\n\nJENIS-JENIS WORK SCHEDULE:\n\n1. FIXED SCHEDULE\n   - Jam kerja sama setiap hari\n   - Contoh: 09:00 - 17:00 (8 jam/hari)\n   - Best for: Office staff, administration\n   - Flexibility: Minimal (ada early start/late end tapi base tetap sama)\n\n2. FLEXIBLE SCHEDULE\n   - Jam kerja flexible, tapi harus total 8 jam/hari\n   - Core hours: 10:00 - 14:00 (wajib)\n   - Fleksibel: Masuk bisa 08:00-10:00, pulang bisa 17:00-19:00\n   - Best for: Office staff, knowledge workers\n   - Contoh: Bisa masuk 08:30 - 16:30 atau 09:00 - 17:00\n\n3. NIGHT SHIFT SCHEDULE\n   - Jadwal malam untuk operasional 24 jam\n   - Contoh: 22:00 - 06:00 (8 jam)\n   - Off days: Biasanya 2 hari dalam seminggu (tidak fixed)\n   - Best for: Security, customer service, production\n\n4. ROTATING SHIFT SCHEDULE\n   - Jadwal bergilir (shift pagi, siang, malam)\n   - Contoh: Senin-Rabu (08:00-16:00), Kamis-Sabtu (16:00-24:00), Minggu-Selasa (24:00-08:00)\n   - Cycle: Biasanya 3-4 minggu\n   - Best for: Manufacturing, hospital, customer service\n\n---\n\nCARACREATE WORK SCHEDULE (Admin):\n\n1. Buka HRD → Attendance → Work Schedule\n2. Klik + New Work Schedule\n3. Isi informasi:\n   - Schedule Name: \"Office Staff Schedule 2026\"\n   - Type: Fixed / Flexible / Night Shift / Rotating\n   - Start Date: 01/01/2026\n   - Description: (optional)\n\n4. Setup Schedule Details:\n   \n   Untuk FIXED:\n   - Start Time: 09:00\n   - End Time: 17:00\n   - Break Duration: 01:00 (lunch break)\n   - Working Hours: 8 hours\n   - Working Days: Monday-Friday (tidak kerja Saturday-Sunday)\n\n   Untuk FLEXIBLE:\n   - Earliest Start: 07:00\n   - Latest Start: 10:00\n   - Earliest End: 16:00\n   - Latest End: 19:00\n   - Core Hours: 10:00 - 14:00 (wajib hadir)\n   - Total Hours Required: 8 hours/hari\n\n   Untuk NIGHT SHIFT:\n   - Start Time: 22:00\n   - End Time: 06:00\n   - Working Days: Sun-Wed\n   - Off Days: Thu-Sat\n\n   Untuk ROTATING:\n   - Shift 1: 08:00 - 16:00 (Mon-Wed)\n   - Shift 2: 16:00 - 24:00 (Thu-Sat)\n   - Shift 3: 24:00 - 08:00 (Sun-Tue)\n   - Rotation Cycle: 3 weeks\n\n5. Klik Save untuk simpan template\n\n---\n\nCARAASSIGN WORK SCHEDULE KE KARYAWAN:\n\n1. Buka Employee detail\n2. Tab Work Information\n3. Field \"Work Schedule\": Pilih schedule yang sudah dibuat\n4. \"Effective Date\": Kapan schedule berlaku (biasanya 01 bulan baru)\n5. Klik Save\n6. Schedule sekarang aktif untuk karyawan tersebut\n\nValidasi:\n- Clock in/out akan di-validasi sesuai schedule\n- Jika clock in sebelum waktunya → EARLY (catat tapi status OK)\n- Jika clock in setelah waktunya → LATE (catat, mungkin ada penalty)\n- Jika tidak ada checkout → ABSENT (jika sudah pass end time)\n\n---\n\nUPDATE SCHEDULE:\n\nJika ada perubahan jadwal (ex: dari 09:00-17:00 jadi 08:00-16:00):\n1. Admin update Work Schedule\n2. Set new Effective Date\n3. Employee yang sudah assign otomatis pake schedule baru\n4. Historical schedule tetap tercatat untuk audit",
+          "image": {
+            "src": "/images/help/hr/attendance/work-schedule.webp",
+            "alt": "Work schedule management"
+          }
+        },
+        {
+          "title": "Holiday Management",
+          "body": "Holiday adalah hari-hari yang tidak ada jam kerja (karyawan libur).\n\n---\n\nJENIS-JENIS HOLIDAY:\n\n1. NATIONAL HOLIDAY (Hari Libur Nasional)\n   - Ditetapkan oleh pemerintah\n   - Contoh: Idul Fitri, Idul Adha, Hari Kemerdekaan, Nyepi\n   - Scope: Semua karyawan di semua company/area\n   - Paid leave: Ya (gaji tetap bayar)\n   - Attendance: Otomatis mark as HOLIDAY\n\n2. COLLECTIVE HOLIDAY (Hari Libur Bersama)\n   - Ditetapkan perusahaan untuk adjustment dari national holiday\n   - Contoh: Long weekend extension, cuti bersama tambahan\n   - Scope: Semua karyawan di company tertentu\n   - Paid leave: Ya\n   - Attendance: Otomatis mark as HOLIDAY\n\n3. COMPANY HOLIDAY (Hari Libur Perusahaan)\n   - Hari spesial perusahaan (ulang tahun, company gathering)\n   - Scope: Bisa semua atau department tertentu\n   - Paid leave: Ya\n   - Attendance: Otomatis mark as HOLIDAY\n\n---\n\nCARAADD HOLIDAY (Admin):\n\n1. Buka HRD → Attendance → Holiday Management\n2. Klik + Add Holiday\n3. Isi informasi:\n   - Holiday Name: \"Idul Fitri\" atau \"Company Founding Day\"\n   - Holiday Type: National / Collective / Company\n   - Start Date: 10/04/2026\n   - End Date: 12/04/2026 (jika multi-day)\n   - Description: Keterangan\n   - Scope: All / Company-Specific / Department-Specific\n   - Paid: Yes/No\n\n4. Klik Save\n5. Sistem otomatis mark hari tersebut sebagai holiday\n6. Karyawan yang work schedule include hari tersebut akan auto-marked HOLIDAY (attendance)\n\n---\n\nVALIDATION OTOMATIS:\n\nSaat karyawan clock in di hari yang declared holiday:\n- Sistem validate: \"Apakah hari ini holiday?\"\n- Jika YA → Reject clock in, tampilkan message \"Hari libur, tidak perlu clock in\"\n- Jika TIDAK → Allow clock in normal\n\n---\n\nHOLIDAY RULES:\n\n✓ Tidak bisa claim overtime di holiday (sudah off day)\n✓ Leave request di holiday tidak diproses (sudah libur)\n✓ Gaji tetap bayar (paid holiday)\n✓ Jika terpaksa kerja (emergency), bisa request special overtime (double rate)\n✓ Attendance otomatis mark HOLIDAY (tidak perlu clock in/out)\n\n---\n\nEXAMPLE TIMELINE:\n\nHari Kerja:\n- Senin 08/04: Normal clock in/out\n- Selasa 09/04: Normal clock in/out\n- Rabu 10/04: HOLIDAY (Idul Fitri Start)\n- Kamis 11/04: HOLIDAY (Idul Fitri)\n- Jumat 12/04: HOLIDAY (Idul Fitri End)\n- Sabtu 13/04: Normal Off Day\n- Minggu 14/04: Normal Off Day\n- Senin 15/04: Normal clock in/out\n\nSaat \"Rabu 10/04\", karyawan tidak perlu clock in. Attendance otomatis mark HOLIDAY.",
+          "image": {
+            "src": "/images/help/hr/attendance/holiday-management.webp",
+            "alt": "Holiday management setup"
+          }
+        },
+        {
+          "title": "Overtime Request & Approval",
+          "body": "Overtime adalah kerja tambahan di luar jam kerja normal atau di hari libur.\n\n---\n\nKAPIAN OVERTIME DIAPPROVE:\n\n1. WEEKDAY OVERTIME\n   - Kerja tambahan hari kerja (Senin-Jumat)\n   - Rate: 1.5x dari hourly rate\n   - Contoh: Rp 30.000/jam regular → Rp 45.000/jam overtime\n\n2. WEEKEND OVERTIME\n   - Kerja di hari Sabtu (jika biasanya off)\n   - Rate: 2.0x dari hourly rate\n   - Contoh: Rp 30.000/jam → Rp 60.000/jam\n\n3. HOLIDAY OVERTIME\n   - Kerja di hari libur nasional/collective/company\n   - Rate: 3.0x dari hourly rate\n   - Contoh: Rp 30.000/jam → Rp 90.000/jam\n\n---\n\nCARA REQUEST OVERTIME (Employee):\n\n1. Buka Attendance halaman\n2. Klik + Request Overtime\n3. Isi form:\n   - Date: Tanggal overtime\n   - Start Time: 17:00 (setelah jam kerja normal)\n   - End Time: 20:00 (estimasi selesai)\n   - Duration: Otomatis hitung (3 jam)\n   - Reason: Alasan overtime (project deadline, customer request, dll)\n   - Manager: Otomatis set ke manager karyawan\n4. Klik Submit\n5. Status: PENDING (menunggu approval manager)\n\n---\n\nCARA APPROVE OVERTIME (Manager):\n\n1. Manager melihat Attendance → Overtime Requests (Pending)\n2. Klik overtime request dari employee\n3. Review:\n   - Date & time reasonable?\n   - Reason valid?\n   - Employee sudah complete regular shift?\n4. Klik Approve atau Reject\n5. Jika APPROVE → Status: APPROVED\n6. Jika REJECT → Status: REJECTED (kasih reason)\n\n---\n\nVALIDATION RULES:\n\n✓ Tidak bisa request overtime jika belum complete regular shift\n✓ Tidak bisa request overtime melebihi 4 jam/hari (company policy)\n✓ Max 20 jam/bulan untuk regular overtime\n✓ Manager bisa auto-reject jika melebihi limit\n✓ Overtime perlu approved sebelum karyawan bisa clock in\n\n---\n\nAPPROVED OVERTIME → PAYROLL:\n\nSetelah overtime di-approve:\n1. Data disynch ke Payroll module\n2. Saat process payroll, overtime otomatis include di gross salary\n3. Calculation: Hours × Hourly Rate × Multiplier\n4. Contoh: 3 hours × Rp 45.000 (1.5x rate) = Rp 135.000\n5. Add ke gross salary karyawan\n6. Tax & BPJS dihitung dari gross yang lebih besar\n7. Result: Net salary meningkat karena overtime\n\n---\n\nOVERTIME REPORT:\n\nManager bisa lihat overtime summary:\n1. Buka Attendance → Overtime Report\n2. Filter: Date range, Employee, Approval Status\n3. View: Total hours, Total amount (before tax), Employee list\n4. Export: Download CSV/PDF untuk dokumentasi atau payroll verification",
+          "image": {
+            "src": "/images/help/hr/attendance/overtime-request.webp",
+            "alt": "Overtime request dan approval"
+          }
+        },
+        {
+          "title": "Manual Attendance Entry (Admin Only)",
+          "body": "Admin dapat input atau edit attendance data untuk koreksi atau special cases.\n\n---\n\nKAPAN PERLU MANUAL ENTRY:\n\n1. SYSTEM DOWNTIME\n   - Karyawan tidak bisa clock in karena sistem error\n   - Admin input attendance data manually berdasarkan employee report\n\n2. FORGOT TO CLOCK IN/OUT\n   - Karyawan lupa clock in pagi atau clock out sore\n   - Employee lapor ke HR dengan alasan\n   - Admin input based on employee request + approval\n\n3. DATA CORRECTION\n   - Clock in/out time salah (ex: clock in 17:00 seharusnya 09:00)\n   - Admin correct dengan bukti (email, chat, witness)\n\n4. SPECIAL CASES\n   - WFH tidak bisa clock in (emergency, internet down)\n   - Site visit, training, meeting di luar (mark as Field Work)\n   - Karyawan sakit di tengah hari (mark as Early Leave)\n\n---\n\nCARA INPUT MANUAL ATTENDANCE (Admin):\n\n1. Buka Attendance → Manual Entry\n2. Klik + New Manual Entry\n3. Isi form:\n   - Employee: Pilih karyawan\n   - Date: Tanggal attendance\n   - Check-in Time: Waktu masuk (ex: 09:00)\n   - Check-out Time: Waktu keluar (ex: 17:00)\n   - Type: Normal / WFH / Field Work / Leave / Holiday\n   - Duration: Otomatis hitung (8 jam)\n   - Reason: Alasan entry manual (System down, Forgot, Correction, dll)\n   - Approval From: Supervisor/Manager yang approve\n   - Evidence: Attach document/screenshot (opsional)\n   - Notes: Keterangan detail\n4. Klik Submit\n5. Status: PENDING (tunggu approval)\n6. Manager review & approve\n7. Setelah approve → Status: VERIFIED\n8. Attendance tercatat resmi\n\n---\n\nDOCUMENTATION REQUIREMENT:\n\nSetiap manual entry harus punya dokumentasi:\n- Email dari employee request\n- Manager approval (email/message screenshot)\n- Supporting evidence (invoice dari site, training certificate, medical note, dll)\n- Audit trail tercatat (siapa input, kapan, alasan)\n\n---\n\nPERMISSION CONTROL:\n\n- Employee: TIDAK bisa input manual entry (hanya request)\n- Manager: Bisa view & approve employee manual entry\n- HR/Admin: Bisa input & approve manual entry\n- Finance: Read-only (untuk payroll verification)\n\n---\n\nVALIDATION SEBELUM SUBMIT:\n\n✓ Semua field required sudah diisi\n✓ Waktu logical (checkout > checkin)\n✓ Tidak overlapping dengan existing attendance\n✓ Approval reference ada (manager/supervisor)\n✓ Reason jelas & dokumentasi attached (jika perlu)\n✓ Not backdated lebih dari 30 hari (compliance)",
+          "image": {
+            "src": "/images/help/hr/attendance/manual-entry.webp",
+            "alt": "Manual attendance entry"
+          }
+        },
+        {
+          "title": "Attendance Reports & Statistics",
+          "body": "Generate berbagai laporan dan statistik kehadiran untuk monitoring dan analysis.\n\n---\n\nREPORT TYPES:\n\n1. PERSONAL ATTENDANCE REPORT\n   - Employee sendiri melihat history kehadiran mereka\n   - Scope: Hanya data employee tersebut\n   - Info: Clock in/out, duration, type (Normal/WFH/Field), status\n   - Filter: Date range, Month, Year\n   - Export: PDF (untuk print/dokumentasi)\n\n2. DIVISION ATTENDANCE SUMMARY\n   - Manager melihat kehadiran seluruh team/division\n   - Scope: Semua employee dalam division tertentu\n   - Info: Total present, absent, late, on leave, on holiday\n   - Metrics: Attendance rate (%), average duration, no-show count\n   - Filter: Date range, Department/Division\n   - Export: CSV/PDF\n\n3. MONTHLY ATTENDANCE REPORT\n   - HR/Finance lihat overview kehadiran per bulan\n   - Scope: Semua employees\n   - Info: Working days, present days, absent days, late count, early leave, overtime hours\n   - Calculation: Attendance rate = (Present Days / Working Days) × 100%\n   - Filter: Month, Year, Department\n   - Export: PDF dengan summary & detail\n\n4. OVERTIME SUMMARY REPORT\n   - Track total overtime per employee\n   - Scope: All or specific department\n   - Info: Hours by type (weekday 1.5x, weekend 2.0x, holiday 3.0x)\n   - Calculation: Total amount (before tax) = Hours × Rate\n   - Filter: Date range, Employee, Approval status\n   - Export: CSV untuk payroll import\n\n---\n\nCARA GENERATE REPORT:\n\n1. Buka Attendance → Reports\n2. Pilih report type yang ingin generate\n3. Set filter:\n   - Date range / Month / Year\n   - Employee / Division / All\n   - Status (All / Pending / Approved)\n4. Klik Generate\n5. Report diproses (max 2-5 detik)\n6. Preview atau Download:\n   - PDF: Untuk print & sharing\n   - CSV: Untuk import ke Excel/analysis\n   - Excel: Dengan formula & pivot table\n\n---\n\nKEY METRICS DALAM REPORT:\n\n- Attendance Rate: (Present Days / Working Days) × 100%\n  Target: >95% (sangat baik), 90-95% (baik), <90% (perlu improvement)\n\n- Late Count: Berapa kali karyawan terlambat (clock in after start time)\n  Policy: Warning jika >3x dalam bulan, performance review jika >5x\n\n- Early Leave Count: Berapa kali pulang lebih awal dari end time\n  Policy: Monitor, jika sering check dengan employee (health issue?)\n\n- Overtime Hours: Total jam overtime\n  Policy: Monitor untuk prevent burnout, max 20 jam/bulan\n\n- Absent Count: Hari tidak hadir tanpa reason/approval\n  Policy: Investigate, bisa jadi resignation sign\n\n---\n\nREPORT USAGE:\n\n- Manager: Monitor team performance, identify trends, coach employee\n- HR: Validate attendance data, identify policy violations, plan workforce\n- Finance: Input overtime ke payroll, verify salary calculation\n- Executive: Review company-wide attendance trends, policy effectiveness",
+          "image": {
+            "src": "/images/help/hr/attendance/attendance-reports.webp",
+            "alt": "Attendance reports and statistics"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Skenario Praktis"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Skenario 1: Normal Daily Attendance",
+          "body": "Karyawan \"Budi Santoso\" (Sales Rep) bekerja normal pada Senin, 8 April 2026.\n\nLANGKAH-LANGKAH:\n\n1. Pagi (08:45):\n   - Budi membuka aplikasi Attendance\n   - Klik Check In\n   - Dialog:\n     • Type: Normal (default)\n     • Location: Office\n     • Notes: -\n   - Klik Confirm\n   - Sistem mencatat: Check-in 08:45\n   - Status: CHECKED_IN\n\n2. Siang (12:00):\n   - Budi lunch break (otomatis pause, jika system support)\n   - Atau bisa clock out 12:00, clock in 13:00 (2 records)\n\n3. Sore (17:00):\n   - Budi membuka Attendance\n   - Klik Check Out\n   - Dialog:\n     • Check-out Time: 17:05 (actual time)\n     • Notes: -\n   - Klik Confirm\n   - Sistem mencatat: Check-out 17:05\n   - Status: CHECKED_OUT\n\n4. System Calculation:\n   - Working Hours: 17:05 - 08:45 = 8 hours 20 minutes (including break)\n   - Expected: 8 hours (berdasarkan work schedule)\n   - Variance: +20 minutes (OK, normal)\n   - Status: PRESENT\n\nRESULT:\nAttendance tercatat PRESENT untuk 8 April. Budi dihitung hadir normal. Data digunakan untuk payroll calculation bulan depan.\n\n---\n\nKEY POINTS:\n\n✓ Clock in 08:45 (15 min sebelum jam kerja 09:00) = OK, on time\n✓ Clock out 17:05 (5 min setelah jam kerja 17:00) = OK, normal\n✓ Total working hours: 8h 20m ≈ full day\n✓ Status: PRESENT (attended full day)\n✓ Attendance record digunakan untuk payroll & leave balance calculation",
+          "image": {
+            "src": "/images/help/hr/attendance/scenario-normal.webp",
+            "alt": "Normal daily attendance scenario"
+          }
+        },
+        {
+          "title": "Skenario 2: Late Arrival",
+          "body": "Karyawan \"Siti Nurhaliza\" terlambat hadir pada Selasa, 9 April 2026 karena traffic.\n\nLANGKAH-LANGKAH:\n\n1. Pagi (09:15):\n   - Siti tiba di kantor 15 menit terlambat (schedule 09:00)\n   - Buka aplikasi Attendance\n   - Klik Check In\n   - Dialog:\n     • Type: Normal\n     • Location: Office\n     • Notes: Traffic macet (optional)\n   - Klik Confirm\n   - Sistem mencatat: Check-in 09:15\n   - Status: LATE (Flagged, karena > scheduled start time)\n\n2. Sore (17:00):\n   - Siti masih bekerja untuk compensate waktu yang hilang\n   - Clock Out 18:00 (1 jam lebih lama)\n   - Sistem mencatat: Check-out 18:00\n   - Status: CHECKED_OUT\n\n3. System Calculation:\n   - Check-in: 09:15 (late, +15 min)\n   - Check-out: 18:00\n   - Working Hours: 18:00 - 09:15 = 8h 45m\n   - Schedule hours: 8 hours\n   - Variance: +45 minutes\n   - Status: LATE (flagged) + PRESENT\n\n4. Record & Notification:\n   - Attendance marked LATE\n   - Late count: +1 untuk April\n   - Manager notified (optional)\n   - Dapat compensate dengan extra work\n\nRESULT:\nSiti dihitung PRESENT (attended), tapi dengan late flag. Berguna untuk:\n- Monitor attendance trend\n- Evaluate performance\n- Identify pattern (jika sering terlambat)\n- Policy enforcement (warning, penalty, talk)\n\n---\n\nKEY POINTS:\n\n✓ Late clock-in: 09:15 vs 09:00 scheduled = LATE (15 minutes)\n✓ Employee bisa compensate dengan extra work (stay until 18:00)\n✓ Status: LATE + PRESENT (tetap dihitung hadir, tapi ada catatan terlambat)\n✓ Late count tracked untuk monthly report\n✓ Manager dapat follow up jika sering terlambat (3x/month → warning)",
+          "image": {
+            "src": "/images/help/hr/attendance/scenario-late.webp",
+            "alt": "Late arrival scenario"
+          }
+        },
+        {
+          "title": "Skenario 3: Work From Home (WFH)",
+          "body": "Karyawan \"Ahmad Riyanto\" bekerja dari rumah pada Rabu, 10 April 2026 (pre-approved oleh manager).\n\nPRE-APPROVAL (sebelumnya):\n- Ahmad request WFH untuk hari ini (meeting di rumah, fokus development)\n- Manager approve via system\n- WFH status: APPROVED\n- Ahmad bisa check-in dari rumah\n\nLANGKAH-LANGKAH:\n\n1. Pagi (09:00):\n   - Ahmad membuka aplikasi (VPN ke company network)\n   - Klik Check In\n   - Dialog:\n     • Type: WFH (Work From Home) ← Pilihan berbeda\n     • Location: Home/Jakarta Selatan\n     • Notes: Development sprint (optional)\n   - Klik Confirm\n   - Sistem validate: \"WFH approved untuk hari ini\" ✓\n   - Mencatat: Check-in 09:00 (WFH)\n   - Status: CHECKED_IN (WFH)\n\n2. Monitoring (optional):\n   - Sistem bisa request status update di siang hari\n   - Ahmad submit: \"Masih developing module X\"\n   - Manager bisa lihat WFH status real-time\n\n3. Sore (17:00):\n   - Ahmad check out\n   - Dialog:\n     • Check-out Time: 17:00\n     • Work output: Fixed bug #123, unit tests passed\n   - Klik Confirm\n   - Sistem mencatat: Check-out 17:00 (WFH)\n   - Status: CHECKED_OUT (WFH)\n\n4. System Calculation:\n   - Type: WFH (bukan NORMAL office)\n   - Working Hours: 17:00 - 09:00 = 8 hours\n   - Status: PRESENT (WFH)\n   - Schedule: Tetap sesuai (flexible, still 8 hours)\n\nRESULT:\nAhmad dihitung PRESENT (WFH). Data digunakan untuk:\n- Payroll calculation (same as office attendance)\n- WFH trend analysis (manager lihat productivity)\n- Leave balance (WFH tidak cut leave balance)\n\n---\n\nWFH VALIDATION RULES:\n\n✓ Harus pre-approved oleh manager (tidak bisa spontan)\n✓ Work schedule harus allow WFH (some company tidak allow WFH)\n✓ Total working hours tetap harus 8 jam/hari\n✓ Gaji & benefit same dengan office attendance\n✓ Tidak bisa combine WFH + clock out early (must complete 8h)\n✓ VPN/system access harus aktif (audit trail)\n\n---\n\nKEY POINTS:\n\n✓ WFH perlu pre-approval (tidak bisa spontan)\n✓ Check-in/out same seperti office (record time)\n✓ Working hours still 8 hours (flexible location, not flexible duration)\n✓ Status: PRESENT (attendance impact same)\n✓ Manager dapat monitor productivity via task/output",
+          "image": {
+            "src": "/images/help/hr/attendance/scenario-wfh.webp",
+            "alt": "Work from home scenario"
+          }
+        },
+        {
+          "title": "Skenario 4: Weekend Overtime",
+          "body": "Karyawan \"Budi Santoso\" ingin bekerja overtime pada Sabtu, 13 April 2026 (normally off day) untuk urgent project.\n\nOVERTIME REQUEST (sebelumnya, Friday):\n\n1. Budi buka Attendance → Overtime Request\n2. Form:\n   - Date: Sabtu, 13 April 2026\n   - Start Time: 10:00\n   - End Time: 16:00\n   - Duration: 6 hours\n   - Reason: \"Urgent project deployment, need team support\"\n   - Manager: Andi Wijaya (auto-filled)\n3. Klik Submit\n4. Status: PENDING (waiting for manager approval)\n\nMANAGER APPROVAL:\n\n1. Andi (manager) receives notification\n2. Review overtime request dari Budi\n3. Check: Valid reason? Urgent? Staffing sufficient?\n4. Click Approve Overtime\n5. Status: APPROVED\n6. Budi notified: \"OT approved for Saturday\"\n\nSABATU ATTENDANCE:\n\n1. Pagi (10:00):\n   - Budi check in (weekend, normally off)\n   - Dialog:\n     • Type: Normal (dapat clock in karena approved OT)\n     • Location: Office\n     • Notes: Overtime approved\n   - Check-in 10:00\n   - Status: CHECKED_IN\n\n2. Sore (16:00):\n   - Budi check out\n   - Dialog:\n     • Check-out Time: 16:00\n     • Task completed: Deployment done, all tests pass\n   - Check-out 16:00\n   - Status: CHECKED_OUT\n\n3. System Calculation:\n   - Date: Saturday (normally off, but OT approved)\n   - Type: Overtime (Saturday)\n   - Working Hours: 16:00 - 10:00 = 6 hours\n   - Rate Multiplier: 2.0x (weekend)\n   - Status: OVERTIME_APPROVED\n\nPAYROLL PROCESSING (bulan depan):\n\n1. Finance generate payroll April 2026\n2. System include overtime dari Budi:\n   - 6 hours × Rp 50.000/hour (regular rate) × 2.0x (weekend) = Rp 600.000\n3. Gross salary meningkat: Rp 5.000.000 (base) + Rp 600.000 (OT) = Rp 5.600.000\n4. Tax & BPJS calculated dari gross yang lebih besar\n5. Net salary: Lebih besar karena OT\n\nRESULT:\nBudi dapat overtime pay Rp 600.000 dalam gaji April. Attendance record menunjukkan OT worked. Manager dapat track team OT trend.\n\n---\n\nKEY POINTS:\n\n✓ Overtime perlu pre-approval (PENDING → APPROVED)\n✓ Weekend OT rate: 2.0x dari hourly rate\n✓ OT hours automatically included di payroll processing\n✓ Employee dapat financial benefit dari overtime\n✓ Manager track untuk prevent overworking/burnout (max 20h/month)\n✓ Attendance record distinguish OT vs regular work",
+          "image": {
+            "src": "/images/help/hr/attendance/scenario-weekend-ot.webp",
+            "alt": "Weekend overtime scenario"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Tips & Troubleshooting"
+    },
+    {
+      "type": "collapsible",
+      "items": [
+        {
+          "title": "Pertanyaan Umum",
+          "body": "Q: Apa beda antara NORMAL, WFH, dan FIELD WORK check-in?\nA: NORMAL = di kantor, WFH = di rumah (pre-approved), FIELD WORK = di lokasi customer/field (tracking location). Ketiga type punya working hours requirement sama (8 jam/hari).\n\nQ: Bagaimana jika karyawan lupa clock in/out?\nA: Karyawan bisa request manual entry ke HR dengan dokumentasi (email approval dari manager). Admin verify & approve. Data tercatat dengan audit trail.\n\nQ: Apakah overtime gaji lebih langsung masuk?\nA: Tidak, overtime diproses saat payroll bulan berikutnya. Jika OT di April, gaji include OT saat process payroll April (dibayar 1 Mei atau sesuai kebijakan).\n\nQ: Berapa rate overtime untuk berbagai hari?\nA: Weekday (Mon-Fri) = 1.5x, Weekend (Sat) = 2.0x, Holiday (National/Collective/Company) = 3.0x. Rate di-apply pada hourly salary.\n\nQ: Bisa kah absent karena on leave approved?\nA: Tidak, jika leave approved maka status ON_LEAVE (bukan ABSENT). Tetap dihitung hadir (paid leave). Absence hanya jika tidak hadir dan tidak ada keterangan.\n\nQ: Bagaimana tracking WFH productivity?\nA: Manager bisa request status update di siang hari. Employee submit daily update (task completed, deliverables). System record untuk productivity tracking.\n\nQ: Apakah holiday attendance butuh clock in/out?\nA: Tidak, hari holiday otomatis mark HOLIDAY (off day). Karyawan tidak perlu clock in. Jika terpaksa kerja, bisa request overtime dengan 3.0x rate."
+        },
+        {
+          "title": "Troubleshooting",
+          "body": "Masalah: Tidak bisa clock in, system error \"Access Denied\"\nSolusi: Check apakah employee status ACTIVE. Jika INACTIVE/DEACTIVATED, tidak bisa clock in. Contact HR untuk re-activate.\n\nMasalah: Clock in berhasil tapi tidak bisa clock out\nSolusi: Klik ulang Check Out button. Jika masih error, restart aplikasi. Jika persist, contact IT untuk system troubleshooting.\n\nMasalah: WFH approved tapi tidak bisa check in dari rumah\nSolusi: Pastikan VPN connected ke company network. Jika tidak ada VPN access, contact IT setup. Atau contact HR untuk change location setting.\n\nMasalah: Overtime request rejected oleh manager, tidak jelas alasan\nSolusi: Contact manager langsung (email/chat). Manager bisa re-open request dengan feedback. Atau discuss dengan HR untuk policy clarification.\n\nMasalah: Holiday tidak ter-mark otomatis, karyawan dapat ABSENT\nSolusi: Admin check holiday setup (apakah include hari tersebut?). Update holiday list jika ada missing. Contact IT untuk re-sync holiday calendar.\n\nMasalah: Late clock-in tapi gaji tetap sama (tidak ada penalty)\nSolusi: Company policy mungkin tidak ada auto-penalty untuk late. Lateness tracked untuk manager review. Jika ada policy, manager handle via talk/warning.\n\nMasalah: Overtime tidak muncul di payroll calculation\nSolusi: Check apakah overtime status APPROVED (bukan PENDING/REJECTED). Verify date & amount. Contact Finance untuk re-process payroll jika perlu adjustment."
+        },
+        {
+          "title": "Best Practices",
+          "body": "1. Clock In ON TIME\n   - Jangan terlambat (bisa jadi pattern, performa issue)\n   - Set alarm untuk office arrival time\n   - Anticipate traffic (arrive 10-15 min early)\n\n2. Request WFH di ADVANCE\n   - Jangan spontan (manager perlu plan)\n   - Submit request 1-2 hari sebelumnya\n   - Pastikan WFH approved sebelum bekerja dari rumah\n\n3. Log Overtime PROPERLY\n   - Jangan lupa request overtime (akan count di payroll)\n   - Submit sebelum atau hari yang sama\n   - Include reason & approval\n\n4. Report Issues IMMEDIATELY\n   - Lupa clock in? Lapor hari itu juga\n   - System error? Contact IT segera\n   - Jangan delay, akan kompleks kalau ketinggalan\n\n5. Monitor Attendance TREND\n   - Manager review team OT, late, absent trend\n   - Identify issues early (health problem? workload?)\n   - Address dengan coaching/support\n\n6. Keep Schedule UPDATE\n   - Inform HR jika ada schedule change (shift change, relocation)\n   - Update schedule effective date\n   - Validate working hours calculation\n\n7. Archive Attendance DATA\n   - Keep records untuk 1+ tahun (compliance)\n   - Use attendance data untuk payroll audit\n   - Reconcile dengan finance GL posting"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "body": "Integrasi Antar Modul"
+    },
+    {
+      "type": "text",
+      "body": "Modul Attendance terintegrasi dengan beberapa modul lain:\n\n1. Integrasi dengan Employee\nData employee (work schedule, employment type, join date) dari Employee module digunakan untuk validasi attendance. Schedule assignment untuk employee harus sudah di-setup sebelum employee bisa clock in.\n\n2. Integrasi dengan Leave Request\nApproved leave request akan mark attendance sebagai ON_LEAVE (tidak perlu clock in). Leave balance di-deduce dari leave request, bukan dari attendance absence.\n\n3. Integrasi dengan Payroll\nApproved overtime dari Attendance module otomatis included dalam payroll processing. System calculate overtime pay dengan rate multiplier dan add ke gross salary karyawan untuk calculation pajak & BPJS.\n\n4. Integrasi dengan Holiday\nHoliday master yang di-setup di Attendance module akan auto-mark employee attendance sebagai HOLIDAY (off day). Tidak perlu clock in pada hari libur.\n\n5. Integrasi dengan Finance (GL)\nWorking hours dari attendance dapat digunakan untuk:\n- Validate billable hours (untuk project costing)\n- Track labor cost (salary expense per employee)\n- Reconcile dengan timesheet system (jika ada)"
+    }
+  ]
+}
