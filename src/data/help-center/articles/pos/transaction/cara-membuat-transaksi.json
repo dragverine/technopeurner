@@ -1,61 +1,91 @@
 {
   "title": "Cara Membuat Transaksi Baru",
-  "description": "Panduan langkah demi langkah membuat transaksi penjualan di modul POS",
+  "description": "Panduan langkah demi langkah membuat transaksi penjualan di modul POS dari membuka kasir hingga menyelesaikan pembayaran.",
   "slug": "cara-membuat-transaksi",
   "module": "pos",
   "subcategory": "transaction",
   "author": "Tim Gilabs",
   "createdAt": "2026-04-04",
-  "updatedAt": "2026-04-10",
-  "tags": ["pos", "transaksi", "penjualan", "kasir"],
+  "updatedAt": "2026-05-11",
+  "tags": ["pos", "transaksi", "penjualan", "kasir", "checkout"],
   "content": [
     {
       "type": "text",
-      "body": "Modul POS memudahkan Anda dalam memproses transaksi penjualan secara cepat dan akurat. Berikut panduan membuat transaksi baru."
+      "body": "Modul POS memudahkan Anda memproses transaksi penjualan dengan cepat dan akurat. Panduan ini menjelaskan langkah-langkah membuat transaksi baru dari awal hingga selesai."
     },
     {
       "type": "step",
       "stepNumber": 1,
       "title": "Buka Halaman Kasir",
-      "body": "Klik menu POS pada sidebar, lalu pilih Kasir / New Transaction untuk membuka halaman transaksi baru.",
+      "body": "Klik menu POS pada sidebar aplikasi, lalu pilih \"Kasir\" atau \"New Transaction\" untuk membuka halaman transaksi baru.",
       "image": {
-        "src": "/images/help/pos/transaction/buat-transaksi-step-1.webp",
-        "alt": "Halaman kasir POS"
+        "src": "/images/help/pos/transaction/buka-halaman-kasir.webp",
+        "alt": "Halaman kasir POS dengan keranjang transaksi kosong"
       }
     },
     {
       "type": "step",
       "stepNumber": 2,
-      "title": "Tambahkan Produk",
-      "body": "Cari produk melalui kolom pencarian atau scan barcode. Klik produk untuk menambahkannya ke keranjang. Anda bisa mengubah jumlah (qty) langsung di keranjang.",
+      "title": "Tambahkan Produk ke Keranjang",
+      "body": "Cari produk melalui kolom pencarian atau gunakan scan barcode. Klik produk untuk menambahkannya ke keranjang. Anda bisa mengubah jumlah (qty) langsung di keranjang dengan input quantity.",
       "image": {
-        "src": "/images/help/pos/transaction/buat-transaksi-step-2.webp",
-        "alt": "Menambahkan produk ke keranjang"
+        "src": "/images/help/pos/transaction/tambah-produk-keranjang.webp",
+        "alt": "Daftar produk dan menambahkan ke keranjang"
       }
     },
     {
       "type": "step",
       "stepNumber": 3,
-      "title": "Pilih Metode Pembayaran",
-      "body": "Setelah semua produk ditambahkan, klik tombol Bayar. Pilih metode pembayaran yang digunakan pelanggan: Tunai, Kartu Debit/Kredit, atau E-Wallet.",
+      "title": "Terapkan Diskon (Opsional)",
+      "body": "Jika ada diskon, klik tombol \"Diskon\" atau \"Terapkan Promo\". Masukkan diskon sesuai tipe (persentase atau jumlah fixed). Sistem akan menampilkan total setelah diskon.",
       "image": {
-        "src": "/images/help/pos/transaction/buat-transaksi-step-3.webp",
-        "alt": "Pilihan metode pembayaran"
+        "src": "/images/help/pos/transaction/terapkan-diskon.webp",
+        "alt": "Aplikasi diskon pada transaksi"
       }
-    },
-    {
-      "type": "info",
-      "body": "Untuk pembayaran tunai, sistem akan otomatis menghitung kembalian berdasarkan nominal yang dimasukkan."
     },
     {
       "type": "step",
       "stepNumber": 4,
-      "title": "Selesaikan Transaksi",
-      "body": "Klik Selesaikan Pembayaran untuk menyelesaikan transaksi. Struk pembayaran dapat dicetak atau dikirim via email/WhatsApp ke pelanggan.",
+      "title": "Pilih Metode Pembayaran",
+      "body": "Klik tombol \"Bayar\" untuk lanjut ke halaman pembayaran. Pilih metode pembayaran: Tunai, Kartu Debit/Kredit, atau E-Wallet. Sistem akan menampilkan total yang harus dibayar.",
       "image": {
-        "src": "/images/help/pos/transaction/buat-transaksi-step-4.webp",
-        "alt": "Konfirmasi transaksi selesai"
+        "src": "/images/help/pos/transaction/pilih-metode-pembayaran.webp",
+        "alt": "Opsi metode pembayaran (tunai, kartu, e-wallet)"
       }
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Input Jumlah Pembayaran",
+      "body": "Masukkan jumlah uang yang diterima dari pelanggan. Untuk pembayaran tunai, sistem akan otomatis menghitung kembalian. Untuk kartu/e-wallet, verifikasi bahwa pembayaran diproses.",
+      "image": {
+        "src": "/images/help/pos/transaction/input-jumlah-pembayaran.webp",
+        "alt": "Input jumlah pembayaran dan kalkulasi kembalian"
+      }
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Selesaikan Transaksi",
+      "body": "Klik \"Selesaikan Pembayaran\" atau \"Konfirmasi\" untuk menyelesaikan transaksi. Transaksi telah berhasil diproses dan terekam dalam sistem.",
+      "image": {
+        "src": "/images/help/pos/transaction/selesaikan-transaksi.webp",
+        "alt": "Konfirmasi dan penyelesaian transaksi"
+      }
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Cetak atau Kirim Struk",
+      "body": "Setelah transaksi selesai, Anda dapat mencetak struk pembayaran untuk diberikan kepada pelanggan, atau mengirimkannya via email/WhatsApp sesuai preferensi.",
+      "image": {
+        "src": "/images/help/pos/transaction/cetak-kirim-struk.webp",
+        "alt": "Opsi cetak dan pengiriman struk pembayaran"
+      }
+    },
+    {
+      "type": "info",
+      "body": "Untuk pembayaran tunai, pastikan kembalian yang dihitung sistem sudah benar sebelum memberikannya kepada pelanggan."
     }
   ],
   "relatedArticles": []

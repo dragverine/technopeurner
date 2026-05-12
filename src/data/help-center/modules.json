@@ -30,8 +30,15 @@
       "color": "#F59E0B",
       "subcategories": [
         { "id": "transaction", "title": "Transaction", "description": "Proses transaksi penjualan" },
-        { "id": "product", "title": "Product", "description": "Kelola produk dan katalog" },
-        { "id": "discount", "title": "Discount", "description": "Atur diskon dan promo" }
+        { "id": "void-return", "title": "Void & Return", "description": "Pembatalan dan pengembalian transaksi" },
+        { "id": "table-management", "title": "Table Management", "description": "Pengelolaan meja di restoran" },
+        { "id": "kitchen-display-system", "title": "Kitchen Display System", "description": "Sistem tampilan dapur" },
+        { "id": "stock-management", "title": "Stock Management", "description": "Kelola stok di POS" },
+        { "id": "discount-promotion", "title": "Discount & Promotion", "description": "Atur diskon dan promo" },
+        { "id": "session-management", "title": "Session Management", "description": "Kelola sesi kasir" },
+        { "id": "reports-analytics", "title": "Reports & Analytics", "description": "Laporan dan analitik penjualan" },
+        { "id": "payment-processing", "title": "Payment Processing", "description": "Proses pembayaran" },
+        { "id": "order-management", "title": "Order Management", "description": "Kelola pesanan penjualan" }
       ]
     },
     {
@@ -42,7 +49,13 @@
       "subcategories": [
         { "id": "employee", "title": "Employee", "description": "Kelola data karyawan" },
         { "id": "payroll", "title": "Payroll", "description": "Penggajian dan kompensasi" },
-        { "id": "attendance", "title": "Attendance", "description": "Absensi dan kehadiran" }
+        { "id": "attendance", "title": "Attendance", "description": "Absensi dan kehadiran" },
+        { "id": "leave-request", "title": "Leave Request", "description": "Pengajuan cuti dan izin" },
+        { "id": "work-schedules", "title": "Work Schedules", "description": "Jadwal kerja karyawan" },
+        { "id": "evaluation", "title": "Evaluation", "description": "Evaluasi kinerja karyawan" },
+        { "id": "recruitment", "title": "Recruitment", "description": "Proses rekrutmen" },
+        { "id": "holidays", "title": "Holidays", "description": "Pengaturan hari libur" },
+        { "id": "overtime", "title": "Overtime", "description": "Manajemen lembur" }
       ]
     },
     {

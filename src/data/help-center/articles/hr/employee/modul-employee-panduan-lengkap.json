@@ -73,7 +73,7 @@
         },
         {
           "title": "Membuat Karyawan Baru (5 Langkah)",
-          "body": "Proses penambahan karyawan melalui beberapa tahap data entry dan approval:\n\n1. Buka Form: Pada Employee list, klik tombol + New Employee untuk membuka form penambahan karyawan baru.\n\n2. Tab Personal Data: Lengkapi informasi pribadi (field dengan * adalah wajib):\n   - Full Name*: Nama lengkap sesuai KTP\n   - Email*: Email aktif & unik\n   - Phone: Nomor telepon\n   - Date of Birth: Tanggal lahir\n   - Gender: Laki-laki atau Perempuan\n   - Religion: Agama\n   - Address: Alamat rumah\n   - City & Zip Code: Kota dan kode pos\n\n3. Tab Work Information: Lengkapi informasi pekerjaan:\n   - Division*: Divisi/departemen\n   - Position*: Jabatan\n   - Join Date*: Tanggal mulai bekerja\n   - Employment Type*: PKWTT, PKWT, Outsourced, Intern\n   - Contract End Date: Jika PKWT, tentukan tanggal berakhir kontrak\n   - Total Leave Quota*: Jumlah hari cuti per tahun\n   - Manager/Supervisor: Atasan langsung\n\n4. Tab Tax & Benefits: Lengkapi informasi pajak dan benefit:\n   - PTKP Status*: TK/0, K/1, K/2, K/3 (untuk perhitungan PPh 21)\n   - Disability Status: Centang jika ada disabilitas\n   - Bank Name: Pilih bank untuk transfer gaji\n   - Bank Account Number: Nomor rekening karyawan\n   - NPWP: Nomor Pokok Wajib Pajak (opsional)\n\n5. Review & Submit: Periksa semua data, pastikan field * lengkap, kemudian klik Submit. Status berubah menjadi PENDING.",
+          "body": "Proses penambahan karyawan melalui beberapa tahap data entry dan approval:\n\n1. Buka Form: Pada Employee list, klik tombol + New Employee untuk membuka form penambahan karyawan baru.\n\n2. Tab Personal Data: Lengkapi informasi pribadi (field dengan - adalah wajib):\n   - Full Name*: Nama lengkap sesuai KTP\n   - Email*: Email aktif & unik\n   - Phone: Nomor telepon\n   - Date of Birth: Tanggal lahir\n   - Gender: Laki-laki atau Perempuan\n   - Religion: Agama\n   - Address: Alamat rumah\n   - City & Zip Code: Kota dan kode pos\n\n3. Tab Work Information: Lengkapi informasi pekerjaan:\n   - Division*: Divisi/departemen\n   - Position*: Jabatan\n   - Join Date*: Tanggal mulai bekerja\n   - Employment Type*: PKWTT, PKWT, Outsourced, Intern\n   - Contract End Date: Jika PKWT, tentukan tanggal berakhir kontrak\n   - Total Leave Quota*: Jumlah hari cuti per tahun\n   - Manager/Supervisor: Atasan langsung\n\n4. Tab Tax & Benefits: Lengkapi informasi pajak dan benefit:\n   - PTKP Status*: TK/0, K/1, K/2, K/3 (untuk perhitungan PPh 21)\n   - Disability Status: Centang jika ada disabilitas\n   - Bank Name: Pilih bank untuk transfer gaji\n   - Bank Account Number: Nomor rekening karyawan\n   - NPWP: Nomor Pokok Wajib Pajak (opsional)\n\n5. Review & Submit: Periksa semua data, pastikan field - lengkap, kemudian klik Submit. Status berubah menjadi PENDING.",
           "image": {
             "src": "/images/help/hr/employee/employee-create-form.webp",
             "alt": "Form membuat karyawan baru"
@@ -170,7 +170,7 @@
         },
         {
           "title": "Troubleshooting",
-          "body": "Masalah: Tidak bisa submit karyawan\nSolusi: Pastikan semua field * (required) sudah terisi\n\nMasalah: Email duplicate error\nSolusi: Email sudah dipakai karyawan lain. Gunakan email unik.\n\nMasalah: Tidak bisa edit field tertentu\nSolusi: Field locked untuk protection. Contact admin untuk unlock.\n\nMasalah: Karyawan tidak muncul di attendance\nSolusi: Pastikan status karyawan = ACTIVE. Inactive/Draft tidak bisa clock in.\n\nMasalah: Attendance tidak ada di Payroll\nSolusi: Sync delay 1-2 jam. Tunggu atau contact IT untuk manual sync."
+          "body": "Masalah: Tidak bisa submit karyawan\nSolusi: Pastikan semua field - (required) sudah terisi\n\nMasalah: Email duplicate error\nSolusi: Email sudah dipakai karyawan lain. Gunakan email unik.\n\nMasalah: Tidak bisa edit field tertentu\nSolusi: Field locked untuk protection. Contact admin untuk unlock.\n\nMasalah: Karyawan tidak muncul di attendance\nSolusi: Pastikan status karyawan = ACTIVE. Inactive/Draft tidak bisa clock in.\n\nMasalah: Attendance tidak ada di Payroll\nSolusi: Sync delay 1-2 jam. Tunggu atau contact IT untuk manual sync."
         },
         {
           "title": "Best Practices",
@@ -180,3 +180,4 @@
     }
   ]
 }
+

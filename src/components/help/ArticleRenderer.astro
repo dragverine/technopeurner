@@ -25,10 +25,26 @@ const { content } = Astro.props;
 
     if (block.type === 'text') {
       return (
-        <div class="prose-block">
-          {block.body?.split('\n').map((line) => (
-            <p class="text-foreground leading-relaxed">{line}</p>
-          ))}
+        <div class="prose-block space-y-3">
+          {block.body?.split('\n\n').map((paragraph) => {
+            if (paragraph.trim().startsWith('- ')) {
+              // Handle bullet points
+              return (
+                <ul class="list-disc list-inside space-y-1">
+                  {paragraph.split('\n').map((line) => {
+                    if (line.trim().startsWith('- ')) {
+                      return <li class="text-foreground leading-relaxed">{line.slice(2)}</li>;
+                    }
+                  })}
+                </ul>
+              );
+            } else {
+              // Handle regular text with HTML support
+              return (
+                <p class="text-foreground leading-relaxed" set:html={paragraph.trim()} />
+              );
+            }
+          })}
         </div>
       );
     }

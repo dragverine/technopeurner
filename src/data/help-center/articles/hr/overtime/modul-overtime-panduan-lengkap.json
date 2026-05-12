@@ -1,13 +1,14 @@
 {
   "title": "Modul HRD - Overtime (Lembur) - Panduan Lengkap",
-  "description": "Panduan lengkap menggunakan Modul Overtime dalam sistem HRD GIMS mencakup overtime request (manual & auto-detected), approval workflow, rate multiplier calculation (1.5x untuk weekday, 2.0x untuk weekend), compensation tracking, monthly limit enforcement, dan integration dengan payroll untuk perhitungan gaji lembur.",
+  "description": "Panduan lengkap mengelola overtime dalam sistem HRD GIMS mencakup pengajuan lembur, approval flow, perhitungan kompensasi, dan reporting dengan berbagai tipe rate multiplier.",
   "slug": "modul-overtime-panduan-lengkap",
   "module": "hr",
   "subcategory": "overtime",
   "author": "Tim GIMS",
-  "createdAt": "2026-04-21",
-  "updatedAt": "2026-04-21",
-  "tags": ["hr", "overtime", "lembur", "overtime-request", "overtime-approval", "overtime-pay", "rate-multiplier", "weekday", "weekend"],
+  "createdAt": "2026-05-11",
+  "updatedAt": "2026-05-11",
+  "tags": ["hr", "overtime", "lembur", "approval", "kompensasi", "payroll"],
+  "relatedArticles": [],
   "content": [
     {
       "type": "text",
