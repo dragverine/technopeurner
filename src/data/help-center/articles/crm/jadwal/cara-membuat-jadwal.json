@@ -1,0 +1,64 @@
+{
+  "title": "Cara Membuat dan Mengelola Jadwal",
+  "description": "Panduan membuat jadwal kegiatan tim sales beserta lokasi, pengingat otomatis, dan penugasan ke karyawan",
+  "slug": "cara-membuat-jadwal",
+  "module": "crm",
+  "subcategory": "jadwal",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["jadwal", "schedule", "kunjungan terjadwal", "pengingat", "kalender sales"],
+  "relatedArticles": ["cara-membuat-tugas", "cara-membuat-laporan-kunjungan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Jadwal membantu tim sales merencanakan kegiatan ke depan — kunjungan pelanggan, rapat, presentasi, atau event lainnya. Setiap jadwal bisa dilengkapi pengingat otomatis sehingga tidak ada kegiatan yang terlewat."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Jadwal",
+      "body": "Dari menu utama, klik CRM → Jadwal. Halaman menampilkan kalender atau daftar jadwal yang sudah dibuat."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Jadwal Baru",
+      "body": "Klik tombol Buat Jadwal. Form dialog akan terbuka dengan tiga bagian: Informasi Dasar, Waktu, dan Entitas Terkait."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Bagian Informasi Dasar",
+      "body": "Isi informasi jadwal:\n- Judul (wajib): nama kegiatan yang deskriptif, contoh \"Kunjungan Demo ke PT Maju Jaya\" atau \"Rapat Internal Tim Sales\"\n- Karyawan (wajib): pilih karyawan yang menjalankan jadwal ini — ditampilkan sebagai nama + kode karyawan\n- Deskripsi (opsional): penjelasan detail kegiatan\n- Lokasi (opsional): alamat atau nama tempat kegiatan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Bagian Waktu",
+      "body": "Tentukan waktu jadwal:\n- Dijadwalkan Pada (wajib): pilih tanggal dan jam mulai kegiatan menggunakan datetime picker\n- Berakhir Pada (opsional): pilih tanggal dan jam selesai kegiatan\n- Pengingat (menit sebelum) (opsional): isi berapa menit sebelum kegiatan sistem akan mengingatkan, contoh isi 30 untuk pengingat 30 menit sebelum"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Bagian Entitas Terkait",
+      "body": "Tautkan jadwal ke entitas CRM yang relevan:\n- Tugas Terkait (opsional): pilih tugas yang terhubung dengan jadwal ini\nPenautan ini membantu menghubungkan kegiatan terjadwal dengan tugas yang sedang diproses."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Simpan Jadwal",
+      "body": "Klik Buat. Jadwal tersimpan dengan status Menunggu (Pending) dan muncul di kalender pada tanggal yang ditentukan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Perbarui Status Jadwal",
+      "body": "Saat mengedit jadwal, ubah Status sesuai kondisi terkini:\n- Menunggu (Pending): jadwal belum dimulai\n- Terkonfirmasi (Confirmed): jadwal sudah dikonfirmasi semua pihak\n- Selesai (Completed): kegiatan sudah selesai dilaksanakan\n- Dibatalkan (Cancelled): jadwal dibatalkan"
+    },
+    {
+      "type": "info",
+      "body": "Setelah jadwal kunjungan selesai, buat Laporan Kunjungan di CRM → Laporan Kunjungan untuk mendokumentasikan hasil dan minat produk dari kunjungan tersebut."
+    }
+  ]
+}

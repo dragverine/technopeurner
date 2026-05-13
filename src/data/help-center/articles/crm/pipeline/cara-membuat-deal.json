@@ -1,0 +1,64 @@
+{
+  "title": "Cara Membuat Deal di Pipeline",
+  "description": "Panduan membuat deal baru di pipeline penjualan beserta produk yang diminati, kualifikasi BANT, dan penugasan ke sales",
+  "slug": "cara-membuat-deal",
+  "module": "crm",
+  "subcategory": "pipeline",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["deal", "pipeline", "peluang penjualan", "BANT", "produk minat"],
+  "relatedArticles": ["cara-mengelola-pipeline-kanban", "cara-menutup-deal", "cara-konversi-lead-ke-pipeline"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Deal adalah peluang penjualan yang sedang diproses di pipeline. Setiap deal mewakili satu kesempatan closing dengan pelanggan tertentu dan bisa dipantau perkembangannya di kanban board pipeline."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pipeline",
+      "body": "Dari menu utama, klik CRM → Pipeline."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Deal Baru",
+      "body": "Klik tombol Buat Deal. Form dialog dua tab akan terbuka: Tab Informasi Dasar dan Tab Produk & BANT."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tab Informasi Dasar",
+      "body": "Isi kolom berikut:\n- Judul Deal: nama yang mendeskripsikan peluang ini, contoh \"Penawaran ERP PT. Maju Jaya\" (wajib, min 2 karakter)\n- Tahap Pipeline: pilih tahap awal deal — sistem menampilkan nama tahap + persentase probabilitas (wajib)\n- Tanggal Perkiraan Tutup: estimasi tanggal closing (opsional)\n- Lead: pilih lead yang terkait (opsional, atau buat lead baru langsung)\n- Pelanggan: pilih pelanggan jika sudah ada di sistem (opsional)\n- Kontak: pilih kontak person dari pelanggan yang dipilih (opsional)\n- Ditugaskan Ke: pilih sales yang menangani deal ini (opsional)\n- Deskripsi: keterangan tambahan tentang deal (opsional)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Klik Selanjutnya",
+      "body": "Klik tombol Selanjutnya untuk pindah ke tab Produk & BANT."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Tab Produk & BANT — Tambah Produk",
+      "body": "Klik Tambah Produk untuk menambahkan produk yang diminati pelanggan:\n- Produk: pilih dari katalog\n- Harga Satuan (Rp): harga per unit\n- Jumlah: kuantitas\n- Diskon (%): persentase diskon\n- Catatan: keterangan khusus untuk item ini\nSubtotal dihitung otomatis. Total nilai deal diperbarui otomatis dari semua produk."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Tab Produk & BANT — Kualifikasi BANT",
+      "body": "Isi kualifikasi BANT deal:\n- Budget Terkonfirmasi: centang → isi Jumlah Budget (Rp)\n- Otoritas Terkonfirmasi: centang → isi nama Orang Berwenang\n- Kebutuhan Terkonfirmasi: centang → isi Deskripsi Kebutuhan\n- Timeline Terkonfirmasi: centang → isi Tanggal Perkiraan Tutup\n- Catatan: catatan tambahan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Simpan Deal",
+      "body": "Klik tombol Buat Deal. Deal baru akan muncul di kanban board pipeline sesuai tahap yang dipilih."
+    },
+    {
+      "type": "info",
+      "body": "Deal yang dibuat dari konversi lead akan otomatis memiliki data lead, estimasi nilai, dan produk minat yang sudah tercatat di lead sebelumnya."
+    }
+  ]
+}

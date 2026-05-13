@@ -1,0 +1,58 @@
+{
+  "title": "Cara Membuat dan Mengelola Tugas",
+  "description": "Panduan membuat tugas untuk tim sales dengan prioritas, tipe, tenggat waktu, dan pengingat otomatis",
+  "slug": "cara-membuat-tugas",
+  "module": "crm",
+  "subcategory": "task",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["tugas", "task", "pengingat", "prioritas", "tenggat waktu", "sales"],
+  "relatedArticles": ["cara-mencatat-aktivitas", "cara-membuat-laporan-kunjungan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Tugas (Task) membantu tim sales mengorganisir pekerjaan harian — dari follow-up telepon, persiapan meeting, hingga pengiriman proposal. Setiap tugas bisa diatur prioritas dan dilengkapi pengingat otomatis."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Tugas",
+      "body": "Dari menu utama, klik CRM → Tugas."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Buat Tugas Baru",
+      "body": "Klik tombol Buat Tugas. Form dialog akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Isi Informasi Dasar Tugas",
+      "body": "Isi kolom berikut:\n- Judul: nama tugas yang jelas (wajib), contoh \"Follow up demo ke PT Maju Jaya\"\n- Deskripsi: penjelasan detail tugas (opsional)\n- Tipe: pilih tipe tugas (wajib):\n  → Umum: tugas umum tidak spesifik\n  → Telepon: perlu melakukan panggilan\n  → Email: perlu mengirim email\n  → Rapat: ada jadwal pertemuan\n  → Tindak Lanjut: follow-up dari interaksi sebelumnya\n- Prioritas: pilih tingkat urgensi (wajib):\n  → Rendah: bisa dikerjakan kapan saja\n  → Sedang: kerjakan hari ini jika memungkinkan\n  → Tinggi: prioritaskan hari ini\n  → Mendesak: harus segera dikerjakan\n- Tenggat Waktu: batas waktu penyelesaian (opsional)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tambahkan Pengingat",
+      "body": "Untuk menambahkan pengingat otomatis:\n1. Klik Tambah Pengingat\n2. Isi:\n   - Ingatkan Pada: pilih tanggal dan waktu pengingat\n   - Tipe: pilih Dalam Aplikasi (notifikasi di sistem) atau Email\n   - Pesan: teks pengingat yang akan dikirimkan\nAnda bisa menambahkan lebih dari satu pengingat per tugas."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan Tugas",
+      "body": "Klik Buat Tugas. Tugas tersimpan dengan status Menunggu (Pending) dan muncul di daftar tugas."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Perbarui Status Tugas",
+      "body": "Saat mengerjakan tugas, perbarui statusnya:\n- Menunggu → Sedang Dikerjakan: saat mulai mengerjakan\n- Sedang Dikerjakan → Selesai: setelah tugas selesai\n- Bisa juga langsung ke Dibatalkan jika tugas tidak perlu dilanjutkan\nBuka detail tugas dan ubah dropdown Status."
+    },
+    {
+      "type": "info",
+      "body": "Tugas juga bisa ditautkan ke Lead, Deal, atau Pelanggan tertentu sehingga muncul di timeline konteks yang relevan. Edit tugas dan isi field Lead/Deal/Pelanggan untuk menautkannya."
+    }
+  ]
+}

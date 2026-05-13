@@ -1,0 +1,46 @@
+{
+  "title": "Cara Mengatur Master Data CRM",
+  "description": "Panduan mengonfigurasi Sumber Lead, Status Lead, Peran Kontak, dan Jenis Aktivitas yang digunakan di seluruh modul CRM",
+  "slug": "cara-mengatur-master-crm",
+  "module": "crm",
+  "subcategory": "pengaturan-crm",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["sumber lead", "status lead", "peran kontak", "jenis aktivitas", "pengaturan CRM"],
+  "relatedArticles": ["cara-mengatur-tahapan-pipeline", "cara-menambah-lead"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Master Data CRM mencakup daftar pilihan yang digunakan di seluruh modul CRM — dari mana lead berasal, apa statusnya, jabatan kontak, hingga jenis aktivitas yang bisa dicatat. Konfigurasi ini menentukan opsi yang tersedia di form-form CRM."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Mengatur Sumber Lead",
+      "body": "Sumber Lead menentukan pilihan di field Sumber Lead saat membuat lead baru.\n1. Klik CRM → Pengaturan CRM → Sumber Lead\n2. Klik Tambah, isi nama sumber (contoh: Pameran Industri, Referral, Google Ads, Cold Call, Website)\n3. Klik Simpan\n\nSumber Lead yang umum digunakan:\n- Pameran / Event: dari pameran atau acara bisnis\n- Referral: rekomendasi dari pelanggan atau mitra\n- Iklan Digital: dari Google Ads, Meta Ads, dll\n- Outbound: dari cold call atau email blast\n- Website: dari formulir di website perusahaan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Mengatur Status Lead",
+      "body": "Status Lead menentukan tahapan kualifikasi lead sebelum masuk pipeline.\n1. Klik CRM → Pengaturan CRM → Status Lead\n2. Klik Tambah, isi nama status dan pilih warna\n3. Atur urutan status sesuai alur kualifikasi\n\nContoh urutan status yang umum:\n- Prospek Baru → Lead Qualified → Dalam Proses → Negosiasi → Konversi"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Mengatur Peran Kontak",
+      "body": "Peran Kontak menentukan pilihan jabatan di field Peran Kontak saat membuat lead atau kontak.\n1. Klik CRM → Pengaturan CRM → Peran Kontak\n2. Klik Tambah, isi nama peran (contoh: Direktur, Manajer IT, PIC Pengadaan, Decision Maker)\n3. Klik Simpan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Mengatur Jenis Aktivitas",
+      "body": "Jenis Aktivitas menentukan pilihan di field Jenis Aktivitas saat mencatat Log Aktivitas.\n1. Klik CRM → Pengaturan CRM → Jenis Aktivitas\n2. Klik Tambah, isi nama jenis (contoh: Demo Produk, Presentasi, Negosiasi Harga)\n3. Klik Simpan\n\nJenis bawaan (tidak bisa dihapus): Panggilan, Email, Rapat, Tindak Lanjut, Kunjungan."
+    },
+    {
+      "type": "info",
+      "body": "Semua master data CRM ini juga bisa dibuat langsung dari form lead, deal, atau aktivitas tanpa perlu membuka menu Pengaturan CRM — cukup ketik nama baru di dropdown dan sistem akan menyimpannya otomatis."
+    }
+  ]
+}

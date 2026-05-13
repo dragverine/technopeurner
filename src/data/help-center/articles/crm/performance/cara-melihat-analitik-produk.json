@@ -1,0 +1,46 @@
+{
+  "title": "Cara Melihat Analitik Produk CRM",
+  "description": "Panduan membaca laporan analitik minat produk berdasarkan data aktivitas dan laporan kunjungan untuk mengidentifikasi produk yang paling diminati pasar",
+  "slug": "cara-melihat-analitik-produk",
+  "module": "crm",
+  "subcategory": "performance",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["analitik produk", "product analytics", "minat produk", "level minat", "CRM"],
+  "relatedArticles": ["cara-melihat-kinerja-penjualan", "cara-mencatat-aktivitas"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Analitik Produk CRM mengolah data minat produk yang dicatat di seluruh aktivitas dan laporan kunjungan. Laporan ini memperlihatkan produk mana yang paling banyak diminati, rata-rata level minat, dan tren permintaan per produk."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Analitik Produk",
+      "body": "Dari menu utama, klik CRM → Analitik Produk."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Pilih Periode dan Filter",
+      "body": "Atur filter:\n- Periode: rentang tanggal data yang ingin dianalisis\n- Sales: tampilkan data dari sales tertentu atau semua\n- Area: filter per wilayah penjualan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Baca Data Minat Produk",
+      "body": "Laporan menampilkan per produk:\n- Nama Produk\n- Total Mention: berapa kali produk ini dicatat di aktivitas dan kunjungan\n- Rata-rata Level Minat (0-5): rata-rata ketertarikan pelanggan terhadap produk ini\n- Jumlah Estimasi: total kuantitas yang diinginkan pelanggan\n- Estimasi Nilai: total potensi nilai penjualan produk ini"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Identifikasi Produk Terpopuler",
+      "body": "Urutkan tabel berdasarkan Total Mention atau Rata-rata Level Minat untuk mengidentifikasi produk yang paling banyak diminati pasar. Informasi ini berguna untuk menentukan fokus promosi dan ketersediaan stok."
+    },
+    {
+      "type": "info",
+      "body": "Data analitik produk ini bersumber dari field Minat Produk yang diisi saat mencatat Aktivitas dan Laporan Kunjungan. Semakin konsisten tim sales mengisi data minat produk, semakin akurat analitiknya."
+    }
+  ]
+}

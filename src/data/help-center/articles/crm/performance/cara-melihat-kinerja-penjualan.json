@@ -1,0 +1,54 @@
+{
+  "title": "Cara Melihat Laporan Kinerja Penjualan",
+  "description": "Panduan memantau performa tim sales berdasarkan data pipeline, deal won/lost, dan aktivitas melalui laporan kinerja CRM",
+  "slug": "cara-melihat-kinerja-penjualan",
+  "module": "crm",
+  "subcategory": "performance",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["kinerja penjualan", "sales performance", "win rate", "laporan CRM", "pipeline report"],
+  "relatedArticles": ["cara-melihat-analitik-produk", "cara-mengatur-target-crm"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Laporan Kinerja Penjualan menampilkan data performa tim sales secara keseluruhan — berapa deal yang berhasil, berapa yang gagal, total nilai pipeline, dan tren aktivitas. Gunakan laporan ini untuk evaluasi dan pengambilan keputusan strategis."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Kinerja Penjualan",
+      "body": "Dari menu utama, klik CRM → Kinerja Penjualan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Pilih Periode dan Filter",
+      "body": "Atur filter laporan:\n- Periode: pilih rentang tanggal yang ingin dianalisis\n- Sales: filter berdasarkan anggota tim tertentu atau tampilkan semua\n- Area: filter berdasarkan wilayah penjualan"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Baca Metrik Utama",
+      "body": "Halaman menampilkan kartu metrik utama:\n- Total Deal: jumlah semua deal dalam periode\n- Deal Won: jumlah dan total nilai deal yang berhasil closing\n- Deal Lost: jumlah deal yang gagal\n- Win Rate (%): persentase deal berhasil dari total deal yang ditutup\n- Total Nilai Pipeline: nilai kumulatif semua deal aktif"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Analisis per Sales",
+      "body": "Lihat tabel performa per anggota tim yang menampilkan:\n- Nama Sales\n- Jumlah deal aktif, won, dan lost\n- Total nilai deal\n- Win rate individual\n- Jumlah aktivitas dan kunjungan yang dicatat"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Lihat Tren Pipeline",
+      "body": "Grafik tren menampilkan perkembangan pipeline dari waktu ke waktu — berguna untuk mengidentifikasi bulan dengan performa terbaik atau penurunan yang perlu ditangani."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Ekspor Laporan",
+      "body": "Klik Ekspor untuk mengunduh data kinerja dalam format Excel untuk keperluan presentasi ke manajemen atau analisis lebih lanjut."
+    }
+  ]
+}

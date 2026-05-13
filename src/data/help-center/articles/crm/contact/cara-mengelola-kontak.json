@@ -1,0 +1,52 @@
+{
+  "title": "Cara Mengelola Kontak CRM",
+  "description": "Panduan menambah dan mengelola kontak person yang terkait dengan lead dan pelanggan di sistem CRM",
+  "slug": "cara-mengelola-kontak",
+  "module": "crm",
+  "subcategory": "contact",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["kontak", "contact person", "CRM", "peran kontak"],
+  "relatedArticles": ["cara-menambah-lead", "cara-membuat-laporan-kunjungan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Kontak adalah data individu yang terkait dengan lead atau pelanggan — misalnya direktur, manajer pengadaan, atau PIC teknis di perusahaan pelanggan. Mengelola kontak dengan baik memudahkan tim sales mengetahui siapa yang harus dihubungi untuk setiap kebutuhan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Tambah Kontak dari Detail Lead",
+      "body": "Cara paling umum menambah kontak adalah dari halaman detail lead:\n1. Buka CRM → Leads dan klik lead yang bersangkutan\n2. Di bagian Kontak, klik Tambah Kontak\n3. Form dialog akan terbuka"
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Isi Informasi Kontak",
+      "body": "Isi form kontak:\n- Nama Lengkap: nama lengkap kontak person (wajib, min 2 karakter)\n- Peran Kontak: jabatan atau peran, contoh Direktur Utama, Manajer IT, PIC Pengadaan (opsional, bisa dibuat langsung)\n- Telepon: nomor HP atau kantor, hanya angka (opsional)\n- Email: alamat email (opsional, format harus valid)\n- Catatan: informasi tambahan tentang kontak ini"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Simpan Kontak",
+      "body": "Klik Buat. Kontak tersimpan dan terhubung ke lead tersebut."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tandai sebagai Kontak Utama",
+      "body": "Jika kontak ini adalah PIC utama yang paling sering dihubungi, aktifkan toggle Kontak Utama di panel detail kontak. Kontak utama akan ditampilkan lebih menonjol di profil lead."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Edit atau Nonaktifkan Kontak",
+      "body": "Klik ikon Edit pada baris kontak untuk memperbarui informasi. Nonaktifkan kontak yang sudah tidak aktif dengan toggle Aktif."
+    },
+    {
+      "type": "info",
+      "body": "Kontak yang sudah terdaftar bisa dipilih saat mengisi Laporan Kunjungan di field Pilih Kontak — data nama dan telepon akan terisi otomatis tanpa perlu mengetik ulang."
+    }
+  ]
+}

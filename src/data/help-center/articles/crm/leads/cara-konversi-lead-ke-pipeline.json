@@ -1,0 +1,56 @@
+{
+  "title": "Cara Mengonversi Lead ke Pipeline (Deal)",
+  "description": "Panduan mengonversi lead yang sudah siap menjadi deal di pipeline penjualan untuk melanjutkan proses closing",
+  "slug": "cara-konversi-lead-ke-pipeline",
+  "module": "crm",
+  "subcategory": "leads",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["konversi lead", "lead to deal", "pipeline", "qualified lead"],
+  "relatedArticles": ["cara-menambah-lead", "cara-membuat-deal"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Ketika sebuah lead sudah cukup berkualitas dan siap untuk diproses lebih lanjut, lead tersebut perlu dikonversi menjadi Deal di pipeline. Proses konversi memindahkan lead ke tahapan pipeline yang sesuai dan membuat deal baru secara otomatis."
+    },
+    {
+      "type": "info",
+      "body": "Pastikan lead sudah memiliki informasi yang cukup — minimal nama, kontak, dan estimasi nilai — sebelum dikonversi ke pipeline."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Detail Lead",
+      "body": "Dari menu CRM → Leads, klik nama lead yang ingin dikonversi untuk membuka halaman detailnya."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Klik Konversi ke Pipeline",
+      "body": "Di halaman detail lead, klik tombol Konversi ke Pipeline. Dialog konfirmasi konversi akan terbuka."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pilih Tahap Pipeline",
+      "body": "Pilih tahap pipeline awal untuk deal yang akan dibuat, contoh Prospecting atau Qualification. Sistem akan menampilkan semua tahap yang tersedia beserta persentase probabilitasnya."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Konfirmasi Konversi",
+      "body": "Klik Konfirmasi. Sistem akan:\n- Membuat Deal baru di pipeline dengan data dari lead (nama, estimasi nilai, produk minat)\n- Menandai lead sebagai Terkonversi (badge Converted muncul di profil lead)\n- Menautkan lead dengan deal yang baru dibuat"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Lanjutkan di Pipeline",
+      "body": "Setelah konversi, buka menu CRM → Pipeline untuk melihat deal baru di kanban board. Deal bisa langsung digeser ke tahap berikutnya sesuai perkembangan negosiasi."
+    },
+    {
+      "type": "info",
+      "body": "Lead yang sudah dikonversi tetap bisa dilihat di daftar Leads dengan badge Terkonversi. Anda masih bisa melihat riwayat aktivitas dan catatan dari lead tersebut."
+    }
+  ]
+}

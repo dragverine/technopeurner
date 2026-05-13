@@ -1,0 +1,82 @@
+{
+  "title": "Cara Membuat Laporan Kunjungan",
+  "description": "Panduan lengkap mencatat laporan kunjungan sales beserta GPS check-in, foto, survei minat produk berbintang, dan alur persetujuan manajer",
+  "slug": "cara-membuat-laporan-kunjungan",
+  "module": "crm",
+  "subcategory": "visit-report",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["laporan kunjungan", "visit report", "GPS check-in", "survei minat", "foto", "level minat"],
+  "relatedArticles": ["cara-mencatat-aktivitas", "cara-membuat-tugas"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Laporan Kunjungan mencatat seluruh detail kunjungan sales ke lokasi pelanggan. Form memiliki dua tab: Tab Informasi Dasar (data kontak, tujuan, foto, GPS) dan Tab Minat Produk (produk yang dibahas dengan level ketertarikan). Laporan melewati alur persetujuan sebelum resmi tercatat."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Laporan Kunjungan",
+      "body": "Dari menu utama, klik CRM → Laporan Kunjungan. Klik tombol Log Kunjungan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tab Informasi Dasar — Kontak yang Ditemui",
+      "body": "Isi data kontak yang ditemui saat kunjungan:\n- Pilih Kontak (opsional): pilih dari dropdown kontak yang sudah terdaftar — Nama Kontak dan Telepon Kontak terisi otomatis\n- Nama Kontak (opsional): isi manual jika kontak belum terdaftar\n- Telepon Kontak (opsional): nomor HP kontak — hanya boleh angka, +, -, spasi, dan tanda kurung"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tab Informasi Dasar — Tujuan Kunjungan",
+      "body": "Isi tujuan kunjungan (wajib): jelaskan tujuan utama kunjungan ini, contoh:\n\"Presentasi demo modul ERP Inventory kepada tim IT\"\n\"Follow-up penawaran yang dikirim minggu lalu\"\n\"Survei kebutuhan untuk proposal baru\"\n\nField ini wajib diisi dan tidak boleh kosong."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tab Informasi Dasar — Tanggal dan Waktu",
+      "body": "Isi jadwal kunjungan:\n- Tanggal Kunjungan: pilih tanggal dari kalender (wajib, default hari ini, format: DD Mmm YYYY)\n- Waktu Terjadwal: isi jam kunjungan dalam format HH:MM (opsional, default waktu saat ini)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "GPS Check-In",
+      "body": "Klik tombol Check In untuk merekam lokasi Anda saat kunjungan:\n1. Browser atau aplikasi akan meminta izin akses lokasi — klik Izinkan\n2. Sistem menampilkan status \"Menangkap lokasi...\" selama proses berlangsung\n3. Setelah berhasil, koordinat GPS (latitude & longitude) tersimpan sebagai bukti kehadiran\n4. Tombol berubah warna menandakan check-in berhasil\n\nJika gagal: pastikan fitur GPS aktif di perangkat dan izin lokasi sudah diberikan ke browser."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Upload Foto Kunjungan",
+      "body": "Klik area Foto untuk mengunggah dokumentasi kunjungan:\n- Maksimal 5 foto per laporan (ditampilkan sebagai \"Foto X/5\")\n- Format: gambar (JPG, PNG, dll)\n- Foto yang sudah diupload ditampilkan sebagai thumbnail dengan tombol hapus\n- Sistem menampilkan indikator loading saat upload berlangsung\n- Setelah upload selesai, foto tersimpan otomatis"
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Tab Minat Produk — Tambah Produk yang Dibahas",
+      "body": "Klik + Tambah Produk untuk setiap produk yang dibahas saat kunjungan. Untuk setiap baris:\n- Produk (wajib): pilih produk dari katalog — tidak boleh duplikat dalam satu laporan\n- Setelah produk dipilih, harga jual produk otomatis terisi di field Harga"
+    },
+    {
+      "type": "step",
+      "stepNumber": 8,
+      "title": "Tab Minat Produk — Isi Level Minat",
+      "body": "Ada dua cara mengisi level minat produk:\n\nCara 1 — Survei Minat (jika tersedia):\nJika sistem dikonfigurasi dengan pertanyaan survei, jawab setiap pertanyaan dengan memilih salah satu opsi radio button. Level minat (0-5) dihitung otomatis dari jawaban — ditampilkan sebagai \"Skor terhitung: X/5\".\n\nCara 2 — Manual:\nJika tidak ada survei, pilih Level Minat dari dropdown:\n- 0 ☆☆☆☆☆: tidak tertarik\n- 1 ★☆☆☆☆: minat sangat rendah\n- 2 ★★☆☆☆: minat rendah\n- 3 ★★★☆☆: cukup tertarik\n- 4 ★★★★☆: sangat tertarik\n- 5 ★★★★★: sangat antusias"
+    },
+    {
+      "type": "step",
+      "stepNumber": 9,
+      "title": "Tab Minat Produk — Detail Produk",
+      "body": "Lengkapi detail per produk:\n- Catatan: keterangan spesifik tentang minat, contoh \"Butuh demo lebih lanjut\"\n- Kuantitas: estimasi jumlah unit yang dibutuhkan (min 0)\n- Harga: harga yang dibahas (min 0, terisi otomatis dari harga jual produk)\nKlik ikon tempat sampah untuk menghapus baris produk."
+    },
+    {
+      "type": "step",
+      "stepNumber": 10,
+      "title": "Ajukan Laporan",
+      "body": "Klik Ajukan. Status laporan berubah dari Draft menjadi Diajukan dan dikirim ke manajer untuk ditinjau."
+    },
+    {
+      "type": "info",
+      "body": "Alur persetujuan: Draft → Diajukan → Disetujui / Ditolak. Jika ditolak, manajer mengisi alasan penolakan (min 5 karakter). Sales bisa memperbaiki dan mengajukan ulang. Manajer tidak bisa menyetujui laporan kunjungannya sendiri."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Cara Melihat Pemetaan Area (Heat Map)",
+  "description": "Panduan menggunakan fitur Pemetaan Area untuk memantau sebaran lead dan pipeline deal di seluruh wilayah melalui tampilan heat map interaktif",
+  "slug": "cara-melihat-pemetaan-area",
+  "module": "crm",
+  "subcategory": "pemetaan-area",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["pemetaan area", "area mapping", "heat map", "sebaran lead", "densitas wilayah"],
+  "relatedArticles": ["cara-menambah-lead", "cara-melihat-kinerja-penjualan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Pemetaan Area adalah fitur visual yang menampilkan sebaran Lead dan Pipeline Deal di seluruh wilayah dalam bentuk heat map. Fitur ini membantu manajer memahami konsentrasi aktivitas sales, mengidentifikasi area yang belum terjangkau, dan mengoptimalkan penugasan tim lapangan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Pemetaan Area",
+      "body": "Dari menu utama, klik CRM → Pemetaan Area. Halaman menampilkan peta interaktif dengan heat map dan panel statistik di sebelah kiri."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Baca Panel Statistik",
+      "body": "Panel di sebelah kiri menampilkan:\n- Tangkapan: total data lokasi yang sudah terekam dari aktivitas lapangan\n- Area Aktif: jumlah area yang memiliki aktivitas dalam periode dipilih\n- Tim Lapangan: jumlah sales rep yang aktif di lapangan\n- Peringkat Cakupan: daftar area diurutkan berdasarkan tingkat aktivitas, dengan info tangkapan terakhir per area"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Filter Data di Peta",
+      "body": "Gunakan filter di atas peta untuk menyesuaikan tampilan:\n- Tipe Data: Semua, Lead, atau Pipeline Deal — tampilkan hanya data yang relevan\n- Bulan: Semua Bulan atau pilih bulan tertentu (Januari–Desember)\n- Tahun: Semua Tahun atau pilih tahun tertentu"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Ganti Mode Tampilan Peta",
+      "body": "Ada dua mode tampilan heat map:\n- Tampilan Lokasi: menampilkan titik-titik lokasi individual dari setiap lead atau deal yang memiliki data GPS\n- Intensitas Regional: menampilkan warna gradasi per wilayah berdasarkan kepadatan aktivitas — merah/oranye untuk konsentrasi tinggi, biru/hijau untuk kepadatan rendah\n\nGunakan tombol toggle di pojok peta untuk berpindah mode."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Baca Skala Kepadatan",
+      "body": "Di mode Intensitas Regional, legenda di sudut peta menampilkan skala warna dari kepadatan rendah ke kepadatan tinggi. Wilayah dengan warna lebih panas (merah/kuning) menandakan banyak aktivitas sales di area tersebut."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Klik Area untuk Detail",
+      "body": "Klik wilayah atau titik di peta untuk melihat ringkasan aktivitas di area tersebut — jumlah lead, deal, dan nama sales yang aktif."
+    },
+    {
+      "type": "info",
+      "body": "Data yang muncul di heat map bersumber dari koordinat GPS yang diisi di profil lead/deal. Semakin lengkap data lokasi lead dan deal, semakin akurat peta yang ditampilkan. Pastikan tim sales mengisi lokasi saat mendaftarkan lead baru."
+    }
+  ]
+}

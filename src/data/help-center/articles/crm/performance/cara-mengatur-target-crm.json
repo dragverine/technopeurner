@@ -1,0 +1,58 @@
+{
+  "title": "Cara Mengatur dan Memantau Target CRM",
+  "description": "Panduan menetapkan target penjualan per area dengan rincian bulanan dan memantau pencapaian secara real-time melalui alur persetujuan",
+  "slug": "cara-mengatur-target-crm",
+  "module": "crm",
+  "subcategory": "performance",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["target CRM", "target penjualan", "rincian bulanan", "area", "KPI sales"],
+  "relatedArticles": ["cara-melihat-kinerja-penjualan"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Target CRM memungkinkan manajemen menetapkan target penjualan per area dengan rincian nilai target per bulan. Total target dihitung otomatis dari 12 bulan yang diisi. Target melewati alur persetujuan sebelum aktif dipantau."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Target CRM",
+      "body": "Dari menu utama, klik CRM → Target CRM. Klik tombol Tambah Target."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tab Informasi Dasar",
+      "body": "Isi informasi dasar target:\n- Area (wajib): pilih area penjualan yang diberi target dari dropdown\n- Tahun (wajib): pilih tahun target dari dropdown\n- Total Target: ditampilkan otomatis, dihitung dari jumlah semua target bulanan (read-only)\n- Catatan (opsional): keterangan tambahan tentang target ini"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Klik Lanjut ke Rincian Bulanan",
+      "body": "Klik tombol Lanjut. Tab Rincian Bulanan akan terbuka dengan 12 baris — satu per bulan dari Januari hingga Desember."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tab Rincian Bulanan — Isi Target per Bulan",
+      "body": "Untuk setiap bulan (Januari–Desember), isi:\n- Jumlah Target (Rp): nilai target penjualan untuk bulan tersebut\n- Catatan (opsional): keterangan khusus untuk bulan tersebut, contoh \"Puncak musim Lebaran, target lebih tinggi\"\n\nTotal di tab Informasi Dasar diperbarui otomatis setiap kali Anda mengubah nilai bulanan."
+    },
+    {
+      "type": "info",
+      "body": "Tidak perlu mengisi semua 12 bulan dengan nilai. Bulan yang target-nya 0 bisa dibiarkan kosong — sistem tetap memvalidasi bahwa ada tepat 12 entri bulan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan dan Ajukan Persetujuan",
+      "body": "Klik Simpan. Target tersimpan dengan status Draft. Klik Ajukan untuk mengirim ke manajemen untuk disetujui. Setelah Disetujui, target aktif dan realisasinya mulai dipantau secara real-time."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Pantau Pencapaian",
+      "body": "Di halaman Target CRM, setiap target menampilkan:\n- Progress bar: persentase pencapaian bulan berjalan\n- Realisasi vs Target bulanan: nilai aktual vs yang ditetapkan\n- Sisa target yang harus dicapai\nStatus target: Draft → Diajukan → Disetujui / Ditolak."
+    }
+  ]
+}

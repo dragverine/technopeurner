@@ -1,0 +1,58 @@
+{
+  "title": "Cara Mengelola Pipeline dengan Kanban Board",
+  "description": "Panduan menggunakan tampilan kanban untuk memindahkan deal antar tahapan pipeline dan memantau progres penjualan secara visual",
+  "slug": "cara-mengelola-pipeline-kanban",
+  "module": "crm",
+  "subcategory": "pipeline",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["kanban", "pipeline", "drag drop", "tahap penjualan", "progres deal"],
+  "relatedArticles": ["cara-membuat-deal", "cara-menutup-deal"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Kanban Board adalah tampilan visual pipeline yang menampilkan semua deal dikelompokkan per tahapan penjualan. Anda bisa memindahkan deal antar tahap dengan drag-and-drop dan melihat total nilai di setiap kolom sekaligus."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Tampilan Kanban",
+      "body": "Dari menu utama, klik CRM → Pipeline. Halaman menampilkan kanban board dengan kolom untuk setiap tahap pipeline yang sudah dikonfigurasi."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Baca Informasi Tiap Kolom",
+      "body": "Setiap kolom pipeline menampilkan:\n- Nama tahap dan persentase probabilitas closing\n- Jumlah deal di tahap tersebut\n- Total nilai kumulatif semua deal di kolom ini\n- Kartu deal berisi: judul deal, pelanggan/lead, nilai, dan sales yang bertanggung jawab"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Pindahkan Deal antar Tahap",
+      "body": "Klik dan tahan kartu deal, lalu seret ke kolom tahap yang diinginkan. Lepaskan untuk menempatkan deal di tahap baru. Dialog perpindahan tahap akan muncul untuk konfirmasi dan alasan perpindahan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Isi Alasan Perpindahan Tahap",
+      "body": "Di dialog yang muncul:\n- Tahap Baru: sudah terisi otomatis sesuai kolom tujuan\n- Alasan: isi penjelasan singkat mengapa deal berpindah tahap, contoh \"Presentasi proposal berhasil, lanjut negosiasi\"\nKlik Simpan untuk konfirmasi perpindahan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Buka Detail Deal",
+      "body": "Klik kartu deal untuk membuka halaman detail lengkap. Di sini Anda bisa melihat riwayat aktivitas, mengedit informasi deal, menambah produk, atau menutup deal."
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Filter Pipeline",
+      "body": "Gunakan filter di atas kanban board untuk menyaring deal berdasarkan:\n- Sales yang ditugaskan\n- Rentang nilai deal\n- Tanggal perkiraan closing\n- Pelanggan atau lead tertentu"
+    },
+    {
+      "type": "info",
+      "body": "Deal yang berstatus Berhasil (Won) atau Gagal (Lost) tidak akan muncul di kanban board aktif. Gunakan filter Status untuk melihat deal yang sudah ditutup."
+    }
+  ]
+}

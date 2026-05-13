@@ -1,0 +1,50 @@
+{
+  "title": "Cara Mengatur Tahapan Pipeline",
+  "description": "Panduan membuat dan mengelola tahapan pipeline penjualan beserta nama, warna, dan persentase probabilitas tiap tahap",
+  "slug": "cara-mengatur-tahapan-pipeline",
+  "module": "crm",
+  "subcategory": "pengaturan-crm",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["tahapan pipeline", "pipeline stages", "probabilitas", "pengaturan CRM"],
+  "relatedArticles": ["cara-membuat-deal", "cara-mengelola-pipeline-kanban"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Tahapan Pipeline mendefinisikan alur proses penjualan dari awal hingga closing. Setiap tahap memiliki nama, warna, dan persentase probabilitas yang mencerminkan kemungkinan deal berhasil di tahap tersebut."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Pengaturan Pipeline",
+      "body": "Dari menu utama, klik CRM → Pengaturan CRM → Tahapan Pipeline."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tambah Tahap Baru",
+      "body": "Klik tombol Tambah Tahap. Form dialog akan terbuka:\n- Nama Tahap: nama yang mencerminkan fase penjualan, contoh Prospecting, Qualification, Proposal, Negotiation, Won\n- Probabilitas (%): persentase kemungkinan closing di tahap ini\n  → Contoh: Prospecting = 10%, Qualification = 25%, Proposal = 50%, Negotiation = 75%\n- Warna: pilih warna untuk tampilan di kanban board\n- Urutan: posisi tahap dalam alur pipeline (angka lebih kecil = lebih awal)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Simpan Tahap",
+      "body": "Klik Simpan. Tahap baru akan muncul sebagai kolom baru di kanban board Pipeline."
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Atur Urutan Tahap",
+      "body": "Urutkan tahap dengan mengubah nilai Urutan atau menggunakan drag-and-drop di daftar tahapan. Urutan menentukan posisi kolom dari kiri ke kanan di kanban board."
+    },
+    {
+      "type": "warning",
+      "body": "Tahap yang sudah memiliki deal aktif tidak bisa dihapus. Pindahkan semua deal ke tahap lain terlebih dahulu sebelum menghapus tahap tersebut."
+    },
+    {
+      "type": "info",
+      "body": "Probabilitas di setiap tahap digunakan untuk menghitung weighted pipeline value — nilai pipeline yang disesuaikan dengan kemungkinan closing. Ini berguna untuk forecasting penjualan yang lebih akurat."
+    }
+  ]
+}

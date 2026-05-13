@@ -1,0 +1,50 @@
+{
+  "title": "Cara Menutup Deal (Won atau Lost)",
+  "description": "Panduan menandai deal sebagai Berhasil (Won) atau Gagal (Lost) dan mengonversinya menjadi Quotation untuk proses penjualan lebih lanjut",
+  "slug": "cara-menutup-deal",
+  "module": "crm",
+  "subcategory": "pipeline",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["tutup deal", "won", "lost", "closing", "konversi ke quotation"],
+  "relatedArticles": ["cara-membuat-deal", "cara-mengelola-pipeline-kanban"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Setiap deal pada akhirnya akan ditutup — baik dengan hasil Berhasil (deal closing, pelanggan setuju membeli) atau Gagal (deal tidak jadi). Menutup deal dengan benar penting untuk akurasi laporan pipeline dan forecasting."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Detail Deal",
+      "body": "Dari kanban board Pipeline, klik kartu deal yang ingin ditutup untuk membuka halaman detailnya."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tandai Berhasil (Won)",
+      "body": "Jika deal berhasil closing:\n1. Klik tombol Tandai Berhasil (atau ikon centang)\n2. Konfirmasi di dialog yang muncul\n3. Status deal berubah menjadi Berhasil dan ditandai badge hijau\n4. Deal terkunci dan tidak bisa diedit lagi"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tandai Gagal (Lost)",
+      "body": "Jika deal tidak jadi:\n1. Klik tombol Tandai Gagal (atau ikon X)\n2. Isi alasan kegagalan di dialog yang muncul — informasi ini berguna untuk analisis\n3. Konfirmasi\n4. Status deal berubah menjadi Gagal dan ditandai badge merah"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Konversi ke Quotation (Setelah Won)",
+      "body": "Untuk deal yang sudah Won dan memiliki produk terdaftar:\n1. Klik tombol Konversi ke Quotation\n2. Sistem mengecek ketersediaan stok produk\n3. Jika stok tersedia, Quotation baru dibuat otomatis di modul Penjualan dengan data produk dari deal\n4. Lanjutkan proses di modul ERP → Penjualan → Penawaran"
+    },
+    {
+      "type": "warning",
+      "body": "Deal yang sudah ditutup (Won atau Lost) tidak bisa diedit atau dikembalikan ke status Terbuka. Pastikan semua informasi deal sudah benar sebelum menutupnya."
+    },
+    {
+      "type": "info",
+      "body": "Deal yang gagal tetap tersimpan di sistem dan bisa dilihat melalui filter Status = Gagal. Data ini berguna untuk analisis win/loss rate tim sales."
+    }
+  ]
+}

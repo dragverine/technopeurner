@@ -18,9 +18,16 @@
       "description": "Customer Relationship Management — Kelola hubungan pelanggan",
       "color": "#10B981",
       "subcategories": [
-        { "id": "leads", "title": "Leads", "description": "Kelola prospek dan calon pelanggan" },
-        { "id": "pipeline", "title": "Pipeline", "description": "Pantau tahapan penjualan" },
-        { "id": "customer", "title": "Customer", "description": "Manajemen data pelanggan" }
+        { "id": "leads", "title": "Leads", "description": "Kelola dan konversi prospek menjadi pelanggan" },
+        { "id": "pipeline", "title": "Pipeline & Deal", "description": "Pantau dan kelola deal di setiap tahapan pipeline" },
+        { "id": "activity", "title": "Aktivitas", "description": "Catat aktivitas interaksi dengan lead dan pelanggan" },
+        { "id": "task", "title": "Tugas", "description": "Kelola tugas tim sales dengan prioritas dan pengingat" },
+        { "id": "visit-report", "title": "Laporan Kunjungan", "description": "Catat kunjungan sales beserta hasil dan minat produk" },
+        { "id": "contact", "title": "Kontak", "description": "Kelola kontak person dari lead dan pelanggan" },
+        { "id": "jadwal", "title": "Jadwal", "description": "Buat dan kelola jadwal kunjungan atau kegiatan tim sales" },
+        { "id": "pemetaan-area", "title": "Pemetaan Area", "description": "Pantau sebaran lead dan deal di seluruh wilayah melalui heat map" },
+        { "id": "performance", "title": "Kinerja & Analitik", "description": "Pantau performa sales, analitik produk, dan target CRM" },
+        { "id": "pengaturan-crm", "title": "Pengaturan CRM", "description": "Konfigurasi tahapan pipeline, sumber lead, status, dan jenis aktivitas" }
       ]
     },
     {

@@ -1,0 +1,56 @@
+{
+  "title": "Cara Mencatat Aktivitas CRM",
+  "description": "Panduan mencatat setiap interaksi dengan lead atau pelanggan seperti panggilan telepon, email, rapat, dan kunjungan beserta produk yang diminati",
+  "slug": "cara-mencatat-aktivitas",
+  "module": "crm",
+  "subcategory": "activity",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["aktivitas", "log aktivitas", "panggilan", "rapat", "minat produk", "follow up"],
+  "relatedArticles": ["cara-menambah-lead", "cara-membuat-laporan-kunjungan", "cara-membuat-tugas"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Aktivitas adalah catatan setiap interaksi yang terjadi dengan lead atau pelanggan — telepon, email, rapat, follow-up, atau kunjungan. Mencatat aktivitas secara konsisten memastikan tidak ada interaksi penting yang terlewat dan membantu analisis pola penjualan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Halaman Detail Lead atau Deal",
+      "body": "Aktivitas dicatat dari konteks lead atau deal. Buka CRM → Leads atau CRM → Pipeline, lalu klik lead/deal yang bersangkutan untuk membuka halaman detailnya."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Klik Catat Aktivitas",
+      "body": "Di halaman detail, klik tombol Catat Aktivitas (Log Activity). Form dialog dua tab akan terbuka: Tab Aktivitas dan Tab Minat Produk."
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tab Aktivitas — Isi Detail Interaksi",
+      "body": "Isi informasi aktivitas:\n- Jenis Aktivitas: pilih tipe interaksi (wajib):\n  → Panggilan: percakapan via telepon\n  → Email: korespondensi email\n  → Rapat: pertemuan tatap muka atau online\n  → Tindak Lanjut (Follow Up): follow-up dari interaksi sebelumnya\n  → Kunjungan: kunjungan fisik ke lokasi\n  (Bisa buat jenis baru langsung dari dropdown)\n- Keterangan: deskripsi isi dan hasil interaksi (wajib)\n  Contoh: \"Panggilan 15 menit, pelanggan tertarik dengan modul ERP, minta demo minggu depan\"\n- Tanggal: tanggal aktivitas terjadi (wajib, default hari ini)\n- Waktu: jam terjadinya aktivitas (format HH:MM)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tab Minat Produk — Catat Produk yang Diminati",
+      "body": "Di tab Minat Produk (opsional), klik Tambah Produk untuk mencatat produk yang dibahas:\n- Produk: pilih produk dari katalog\n- Level Minat (0-5): tingkat ketertarikan pelanggan terhadap produk\n  → 0: tidak tertarik, 5: sangat tertarik\n- Catatan: keterangan khusus tentang minat ini\n- Kuantitas: estimasi jumlah yang dibutuhkan\n- Harga: harga yang dibahas (opsional)"
+    },
+    {
+      "type": "info",
+      "body": "Jika sistem sudah dikonfigurasi dengan Survei Minat, Anda akan melihat daftar pertanyaan untuk setiap produk. Pilih jawaban yang sesuai dan Level Minat akan dihitung otomatis dari jawaban tersebut."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Simpan Aktivitas",
+      "body": "Klik tombol Catat. Aktivitas tersimpan dan muncul di timeline halaman detail lead/deal dalam urutan terbaru ke terlama."
+    },
+    {
+      "type": "info",
+      "body": "Semua aktivitas yang dicatat membentuk riwayat interaksi lengkap dengan lead/pelanggan. Riwayat ini bisa dilihat oleh seluruh anggota tim sales yang memiliki akses ke lead/deal tersebut."
+    }
+  ]
+}

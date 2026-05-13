@@ -1,0 +1,70 @@
+{
+  "title": "Cara Menambah Lead Baru",
+  "description": "Panduan lengkap mendaftarkan prospek ke sistem CRM beserta informasi kontak, lokasi, klasifikasi, dan kualifikasi BANT",
+  "slug": "cara-menambah-lead",
+  "module": "crm",
+  "subcategory": "leads",
+  "author": "Tim Gilabs",
+  "createdAt": "2026-05-08",
+  "updatedAt": "2026-05-08",
+  "tags": ["lead", "prospek", "calon pelanggan", "BANT", "sumber lead"],
+  "relatedArticles": ["cara-konversi-lead-ke-pipeline", "cara-mencatat-aktivitas"],
+  "content": [
+    {
+      "type": "text",
+      "body": "Lead adalah prospek atau calon pelanggan yang berpotensi menjadi pembeli. Form Tambah Lead memiliki dua tab: Tab Informasi Dasar (data kontak, lokasi, klasifikasi) dan Tab BANT & Scoring (kualifikasi peluang). Hanya satu field yang wajib — Nama Depan — sisanya opsional namun sangat dianjurkan diisi selengkap mungkin."
+    },
+    {
+      "type": "step",
+      "stepNumber": 1,
+      "title": "Buka Menu Leads",
+      "body": "Dari menu utama, klik CRM → Leads. Klik tombol Tambah Lead di sudut kanan atas."
+    },
+    {
+      "type": "step",
+      "stepNumber": 2,
+      "title": "Tab Informasi Dasar — Data Pribadi & Perusahaan",
+      "body": "Isi bagian pertama form:\n- Nama Depan (wajib): nama pertama lead, minimal 2 karakter, maks 100 karakter\n- Nama Belakang (opsional): nama akhir lead\n- Nama Perusahaan (opsional): perusahaan tempat lead bekerja\n- Peran Kontak (opsional): jabatan lead, contoh Direktur, Manajer IT — bisa dibuat langsung dengan mengetik nama baru"
+    },
+    {
+      "type": "step",
+      "stepNumber": 3,
+      "title": "Tab Informasi Dasar — Informasi Kontak",
+      "body": "Isi cara menghubungi lead:\n- Email (opsional): alamat email — harus format email yang valid\n- Telepon (opsional): nomor HP atau kantor — hanya boleh angka, tanda +, -, spasi, dan tanda kurung; maks 20 karakter\n- Alamat (opsional): alamat lengkap lead\n- Media Sosial/Tautan (opsional): URL LinkedIn, Instagram, website — contoh: linkedin.com/in/namalead"
+    },
+    {
+      "type": "step",
+      "stepNumber": 4,
+      "title": "Tab Informasi Dasar — Lokasi",
+      "body": "Tentukan lokasi lead untuk penugasan area sales:\n- Provinsi: pilih dari dropdown\n- Kota: muncul setelah provinsi dipilih\n- Kecamatan dan Desa/Kelurahan: pilih dari dropdown yang tersedia\n- Area: terisi otomatis berdasarkan provinsi, atau pilih manual dari dropdown area yang terdaftar\nGunakan peta interaktif untuk menandai lokasi secara visual — koordinat latitude & longitude tersimpan otomatis."
+    },
+    {
+      "type": "step",
+      "stepNumber": 5,
+      "title": "Tab Informasi Dasar — Klasifikasi & Penugasan",
+      "body": "Kelompokkan dan tugaskan lead:\n- Sumber Lead (opsional): darimana lead berasal — contoh Pameran, Referral, Google Ads, Cold Call. Bisa dibuat langsung\n- Status Lead (opsional): tahap kualifikasi saat ini — tidak bisa memilih status CONVERTED. Bisa dibuat langsung\n- Ditugaskan Ke (opsional): pilih karyawan/sales yang menangani lead ini\n- Tipe Bisnis (opsional): jenis bisnis pelanggan. Bisa dibuat langsung\n- Termin Pembayaran (opsional): preferensi pembayaran, ditampilkan sebagai \"Nama (X hari)\". Bisa dibuat langsung\n- Catatan (opsional): informasi tambahan tentang lead"
+    },
+    {
+      "type": "step",
+      "stepNumber": 6,
+      "title": "Tab BANT — Nilai & Probabilitas",
+      "body": "Klik Selanjutnya untuk ke tab BANT & Scoring. Isi:\n- Nilai Estimasi (Rp): perkiraan nilai transaksi jika closing (opsional, default 0)\n- Probabilitas (%): kemungkinan closing, maks 100% (opsional, default 0)"
+    },
+    {
+      "type": "step",
+      "stepNumber": 7,
+      "title": "Tab BANT — Kualifikasi Budget, Authority, Need, Timeline",
+      "body": "Aktifkan toggle untuk setiap kriteria BANT yang sudah terkonfirmasi:\n\n- Budget Terkonfirmasi: toggle → muncul field Jumlah Budget (Rp) — isi anggaran yang tersedia\n- Otoritas Terkonfirmasi: toggle → muncul field Pengambil Keputusan — isi nama orang yang berwenang memutuskan\n- Kebutuhan Terkonfirmasi: toggle → muncul field Deskripsi Kebutuhan — jelaskan kebutuhan spesifik lead\n- Timeline Terkonfirmasi: toggle → muncul Date Picker Tanggal Diharapkan — isi target waktu pembelian"
+    },
+    {
+      "type": "info",
+      "body": "BANT: Budget (ada anggaran), Authority (ada kewenangan memutuskan), Need (ada kebutuhan nyata), Timeline (ada target waktu). Lead dengan semua BANT terkonfirmasi adalah lead paling berkualitas dan harus diprioritaskan."
+    },
+    {
+      "type": "step",
+      "stepNumber": 8,
+      "title": "Simpan Lead",
+      "body": "Klik tombol Buat. Lead tersimpan dan muncul di daftar Leads. Lanjutkan dengan mencatat aktivitas, membuat tugas follow-up, atau mengonversi lead ke pipeline."
+    }
+  ]
+}
